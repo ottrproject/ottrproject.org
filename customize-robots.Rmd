@@ -68,7 +68,7 @@ In the `config_automation.yml` file it is set by:
 ```
 spell-check: yes
 ```
-Github actions will automatically [run a spell check on all Rmd's and md's](https://github.com/jhudsl/OTTR_Template/blob/main/.github/workflows/style-and-sp-check.yml) whenever a pull request to the `main` branch is filed.
+Github actions will automatically run a spell check on all Rmd's and md's whenever a pull request to the `main` branch is filed.
 
 It will fail if there are more than 2 spelling errors and you'll need to resolve those before being able to merge your pull request. Errors will be printed out on a GitHub comment on your pull request.
 
@@ -123,6 +123,6 @@ From time to time, it may be useful to manually re-trigger a particular GitHub a
 GitHub action rendering or other GitHub actions may fail sometimes if the input is unexpected or for a number of other reasons.
 To investigate why a GitHub action has failed, go to `Actions` and click on the failed action. [See this article for how to find this information](https://docs.github.com/en/actions/learn-github-actions/understanding-github-actions#viewing-the-workflows-activity).
 
-See our [FAQ's section](./faqs.html) for the most commonly encountered errors and how to address them. 
+See our [FAQ's section](./faqs.html) for the most commonly encountered errors and how to address them.
 
 If you are unsure what the error message means and have trouble addressing it, please [file an issue on the OTTR_Template repository to get help](https://github.com/jhudsl/OTTR_Template/issues/new?assignees=cansavvy&labels=bug&template=course-template-problem-report.md).
