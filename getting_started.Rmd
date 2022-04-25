@@ -8,7 +8,7 @@ output:
 
 - Please take a look at the [code of conduct](https://github.com/jhudsl/OTTR_Template/blob/main/code_of_conduct.md).
 
-## Recommended background information
+### Recommended background information
 
 - If you are not familiar with **Git and Github**, we recommend going through these chapters from our Reproducibility courses for quick orientation:
   - [Why GitHub](https://jhudatascience.org/Reproducibility_in_Cancer_Informatics/making-your-project-open-source-with-github.html)
@@ -19,6 +19,8 @@ output:
 - For information on **RMarkdown** (a variation of a markdown file that we use here): [RStudio has their lessons here](https://rmarkdown.rstudio.com/lesson-1.html).
 
 Upon creating your repository, issues for getting your course started will be automatically filed in your repository. Go to `Issues` and you can follow them along to get set up.
+
+### Create an OTTR repository
 
 ### 1. Create a repository from this template
 
@@ -283,7 +285,7 @@ For more on [how to review a pull request, see this chapter](https://jhudatascie
 - [GitHub docs about creating a Pull Request](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/creating-a-pull-request)
 - [Making a Pull Request](https://www.atlassian.com/git/tutorials/making-a-pull-request)
 
-## Setting up images
+## Set up images!
 
 To maintain style and attributions for graphics and images, as well as to enable easy updates in the future, please start a new Google Slide document for your course.
 
