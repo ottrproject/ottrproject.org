@@ -23,7 +23,7 @@ navbar:
         icon: fa-palette
       - text: "Customizing Docker"
         href: customize-docker.html
-        icon: fa-whale
+        icon: fa-gears
   - text: FAQs
     href: faqs.html
     icon: fa-question
