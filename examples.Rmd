@@ -1,0 +1,31 @@
+---
+title: "Examples of OTTR courses"
+output:
+  html_document:
+    toc: true
+    toc_float: true
+---
+
+## OTTR course
+
+Here's an example of a course made with the [main OTTR Template](https://github.com/jhudsl/OTTR_Template) and has been published in three platforms: Bookdown, Leanpub and Coursera.
+
+_Introduction to Reproducibility in Cancer Informatics:_  
+- [GitHub repository and source code](https://github.com/jhudsl/Reproducibility_in_Cancer_Informatics)
+  - [Bookdown website](https://jhudatascience.org/Reproducibility_in_Cancer_Informatics/introduction.html)
+  - [Leanpub course](https://leanpub.com/universities/courses/jhu/cancer-informatics-for-research-leaders)
+  - [Coursera course](https://www.coursera.org/learn/intro-reproducibility-cancer-informatics)
+
+## OTTR website
+
+This website itself is an example of website only OTTR made with the spinoff repository: [OTTR_Template_Website](https://github.com/jhudsl/OTTR_Template_Website).
+
+- [GitHub repository and source code](https://github.com/jhudsl/ottr-website)
+
+## OTTR "baby" template
+
+This is a template made from our main OTTR Template that is used for a set of courses being made for the [AnVIL set of cloud tools](https://anvilproject.org/)
+
+- [GitHub repository and source code](https://github.com/jhudsl/AnVIL_Template)
+
+If you find yourself making a full set of courses and multiple repositories from OTTR, you may want to make a template from our template (If you need to go this route, we recommend talking directly to the OTTR maintainers by filing a GitHub issue and assigning `@cansavvy` and `@carriewright11`).
