@@ -1,34 +1,23 @@
 ---
-title: "**Website Name**"
+title: "Why use OTTR?"
 output:
   html_document
 ---
 
-<div class = "banner_color">
-Banner text!  
-</div>
-
-### **About**
-
-This website was created with the OTTR_Template_Website template. This enables simpler creation of websites that have automated checks for broken URLs and spelling errors, as well as automated rendering of all html files. No need to worry about git conflicts for html files!
-
-Here is how you can include images in your website pages (this one is saved in `resources/images` to keep things tidy:
-
-```{r, fig.align='center', fig.alt= "Example image", echo = FALSE, out.width="30%"}
-knitr::include_graphics("resources/images/example_image.png")
-```
-
- 
- 
-We will go through the following:
-
-1. How to set up your repository to enable the GitHub actions of the template. (Setup tab)
-2. How to host your website using GitHub (Hosting tab)
-3. How to modify your website structure (Structure tab)
-4. How to change your website style (Style tab)
-5. More information about GitHub Actions (Git Actions tab)
-
-Click on each tab to learn more.
+OTTR is a set of tools and documentation to make course publishing maintenance across multiple different platforms _less painful_.  
 
 
+<img src = "https://github.com/jhudsl/OTTR_Template/raw/main/resources/screenshots/OTTR_Robot_Image.png" width = 400>
 
+- Edit and write a course in [R Markdown files](https://rmarkdown.rstudio.com/) and have it published to multiple different platforms:  
+  - [Leanpub](https://leanpub.com/bookstore?type=course)  
+  - [Bookdown](https://bookdown.org/)  
+  - [Coursera](https://www.coursera.org/)  
+- Have [Github action robots](./getting_started.html) do your repetitive tasks like spell check and re-rendering.
+- Use automagic conversion to ease the lift of prepping the material for different platforms' formats.  
+- Use [our Docker image](https://hub.docker.com/repository/docker/jhudsl/course_template) for consistency across authors as well as to help you [avoid dependency hell](https://en.wikipedia.org/wiki/Dependency_hell).  
+  - OR, customize your own Docker image  
+
+\*  📝 [See the OTTR pre-print here!](https://arxiv.org/abs/2203.07083)
+
+Go to [Getting Started](./getting_started.html) to get started!

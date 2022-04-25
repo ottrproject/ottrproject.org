@@ -11,10 +11,10 @@
 
 
 
-<title>Structure</title>
+<title>Examples of OTTR courses</title>
 
-<script src="site_libs/header-attrs-2.10/header-attrs.js"></script>
-<script src="site_libs/jquery-1.11.3/jquery.min.js"></script>
+<script src="site_libs/header-attrs-2.11/header-attrs.js"></script>
+<script src="site_libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <link href="site_libs/bootstrap-3.3.5/css/cosmo.min.css" rel="stylesheet" />
 <script src="site_libs/bootstrap-3.3.5/js/bootstrap.min.js"></script>
@@ -29,11 +29,15 @@
        h6 {font-size: 12px;}
        code {color: inherit; background-color: rgba(0, 0, 0, 0.04);}
        pre:not([class]) { background-color: white }</style>
+<script src="site_libs/jqueryui-1.11.4/jquery-ui.min.js"></script>
+<link href="site_libs/tocify-1.9.1/jquery.tocify.css" rel="stylesheet" />
+<script src="site_libs/tocify-1.9.1/jquery.tocify.js"></script>
 <script src="site_libs/navigation-1.1/tabsets.js"></script>
 <link href="site_libs/highlightjs-9.12.0/textmate.css" rel="stylesheet" />
 <script src="site_libs/highlightjs-9.12.0/highlight.js"></script>
 <link href="site_libs/font-awesome-5.1.0/css/all.css" rel="stylesheet" />
 <link href="site_libs/font-awesome-5.1.0/css/v4-shims.css" rel="stylesheet" />
+<link rel="shortcut icon" href="resources/images/otter-solid.ico" />
 
 <style type="text/css">
   code{white-space: pre-wrap;}
@@ -221,6 +225,69 @@ $(document).ready(function () {
 
 
 
+<style type="text/css">
+
+#TOC {
+  margin: 25px 0px 20px 0px;
+}
+@media (max-width: 768px) {
+#TOC {
+  position: relative;
+  width: 100%;
+}
+}
+
+@media print {
+.toc-content {
+  /* see https://github.com/w3c/csswg-drafts/issues/4434 */
+  float: right;
+}
+}
+
+.toc-content {
+  padding-left: 30px;
+  padding-right: 40px;
+}
+
+div.main-container {
+  max-width: 1200px;
+}
+
+div.tocify {
+  width: 20%;
+  max-width: 260px;
+  max-height: 85%;
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+  div.tocify {
+    width: 25%;
+  }
+}
+
+@media (max-width: 767px) {
+  div.tocify {
+    width: 100%;
+    max-width: none;
+  }
+}
+
+.tocify ul, .tocify li {
+  line-height: 20px;
+}
+
+.tocify-subheader .tocify-item {
+  font-size: 0.90em;
+}
+
+.tocify .list-group-item {
+  border-radius: 0px;
+}
+
+
+</style>
+
+
 
 </head>
 
@@ -228,6 +295,16 @@ $(document).ready(function () {
 
 
 <div class="container-fluid main-container">
+
+
+<!-- setup 3col/9col grid for toc_float and main content  -->
+<div class="row">
+<div class="col-xs-12 col-sm-4 col-md-3">
+<div id="TOC" class="tocify">
+</div>
+</div>
+
+<div class="toc-content col-xs-12 col-sm-8 col-md-9">
 
 
 
@@ -240,33 +317,75 @@ $(document).ready(function () {
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <a class="navbar-brand" href="index.html">OTTR Web</a>
+      <a class="navbar-brand" href="index.html">OTTR - Open-source Tools for Training Resources</a>
     </div>
     <div id="navbar" class="navbar-collapse collapse">
       <ul class="nav navbar-nav">
         <li>
-  <a href="index.html">Home</a>
-</li>
-<li>
-  <a href="setup.html">Setup</a>
-</li>
-<li>
-  <a href="hosting.html">Hosting</a>
-</li>
-<li>
-  <a href="structure.html">Structure</a>
-</li>
-<li>
-  <a href="style.html">Style</a>
-</li>
-<li>
-  <a href="git_actions.html">Git Actions</a>
-</li>
-<li>
-  <a href="contact.html">
-    <span class="fa fa-envelope"></span>
+  <a href="index.html">
+    <span class="fa fa-otter"></span>
      
-    Contact
+    Why OTTR?
+  </a>
+</li>
+<li>
+  <a href="getting_started.html">
+    <span class="fa fa-play"></span>
+     
+    Getting Started
+  </a>
+</li>
+<li>
+  <a href="examples.html">
+    <span class="fa fa-lightbulb"></span>
+     
+    OTTR Examples
+  </a>
+</li>
+<li class="dropdown">
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+    <span class="fa fa-palette"></span>
+     
+    Customizing your OTTR repo
+     
+    <span class="caret"></span>
+  </a>
+  <ul class="dropdown-menu" role="menu">
+    <li>
+      <a href="customize-robots.html">
+        <span class="fa fa-robot"></span>
+         
+        Customizing Checks
+      </a>
+    </li>
+    <li>
+      <a href="customize-style.html">
+        <span class="fa fa-palette"></span>
+         
+        Customizing style
+      </a>
+    </li>
+    <li>
+      <a href="customize-docker.html">
+        <span class="fa fa-whale"></span>
+         
+        Customizing Docker
+      </a>
+    </li>
+  </ul>
+</li>
+<li>
+  <a href="faqs.html">
+    <span class="fa fa-question"></span>
+     
+    FAQs
+  </a>
+</li>
+<li>
+  <a href="https://github.com/jhudsl/OTTR_Template">
+    <span class="fa fa-github"></span>
+     
+    GitHub
   </a>
 </li>
       </ul>
@@ -281,28 +400,36 @@ $(document).ready(function () {
 
 
 
-<h1 class="title toc-ignore">Structure</h1>
+<h1 class="title toc-ignore">Examples of OTTR courses</h1>
 
 </div>
 
 
-<div id="title" class="section level2">
-<h2>Title</h2>
-<p>To change the title of the website, modify the <code>name</code> line of the <code>_site.yml</code> file.</p>
-<p><img src="resources/images/title.png" title="Change title" alt="Change title" width="40%" style="display: block; margin: auto;" /></p>
+<div id="ottr-courses" class="section level2">
+<h2>OTTR courses:</h2>
+<div id="documentation-and-usability-course" class="section level3">
+<h3>Documentation and Usability course</h3>
+<ul>
+<li><a href="https://github.com/jhudsl/Documentation_and_Usability">OTTR GitHub repository</a>
+<ul>
+<li><a href="https://jhudatascience.org/Documentation_and_Usability/">Bookdown website</a></li>
+<li><a href="https://leanpub.com/universities/courses/jhu/documentation_and_usability/">Leanpub course</a></li>
+<li><a href="https://www.coursera.org/learn/documentation-usability-cancer-informatics">Coursera course</a></li>
+</ul></li>
+<li><a href="https://jhudatascience.org/Informatics_Research_Leadership/">Leadership for Cancer Informatics Research</a></li>
+<li><a href="https://jhudatascience.org/Reproducibility_in_Cancer_Informatics/">Reproducibility in Cancer Informatics</a></li>
+<li><a href="https://jhudatascience.org/Adv_Reproducibility_in_Cancer_Informatics/">Advanced Reproducibility in Cancer Informatics</a></li>
+</ul>
 </div>
-<div id="modifying-pages" class="section level2">
-<h2>Modifying pages</h2>
-<p>Pages are specified in the navigation bar by the lines that say <code>-text:</code> and <code>href:</code>.</p>
-<p>The <code>-text</code> specifies what the navigation bar will say for that tab.</p>
-<p>The <code>href</code> specifies which rendered Rmd file to use for that tab, it needs to be the html version of this file.</p>
-<p>The tabs are aligned to the left in the order listed.</p>
-<p>You can also add icons to these tabs using <a href="https://fontawesome.com/">font awesome</a> as is shown for the contact page.</p>
-<p><img src="resources/images/page_modification.png" title="Page modification" alt="Page modification" width="40%" style="display: block; margin: auto;" /></p>
+</div>
+<div id="ottr-websites" class="section level2">
+<h2>OTTR websites</h2>
 </div>
 
 
 
+</div>
+</div>
 
 </div>
 
@@ -335,6 +462,35 @@ $(document).ready(function () {
 
 <!-- code folding -->
 
+<script>
+$(document).ready(function ()  {
+
+    // temporarily add toc-ignore selector to headers for the consistency with Pandoc
+    $('.unlisted.unnumbered').addClass('toc-ignore')
+
+    // move toc-ignore selectors from section div to header
+    $('div.section.toc-ignore')
+        .removeClass('toc-ignore')
+        .children('h1,h2,h3,h4,h5').addClass('toc-ignore');
+
+    // establish options
+    var options = {
+      selectors: "h1,h2,h3",
+      theme: "bootstrap3",
+      context: '.toc-content',
+      hashGenerator: function (text) {
+        return text.replace(/[.\\/?&!#<>]/g, '').replace(/\s/g, '_');
+      },
+      ignoreSelector: ".toc-ignore",
+      scrollTo: 0
+    };
+    options.showAndHide = true;
+    options.smoothScroll = true;
+
+    // tocify
+    var toc = $("#TOC").tocify(options).data("toc-tocify");
+});
+</script>
 
 <!-- dynamically load mathjax for compatibility with self-contained -->
 <script>

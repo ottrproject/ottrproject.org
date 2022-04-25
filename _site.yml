@@ -1,24 +1,35 @@
-name: OTTR Template Website
+name: Open-source Tools for Training Resources
 output_dir: '.'
 navbar:
-  title: OTTR Web
+  title: OTTR - Open-source Tools for Training Resources
   left:
-  - text: Home
+  - text: Why OTTR?
     href: index.html
-  - text: Setup
-    href: setup.html   
-  - text: Hosting
-    href: hosting.html   
-  - text: Structure
-    href: structure.html  
-  - text: Style
-    href: style.html
-  - text: Git Actions
-    href: git_actions.html
-  - text: Contact
-    href: contact.html
-    icon: fa-envelope
-
+    icon: fa-otter
+  - text: Getting Started
+    href: getting_started.html
+    icon: fa-play
+  - text: OTTR Examples
+    href: examples.html
+    icon: fa-lightbulb
+  - text: Customizing your OTTR repo
+    icon: fa-palette
+    menu:
+      - text: "Customizing Checks"
+        href: customize-robots.html
+        icon: fa-robot
+      - text: "Customizing style"
+        href: customize-style.html
+        icon: fa-palette
+      - text: "Customizing Docker"
+        href: customize-docker.html
+        icon: fa-whale
+  - text: FAQs
+    href: faqs.html
+    icon: fa-question
+  - text: GitHub
+    href: https://github.com/jhudsl/OTTR_Template
+    icon: fa-github
 
 output:
   html_document:
@@ -27,5 +38,5 @@ output:
     self_contained: no
     highlight: textmate
     css: styles.css
-    # includes:
-    #   in_header: resources/header.html
+    includes:
+      in_header: resources/header.html
