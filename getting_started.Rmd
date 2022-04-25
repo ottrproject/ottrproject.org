@@ -20,7 +20,6 @@ output:
 
 Upon creating your repository, issues for getting your course started will be automatically filed in your repository. Go to `Issues` and you can follow them along to get set up.
 
-
 ### 1. Create a repository from this template
 
 In the upper right of the [landing page for this repository](https://github.com/jhudsl/OTTR_Template/tree/1.8), click the green `Use this template` button and follow the steps to set up your course's GitHub repository.
@@ -130,6 +129,8 @@ When updates are made to files that aren't specific to the course content but in
 
 If your new course doesn't need some of the functionality of these files or you find the automatic updates bothersome, you can feel free to use [this guide](https://github.com/marketplace/actions/repo-file-sync-action#sync-the-same-files-to-multiple-repositories) to tailor which files you want updates for.
 _If you have any questions about the implications of any of these updates or files, please tag `@cansavvy`._
+
+***
 
 ## Start writing content!
 
@@ -282,7 +283,6 @@ For more on [how to review a pull request, see this chapter](https://jhudatascie
 - [GitHub docs about creating a Pull Request](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/creating-a-pull-request)
 - [Making a Pull Request](https://www.atlassian.com/git/tutorials/making-a-pull-request)
 
-
 ## Setting up images
 
 To maintain style and attributions for graphics and images, as well as to enable easy updates in the future, please start a new Google Slide document for your course.
@@ -295,92 +295,11 @@ Each Rmd with images that is a part of your Bookdown needs to have this chunk at
 
 If you are unfamiliar with [how R Markdown code chunks work, read this](https://rmarkdown.rstudio.com/lesson-3.html).
 
+<img src = "resources/images/set_knitr_image_path.png" width = 400>
 
 Next, import the appropriate theme (see [this video](https://youtu.be/pNbwF263yY8) for assistance):
 
 Note that you will need to [change your Google Slide permissions](https://support.google.com/drive/answer/2494893?hl=en&co=GENIE.Platform%3DDesktop) to "Anyone with a link" in order for some functionality to work.
-
-### Themes for non-ITCR projects (JHU users):
-
- - If you are not creating a course as part of a larger collaboration but simply just as a DaSL course, import the theme from this [template](https://docs.google.com/presentation/d/1YmwKdIy9BeQ3EShgZhvtb3MgR8P6iDX4DfFD65W_gdQ/edit?usp=sharing). Once you have done this add a slide with the "Title slide" layout under layouts - and add your course title.
-
- ![](https://docs.google.com/presentation/d/1YmwKdIy9BeQ3EShgZhvtb3MgR8P6iDX4DfFD65W_gdQ/export/png?id=1YmwKdIy9BeQ3EShgZhvtb3MgR8P6iDX4DfFD65W_gdQ&pageid=p)
-
-
- - If you are working on a project (more likely) with the [Johns Hopkins Data Science Lab](http://jhudatascience.org/) than import the theme from this [template](https://docs.google.com/presentation/d/1qa3v_zlNedCKHQ6IYF5MM1ZLZLgHUs0U4usgDRRe3W8/edit?usp=sharing).
-
-Add a title slide and update it with your project's logo.
-
-
-![](https://docs.google.com/presentation/d/1qa3v_zlNedCKHQ6IYF5MM1ZLZLgHUs0U4usgDRRe3W8/export/png?id=1qa3v_zlNedCKHQ6IYF5MM1ZLZLgHUs0U4usgDRRe3W8&pageid=p)
-
-
-In either case:
-
-Be sure to add a terms of use slide to let people know about our licensing.
-
-![](https://docs.google.com/presentation/d/1YmwKdIy9BeQ3EShgZhvtb3MgR8P6iDX4DfFD65W_gdQ/export/png?id=1YmwKdIy9BeQ3EShgZhvtb3MgR8P6iDX4DfFD65W_gdQ&pageid=gcc4fbee202_0_153)
-
-
-For any major point, please select this layout:
-
-![Major_point_layout](https://docs.google.com/presentation/d/1qa3v_zlNedCKHQ6IYF5MM1ZLZLgHUs0U4usgDRRe3W8/export/png?id=1qa3v_zlNedCKHQ6IYF5MM1ZLZLgHUs0U4usgDRRe3W8&pageid=gcf1264c749_0_130)
-
-For itemized lists, please select this layout:
-
-![list_layout](https://docs.google.com/presentation/d/1qa3v_zlNedCKHQ6IYF5MM1ZLZLgHUs0U4usgDRRe3W8/export/png?id=1qa3v_zlNedCKHQ6IYF5MM1ZLZLgHUs0U4usgDRRe3W8&pageid=gcf1264c749_0_135)
-
-Please select the layout that looks like this for any images/content from outside sources:
-
-![source_layout](https://docs.google.com/presentation/d/1qa3v_zlNedCKHQ6IYF5MM1ZLZLgHUs0U4usgDRRe3W8/export/png?id=1qa3v_zlNedCKHQ6IYF5MM1ZLZLgHUs0U4usgDRRe3W8&pageid=gcf1264c749_0_140)
-
-Please update the text at the bottom to describe the source. If it is not from JHU, remove the JHU information.
-
-Also please type text describing the image in the notes section of the slide, this can be used to give visually impaired learners audio explanations of the images.
-
-Once complete, you can incorporate slides into your course using the instructions in the [Adding images and graphics in text](https://github.com/jhudsl/OTTR_Template/wiki/Setting-up-images-and-graphics#adding-images-and-graphics-in-text) below.
-
-
-
-### Themes for ITCR project (nonJHU users and JHU users):
-
- - If you are not part of the [Johns Hopkins Data Science Lab](http://jhudatascience.org/), import the theme from this [template](https://docs.google.com/presentation/d/1lMNTlY8S21cNG4hL6NoOmXYZBQ30BtCQ4UdUJ7J_Wvs/edit?usp=sharing). Once you have done this add a slide with the ITN2 layout - and add your course title and any logos for your organization(s) that may be appropriate like so:
-
- ![](https://docs.google.com/presentation/d/1-7UvgVq5tP1pasTEErUM3bJFH2fU_pilH6i6_81CCXU/export/png?id=1-7UvgVq5tP1pasTEErUM3bJFH2fU_pilH6i6_81CCXU&pageid=p)
-
-Also be sure to add a terms of use slide to let people know what licensing that you have chosen.
-You can use ours (that looks like the slide below) if you like or create your own with a different license.
-
-![](https://docs.google.com/presentation/d/1-7UvgVq5tP1pasTEErUM3bJFH2fU_pilH6i6_81CCXU/export/png?id=1-7UvgVq5tP1pasTEErUM3bJFH2fU_pilH6i6_81CCXU&pageid=gcf0c1d8548_0_157)
-
-
- - If you are part of the [Johns Hopkins Data Science Lab](http://jhudatascience.org/) than import the theme from this [template](https://docs.google.com/presentation/d/1-7UvgVq5tP1pasTEErUM3bJFH2fU_pilH6i6_81CCXU/edit?usp=sharing).
-
-
-Be sure to add a Johns Hopkins terms of use slide.
-
-![Terms of Use](https://docs.google.com/presentation/d/1lMNTlY8S21cNG4hL6NoOmXYZBQ30BtCQ4UdUJ7J_Wvs/export/png?id=1lMNTlY8S21cNG4hL6NoOmXYZBQ30BtCQ4UdUJ7J_Wvs&pageid=gcc48deaeac_0_399)
-
-
-For any major point, please select this layout:
-
-![Major_point_layout](https://docs.google.com/presentation/d/1-7UvgVq5tP1pasTEErUM3bJFH2fU_pilH6i6_81CCXU/export/png?id=1-7UvgVq5tP1pasTEErUM3bJFH2fU_pilH6i6_81CCXU&pageid=gcf0c1d8548_0_136)
-
-For itemized lists, please select this layout:
-
-![list_layout](https://docs.google.com/presentation/d/1-7UvgVq5tP1pasTEErUM3bJFH2fU_pilH6i6_81CCXU/export/png?id=1-7UvgVq5tP1pasTEErUM3bJFH2fU_pilH6i6_81CCXU&pageid=gcf0c1d8548_0_141)
-
-Please select the layout that looks like this for any images/content from outside sources:
-
-![source_layout](https://docs.google.com/presentation/d/1-7UvgVq5tP1pasTEErUM3bJFH2fU_pilH6i6_81CCXU/export/png?id=1-7UvgVq5tP1pasTEErUM3bJFH2fU_pilH6i6_81CCXU&pageid=gcf0c1d8548_0_146)
-
-
-Please update the text at the bottom to describe the source. If it is not from JHU, remove the JHU information.
-
-Also please type text describing the image in the notes section of the slide, this can be used to give visually impaired learners audio explanations of the images.
-
-Once complete, you can incorporate slides into your course using the instructions in the [Adding images and graphics in text](https://github.com/jhudsl/OTTR_Template/wiki/Setting-up-images-and-graphics#adding-images-and-graphics-in-text) below.
-
 
 ### Accessibility
 
@@ -397,9 +316,7 @@ You can check this using [Color Oracle](https://colororacle.org/).
 All images should be included in your Google Slides with the captions we discussed above.
 To add images in the text in your Rmd, use the following function within an [R code chunk](https://bookdown.org/yihui/rmarkdown/r-code.html).
 
-```{r, fig.alt="Alternative text", echo = FALSE, outwidth = "100%"}
-ottrpal::include_slide(<google_slide_url>)
-```
+<img src = "resources/images/include_slide.png" width = 600>
 
 You can obtain the <google_slide_url> by viewing the slide with the image you want to add and copying the address from the browser search bar.
 
@@ -412,10 +329,7 @@ The `echo=FALSE` ensures that the r code is hidden from your course, while the `
 _You must define `fig.alt` in the code chunk options/parameters to pass to `knitr`._
 You can adjust the size(fig.hight, fig.width, out.width, out.height), alignment (fig.align), or caption (fig.cap) of the image you can use these arguments in the code chunk tag:  
 
-
-```{r, fig.alt="Alternative text", fig.height=4, fig.align='center', fig.cap='...'}
-
-
+<img src = "resources/images/header.png" width = 400>
 
 Google Slides must be **public**. Share settings must be set to "Anyone on the internet with this link can view". Note that "Private" is the default setting when you make a new presentation.
 
@@ -440,14 +354,17 @@ Sometimes it is useful to include an embedded version of a website or file on a 
 
 To include such a file or website do the following:
 
+<img src = "resources/images/include_url.png" width = 600>
 
 Again you will need to include `echo = FALSE` to ensure that the code to generate the preview of the website or file is not included in your course material.
+
+<img src = "resources/images/include_url_2.png" width = 600>
 
 If you want to include a file that is not hosted online, consider hosting it on GitHub using the method described for hosting your Bookdown version of the course. See the [Set up GitHub pages](https://github.com/jhudsl/OTTR_Template/wiki/Starting-a-new-course-with-this-template#set-up-github-pages) section.
 
 Then you would do the following, where the url is that of your hosted file:
 
-
+<img src = "resources/images/include_url_3.png" width = 600>
 
 See [Chapter 2](https://github.com/jhudsl/OTTR_Template/blob/main/02-chapter_of_course.Rmd) of the template course for examples.
 
