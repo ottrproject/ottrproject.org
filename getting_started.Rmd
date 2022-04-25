@@ -6,9 +6,9 @@ output:
     toc_float: true
 ---
 
-- Please take a look at the [code of conduct](https://github.com/jhudsl/OTTR_Template/blob/main/code_of_conduct.md).
+## Prerequisites for using OTTR
 
-### Recommended background information
+- Please take a look at the [code of conduct](https://github.com/jhudsl/OTTR_Template/blob/main/code_of_conduct.md).
 
 - If you are not familiar with **Git and Github**, we recommend going through these chapters from our Reproducibility courses for quick orientation:
   - [Why GitHub](https://jhudatascience.org/Reproducibility_in_Cancer_Informatics/making-your-project-open-source-with-github.html)
@@ -20,7 +20,9 @@ output:
 
 Upon creating your repository, issues for getting your course started will be automatically filed in your repository. Go to `Issues` and you can follow them along to get set up.
 
-### Create an OTTR repository
+***
+
+## Starting a new OTTR course
 
 ### 1. Create a repository from this template
 
@@ -134,11 +136,13 @@ _If you have any questions about the implications of any of these updates or fil
 
 ***
 
-## Start writing content!
+## Start writing content
 
-Now you have a course repository on GitHub and you're ready to start editing files.
+Now you have a course repository on GitHub and you're ready to start writing content!
 
-For any set of file changes, its recommended you file a pull request (which [the section below](#getting-started-with-the-github-workflow) will guide you on if you are unfamiliar). Filing a pull request initiates a series of checks done automatically by GitHub actions which will help you as you add content to your course (If you commit directly to the `main` branch, you will not reap the full benefit of these automatic checks).
+For any set of file changes, its recommended you file a pull request (we will guide you on that here if you are unfamiliar).
+OTTR checks center around pull requests so you can avoid accidentally making your mistakes live in your courses.
+When you file a pull request initiates a series of checks done automatically by GitHub actions which will help you as you add content to your course.
 
 These checks will do important things like:
 * Check that the all the urls actually take learners somewhere (`check-urls`)
@@ -147,42 +151,9 @@ These checks will do important things like:
 * Create previews of the rendered versions of the course (`render-preview`)
 * Check the formatting of any quizzes (`check-quizzes`)
 
-You can adjust what checks are run by editing the `config_automation.yml` file. This is further discussed in this section about [the GitHub Actions](./customize-robots.html).
+You can adjust what checks are run by editing the `config_automation.yml` file. This is further discussed in this section about [customizing GitHub Actions](./customize-robots.html).
 
-## File changes to be made
-
-These are a list of changes you'll want to make to get you started. This same list of changes is printed in an issue automatically on your repository for you to follow.
-
-### Files that need edited upon creating a new course.
-
-- [ ] `README.md` - Fill in all the `{ }` and delete the first part of the README that is referring to the OTTR_Template.
-- [ ] `index.Rmd` - `title:` should be updated.
-- [ ] `01-intro.Rmd` - replace the information there with information pertinent to this new course.
-- [ ] `02-chapter_of_course.Rmd` - This Rmd has examples of how to set things up, if you don't need it as a reference, it can be deleted.
-
-### Files that need to be edited upon adding each new chapter (including upon creating a new course):
-
-- [ ] `_bookdown.yml` - The list of Rmd files that need to be rendered needs to be updated. See [instructions](https://github.com/jhudsl/OTTR_Template/wiki/Publishing-with-Bookdown).
-- [ ] `book.bib` - any citations need to be added. See [instructions](https://github.com/jhudsl/OTTR_Template/wiki/Citations).
-
-### Files that need to be edited upon adding new packages that the book's code uses:
-
-- If your course will require additional packages, `docker/Dockerfile` needs to have the new package added so it will be installed. See [instructions](https://github.com/jhudsl/OTTR_Template/wiki/Using-Docker#starting-a-new-docker-image) for more on this.
-
-### Picking a style
-
-See more [about customizing style on this page in the guide](https://github.com/jhudsl/OTTR_Template/wiki/Change-Title-&-Customize-style).
-By default this course template will use the jhudsl data science lab style. However, you can customize and switch this to another style set.
-
-#### Using a style set
-
-[Read more about the style sets here](https://github.com/jhudsl/OTTR_Template/wiki/Change-Title-and-style#customizing-the-style).
-
-- [ ] On a new branch, copy the `style-sets/<set-name>/index.Rmd` and `style-sets/<set-name>/_output.yml` to the top of the repository to overwrite the default `index.Rmd` and `_output.yml`.
-- [ ] Copy over all the files in the `style-sets/<set-name>/copy-to-assets` to the `assets` folder in the top of the repository.
-- [ ] [Create a pull request](https://github.com/jhudsl/OTTR_Template/wiki/About-pull-request-review) with these changes, and double check the rendered preview to make sure that the style is what you are looking for.
-
-## Getting started with the Github workflow
+## GitHub quick start
 
 If you do not have a method of working with Git already it is recommended you use a git client to help you manage your branches more easily. Install [GitKraken](https://www.gitkraken.com/) for a handy way to manage your course locally. These steps shown here will show you the GitKraken way of handling files.
 
@@ -252,7 +223,7 @@ Now we can open up a pull request if we go to our GitHub repository on GitHub.
 
 After you click on `Compare & pull request` you'll be taken to a screen where you can add information about your changes. After you are done writing your description, click `Create Pull Request`! (If you don't have your pull request description _perfect_ don't worry about it, you can always edit it later).
 
-Congrats! You've just opened a pull request!
+Congrats! You've just opened a pull request! For every set of changes you'll make to your course, you will want to follow this similar set of steps.
 
 ### Checks on the pull requests
 
@@ -285,9 +256,11 @@ For more on [how to review a pull request, see this chapter](https://jhudatascie
 - [GitHub docs about creating a Pull Request](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/creating-a-pull-request)
 - [Making a Pull Request](https://www.atlassian.com/git/tutorials/making-a-pull-request)
 
-## Set up images!
+***
 
-To maintain style and attributions for graphics and images, as well as to enable easy updates in the future, please start a new Google Slide document for your course.
+## Set up images
+
+To maintain style and attributions for graphics and images, as well as to enable easy updates in the future, please start a new Google Slide document for your OTTR course.
 
 **Important:** :warning: Your Google Slide document must be set to `Anyone with a link`. See [this article for more details.](https://support.wix.com/en/article/setting-permissions-for-google-drive-files-and-folders#:~:text=Settings%20Permissions%20for%20a%20Google,edit%20and%20comment%20as%20well.) The renders will fail if this is not set!
 
@@ -369,11 +342,3 @@ Then you would do the following, where the url is that of your hosted file:
 <img src = "resources/images/include_url_3.png" width = 600>
 
 See [Chapter 2](https://github.com/jhudsl/OTTR_Template/blob/main/02-chapter_of_course.Rmd) of the template course for examples.
-
-### Learning Objectives Formatting
-
-Each chapter should start with Learning objectives!
-You can use [this website](https://eclearn.emmanuel.edu/courses/1285497/pages/how-to-write-measurable-learning-objectives/) to help you craft learning objectives.
-
-Learning objectives should be stated both in the slides and in the beginning of each bookdown chapter.
-Because of this, you may find it most handy to use the [`List layout`](https://docs.google.com/presentation/d/1-7UvgVq5tP1pasTEErUM3bJFH2fU_pilH6i6_81CCXU/export/png?id=1-7UvgVq5tP1pasTEErUM3bJFH2fU_pilH6i6_81CCXU&pageid=gcf0c1d8548_0_141) slide for stating your Learning objectives and then embed that in the book from your GoogleSlides [the instructions here](https://github.com/jhudsl/OTTR_Template/wiki/Setting-up-images-and-graphics#adding-images-and-graphics-in-text).

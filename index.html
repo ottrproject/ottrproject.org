@@ -16,7 +16,7 @@
 <script src="site_libs/header-attrs-2.10/header-attrs.js"></script>
 <script src="site_libs/jquery-1.11.3/jquery.min.js"></script>
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<link href="site_libs/bootstrap-3.3.5/css/cosmo.min.css" rel="stylesheet" />
+<link href="site_libs/bootstrap-3.3.5/css/flatly.min.css" rel="stylesheet" />
 <script src="site_libs/bootstrap-3.3.5/js/bootstrap.min.js"></script>
 <script src="site_libs/bootstrap-3.3.5/shim/html5shiv.min.js"></script>
 <script src="site_libs/bootstrap-3.3.5/shim/respond.min.js"></script>
@@ -34,7 +34,6 @@
 <script src="site_libs/highlightjs-9.12.0/highlight.js"></script>
 <link href="site_libs/font-awesome-5.1.0/css/all.css" rel="stylesheet" />
 <link href="site_libs/font-awesome-5.1.0/css/v4-shims.css" rel="stylesheet" />
-<link rel="shortcut icon" href="resources/images/otter-solid.ico" />
 
 <style type="text/css">
   code{white-space: pre-wrap;}
@@ -60,7 +59,7 @@ if (window.hljs) {
 
 
 
-<link rel="stylesheet" href="styles.css" type="text/css" />
+<link rel="stylesheet" href="assets/styles.css" type="text/css" />
 
 
 
@@ -252,12 +251,51 @@ $(document).ready(function () {
     Why OTTR?
   </a>
 </li>
-<li>
-  <a href="getting_started.html">
+<li class="dropdown">
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
     <span class="fa fa-play"></span>
      
     Getting Started
+     
+    <span class="caret"></span>
   </a>
+  <ul class="dropdown-menu" role="menu">
+    <li>
+      <a href="getting_started.html#recommended-background-information">
+        <span class="fa fa-hammer"></span>
+         
+        Prerequisites
+      </a>
+    </li>
+    <li>
+      <a href="getting_started.html#starting-a-new-ottr-course">
+        <span class="fa fa-flag-checkered"></span>
+         
+        Starting a new OTTR course
+      </a>
+    </li>
+    <li>
+      <a href="getting_started.html#start-writing-content">
+        <span class="fa fa-file"></span>
+         
+        Start writing content
+      </a>
+    </li>
+    <li>
+      <a href="getting_started.html#gitHub-quick-start">
+        <span class="fa fa-github"></span>
+         
+        GitHub quick start
+      </a>
+    </li>
+    <li>
+      <a href="getting_started.html#set-up-images">
+        <span class="fa fa-images"></span>
+         
+        Set up images
+      </a>
+    </li>
+  </ul>
 </li>
 <li>
   <a href="examples.html">
@@ -300,7 +338,7 @@ $(document).ready(function () {
 </li>
 <li>
   <a href="faqs.html">
-    <span class="fa fa-question"></span>
+    <span class="fa fa-bug"></span>
      
     FAQs
   </a>
@@ -346,12 +384,25 @@ $(document).ready(function () {
 </li>
 <li>Use <a href="https://hub.docker.com/repository/docker/jhudsl/course_template">our Docker image</a> for consistency across authors as well as to help you <a href="https://en.wikipedia.org/wiki/Dependency_hell">avoid dependency hell</a>.
 <ul>
-<li>OR, customize your own Docker image</li>
+<li>Or, <a href="./customize-docker.html">customize your own Docker image</a><br />
+</li>
 </ul></li>
+<li>Follow our guides to <a href="./customize-style.html">customize the style of your course</a> to show your own branding.</li>
 </ul>
-<p>* 📝 <a href="https://arxiv.org/abs/2203.07083">See the OTTR pre-print here!</a></p>
+<p>📝 <a href="https://arxiv.org/abs/2203.07083">See the OTTR pre-print here!</a></p>
 <p>Go to <a href="./getting_started.html">Getting Started</a> to get started!</p>
 
+<hr>
+<center>
+  <div class="footer">
+    <img src="resources/images/ottr-mascot.png" width=50>
+    <br>
+    Your feedback is greatly appreciated! You can fill out <a href="https://forms.gle/jvFjnhqt5V1E9LbQ9">this form </a>
+    <br>
+    or <a href="https://github.com/jhudsl/OTTR_Template/issues/new/choose">file a GitHub issue</a>.
+      <br>
+  </div>
+</center>
 
 
 

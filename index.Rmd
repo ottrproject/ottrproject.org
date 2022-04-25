@@ -16,8 +16,9 @@ OTTR is a set of tools and documentation to make course publishing maintenance a
 - Have [Github action robots](./getting_started.html) do your repetitive tasks like spell check and re-rendering.
 - Use automagic conversion to ease the lift of prepping the material for different platforms' formats.  
 - Use [our Docker image](https://hub.docker.com/repository/docker/jhudsl/course_template) for consistency across authors as well as to help you [avoid dependency hell](https://en.wikipedia.org/wiki/Dependency_hell).  
-  - OR, customize your own Docker image  
+  - Or, [customize your own Docker image](./customize-docker.html)  
+- Follow our guides to [customize the style of your course](./customize-style.html) to show your own branding.
 
-\*  📝 [See the OTTR pre-print here!](https://arxiv.org/abs/2203.07083)
+📝 [See the OTTR pre-print here!](https://arxiv.org/abs/2203.07083)
 
 Go to [Getting Started](./getting_started.html) to get started!
