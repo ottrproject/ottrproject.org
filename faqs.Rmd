@@ -1,14 +1,9 @@
 ---
-title: "FAQs and common errors"
 output:
   html_document:
     toc: true
     toc_float: true
 ---
-
-## FAQs
-
-
 
 ## Most common errors
 
