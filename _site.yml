@@ -1,8 +1,9 @@
 name: Open-source Tools for Training Resources
 output_dir: '.'
 navbar:
-  title: OTTR - Open-source Tools for Training Resources
+  title: <img src="resources/images/basic_otter_circle.PNG" width=80> OTTR - Open-source Tools for Training Resources <br>
   left:
+    margin-top: 50px
   - text: Why OTTR?
     href: index.html
     icon: fa-otter
@@ -50,7 +51,6 @@ navbar:
 
 output:
   html_document:
-    theme: flatly
     lib_dir: site_libs
     self_contained: no
     highlight: textmate
