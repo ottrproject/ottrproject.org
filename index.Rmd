@@ -36,12 +36,12 @@ Simplify publishing steps:
 Customize for your own needs:  
 </div>
 - Follow our guides to [customize the style of your course](./customize-style.html) to show your own branding.
-  - [Customize your own Docker image](./customize-docker.html)  
+- [Customize your own Docker image](./customize-docker.html) for your particular needs. 
 
 <div class = "banner_color">
 Learn more!  
 </div>
  - [See the OTTR pre-print here!](https://arxiv.org/abs/2203.07083)📝👀
 
-Ready to try OTTR?
-Click [here](./getting_started.html)!
+**Want to try OTTR?**
+Click [Getting Started](./getting_started.html)!
