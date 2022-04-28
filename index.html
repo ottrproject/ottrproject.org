@@ -11,9 +11,9 @@
 
 
 
-<title>Why use OTTR?</title>
+<title>OTTR: Open-source Tools for Training Resources</title>
 
-<script src="site_libs/header-attrs-2.13/header-attrs.js"></script>
+<script src="site_libs/header-attrs-2.11/header-attrs.js"></script>
 <script src="site_libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <link href="site_libs/bootstrap-3.3.5/css/bootstrap.min.css" rel="stylesheet" />
@@ -30,12 +30,11 @@
        code {color: inherit; background-color: rgba(0, 0, 0, 0.04);}
        pre:not([class]) { background-color: white }</style>
 <script src="site_libs/navigation-1.1/tabsets.js"></script>
-<link href="site_libs/highlightjs-9.12.0/textmate.css" rel="stylesheet" />
+<link href="site_libs/highlightjs-9.12.0/default.css" rel="stylesheet" />
 <script src="site_libs/highlightjs-9.12.0/highlight.js"></script>
 <link href="site_libs/font-awesome-5.1.0/css/all.css" rel="stylesheet" />
 <link href="site_libs/font-awesome-5.1.0/css/v4-shims.css" rel="stylesheet" />
 <link rel="shortcut icon" href="resources/images/basic_otter_water.ico" />
-<img src="resources/images/basic_otter_circle.PNG" width=80>
 
 <style type="text/css">
   code{white-space: pre-wrap;}
@@ -61,8 +60,7 @@ if (window.hljs) {
 
 
 
-
-<link rel="stylesheet" href="assets/styles.css" type="text/css" />
+<link rel="stylesheet" href="style.css" type="text/css" />
 
 
 
@@ -86,9 +84,6 @@ button.code-folding-btn:focus {
 }
 summary {
   display: list-item;
-}
-details > summary > p:only-child {
-  display: inline;
 }
 pre code {
   padding: 0;
@@ -241,24 +236,26 @@ $(document).ready(function () {
 <div class="navbar navbar-default  navbar-fixed-top" role="navigation">
   <div class="container">
     <div class="navbar-header">
-      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-bs-toggle="collapse" data-target="#navbar" data-bs-target="#navbar">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar">
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <a class="navbar-brand" href="index.html"><img src="resources/images/basic_otter_circle.PNG" width=80> OTTR - Open-source Tools for Training Resources <br></a>
+      <a class="navbar-brand" href="index.html">OTTR <br>
+<img src="resources/images/basic_otter_circle.PNG" width=90>
+</a>
     </div>
     <div id="navbar" class="navbar-collapse collapse">
       <ul class="nav navbar-nav">
         <li>
   <a href="index.html">
-    <span class="fa fa-otter"></span>
+    <span class="fa fa-home"></span>
      
-    Why OTTR?
+    About OTTR
   </a>
 </li>
 <li class="dropdown">
-  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
     <span class="fa fa-play"></span>
      
     Getting Started
@@ -311,10 +308,10 @@ $(document).ready(function () {
   </a>
 </li>
 <li class="dropdown">
-  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
     <span class="fa fa-palette"></span>
      
-    Customizing your OTTR repo
+    Customization
      
     <span class="caret"></span>
   </a>
@@ -344,9 +341,9 @@ $(document).ready(function () {
 </li>
 <li>
   <a href="faqs.html">
-    <span class="fa fa-bug"></span>
+    <span class="fa fa-handshake"></span>
      
-    FAQs
+    Help
   </a>
 </li>
 <li>
@@ -354,6 +351,13 @@ $(document).ready(function () {
     <span class="fa fa-github"></span>
      
     GitHub
+  </a>
+</li>
+<li>
+  <a href="https://forms.gle/jvFjnhqt5V1E9LbQ9">
+    <span class="fa fa-comment"></span>
+     
+    Feedback
   </a>
 </li>
       </ul>
@@ -368,35 +372,51 @@ $(document).ready(function () {
 
 
 
-<h1 class="title toc-ignore">Why use OTTR?</h1>
+<h1 class="title toc-ignore">OTTR: Open-source Tools for Training Resources</h1>
 
 </div>
 
 
-<p>OTTR is a set of tools and documentation to make course publishing maintenance across multiple different platforms <em>less painful</em>.</p>
-<p><img src = "https://github.com/jhudsl/OTTR_Template/raw/main/resources/screenshots/OTTR_Robot_Image.png" width = 400></p>
+<div class="banner_color">
+<p>OTTR makes publishing and maintaining courses on multiple platforms <em>less painful</em>!</p>
+</div>
+<p><br></p>
+<p><img src="https://github.com/jhudsl/OTTR_Template/raw/main/resources/screenshots/OTTR_Robot_Image.png" title="OTTR provides tools for customized spell check, checks for broken urls, checks for formmating, and tools to convert and render files to be compatible across publishing platforms to allow you to publish on  bookdown, Leanpub, and coursera more easily" alt="OTTR provides tools for customized spell check, checks for broken urls, checks for formmating, and tools to convert and render files to be compatible across publishing platforms to allow you to publish on  bookdown, Leanpub, and coursera more easily" width="400" style="display: block; margin: auto;" /></p>
+<div class="banner_color">
+<p>Write 1 time ➡️ publish 3 times!</p>
+</div>
 <ul>
 <li>Edit and write a course in <a href="https://rmarkdown.rstudio.com/">R Markdown files</a> and have it published to multiple different platforms:
 <ul>
+<li><a href="https://bookdown.org/">Bookdown</a></li>
 <li><a href="https://leanpub.com/bookstore?type=course">Leanpub</a><br />
-</li>
-<li><a href="https://bookdown.org/">Bookdown</a><br />
 </li>
 <li><a href="https://www.coursera.org/">Coursera</a><br />
 </li>
 </ul></li>
-<li>Have <a href="./getting_started.html">Github action robots</a> do your repetitive tasks like spell check and re-rendering.</li>
-<li>Use automagic conversion to ease the lift of prepping the material for different platforms’ formats.<br />
-</li>
-<li>Use <a href="https://hub.docker.com/repository/docker/jhudsl/course_template">our Docker image</a> for consistency across authors as well as to help you <a href="https://en.wikipedia.org/wiki/Dependency_hell">avoid dependency hell</a>.
-<ul>
-<li>Or, <a href="./customize-docker.html">customize your own Docker image</a><br />
-</li>
-</ul></li>
-<li>Follow our guides to <a href="./customize-style.html">customize the style of your course</a> to show your own branding.</li>
+<li>Use automagic conversion to ease the lift of prepping the material for different platforms. <br></li>
 </ul>
-<p>📝 <a href="https://arxiv.org/abs/2203.07083">See the OTTR pre-print here!</a></p>
-<p>Go to <a href="./getting_started.html">Getting Started</a> to get started!</p>
+<div class="banner_color">
+<p>Simplify publishing steps:</p>
+</div>
+<ul>
+<li>Have <a href="./getting_started.html">Github action robots</a> do your repetitive tasks like spell check and re-rendering.</li>
+<li>If you plan to include code, use <a href="https://hub.docker.com/repository/docker/jhudsl/course_template">our Docker image</a> for consistency across authors as well as to help you <a href="https://en.wikipedia.org/wiki/Dependency_hell">avoid dependency hell</a>.</li>
+</ul>
+<div class="banner_color">
+<p>Customize for your own needs:</p>
+</div>
+<ul>
+<li>Follow our guides to <a href="./customize-style.html">customize the style of your course</a> to show your own branding.</li>
+<li><a href="./customize-docker.html">Customize your own Docker image</a> for your particular needs.</li>
+</ul>
+<div class="banner_color">
+<p>Learn more!</p>
+</div>
+<ul>
+<li><a href="https://arxiv.org/abs/2203.07083">See the OTTR pre-print here!</a>📝👀</li>
+</ul>
+<p><strong>Want to try OTTR?</strong> Click <a href="./getting_started.html">Getting Started</a>!</p>
 
 <hr>
 <center>
@@ -407,6 +427,8 @@ $(document).ready(function () {
     <br>
     or <a href="https://github.com/jhudsl/OTTR_Template/issues/new/choose">file a GitHub issue</a>.
       <br>
+    <br><font size="1">Otter images by <a href = https://www.linkedin.com/in/jimin-hwang-549835142/>Jimin Hwang</a>.</font>
+    <br>
   </div>
 </center>
 

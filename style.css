@@ -1,15 +1,27 @@
 
 /* To add some space below the navigation bar */
 
- body {
-  margin-top: 50px;
+.navbar {
+    height: 15%;
+    width: 9.35%;
+    background-color: #aaf0d1
+    color: #000000;
+}
+
+body {
+  margin-top: 50x;
+  font-family: Verdana;
+  font-size: 15px;
+  line-height: 20px;
+  color: #656566; <----
+  background-color: #262528;
 }
 
 
 /* add some color - if you want color behind a major point on your website */
 
 .banner_color {
-  background-color: lightblue;
+  background-color: #aaf0d1;
   font-weight:bold;
 
 }
