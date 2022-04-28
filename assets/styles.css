@@ -14,6 +14,14 @@
 
 }
 
+.banner_mono {
+  background-color: #6fa8dc;
+  font-weight:bold;
+  color:#ffd966;
+  text-align: center;
+
+}
+
 /* Style buttons - if you want some text centered and bolded */
 
 .center {

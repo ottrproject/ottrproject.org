@@ -1,7 +1,7 @@
 name: Open-source Tools for Training Resources
 output_dir: '.'
 navbar:
-  title: <img src="resources/images/basic_otter_circle.PNG" width=100>
+  title: <img src="resources/images/basic_otter_circle.PNG" width=70>
   left:
   - text: About OTTR
     href: index.html
