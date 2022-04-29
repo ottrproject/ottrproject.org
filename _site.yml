@@ -1,11 +1,13 @@
 name: Open-source Tools for Training Resources
 output_dir: '.'
 navbar:
-  title: OTTR - Open-source Tools for Training Resources
+  title: |
+    OTTR <br>
+    <img src="resources/images/basic_otter_circle.PNG" width=90>
   left:
-  - text: Why OTTR?
+  - text: About OTTR
     href: index.html
-    icon: fa-otter
+    icon: fa-home
   - text: Getting Started
     href: getting_started.html
     icon: fa-play
@@ -28,7 +30,7 @@ navbar:
   - text: OTTR Examples
     href: examples.html
     icon: fa-lightbulb
-  - text: Customizing your OTTR repo
+  - text: Customization
     icon: fa-palette
     href: customizing.html
     menu:
@@ -41,19 +43,19 @@ navbar:
       - text: "Customizing Docker"
         href: customize-docker.html
         icon: fa-gears
-  - text: FAQs
+  - text: Help
     href: faqs.html
-    icon: fa-bug
+    icon: fa-handshake
   - text: GitHub
     href: https://github.com/jhudsl/OTTR_Template
     icon: fa-github
+  - text: Feedback
+    icon: fa-comment
+    href: https://forms.gle/jvFjnhqt5V1E9LbQ9
 
 output:
   html_document:
-    theme: flatly
-    lib_dir: site_libs
-    self_contained: no
-    highlight: textmate
-    css: assets/styles.css
+    css: style.css
     includes:
+      in_header: resources/header.html
       after_body: resources/footer.html

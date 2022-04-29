@@ -1,24 +1,47 @@
 ---
-title: "Why use OTTR?"
+title: "OTTR: Open-source Tools for Training Resources"
 output:
   html_document
 ---
 
-OTTR is a set of tools and documentation to make course publishing maintenance across multiple different platforms _less painful_.  
+<div class = "banner_color">
+OTTR makes publishing and maintaining courses on multiple platforms _less painful_!  
+</div>
 
+<br>
 
-<img src = "https://github.com/jhudsl/OTTR_Template/raw/main/resources/screenshots/OTTR_Robot_Image.png" width = 400>
+```{r, fig.align='center', fig.alt= "OTTR provides tools for customized spell check, checks for broken urls, checks for formmating, and tools to convert and render files to be compatible across publishing platforms to allow you to publish on  bookdown, Leanpub, and coursera more easily", echo = FALSE, out.width= "400"}
+knitr::include_graphics("https://github.com/jhudsl/OTTR_Template/raw/main/resources/screenshots/OTTR_Robot_Image.png")
+```
+
+<div class = "banner_color">
+Write 1 time ➡️ publish 3 times!  
+</div>
 
 - Edit and write a course in [R Markdown files](https://rmarkdown.rstudio.com/) and have it published to multiple different platforms:  
+  - [Bookdown](https://bookdown.org/) 
   - [Leanpub](https://leanpub.com/bookstore?type=course)  
-  - [Bookdown](https://bookdown.org/)  
   - [Coursera](https://www.coursera.org/)  
+- Use automagic conversion to ease the lift of prepping the material for different platforms.
+<br>
+
+<div class = "banner_color">
+Simplify publishing steps:  
+</div>
+
 - Have [Github action robots](./getting_started.html) do your repetitive tasks like spell check and re-rendering.
-- Use automagic conversion to ease the lift of prepping the material for different platforms' formats.  
-- Use [our Docker image](https://hub.docker.com/repository/docker/jhudsl/course_template) for consistency across authors as well as to help you [avoid dependency hell](https://en.wikipedia.org/wiki/Dependency_hell).  
-  - Or, [customize your own Docker image](./customize-docker.html)  
+- If you plan to include code, use [our Docker image](https://hub.docker.com/repository/docker/jhudsl/course_template) for consistency across authors as well as to help you [avoid dependency hell](https://en.wikipedia.org/wiki/Dependency_hell).  
+
+<div class = "banner_color">
+Customize for your own needs:  
+</div>
 - Follow our guides to [customize the style of your course](./customize-style.html) to show your own branding.
+- [Customize your own Docker image](./customize-docker.html) for your particular needs. 
 
-📝 [See the OTTR pre-print here!](https://arxiv.org/abs/2203.07083)
+<div class = "banner_color">
+Learn more!  
+</div>
+ - [See the OTTR pre-print here!](https://arxiv.org/abs/2203.07083)📝👀
 
-Go to [Getting Started](./getting_started.html) to get started!
+**Want to try OTTR?**
+Click [Getting Started](./getting_started.html)!
