@@ -18,13 +18,33 @@
 }
 
 
+/*@media (min-width: 768px)
+{
+    .navbar-header
+    {
+        float: none;
+    }
+
+    .navbar-toggle
+   {
+        display: block;
+    }
+
+    .navbar-collapse.collapse
+    {
+        display: none !important;
+    }
+*/}
+
+
+
 
 
 
 body {
   margin-top: 20px;
   font-family: Verdana;
-  font-size: 15px;
+  font-size: 14px;
   line-height: 20px;
   color: #656566; <----
   background-color: #262528;
