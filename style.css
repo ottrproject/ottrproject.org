@@ -1,6 +1,24 @@
 
 /* To add some space below the navigation bar */
 
+@media (min-width: 768px)
+{
+    .navbar-header
+    {
+        float: none;
+    }
+
+    .navbar-toggle
+    {
+        display: block;
+    }
+
+    .navbar-collapse.collapse
+    {
+        display: none !important;
+    }
+}
+
 .navbar-brand {
   background: url('https://github.com/jhudsl/ottr-website/raw/main/resources/images/basic_otter_water.PNG') center / contain no-repeat;
   width: 100px;
@@ -10,7 +28,7 @@
 body {
   margin-top: 10x;
   font-family: Verdana;
-  font-size: 15px;
+  font-size: 14px;
   line-height: 20px;
   color: #656566; <----
   background-color: #262528;
