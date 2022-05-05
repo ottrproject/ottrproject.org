@@ -1,14 +1,28 @@
 
 /* To add some space below the navigation bar */
+.navbar {
+  padding-right: 20px;
+  padding-left: 200px;
+  height:100px;
+  position: fixed;
+  background-color: #f8f8f8;
+}
 
 .navbar-brand {
   background: url('https://github.com/jhudsl/ottr-website/raw/main/resources/images/basic_otter_water.PNG') center / contain no-repeat;
-  width: 100px;
+  width: 200px;
+  height: 100px;
   background-color: #aaf0d1;
+  position: absolute;
+  left: 0%;
 }
 
+
+
+
+
 body {
-  margin-top: 10x;
+  margin-top: 20px;
   font-family: Verdana;
   font-size: 15px;
   line-height: 20px;
