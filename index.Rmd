@@ -5,6 +5,9 @@ output:
     toc: true
     toc_float: true
 ---
+<div class = "banner_color">
+  <br>           
+</div>
 
 ## Why OTTR?
 
