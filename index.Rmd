@@ -1,8 +1,15 @@
 ---
 title: "OTTR: Open-source Tools for Training Resources"
 output:
-  html_document
+  html_document:
+    toc: true
+    toc_float: true
 ---
+<div class = "banner_color">
+  <br>           
+</div>
+
+## Why OTTR?
 
 <div class = "banner_color">
 OTTR makes publishing and maintaining courses on multiple platforms _less painful_!  
@@ -19,7 +26,7 @@ Write 1 time ➡️ publish 3 times!
 </div>
 
 - Edit and write a course in [R Markdown files](https://rmarkdown.rstudio.com/) and have it published to multiple different platforms:  
-  - [Bookdown](https://bookdown.org/) 
+  - [Bookdown](https://bookdown.org/)
   - [Leanpub](https://leanpub.com/bookstore?type=course)  
   - [Coursera](https://www.coursera.org/)  
 - Use automagic conversion to ease the lift of prepping the material for different platforms.
@@ -36,12 +43,28 @@ Simplify publishing steps:
 Customize for your own needs:  
 </div>
 - Follow our guides to [customize the style of your course](./customize-style.html) to show your own branding.
-- [Customize your own Docker image](./customize-docker.html) for your particular needs. 
+- [Customize your own Docker image](./customize-docker.html) for your particular needs.
 
-<div class = "banner_color">
-Learn more!  
-</div>
- - [See the OTTR pre-print here!](https://arxiv.org/abs/2203.07083)📝👀
+## Want to try OTTR?
 
-**Want to try OTTR?**
 Click [Getting Started](./getting_started.html)!
+
+## How to Cite OTTR
+
+OTTR was created by members of the [Johns Hopkins Data Science Lab](https://jhudatascience.org/index.html) and [Carnegie Institution](https://carnegiescience.edu/).
+
+**[See the OTTR pre-print here!](https://arxiv.org/abs/2203.07083)📝👀**
+
+Here's the BibTeX formatted citation for the pre-print:
+```
+@misc{https://doi.org/10.48550/arxiv.2203.07083,
+  doi = {10.48550/ARXIV.2203.07083},
+  url = {https://arxiv.org/abs/2203.07083},
+  author = {Savonen, Candace and Wright, Carrie and Hoffman, Ava M. and Muschelli, John and Cox, Katherine and Tan, Frederick J. and Leek, Jeffrey T.},
+  keywords = {Computers and Society (cs.CY), FOS: Computer and information sciences, FOS: Computer and information sciences},
+  title = {Open-source Tools for Training Resources -- OTTR},
+  publisher = {arXiv},
+  year = {2022},
+  copyright = {Creative Commons Attribution 4.0 International}
+}
+```
