@@ -29,6 +29,9 @@
        h6 {font-size: 12px;}
        code {color: inherit; background-color: rgba(0, 0, 0, 0.04);}
        pre:not([class]) { background-color: white }</style>
+<script src="site_libs/jqueryui-1.11.4/jquery-ui.min.js"></script>
+<link href="site_libs/tocify-1.9.1/jquery.tocify.css" rel="stylesheet" />
+<script src="site_libs/tocify-1.9.1/jquery.tocify.js"></script>
 <script src="site_libs/navigation-1.1/tabsets.js"></script>
 <link href="site_libs/highlightjs-9.12.0/default.css" rel="stylesheet" />
 <script src="site_libs/highlightjs-9.12.0/highlight.js"></script>
@@ -222,6 +225,69 @@ $(document).ready(function () {
 
 
 
+<style type="text/css">
+
+#TOC {
+  margin: 25px 0px 20px 0px;
+}
+@media (max-width: 768px) {
+#TOC {
+  position: relative;
+  width: 100%;
+}
+}
+
+@media print {
+.toc-content {
+  /* see https://github.com/w3c/csswg-drafts/issues/4434 */
+  float: right;
+}
+}
+
+.toc-content {
+  padding-left: 30px;
+  padding-right: 40px;
+}
+
+div.main-container {
+  max-width: 1200px;
+}
+
+div.tocify {
+  width: 20%;
+  max-width: 260px;
+  max-height: 85%;
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+  div.tocify {
+    width: 25%;
+  }
+}
+
+@media (max-width: 767px) {
+  div.tocify {
+    width: 100%;
+    max-width: none;
+  }
+}
+
+.tocify ul, .tocify li {
+  line-height: 20px;
+}
+
+.tocify-subheader .tocify-item {
+  font-size: 0.90em;
+}
+
+.tocify .list-group-item {
+  border-radius: 0px;
+}
+
+
+</style>
+
+
 
 </head>
 
@@ -229,6 +295,16 @@ $(document).ready(function () {
 
 
 <div class="container-fluid main-container">
+
+
+<!-- setup 3col/9col grid for toc_float and main content  -->
+<div class="row">
+<div class="col-xs-12 col-sm-4 col-md-3">
+<div id="TOC" class="tocify">
+</div>
+</div>
+
+<div class="toc-content col-xs-12 col-sm-8 col-md-9">
 
 
 
@@ -376,6 +452,11 @@ $(document).ready(function () {
 
 
 <div class="banner_color">
+<p><br></p>
+</div>
+<div id="why-ottr" class="section level2">
+<h2>Why OTTR?</h2>
+<div class="banner_color">
 <p>OTTR makes publishing and maintaining courses on multiple platforms <em>less painful</em>!</p>
 </div>
 <p><br></p>
@@ -408,18 +489,32 @@ $(document).ready(function () {
 <li>Follow our guides to <a href="./customize-style.html">customize the style of your course</a> to show your own branding.</li>
 <li><a href="./customize-docker.html">Customize your own Docker image</a> for your particular needs.</li>
 </ul>
-<div class="banner_color">
-<p>Learn more!</p>
 </div>
-<ul>
-<li><a href="https://arxiv.org/abs/2203.07083">See the OTTR pre-print here!</a>📝👀</li>
-</ul>
-<p><strong>Want to try OTTR?</strong> Click <a href="./getting_started.html">Getting Started</a>!</p>
+<div id="want-to-try-ottr" class="section level2">
+<h2>Want to try OTTR?</h2>
+<p>Click <a href="./getting_started.html">Getting Started</a>!</p>
+</div>
+<div id="how-to-cite-ottr" class="section level2">
+<h2>How to Cite OTTR</h2>
+<p>OTTR was created by members of the <a href="https://jhudatascience.org/index.html">Johns Hopkins Data Science Lab</a> and <a href="https://carnegiescience.edu/">Carnegie Institution</a>.</p>
+<p><strong><a href="https://arxiv.org/abs/2203.07083">See the OTTR pre-print here!</a>📝👀</strong></p>
+<p>Here’s the BibTeX formatted citation for the pre-print:</p>
+<pre><code>@misc{https://doi.org/10.48550/arxiv.2203.07083,
+  doi = {10.48550/ARXIV.2203.07083},
+  url = {https://arxiv.org/abs/2203.07083},
+  author = {Savonen, Candace and Wright, Carrie and Hoffman, Ava M. and Muschelli, John and Cox, Katherine and Tan, Frederick J. and Leek, Jeffrey T.},
+  keywords = {Computers and Society (cs.CY), FOS: Computer and information sciences, FOS: Computer and information sciences},
+  title = {Open-source Tools for Training Resources -- OTTR},
+  publisher = {arXiv},
+  year = {2022},
+  copyright = {Creative Commons Attribution 4.0 International}
+}</code></pre>
+</div>
 
 <hr>
 <center>
   <div class="footer">
-    <img src="resources/images/basic_otter_circle.PNG" width=80>    
+    <img src="resources/images/basic_otter_circle.PNG" width=120>    
     <br>
     Your feedback is greatly appreciated! You can fill out <a href="https://forms.gle/jvFjnhqt5V1E9LbQ9">this form </a>
     <br>
@@ -431,6 +526,8 @@ $(document).ready(function () {
 </center>
 
 
+</div>
+</div>
 
 </div>
 
@@ -463,6 +560,35 @@ $(document).ready(function () {
 
 <!-- code folding -->
 
+<script>
+$(document).ready(function ()  {
+
+    // temporarily add toc-ignore selector to headers for the consistency with Pandoc
+    $('.unlisted.unnumbered').addClass('toc-ignore')
+
+    // move toc-ignore selectors from section div to header
+    $('div.section.toc-ignore')
+        .removeClass('toc-ignore')
+        .children('h1,h2,h3,h4,h5').addClass('toc-ignore');
+
+    // establish options
+    var options = {
+      selectors: "h1,h2,h3",
+      theme: "bootstrap3",
+      context: '.toc-content',
+      hashGenerator: function (text) {
+        return text.replace(/[.\\/?&!#<>]/g, '').replace(/\s/g, '_');
+      },
+      ignoreSelector: ".toc-ignore",
+      scrollTo: 0
+    };
+    options.showAndHide = true;
+    options.smoothScroll = true;
+
+    // tocify
+    var toc = $("#TOC").tocify(options).data("toc-tocify");
+});
+</script>
 
 <!-- dynamically load mathjax for compatibility with self-contained -->
 <script>
