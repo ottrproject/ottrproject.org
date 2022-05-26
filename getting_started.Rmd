@@ -200,7 +200,40 @@ Click the `Compare & Pull Request button`. Now you can write in a description of
 
 Adding new chapters to your OTTR course, requires some specific steps in addition to what we've discussed here.
 
-#### Step 1) [Add a new Rmd file](https://docs.github.com/en/repositories/working-with-files/managing-files/adding-a-file-to-a-repository) - Follow the instructions for adding a new file, but make sure that you name the file something ending in `.Rmd` and follow the
+#### Step 1) Add a new chapter Rmd file
+Follow the instructions for [adding a new file](](https://docs.github.com/en/repositories/working-with-files/managing-files/adding-a-file-to-a-repository)), but make sure that you name the file something ending in `.Rmd` and add it to your new branch.
+
+#### Step 2) Add the name of your new chapter to your _bookdown.yml file
+
+As you modify the names of the chapters of your course and add more chapters (using the `.Rmd` files), you need to update the `_bookdown.yml` file accordingly.
+
+For example let's say that we added another chapter and named the file `03-new_chapter_of_course.Rmd`.
+We would update our `_bookdown.yml` to look like this:
+
+```yaml
+book_filename: "Course_Name"  
+chapter_name: "Chapter "  
+repo: https://github.com/jhudsl/OTTR_Template/ ##Make sure you update this for your GitHub Repo!!  
+rmd_files: ["index.Rmd",  
+            "01-intro.Rmd",   
+            "02-chapter_of_course.Rmd",   
+            "03-new_chapter_of_course.Rmd",  ##Only this is new!
+            "about.Rmd"]  
+new_session: yes  
+delete_merged_file: true  
+language:  
+  ui:  
+    chapter_name: "Chapter "  
+output_dir: "docs"  
+```
+
+**Important:** Notice how only one line is different - the one that says `03-chapter_of_course.Rmd",`
+Be careful about quotation marks: `""` as well as commas: `,`!
+
+
+#### Step 3) Commit the _bookdown.yml file changes to the current branch
+
+#### Step 4) Go to your Pull Request to see how the checks turn out
 
 
 ## OTTR Advanced
