@@ -140,7 +140,18 @@ _If you have any questions about the implications of any of these updates or fil
 
 Now you have a course repository on GitHub and you're ready to start writing content!
 
-For any set of file changes, its recommended you file a pull request (we will guide you on that here if you are unfamiliar).
+The OTTR content development process is designed around you opening pull requests! Pull requests are a way to set up changes and adds (and OTTR will test them) before you publish - this allows you to more easily check your new adds and talk about them with others!
+
+### Method of writing content
+
+We have two recommended ways of writing content that is based on your comfort and interest level in using git and GitHub:
+
+- [OTTR Entry Level](#ottr-entry-level) - if you do not have interest in diving into GitHub use this version is done completely through the GitHub web browser.
+- [OTTR Advanced](#ottr-advanced) - If you are already familiar with git and GitHub or are interested in starting to use it, we recommend this method. It will require a bit more learning but git and GitHub will be a great skill set for you to utilize; both for OTTR purposes and elsewhere for version control!
+
+[Jump to OTTR Entry Level instructions here](#ottr-entry-level)
+[Jump to OTTR Advanced instructions here](#ottr-advanced)
+
 OTTR checks center around pull requests so you can avoid accidentally making your mistakes live in your courses.
 When you file a pull request initiates a series of checks done automatically by GitHub actions which will help you as you add content to your course.
 
@@ -153,9 +164,52 @@ These checks will do important things like:
 
 You can adjust what checks are run by editing the `config_automation.yml` file. This is further discussed in this section about [customizing GitHub Actions](./customize-robots.html).
 
-## GitHub quick start
+## OTTR Entry Level
 
-If you do not have a method of working with Git already it is recommended you use a git client to help you manage your branches more easily. Install [GitKraken](https://www.gitkraken.com/) for a handy way to manage your course locally. These steps shown here will show you the GitKraken way of handling files.
+You can edit and add content directly in the GitHub website if you prefer not to learn Git and GitHub (though we highly recommend it's a useful skill to integrate into your workflow -- not just for OTTR).
+
+### Create a new branch
+
+Whenever you are getting ready to prep a new set of changes you'll need to create a new branch. On your main repository page, click on the Switch Branches button.
+
+Type in a name for your new branch; something that relates to the changes you are making. For the purposes of this example, we'll call this new branch, `new-changes`.
+
+Then click `Create branch: new-changes from main`.
+
+![](resources/images/new-branch.png)
+
+Congrats! You've made a new branch. Github will automatically show you your new branch's files (which have been copied from the `main`).
+
+Whenever you are making changes, you'll want to check that you are on your new branch in order to add any new changes to your pull request.
+
+### General usage of GitHub
+
+In your OTTR repository, on your new branch, you can add/edit/rename currently existing files [following the instructions about managing files here](https://docs.github.com/en/repositories/working-with-files/managing-files).
+
+After every edit you make, you'll scroll down and make sure that you choose `Commit directly to the new-changes branch.` in order to add your changes to the pull request in order for the changes to be run through the OTTR checks.
+
+Then click `Commit changes`
+
+As soon as you have changes ready to go on your new branch, you can open a pull request. On your repository, click on `Pull Requests` and you should see a banner that looks something like this:
+
+![](resources/images/new-branch-banner.png)
+
+Click the `Compare & Pull Request button`. Now you can write in a description of the changes you are making in your pull request as well as your rationale for these changes.
+
+### Adding new chapters
+
+Adding new chapters to your OTTR course, requires some specific steps in addition to what we've discussed here.
+
+#### Step 1) [Add a new Rmd file](https://docs.github.com/en/repositories/working-with-files/managing-files/adding-a-file-to-a-repository) - Follow the instructions for adding a new file, but make sure that you name the file something ending in `.Rmd` and follow the
+
+
+## OTTR Advanced
+
+If you are interested in engaging with GitHub (or already know how), we recommend using it to set up pull requests
+
+If you are new to git and GitHub already it is recommended you use a git client to help you manage your branches more easily. Install [GitKraken](https://www.gitkraken.com/) for a handy way to manage your course locally. These steps shown here will show you the GitKraken way of handling files.
+
+If you are not new to GitHub, then we recommend skipping this section and jumping to the [`Setting Up Images` section](#set-up-images).
 
 ### git clone
 
