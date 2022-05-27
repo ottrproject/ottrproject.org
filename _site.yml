@@ -16,13 +16,17 @@ navbar:
         href: getting_started.html#starting-a-new-ottr-course
         icon: fa-flag-checkered
       - text: "Start writing content"
-        href: getting_started.html#start-writing-content
+        href: sub_dir/writing_content.html
         icon: fa-file
-      - text: "GitHub quick start"
-        href: getting_started.html#gitHub-quick-start
-        icon: fa-github
+        menu:
+        - text: "Entry Level"
+          href: writing_content.html#ottr-entry-level
+          icon: fa-circle
+        - text: "Advanced"
+          href: writing_content.html#ottr-advanced
+          icon: fa-square
       - text: "Set up images"
-        href: getting_started.html#set-up-images
+        href: sub_dir/writing_content.html#set-up-images
         icon: fa-images
   - text: OTTR Examples
     href: examples.html

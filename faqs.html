@@ -13,8 +13,8 @@
 
 <title>faqs.knit</title>
 
-<script src="site_libs/header-attrs-2.10/header-attrs.js"></script>
-<script src="site_libs/jquery-1.11.3/jquery.min.js"></script>
+<script src="site_libs/header-attrs-2.11/header-attrs.js"></script>
+<script src="site_libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <link href="site_libs/bootstrap-3.3.5/css/bootstrap.min.css" rel="stylesheet" />
 <script src="site_libs/bootstrap-3.3.5/js/bootstrap.min.js"></script>
@@ -351,22 +351,31 @@ div.tocify {
         Starting a new OTTR course
       </a>
     </li>
-    <li>
-      <a href="getting_started.html#start-writing-content">
+    <li class="dropdown-submenu">
+      <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
         <span class="fa fa-file"></span>
          
         Start writing content
       </a>
+      <ul class="dropdown-menu" role="menu">
+        <li>
+          <a href="writing_content.html#ottr-entry-level">
+            <span class="fa fa-circle"></span>
+             
+            Entry Level
+          </a>
+        </li>
+        <li>
+          <a href="writing_content.html#ottr-advanced">
+            <span class="fa fa-square"></span>
+             
+            Advanced
+          </a>
+        </li>
+      </ul>
     </li>
     <li>
-      <a href="getting_started.html#gitHub-quick-start">
-        <span class="fa fa-github"></span>
-         
-        GitHub quick start
-      </a>
-    </li>
-    <li>
-      <a href="getting_started.html#set-up-images">
+      <a href="sub_dir/writing_content.html#set-up-images">
         <span class="fa fa-images"></span>
          
         Set up images
