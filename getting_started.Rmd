@@ -40,7 +40,7 @@ In particular, the rendered preview on pull requests won't work, but you can alt
 
 ### 4. Set up a Git client
 
-If you do not have a method of working with Git already it is recommended you use a git client to help you manage your branches more easily. Install [GitKraken](https://www.gitkraken.com/) for a handy way to manage your course locally.
+If you do not have a method of working with Git already it is recommended you use a Git client to help you manage your branches more easily. Install [GitKraken](https://www.gitkraken.com/) for a handy way to manage your course locally.
 
 ### 5. Add jhudsl-robot as a collaborator
 
@@ -138,10 +138,10 @@ Now you are ready to start writing content!
 
 ### Methods of writing content
 
-We have two recommended ways of writing content that is based on your comfort and interest level in using git and GitHub:
+We have two recommended ways of writing content that is based on your comfort and interest level in using Git and GitHub:
 
 - [OTTR Entry Level](#ottr-entry-level) - if you do not have interest in diving into GitHub, use this version. It is done completely through the GitHub web browser.
-- [OTTR Advanced](#ottr-advanced) - If you are already familiar with git and GitHub or are interested in starting to use it, we recommend this method. It will require a bit more learning but git and GitHub will be a great skill set for you to utilize; both for OTTR purposes and elsewhere for version control!
+- [OTTR Advanced](#ottr-advanced) - If you are already familiar with Git and GitHub or are interested in starting to use it, we recommend this method. It will require a bit more learning, but Git and GitHub will be a great skill set for you to utilize; both for OTTR purposes and elsewhere for version control!
 
 [Jump to OTTR Entry Level instructions here](#ottr-entry-level)
 [Jump to OTTR Advanced instructions here](#ottr-advanced)
