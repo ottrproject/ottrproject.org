@@ -256,7 +256,7 @@ You can check this using [Color Oracle](https://colororacle.org/).
 ## Adding images and graphics in text
 
 All images should be included in your Google Slides with the captions we discussed above.
-To add images in the text in your Rmd, use the following function within an [R code chunk](https://bookdown.org/yihui/rmarkdown/r-code.html).
+To add images in the text in your Rmd, use the `ottrpal::include_slide()` within an [R code chunk](https://bookdown.org/yihui/rmarkdown/r-code.html).
 
 <img src = "resources/images/include_slide.png" width = 600>
 
