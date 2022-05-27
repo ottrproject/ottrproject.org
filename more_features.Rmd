@@ -102,12 +102,11 @@ These rows should be added to all _Johns Hopkins_ courses:
 
 Additionally, this row should be added for _all ITCR Courses_:  
 ```
-|Content Directors|[Jeff Leek], [Sarah Wheelan]|
+|Content Directors|[Jeff Leek]|
 
 <!-- Author information -->
 
 [Jeff Leek]: https://jtleek.com/
-[Sarah Wheelan]: https://www.hopkinsmedicine.org/profiles/details/sarah-wheelan
 ```
 
 
