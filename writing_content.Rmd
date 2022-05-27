@@ -14,10 +14,10 @@ The OTTR content development process is designed around you opening pull request
 
 ## Method of writing content
 
-We have two recommended ways of writing content that is based on your comfort and interest level in using git and GitHub:
+We have two recommended ways of writing content that is based on your comfort and interest level in using Git and GitHub:
 
 - [OTTR Entry Level](#ottr-entry-level) - if you do not have interest in diving into GitHub, use this version. It is done completely through the GitHub web browser.
-- [OTTR Advanced](#ottr-advanced) - If you are already familiar with git and GitHub or are interested in starting to use it, we recommend this method. It will require a bit more learning but git and GitHub will be a great skill set for you to utilize; both for OTTR purposes and elsewhere for version control!
+- [OTTR Advanced](#ottr-advanced) - If you are already familiar with Git and GitHub or are interested in starting to use them, we recommend this method. It will require a bit more learning, but Git and GitHub will be a great skill set for you to utilize; both for OTTR purposes and elsewhere for version control!
 
 ![](resources/images/methods_of_writing.jpg)
 
@@ -38,7 +38,7 @@ You can adjust what checks are run by editing the `config_automation.yml` file. 
 
 # OTTR Entry Level
 
-You can edit and add content directly in the GitHub website if you prefer not to learn Git and GitHub (though we highly recommend it's a useful skill to integrate into your workflow -- not just for OTTR).
+You can edit and add content directly in the GitHub website if you prefer not to learn Git and GitHub (though we highly recommend it, as knowing how to use Git/GitHub is a useful skill to integrate into your workflow -- not just for OTTR).
 
 ## Create a new branch
 
@@ -50,7 +50,7 @@ Then click `Create branch: new-changes from main`.
 
 ![](resources/images/new-branch.png)
 
-Congrats! You've made a new branch. Github will automatically show you your new branch's files (which have been copied from the `main`).
+Congrats! You've made a new branch. GitHub will automatically show you your new branch's files (which have been copied from the `main`).
 
 Whenever you are making changes, you'll want to check that you are on your new branch in order to add any new changes to your pull request.
 
@@ -71,15 +71,15 @@ Now you are ready to open your pull request.
 
 # OTTR Advanced
 
-If you are interested in engaging with GitHub (or already know how), we recommend interacting with GitHub and git outside of the GitHub website to create your pull requests.
+If you are interested in engaging with GitHub (or already know how), we recommend interacting with GitHub and Git outside of the GitHub website to create your pull requests.
 
-If you are new to git and GitHub already it is recommended you use a git client to help you manage your branches more easily. Install [GitKraken](https://www.gitkraken.com/) for a handy way to manage your course locally. These steps shown here will show you the GitKraken way of handling files.
+If you are new to Git and GitHub already it is recommended you use a Git client to help you manage your branches more easily. Install [GitKraken](https://www.gitkraken.com/) for a handy way to manage your course locally. These steps shown here will show you the GitKraken way of handling files.
 
 If you are not new to GitHub, then we recommend skipping this section and jumping to the [`Setting Up Images` section](#set-up-images).
 
-## git clone
+## Cloning with Git
 
-It's ideal to work on your course from your computer (you do not need to install any other software besides git if you don't want to). To get going, you will need to `clone` the course repository it to your own computer. Cloning is just making a remote copy of the project local.
+It's ideal to work on your course from your computer (you do not need to install any other software besides Git if you don't want to). To get going, you will need to `clone` the course repository it to your own computer. Cloning is just making a remote copy of the project local.
 
 <img src="https://docs.google.com/presentation/d/1IJ_uFxJud7OdIAr6p8ZOzvYs-SGDqa7g4cUHtUld03I/export/png?id=1IJ_uFxJud7OdIAr6p8ZOzvYs-SGDqa7g4cUHtUld03I&pageid=g1014c75158f_0_90" width="800"/>
 
