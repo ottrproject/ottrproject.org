@@ -8,7 +8,7 @@ output:
 
 Now you have a course repository on GitHub and you're ready to start writing content!
 
-The OTTR content development process is designed around you opening pull requests! Pull requests are a way to set up changes and adds (and OTTR will test them) before you publish - this allows you to more easily check your new adds and talk about them with others!
+The OTTR content development process is designed around you opening what is called **pull requests**! Pull requests are a way to set up **proposed changes** (instead of direct changes) before you publish them. Pull requests allow for OTTR to test your proposed changes for issues like broken URLs or spelling errors. Importantly, pull requests also allow you to discuss proposed changes with others!
 
 ![](resources/images/pull_request_model.jpg)
 
@@ -16,13 +16,14 @@ The OTTR content development process is designed around you opening pull request
 
 We have two recommended ways of writing content that is based on your comfort and interest level in using Git and GitHub:
 
-- [OTTR Entry Level](#ottr-entry-level) - if you do not have interest in diving into GitHub, use this version. It is done completely through the GitHub web browser.
+- [OTTR Entry Level](#ottr-entry-level) - if you do not have an interest in diving into GitHub, use this version. It is done completely through the GitHub web browser.
 - [OTTR Advanced](#ottr-advanced) - If you are already familiar with Git and GitHub or are interested in starting to use them, we recommend this method. It will require a bit more learning, but Git and GitHub will be a great skill set for you to utilize; both for OTTR purposes and elsewhere for version control!
 
 ![](resources/images/methods_of_writing.jpg)
 
 OTTR checks center around pull requests so you can avoid accidentally making your mistakes live in your courses.
-When you file a pull request initiates a series of checks done automatically by GitHub actions which will help you as you add content to your course.
+
+When you file a pull request, this initiates a series of checks done automatically by GitHub actions which will help you as you add content to your course.
 
 These checks will do important things like:
 * Check that the all the urls actually take learners somewhere (`check-urls`)
