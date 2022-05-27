@@ -8,17 +8,30 @@ output:
 
 ## Prerequisites for using OTTR
 
-- Please take a look at the [code of conduct](https://github.com/jhudsl/OTTR_Template/blob/main/code_of_conduct.md).
+First please take a look at our [code of conduct](https://github.com/jhudsl/OTTR_Template/blob/main/code_of_conduct.md) if you wish to contribute to OTTR. 
 
-- If you are not familiar with **Git and GitHub**, we recommend going through these chapters from our Reproducibility courses for quick orientation:
-  - [Why GitHub](https://jhudatascience.org/Reproducibility_in_Cancer_Informatics/making-your-project-open-source-with-github.html)
-  - [Using GitHub](https://jhudatascience.org/Adv_Reproducibility_in_Cancer_Informatics/using-version-control-with-github.html)
+OTTR relies on R Markdown and GitHub actions, however, you do not need to be familiar with either R Markdown or GitHub to use OTTR!
+
+Please check out these resources if you are not familiar with R Markdown:
 
 - If you aren't familiar with **markdown** [this is a nice introduction](https://www.markdownguide.org/getting-started/).  
 
-- For information on **RMarkdown** (a variation of a markdown file that we use here): [RStudio has their lessons here](https://rmarkdown.rstudio.com/lesson-1.html).
+- For information on **R Markdown** (a variation of a markdown file that we use here): [RStudio has their lessons here](https://rmarkdown.rstudio.com/lesson-1.html).
 
-Upon creating your repository, issues for getting your course started will be automatically filed in your repository. Go to `Issues` and you can follow them along to get set up.
+If you are not familiar with **Git and GitHub**, we recommend going through these chapters from our Reproducibility courses for a quick orientation:
+
+  - [Why GitHub](https://jhudatascience.org/Reproducibility_in_Cancer_Informatics/making-your-project-open-source-with-github.html)
+  - [Using GitHub](https://jhudatascience.org/Adv_Reproducibility_in_Cancer_Informatics/using-version-control-with-github.html)
+  
+
+We have two recommended ways of writing content based on your comfort and interest level in using Git and GitHub:
+
+- [OTTR Entry Level](#ottr-entry-level) - if you do not have interest in diving into GitHub, use this version. It is done completely through the GitHub web browser.
+- [OTTR Advanced](#ottr-advanced) - If you are already familiar with Git and GitHub or are interested in starting to use it, we recommend this method. It will require a bit more learning, but Git and GitHub will be a great skill set for you to utilize; both for OTTR purposes and elsewhere for version control!
+
+If you choose to use our OTTR Advanced guidance, you will need a method for working with git. 
+
+If you do not have a method of working with Git already it is recommended you use a Git client to help you manage your branches more easily. Install [GitKraken](https://www.gitkraken.com/) for a handy way to manage your course locally.
 
 ***
 
@@ -34,13 +47,14 @@ In the upper right of the [landing page for this repository](https://github.com/
 
 ![Creating new course repository](https://raw.githubusercontent.com/jhudsl/OTTR_Template/main/resources/screenshots/creating_new_course_repo.png)
 
-### 3. Your course must be set to `public` for all GitHub actions to work.
+### 3.  Make sure your course is set to `public` for all GitHub actions to work
 
-In particular, the rendered preview on pull requests won't work, but you can alternatively preview the content by re-rendering locally, we will cover this later.
+In particular, the rendered preview on pull requests won't work, but you can alternatively preview the content by re-rendering locally if you want to keep your course private. We will cover this later.
 
-### 4. Set up a Git client
+### 4. Click the `Create repository from template button`!
 
-If you do not have a method of working with Git already it is recommended you use a Git client to help you manage your branches more easily. Install [GitKraken](https://www.gitkraken.com/) for a handy way to manage your course locally.
+Upon creating your repository, issues for getting your course started will be automatically filed in your repository. Go to `Issues` and you can follow them along to get set up.
+
 
 ### 5. Add jhudsl-robot as a collaborator
 
@@ -134,14 +148,13 @@ When updates are made to files that aren't specific to the course content but in
 If your new course doesn't need some of the functionality of these files or you find the automatic updates bothersome, you can feel free to use [this guide](https://github.com/marketplace/actions/repo-file-sync-action#sync-the-same-files-to-multiple-repositories) to tailor which files you want updates for.
 _If you have any questions about the implications of any of these updates or files, please tag `@cansavvy`._
 
-Now you are ready to start writing content!
 
 ### Methods of writing content
 
-We have two recommended ways of writing content that is based on your comfort and interest level in using Git and GitHub:
-
-- [OTTR Entry Level](#ottr-entry-level) - if you do not have interest in diving into GitHub, use this version. It is done completely through the GitHub web browser.
-- [OTTR Advanced](#ottr-advanced) - If you are already familiar with Git and GitHub or are interested in starting to use it, we recommend this method. It will require a bit more learning, but Git and GitHub will be a great skill set for you to utilize; both for OTTR purposes and elsewhere for version control!
+Again we have two recommended ways of writing content based on your comfort and interest level in using Git and GitHub:
 
 [Jump to OTTR Entry Level instructions here](#ottr-entry-level)
 [Jump to OTTR Advanced instructions here](#ottr-advanced)
+
+Now you are ready to start writing content!
+
