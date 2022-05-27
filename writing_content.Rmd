@@ -282,9 +282,9 @@ See [Chapter 2](https://github.com/jhudsl/OTTR_Template/blob/main/02-chapter_of_
 To add a youtube video to your Rmd files use the following:
 
 To get the appropriate youtube url do the following:
-1) click on the **SHARE** button on the lower right corner of the video on youtube
-2) click on the **Embed** option on the far left
-3) copy just the part after `"src ="` and paste the url into the `knitr::include_url()` function
+1) Click on the **SHARE** button on the lower right corner of the video on youtube
+2) Click on the **Embed** option on the far left
+3) Copy just the part after `"src ="` and paste the url into the `knitr::include_url()` function
 
 Again, it is important to use the `echo=FALSE` option so that only the video is shown and not the code to generate it.
 
