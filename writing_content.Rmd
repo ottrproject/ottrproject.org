@@ -42,7 +42,17 @@ You can edit and add content directly in the GitHub website if you prefer not to
 
 ## Create a new branch
 
-Whenever you are getting ready to prep a new set of changes you'll need to create a new branch. On your main repository page, click on the `Switch Branches` button.
+With GitHub in order to keep your OTTR course preserved content and code is managed through the use of branches (basically just tracked copies of your whole repository). To explain branches we'll mainly refer to two branches: your `main` branch:
+
+![](resources/images/main_branch.png)
+
+The `main` branch is what your content will be published from and it will be live to any learners looking at your course. You will want to keep this `main` branch as preserved and well curated as possible!
+
+So when you are ready to add more content you will want to have an isolated copy of your files to work from that keeps your main branch safe as you work. You can name the branch you work from whatever you like -- its recommended you name it something related to the changes you are working on
+
+![](resources/images/working_branch.png)
+
+To create a new branch through the GitHub website, you will go to your main course repository page, click on the `Switch Branches` button.
 
 Type in a name for your new branch; something that relates to the changes you are making. For the purposes of this example, we'll call this new branch, `new-changes`.
 

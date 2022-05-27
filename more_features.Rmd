@@ -1,0 +1,229 @@
+---
+title: "More Features"
+output:
+  html_document:
+    toc: true
+    toc_float: true
+---
+
+There are a lot of additional features and tools of OTTR that are discussed here!
+
+## Citing sources
+
+You can generally follow the [Bookdown instructions about citations](https://bookdown.org/yihui/rmarkdown-cookbook/bibliography.html), but you don't need to add the additional bibliography argument at the top of the Rmds.
+
+To add a new reference source, add to the `book.bib` file, keeping your new entry in alphabetical order.
+
+For articles (or anything with a DOI), go to [doi2bib.org](https://www.doi2bib.org/) or [ZoteroBib](https://zbib.org/) to get a BibTex-formatted reference that you can copy and paste the reference to the `book.bib` file.
+
+You can also use programs like Zotero or Endnote to export a .bib file and either combine with the `book.bib` or manage your references from there.
+
+Other sources can be added using this template:
+```
+@website{citekey,
+    author = {First Last},
+    title = {Title},
+    url  = {http://www.someurl.html},
+}
+```
+
+To reference the citations in your writing follow the [bookdown instructions](https://bookdown.org/yihui/rmarkdown-cookbook/bibliography.html):
+
+```
+Items can be cited directly within the documentation using the syntax @key where key is the citation key in the first line of the entry, e.g., @R-base. To put citations in parentheses, use [@key]. To cite multiple entries, separate the keys by semicolons, e.g., [@key-1; @key-2; @key-3]. To suppress the mention of the author, add a minus sign before @, e.g., [-@R-base].
+```
+
+See [Chapter 2](https://github.com/jhudsl/OTTR_Template/blob/main/02-chapter_of_course.Rmd) of this template course for examples.
+
+## Giving credits to contributors
+
+Since so many individuals contribute to our courses in so many ways.  Thus, we decided to make a table of credits to make it clear who did what.
+
+Here is an example:  
+
+![Credit section from a course that used this template](https://raw.githubusercontent.com/jhudsl/OTTR_Template/main/resources/screenshots/example_credits.png)
+
+Please see the [about section](https://jhudatascience.org/OTTR_Template/about-the-authors.html) of the template for descriptions of how credits should be attributed for the course.
+
+This is generated from the About.Rmd file. An About.Rmd file will already be in your course from using our template. You will need to do the following steps to update it for your course:
+
+1) Fill out author names for the various roles where applicable.  
+2) Delete lines for roles that are not applicable.  
+3) Make sure roles grammatically match names. If there are multiple people include the "s" in the role name where applicable and remove the parentheses. If only one person is appropriate for a given role remove "(s)" from the role name.
+4) Ensure that each row has "|" around each cell value.  
+
+*Example Table*:
+
+The first row and additional rows based on [this table](https://bit.ly/course-credits-table) should be added and filled in using [markdown table format](https://www.markdownguide.org/extended-syntax/).
+```
+|Credits|Names|
+|-------|-----|
+|Lead Content Instructor|FirstName LastName|
+```
+
+Links to personal websites can be added below the table to make it easier to read.
+```
+|Credits|Names|
+|-------|-----|
+|Lead Content Instructor|[FirstName LastName]|
+
+<!-- Author information -->
+
+[FirstName LastName]: link to personal website
+```
+
+These rows should be included for _all courses_:
+```
+|Template Publishing Engineers|[Candace Savonen], [Carrie Wright]|
+|Publishing Maintenance Engineer|[Candace Savonen]|
+|Technical Publishing Stylists|[Carrie Wright], [Candace Savonen]|
+|Package Developers[ottrpal]|[John Muschelli], [Candace Savonen], [Carrie Wright]|
+
+<!-- Author information -->
+
+[John Muschelli]: https://johnmuschelli.com/
+[Candace Savonen]: https://www.cansavvy.com/
+[Carrie Wright]: https://carriewright11.github.io/
+
+<!-- Links -->
+
+[ottrpal]: https://github.com/jhudsl/ottrpal
+```
+
+These rows should be added to all _Johns Hopkins_ courses:
+```
+|Content Publisher|[Ira Gooding]|
+|Content Publishing Reviewer|Ira Gooding]|
+
+<!-- Author information -->
+
+[Ira Gooding]: https://publichealth.jhu.edu/faculty/4130/ira-gooding
+```
+
+Additionally, this row should be added for _all ITCR Courses_:  
+```
+|Content Directors|[Jeff Leek]|
+
+<!-- Author information -->
+
+[Jeff Leek]: https://jtleek.com/
+```
+
+
+### Adding the Credits table to Coursera
+
+In Coursera, you can add the credits table URL as an ungraded plugin ([the same as described here for adding chapter content](https://github.com/jhudsl/OTTR_Template/wiki/Publishing-on-Coursera#navigating-to-your-course-on-coursera)). This should be added at the beginning of your course, right after the introduction.
+
+### Adding the Credits table to Leanpub
+
+In Leanpub, make sure that your About.md file in your manuscript folder is listed in your Book.txt file and this Credits table will automatically be incorporated into your Leanpub course.
+
+## Borrowing chapters
+
+If you have two courses that the content and topics overlap, you may want to share written material between the two.
+
+But, if you copy and paste to share material this would create a maintenance problem because if you update one you will need to remember to copy over the other! 😱
+
+In OTTR, we try to minimize maintenance pains so to get around this, we use `cow::borrow_chapter()` from the [jhudsl/cow](https://jhudatascience.org/cow/index.html) package.
+The `cow` package is already on the `jhudsl/course_template` docker image  so you do not need to install it if you are using the docker image or if you are have GitHub actions do all the rendering for you.
+
+To borrow a chapter from another course, create an `.Rmd` as you normally would, with a `ottrpal::set_knitr_image_path()` in a chunk at the beginning of the file and a [`H1` title](https://www.markdownguide.org/basic-syntax/).
+
+Then, wherever you would like the borrowed chapter to appear, put an R chunk with this:
+
+````{r, eval = FALSE}
+```{r, echo = FALSE, results='asis'}
+cow::borrow_chapter(
+  doc_path = "02-chapter_of_course.Rmd",
+  repo_name = "jhudsl/OTTR_Template"
+)
+```
+````
+
+The magic of this function is that whenever the course is re-rendered it will knit the latest version of the chapter you are borrowing.
+Note that this chunk cannot be run interactively, just include it in your Rmd and render your course as usual.
+
+### Borrowing from a local file
+
+If for some reason you would like a local file incorporated, just leave off the repo_name argument and `cow::borrow_chapter()` will look for the chapter locally:
+
+````{r, eval = FALSE}
+```{r, echo = FALSE, results='asis'}
+cow::borrow_chapter(
+  doc_path = "02-chapter_of_course.Rmd"
+)
+```
+````
+
+### Borrowing from a private repository
+
+If you are borrowing from a course in a private repository, you will need to supply [GitHub personal access token](https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/creating-a-personal-access-token) using a `git_pat` argument like this:
+
+````{r, eval = FALSE}
+```{r, echo = FALSE, results='asis'}
+cow::borrow_chapter(
+  doc_path = "02-chapter_of_course.Rmd",
+  repo_name = "jhudsl/Private_Repo",
+  git_pat = "12345"
+)
+```
+````
+
+### Removing an h1 header
+
+If you want to change the title you can use an option `remove_h1` to remove the title from the incoming borrowed chapter.
+
+````
+
+# A new title
+
+Some new words before the borrowed chapter content.
+
+```{r, echo = FALSE, results='asis'}
+cow::borrow_chapter(
+  doc_path = "02-chapter_of_course.Rmd",
+  remove_h1 = TRUE
+)
+```
+
+Some new words after the borrowed chapter content.
+
+````
+
+### Linking between chapters
+
+If you don't want the material from another chapter completely copied over, you might instead just want to put a link to the Bookdown chapter. You can just use the full url. A link would look something like this:
+```
+![](https://jhudatascience.org/OTTR_Template/a-new-chapter.html)
+```
+
+
+You might want your course available for download as a docx. For example, you might be running a "train-the-trainer" workshop where trainees don't feel comfortable using Github to edit the lessons for their own use.
+
+The following yml in `index.Rmd` allows you to render the docx with a table of contents:
+
+```
+output:
+    bookdown::word_document2:
+      toc: true
+```
+
+You can also incorporate a template docx if you have headers and logos you want to use. To incorporate a template, make sure you add the `reference_docx` argument:
+
+```
+output:
+    bookdown::word_document2:
+      reference_docx: <path/to/template>.docx
+      toc: true
+```
+
+Learn more about templates [here](https://bookdown.org/yihui/rmarkdown-cookbook/word-template.html).
+
+## Compatibility with Google Docs
+
+Google Docs can be a great way to get feedback from collaborators who aren't comfortable developing in the GitHub environment. docx versions of the course are automatically rendered in pull requests and can be downloaded from the autogenerated comment.
+
+- Once you've downloaded the docx, this can be uploaded to Google Drive and shared with the individuals you would like to solicit feedback or new material from. In Google Drive, click `+ New` in the left corner and then `File Upload`. Choose the docx file you downloaded.
+- You may also want to include a link to the commit ID the Google Doc came from so you are able to keep track of what changes have occurred since the Google doc was set up initially.
+- So you are able to keep track of the changes to the docx version of the course, its advisable to set to "suggestions" when you share the document.
+- Then as comments and suggestions trickle in, a lead author who is comfortable with the OTTR process can incorporate those comments into an existing or new pull request which can checked for its rendering and eventually added to the `main` content branch.
