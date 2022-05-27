@@ -173,7 +173,7 @@ cow::borrow_chapter(
 
 If you want to change the title you can use an option `remove_h1` to remove the title from the incoming borrowed chapter.
 
-````{r, eval = FALSE}
+````
 
 # A new title
 
