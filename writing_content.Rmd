@@ -10,7 +10,7 @@ Now you have a course repository on GitHub and you're ready to start writing con
 
 The OTTR content development process is designed around you opening pull requests! Pull requests are a way to set up changes and adds (and OTTR will test them) before you publish - this allows you to more easily check your new adds and talk about them with others!
 
-![]()
+![](resources/images/pull_request_model.jpg)
 
 ## Method of writing content
 
@@ -19,8 +19,7 @@ We have two recommended ways of writing content that is based on your comfort an
 - [OTTR Entry Level](#ottr-entry-level) - if you do not have interest in diving into GitHub, use this version. It is done completely through the GitHub web browser.
 - [OTTR Advanced](#ottr-advanced) - If you are already familiar with git and GitHub or are interested in starting to use it, we recommend this method. It will require a bit more learning but git and GitHub will be a great skill set for you to utilize; both for OTTR purposes and elsewhere for version control!
 
-- [Jump to OTTR Entry Level instructions here](#ottr-entry-level)  
-- [Jump to OTTR Advanced instructions here](#ottr-advanced)
+![](resources/images/methods_of_writing.jpg)
 
 OTTR checks center around pull requests so you can avoid accidentally making your mistakes live in your courses.
 When you file a pull request initiates a series of checks done automatically by GitHub actions which will help you as you add content to your course.
@@ -33,6 +32,9 @@ These checks will do important things like:
 * Check the formatting of any quizzes (`check-quizzes`)
 
 You can adjust what checks are run by editing the `config_automation.yml` file. This is further discussed in this section about [customizing GitHub Actions](./customize-robots.html).
+
+- [Jump to OTTR Entry Level instructions here](#ottr-entry-level)  
+- [Jump to OTTR Advanced instructions here](#ottr-advanced)
 
 # OTTR Entry Level
 
@@ -69,7 +71,7 @@ Now you are ready to open your pull request.
 
 # OTTR Advanced
 
-If you are interested in engaging with GitHub (or already know how), we recommend using it to set up pull requests
+If you are interested in engaging with GitHub (or already know how), we recommend interacting with GitHub and git outside of the GitHub website to create your pull requests.
 
 If you are new to git and GitHub already it is recommended you use a git client to help you manage your branches more easily. Install [GitKraken](https://www.gitkraken.com/) for a handy way to manage your course locally. These steps shown here will show you the GitKraken way of handling files.
 
@@ -221,11 +223,17 @@ For more on [how to review a pull request, see this chapter](https://jhudatascie
 
 # Set up images
 
-To maintain style and attributions for graphics and images, as well as to enable easy updates in the future, please start a new Google Slide document for your OTTR course.
+To maintain style and attributions for graphics and images, as well as to enable easy updates in the future, you can have all your images stored in a central Google Slide document.
+
+We encourage this strategy for several reasons:
+
+- OTTR can interact with Google Slides to allow you to get all image updates of your current Google Slides whenever you re-render the content (no juggling different file versions of your images).
+- Google Slides are easily shareable to your collaborators
+- Google Slides is free.
+- Storing your images on Google slides allows them to be in one central location and may be helpful for you to re-use the media from your course in the future.
+- This also allows you to make videos of your slides that can be added to your course using `ari`
 
 **Important:** :warning: Your Google Slide document must be set to `Anyone with a link`. See [this article for more details.](https://support.wix.com/en/article/setting-permissions-for-google-drive-files-and-folders#:~:text=Settings%20Permissions%20for%20a%20Google,edit%20and%20comment%20as%20well.) The renders will fail if this is not set!
-
-This also allows you to make videos of your slides that can be added to your course.
 
 Each Rmd with images that is a part of your Bookdown needs to have this chunk at the beginning so that images are stored properly for Leanpub conversion.
 
@@ -235,11 +243,9 @@ If you are unfamiliar with [how R Markdown code chunks work, read this](https://
 
 Next, import the appropriate theme (see [this video](https://youtu.be/pNbwF263yY8) for assistance):
 
-Note that you will need to [change your Google Slide permissions](https://support.google.com/drive/answer/2494893?hl=en&co=GENIE.Platform%3DDesktop) to "Anyone with a link" in order for some functionality to work.
-
 ## Accessibility
 
-Each slide and image added to the courses needs to be accessible.
+Each slide and image added to the courses should be accessible so every member of your audience can use your content.
 There are two things to check for each slide:
 
 - [ ] Each slide is described in the notes of the slide so learners relying on a screen reader can access the content. See https://lastcallmedia.com/blog/accessible-comics for more guidance on this.
