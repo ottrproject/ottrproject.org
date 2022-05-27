@@ -339,7 +339,7 @@ div.tocify {
   <ul class="dropdown-menu" role="menu">
     <li>
       <a href="getting_started.html#recommended-background-information">
-        <span class="fa fa-hammer"></span>
+        <span class="fa fa-asterisk"></span>
          
         Prerequisites
       </a>
@@ -353,7 +353,7 @@ div.tocify {
     </li>
     <li class="dropdown-submenu">
       <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
-        <span class="fa fa-file"></span>
+        <span class="fa fa-pen"></span>
          
         Start writing content
       </a>
@@ -422,6 +422,45 @@ div.tocify {
     </li>
   </ul>
 </li>
+<li class="dropdown">
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+    <span class="fa fa-plus"></span>
+     
+    More features
+     
+    <span class="caret"></span>
+  </a>
+  <ul class="dropdown-menu" role="menu">
+    <li>
+      <a href="more_features.html#citing-sources">
+        <span class="fa fa-quote-left"></span>
+         
+        Citing sources
+      </a>
+    </li>
+    <li>
+      <a href="more_features.html#giving-credits-to-contributors">
+        <span class="fa fa-award"></span>
+         
+        Giving credits
+      </a>
+    </li>
+    <li>
+      <a href="more_features.html#borrowing-chapters">
+        <span class="fa fa-bookmark"></span>
+         
+        Borrowing chapters
+      </a>
+    </li>
+    <li>
+      <a href="more_features.html#compatibility-with-google-docs">
+        <span class="fa fa-file"></span>
+         
+        Compatibility with Google Docs
+      </a>
+    </li>
+  </ul>
+</li>
 <li>
   <a href="faqs.html">
     <span class="fa fa-handshake"></span>
@@ -462,20 +501,23 @@ div.tocify {
 
 <p>Now you have a course repository on GitHub and you’re ready to start writing content!</p>
 <p>The OTTR content development process is designed around you opening pull requests! Pull requests are a way to set up changes and adds (and OTTR will test them) before you publish - this allows you to more easily check your new adds and talk about them with others!</p>
-<p><img src="" /></p>
+<p><img src="resources/images/pull_request_model.jpg" /></p>
 <div id="method-of-writing-content" class="section level2">
 <h2>Method of writing content</h2>
 <p>We have two recommended ways of writing content that is based on your comfort and interest level in using git and GitHub:</p>
 <ul>
-<li><p><a href="#ottr-entry-level">OTTR Entry Level</a> - if you do not have interest in diving into GitHub, use this version. It is done completely through the GitHub web browser.</p></li>
-<li><p><a href="#ottr-advanced">OTTR Advanced</a> - If you are already familiar with git and GitHub or are interested in starting to use it, we recommend this method. It will require a bit more learning but git and GitHub will be a great skill set for you to utilize; both for OTTR purposes and elsewhere for version control!</p></li>
-<li><p><a href="#ottr-entry-level">Jump to OTTR Entry Level instructions here</a><br />
-</p></li>
-<li><p><a href="#ottr-advanced">Jump to OTTR Advanced instructions here</a></p></li>
+<li><a href="#ottr-entry-level">OTTR Entry Level</a> - if you do not have interest in diving into GitHub, use this version. It is done completely through the GitHub web browser.</li>
+<li><a href="#ottr-advanced">OTTR Advanced</a> - If you are already familiar with git and GitHub or are interested in starting to use it, we recommend this method. It will require a bit more learning but git and GitHub will be a great skill set for you to utilize; both for OTTR purposes and elsewhere for version control!</li>
 </ul>
+<p><img src="resources/images/methods_of_writing.jpg" /></p>
 <p>OTTR checks center around pull requests so you can avoid accidentally making your mistakes live in your courses. When you file a pull request initiates a series of checks done automatically by GitHub actions which will help you as you add content to your course.</p>
 <p>These checks will do important things like: * Check that the all the urls actually take learners somewhere (<code>check-urls</code>) * Check that the code is styled using the <code>styler</code> package (<code>style-and-sp-check</code>) * Check that the spelling is correct using the <code>spelling</code> package (<code>style-and-sp-check</code>) * Create previews of the rendered versions of the course (<code>render-preview</code>) * Check the formatting of any quizzes (<code>check-quizzes</code>)</p>
 <p>You can adjust what checks are run by editing the <code>config_automation.yml</code> file. This is further discussed in this section about <a href="./customize-robots.html">customizing GitHub Actions</a>.</p>
+<ul>
+<li><a href="#ottr-entry-level">Jump to OTTR Entry Level instructions here</a><br />
+</li>
+<li><a href="#ottr-advanced">Jump to OTTR Advanced instructions here</a></li>
+</ul>
 </div>
 <div id="ottr-entry-level" class="section level1">
 <h1>OTTR Entry Level</h1>
@@ -505,7 +547,7 @@ div.tocify {
 </div>
 <div id="ottr-advanced" class="section level1">
 <h1>OTTR Advanced</h1>
-<p>If you are interested in engaging with GitHub (or already know how), we recommend using it to set up pull requests</p>
+<p>If you are interested in engaging with GitHub (or already know how), we recommend interacting with GitHub and git outside of the GitHub website to create your pull requests.</p>
 <p>If you are new to git and GitHub already it is recommended you use a git client to help you manage your branches more easily. Install <a href="https://www.gitkraken.com/">GitKraken</a> for a handy way to manage your course locally. These steps shown here will show you the GitKraken way of handling files.</p>
 <p>If you are not new to GitHub, then we recommend skipping this section and jumping to the <a href="#set-up-images"><code>Setting Up Images</code> section</a>.</p>
 <div id="git-clone" class="section level2">
@@ -616,17 +658,23 @@ output_dir: &quot;docs&quot;  </code></pre>
 </div>
 <div id="set-up-images" class="section level1">
 <h1>Set up images</h1>
-<p>To maintain style and attributions for graphics and images, as well as to enable easy updates in the future, please start a new Google Slide document for your OTTR course.</p>
+<p>To maintain style and attributions for graphics and images, as well as to enable easy updates in the future, you can have all your images stored in a central Google Slide document.</p>
+<p>We encourage this strategy for several reasons:</p>
+<ul>
+<li>OTTR can interact with Google Slides to allow you to get all image updates of your current Google Slides whenever you re-render the content (no juggling different file versions of your images).</li>
+<li>Google Slides are easily shareable to your collaborators</li>
+<li>Google Slides is free.</li>
+<li>Storing your images on Google slides allows them to be in one central location and may be helpful for you to re-use the media from your course in the future.</li>
+<li>This also allows you to make videos of your slides that can be added to your course using <code>ari</code></li>
+</ul>
 <p><strong>Important:</strong> :warning: Your Google Slide document must be set to <code>Anyone with a link</code>. See <a href="https://support.wix.com/en/article/setting-permissions-for-google-drive-files-and-folders#:~:text=Settings%20Permissions%20for%20a%20Google,edit%20and%20comment%20as%20well.">this article for more details.</a> The renders will fail if this is not set!</p>
-<p>This also allows you to make videos of your slides that can be added to your course.</p>
 <p>Each Rmd with images that is a part of your Bookdown needs to have this chunk at the beginning so that images are stored properly for Leanpub conversion.</p>
 <p>If you are unfamiliar with <a href="https://rmarkdown.rstudio.com/lesson-3.html">how R Markdown code chunks work, read this</a>.</p>
 <p><img src = "resources/images/set_knitr_image_path.png" width = 400></p>
 <p>Next, import the appropriate theme (see <a href="https://youtu.be/pNbwF263yY8">this video</a> for assistance):</p>
-<p>Note that you will need to <a href="https://support.google.com/drive/answer/2494893?hl=en&amp;co=GENIE.Platform%3DDesktop">change your Google Slide permissions</a> to “Anyone with a link” in order for some functionality to work.</p>
 <div id="accessibility" class="section level2">
 <h2>Accessibility</h2>
-<p>Each slide and image added to the courses needs to be accessible. There are two things to check for each slide:</p>
+<p>Each slide and image added to the courses should be accessible so every member of your audience can use your content. There are two things to check for each slide:</p>
 <ul class="task-list">
 <li><p><input type="checkbox" disabled="" />
 Each slide is described in the notes of the slide so learners relying on a screen reader can access the content. See <a href="https://lastcallmedia.com/blog/accessible-comics" class="uri">https://lastcallmedia.com/blog/accessible-comics</a> for more guidance on this.</p></li>
@@ -653,7 +701,7 @@ The color palette choices of the slide are contrasted in a way that is friendly 
 <div id="adding-videos-in-text" class="section level2">
 <h2>Adding videos in text</h2>
 <p>To add a youtube video to your Rmd files use the following:</p>
-<p>To get the appropriate youtube url do the following: 1) click on the <strong>SHARE</strong> button on the lower right corner of the video on youtube 2) click on the <strong>Embed</strong> option on the far left 3) copy just the part after <code>"src ="</code> and paste the url into the <code>knitr::include_url()</code> function</p>
+<p>To get the appropriate youtube url do the following: 1) Click on the <strong>SHARE</strong> button on the lower right corner of the video on youtube 2) Click on the <strong>Embed</strong> option on the far left 3) Copy just the part after <code>"src ="</code> and paste the url into the <code>knitr::include_url()</code> function</p>
 <p>Again, it is important to use the <code>echo=FALSE</code> option so that only the video is shown and not the code to generate it.</p>
 <p>See <a href="https://github.com/jhudsl/OTTR_Template/blob/main/02-chapter_of_course.Rmd">Chapter 2</a> of the template course for examples.</p>
 </div>

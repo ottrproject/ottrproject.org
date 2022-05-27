@@ -44,6 +44,13 @@ navbar:
       - text: "Customizing Docker"
         href: customize-docker.html
         icon: fa-gears
+  - text: More features
+    href: faqs.html
+    icon: fa-handshake
+    menu:
+        - text: "How to give credits"
+          href: more_features.html#adding-credits
+          icon: fa-award
   - text: Help
     href: faqs.html
     icon: fa-handshake
