@@ -13,8 +13,8 @@
 
 <title>Getting started</title>
 
-<script src="site_libs/header-attrs-2.10/header-attrs.js"></script>
-<script src="site_libs/jquery-1.11.3/jquery.min.js"></script>
+<script src="site_libs/header-attrs-2.11/header-attrs.js"></script>
+<script src="site_libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <link href="site_libs/bootstrap-3.3.5/css/bootstrap.min.css" rel="stylesheet" />
 <script src="site_libs/bootstrap-3.3.5/js/bootstrap.min.js"></script>
@@ -351,22 +351,31 @@ div.tocify {
         Starting a new OTTR course
       </a>
     </li>
-    <li>
-      <a href="getting_started.html#start-writing-content">
+    <li class="dropdown-submenu">
+      <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
         <span class="fa fa-file"></span>
          
         Start writing content
       </a>
+      <ul class="dropdown-menu" role="menu">
+        <li>
+          <a href="writing_content.html#ottr-entry-level">
+            <span class="fa fa-circle"></span>
+             
+            Entry Level
+          </a>
+        </li>
+        <li>
+          <a href="writing_content.html#ottr-advanced">
+            <span class="fa fa-square"></span>
+             
+            Advanced
+          </a>
+        </li>
+      </ul>
     </li>
     <li>
-      <a href="getting_started.html#gitHub-quick-start">
-        <span class="fa fa-github"></span>
-         
-        GitHub quick start
-      </a>
-    </li>
-    <li>
-      <a href="getting_started.html#set-up-images">
+      <a href="sub_dir/writing_content.html#set-up-images">
         <span class="fa fa-images"></span>
          
         Set up images
@@ -578,140 +587,16 @@ Then check the box that says <code>Require pull requests before merging</code>.<
 <li>Request <code>@cansavvy</code> as a reviewer.</li>
 </ul>
 <p>If your new course doesn’t need some of the functionality of these files or you find the automatic updates bothersome, you can feel free to use <a href="https://github.com/marketplace/actions/repo-file-sync-action#sync-the-same-files-to-multiple-repositories">this guide</a> to tailor which files you want updates for. <em>If you have any questions about the implications of any of these updates or files, please tag <code>@cansavvy</code>.</em></p>
-<hr />
+<p>Now you are ready to start writing content!</p>
 </div>
-</div>
-<div id="start-writing-content" class="section level2">
-<h2>Start writing content</h2>
-<p>Now you have a course repository on GitHub and you’re ready to start writing content!</p>
-<p>For any set of file changes, its recommended you file a pull request (we will guide you on that here if you are unfamiliar). OTTR checks center around pull requests so you can avoid accidentally making your mistakes live in your courses. When you file a pull request initiates a series of checks done automatically by GitHub actions which will help you as you add content to your course.</p>
-<p>These checks will do important things like: * Check that the all the urls actually take learners somewhere (<code>check-urls</code>) * Check that the code is styled using the <code>styler</code> package (<code>style-and-sp-check</code>) * Check that the spelling is correct using the <code>spelling</code> package (<code>style-and-sp-check</code>) * Create previews of the rendered versions of the course (<code>render-preview</code>) * Check the formatting of any quizzes (<code>check-quizzes</code>)</p>
-<p>You can adjust what checks are run by editing the <code>config_automation.yml</code> file. This is further discussed in this section about <a href="./customize-robots.html">customizing GitHub Actions</a>.</p>
-</div>
-<div id="github-quick-start" class="section level2">
-<h2>GitHub quick start</h2>
-<p>If you do not have a method of working with Git already it is recommended you use a git client to help you manage your branches more easily. Install <a href="https://www.gitkraken.com/">GitKraken</a> for a handy way to manage your course locally. These steps shown here will show you the GitKraken way of handling files.</p>
-<div id="git-clone" class="section level3">
-<h3>git clone</h3>
-<p>It’s ideal to work on your course from your computer (you do not need to install any other software besides git if you don’t want to). To get going, you will need to <code>clone</code> the course repository it to your own computer. Cloning is just making a remote copy of the project local.</p>
-<p><img src="https://docs.google.com/presentation/d/1IJ_uFxJud7OdIAr6p8ZOzvYs-SGDqa7g4cUHtUld03I/export/png?id=1IJ_uFxJud7OdIAr6p8ZOzvYs-SGDqa7g4cUHtUld03I&pageid=g1014c75158f_0_90" width="800"/></p>
-<p>So to get started, you will need to clone your course’s repository you created that we will be using for the duration of this course.</p>
-<p><img src="https://docs.google.com/presentation/d/1IJ_uFxJud7OdIAr6p8ZOzvYs-SGDqa7g4cUHtUld03I/export/png?id=1IJ_uFxJud7OdIAr6p8ZOzvYs-SGDqa7g4cUHtUld03I&pageid=g1014c75158f_0_166" width="800"/></p>
-<p>To clone a GitHub repository, using GitKraken. First, click <code>Clone a repo</code>. Then, choose where you’d like the repository to be on your computer using the <code>Browse</code> button. You will need to <code>Copy + Paste</code> your new repository’s url to where it says <code>URL</code>.</p>
-<p>Navigate to your repository on GitHub to copy the URL. Copying and pasting is advisable because any little typo will inhibit cloning.</p>
-<p>Now you are ready to click <code>Clone the repository</code>! It will ask you if you’d like to <code>Open Now</code>, click that.</p>
-</div>
-<div id="create-a-branch" class="section level3">
-<h3>Create a branch</h3>
-<p>Handling branches is where you unleash the real benefit of GitHub, but it’s also the confusing part to get a hang of.</p>
-<p><img src="https://docs.google.com/presentation/d/1IJ_uFxJud7OdIAr6p8ZOzvYs-SGDqa7g4cUHtUld03I/export/png?id=1IJ_uFxJud7OdIAr6p8ZOzvYs-SGDqa7g4cUHtUld03I&pageid=g1014c75158f_0_266" width="800"/></p>
-<p>The best way to get a grasp on what the branches represent is to create one and start using it.</p>
-<p><img src="https://docs.google.com/presentation/d/1IJ_uFxJud7OdIAr6p8ZOzvYs-SGDqa7g4cUHtUld03I/export/png?id=1IJ_uFxJud7OdIAr6p8ZOzvYs-SGDqa7g4cUHtUld03I&pageid=g1014c75158f_0_632" width="800"/></p>
-<p>In GitKraken we can create a new branch; this will be your working copy. First, click the Branch button. Next, type in a branch name in the box that the cursor is blinking in. In our example, we are calling it <code>a-new-branch</code>. Now click <code>Enter</code>! Now you have a new branch!</p>
-<p><img src="https://docs.google.com/presentation/d/1IJ_uFxJud7OdIAr6p8ZOzvYs-SGDqa7g4cUHtUld03I/export/png?id=1IJ_uFxJud7OdIAr6p8ZOzvYs-SGDqa7g4cUHtUld03I&pageid=g1014c75158f_0_618" width="800"/></p>
-<p>Now we can edit our files and code however we normally would. Go ahead and make an edit to <a href="#file-changes-to-be-made">some of the files listed in the above section</a>.</p>
-<p><img src="https://docs.google.com/presentation/d/1IJ_uFxJud7OdIAr6p8ZOzvYs-SGDqa7g4cUHtUld03I/export/png?id=1IJ_uFxJud7OdIAr6p8ZOzvYs-SGDqa7g4cUHtUld03I&pageid=g1014c75158f_0_645" width="800"/></p>
-<p>If you’ve made a change to any file in your repository, it will appear in GitKraken and you can click on it to see the differences.</p>
-<p><img src="https://docs.google.com/presentation/d/1IJ_uFxJud7OdIAr6p8ZOzvYs-SGDqa7g4cUHtUld03I/export/png?id=1IJ_uFxJud7OdIAr6p8ZOzvYs-SGDqa7g4cUHtUld03I&pageid=g1014c75158f_0_652" width="800"/></p>
-<p>If we want to add these file changes to our current branch, we need to <code>commit</code> them.</p>
-<p><img src="https://docs.google.com/presentation/d/1IJ_uFxJud7OdIAr6p8ZOzvYs-SGDqa7g4cUHtUld03I/export/png?id=1IJ_uFxJud7OdIAr6p8ZOzvYs-SGDqa7g4cUHtUld03I&pageid=g1014c75158f_0_664" width="800"/></p>
-<p>Now that we have changes committed to our branch we are ready to also add them to the remote, internet copy! To do this, we will need to <code>push</code> our branch.</p>
-<p><img src="https://docs.google.com/presentation/d/1IJ_uFxJud7OdIAr6p8ZOzvYs-SGDqa7g4cUHtUld03I/export/png?id=1IJ_uFxJud7OdIAr6p8ZOzvYs-SGDqa7g4cUHtUld03I&pageid=g1014c75158f_0_686" width="800"/></p>
-<p>To push means to add changes that are on your new branch to the remote branch (internet version). The word origin just refers to where your branch is stored on the internet. Choose your origin in the dropdown menu and click Submit.</p>
-<p><img src="https://docs.google.com/presentation/d/1IJ_uFxJud7OdIAr6p8ZOzvYs-SGDqa7g4cUHtUld03I/export/png?id=1IJ_uFxJud7OdIAr6p8ZOzvYs-SGDqa7g4cUHtUld03I&pageid=g1014c75158f_0_786" width="800"/></p>
-<p>After a variable number of commits, your branch, called a-new-branch is a different version of the original code base that may have a nifty improvement to it. But our main goal is to add that nifty improvement to the main branch. To start this process of bringing in new changes to the main curated repository, we will create a pull request.</p>
-<p>From GitHub:</p>
-<blockquote>
-<p>Pull requests let you tell others about changes you’ve pushed to a GitHub repository. Once a pull request is sent, interested parties can review the set of changes, discuss potential modifications, and even push follow-up commits if necessary.</p>
-</blockquote>
-<p>Pull Requests are the meat of how code changes and improvements get reviewed and incorporated! A vast majority of the benefits of incorporating GitHub into your workflow centers around fully utilizing the power of pull requests!</p>
-<p><img src="https://docs.google.com/presentation/d/1IJ_uFxJud7OdIAr6p8ZOzvYs-SGDqa7g4cUHtUld03I/export/png?id=1IJ_uFxJud7OdIAr6p8ZOzvYs-SGDqa7g4cUHtUld03I&pageid=g1014c75158f_0_751" width="800"/></p>
-<p>Now we can open up a pull request if we go to our GitHub repository on GitHub.</p>
-<p><img src="https://docs.google.com/presentation/d/1IJ_uFxJud7OdIAr6p8ZOzvYs-SGDqa7g4cUHtUld03I/export/png?id=1IJ_uFxJud7OdIAr6p8ZOzvYs-SGDqa7g4cUHtUld03I&pageid=g1014c75158f_0_713" width="800"/></p>
-<p>After you click on <code>Compare &amp; pull request</code> you’ll be taken to a screen where you can add information about your changes. After you are done writing your description, click <code>Create Pull Request</code>! (If you don’t have your pull request description <em>perfect</em> don’t worry about it, you can always edit it later).</p>
-<p>Congrats! You’ve just opened a pull request! For every set of changes you’ll make to your course, you will want to follow this similar set of steps.</p>
-</div>
-<div id="checks-on-the-pull-requests" class="section level3">
-<h3>Checks on the pull requests</h3>
-<p>With your pull request open, the series of OTTR GitHub actions checks will commence! They will print out reports in comments on your pull request.</p>
-<p><img src="https://raw.githubusercontent.com/jhudsl/OTTR_Template/main/resources/screenshots/gha-checks.png" /></p>
-<p>Read those comments to begin addressing the problems with more commits to your branch.</p>
-<p>You can adjust what checks are run by editing the <code>config_automation.yml</code> file. This is further discussed in this section about <a href="https://github.com/jhudsl/OTTR_Template/wiki/How-to-set-up-and-customize-GitHub-actions-robots">the GitHub Actions</a>.</p>
-<p>If you need more information on failed GitHub actions you can scroll to the bottom of your pull request where the status of the checks are shown and click on <code>Details</code> for more information. If you are unsure what the error message means and have trouble addressing it, please <a href="https://github.com/jhudsl/OTTR_Template/issues/new?assignees=cansavvy&amp;labels=bug&amp;template=course-template-problem-report.md">file an issue on the OTTR_Template repository to get help</a>.</p>
-<p>To summarize, this is what this workflow looks like:</p>
-<p><img src="https://docs.google.com/presentation/d/1IJ_uFxJud7OdIAr6p8ZOzvYs-SGDqa7g4cUHtUld03I/export/png?id=1IJ_uFxJud7OdIAr6p8ZOzvYs-SGDqa7g4cUHtUld03I&pageid=g1014c75158f_0_675" width="800"/></p>
-<p>For more on <a href="https://jhudatascience.org/Adv_Reproducibility_in_Cancer_Informatics/engaging-in-code-review---as-an-author.html">what to put in a pull request’s description you can read this chapter</a></p>
-<p>For more on <a href="https://jhudatascience.org/Adv_Reproducibility_in_Cancer_Informatics/engaging-in-code-review---as-a-reviewer.html">how to review a pull request, see this chapter</a></p>
-</div>
-<div id="more-resources-for-learning-github" class="section level3">
-<h3>More resources for learning GitHub</h3>
+<div id="methods-of-writing-content" class="section level3">
+<h3>Methods of writing content</h3>
+<p>We have two recommended ways of writing content that is based on your comfort and interest level in using git and GitHub:</p>
 <ul>
-<li><a href="https://jhudatascience.org/Adv_Reproducibility_in_Cancer_Informatics/using-version-control-with-github.html">Using version control with GitHub</a></li>
-<li><a href="https://happygitwithr.com/">Happy Git and GitHub for the useR</a></li>
-<li><a href="https://towardsdatascience.com/introduction-to-github-for-data-scientists-2cf8b9b25fba">GitHub for data scientists</a></li>
-<li><a href="https://lab.github.com/githubtraining/introduction-to-github">Intro to GitHub</a></li>
-<li><a href="https://lab.github.com/githubtraining/first-day-on-github">First Day on GitHub</a></li>
-<li><a href="https://lab.github.com/githubtraining/first-week-on-github">First Week on GitHub</a></li>
-<li><a href="https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/creating-a-pull-request">GitHub docs about creating a Pull Request</a></li>
-<li><a href="https://www.atlassian.com/git/tutorials/making-a-pull-request">Making a Pull Request</a></li>
+<li><a href="#ottr-entry-level">OTTR Entry Level</a> - if you do not have interest in diving into GitHub, use this version. It is done completely through the GitHub web browser.</li>
+<li><a href="#ottr-advanced">OTTR Advanced</a> - If you are already familiar with git and GitHub or are interested in starting to use it, we recommend this method. It will require a bit more learning but git and GitHub will be a great skill set for you to utilize; both for OTTR purposes and elsewhere for version control!</li>
 </ul>
-<hr />
-</div>
-</div>
-<div id="set-up-images" class="section level2">
-<h2>Set up images</h2>
-<p>To maintain style and attributions for graphics and images, as well as to enable easy updates in the future, please start a new Google Slide document for your OTTR course.</p>
-<p><strong>Important:</strong> :warning: Your Google Slide document must be set to <code>Anyone with a link</code>. See <a href="https://support.wix.com/en/article/setting-permissions-for-google-drive-files-and-folders#:~:text=Settings%20Permissions%20for%20a%20Google,edit%20and%20comment%20as%20well.">this article for more details.</a> The renders will fail if this is not set!</p>
-<p>This also allows you to make videos of your slides that can be added to your course.</p>
-<p>Each Rmd with images that is a part of your Bookdown needs to have this chunk at the beginning so that images are stored properly for Leanpub conversion.</p>
-<p>If you are unfamiliar with <a href="https://rmarkdown.rstudio.com/lesson-3.html">how R Markdown code chunks work, read this</a>.</p>
-<p><img src = "resources/images/set_knitr_image_path.png" width = 400></p>
-<p>Next, import the appropriate theme (see <a href="https://youtu.be/pNbwF263yY8">this video</a> for assistance):</p>
-<p>Note that you will need to <a href="https://support.google.com/drive/answer/2494893?hl=en&amp;co=GENIE.Platform%3DDesktop">change your Google Slide permissions</a> to “Anyone with a link” in order for some functionality to work.</p>
-<div id="accessibility" class="section level3">
-<h3>Accessibility</h3>
-<p>Each slide and image added to the courses needs to be accessible. There are two things to check for each slide:</p>
-<ul class="task-list">
-<li><p><input type="checkbox" disabled="" />
-Each slide is described in the notes of the slide so learners relying on a screen reader can access the content. See <a href="https://lastcallmedia.com/blog/accessible-comics" class="uri">https://lastcallmedia.com/blog/accessible-comics</a> for more guidance on this.</p></li>
-<li><p><input type="checkbox" disabled="" />
-The color palette choices of the slide are contrasted in a way that is friendly to those with color vision deficiencies. You can check this using <a href="https://colororacle.org/">Color Oracle</a>.</p></li>
-</ul>
-</div>
-<div id="adding-images-and-graphics-in-text" class="section level3">
-<h3>Adding images and graphics in text</h3>
-<p>All images should be included in your Google Slides with the captions we discussed above. To add images in the text in your Rmd, use the following function within an <a href="https://bookdown.org/yihui/rmarkdown/r-code.html">R code chunk</a>.</p>
-<p><img src = "resources/images/include_slide.png" width = 600></p>
-<p>You can obtain the <google_slide_url> by viewing the slide with the image you want to add and copying the address from the browser search bar.</p>
-<div class="figure">
-<img src="https://raw.githubusercontent.com/jhudsl/OTTR_Template/main/resources/screenshots/slide_url.png" alt="" />
-<p class="caption">Google slide url</p>
-</div>
-<p>Also add notes (the same as the <code>fig.alt</code> text) to each slide in the google slide presentation describing the text or images of the slide to allow for the content to be accessible to vision impaired individuals, as this can be converted to audio. Note that you can’t have any line breaks within the <code>fig.alt</code> text. If there are no line breaks the text should appear blue within the code chunk.</p>
-<p>The <code>echo=FALSE</code> ensures that the r code is hidden from your course, while the <code>out.width = "100%"</code> is used to size the image. We generally recommend going with larger images.</p>
-<p><em>You must define <code>fig.alt</code> in the code chunk options/parameters to pass to <code>knitr</code>.</em> You can adjust the size(fig.hight, fig.width, out.width, out.height), alignment (fig.align), or caption (fig.cap) of the image you can use these arguments in the code chunk tag:</p>
-<p><img src = "resources/images/header.png" width = 400></p>
-<p>Google Slides must be <strong>public</strong>. Share settings must be set to “Anyone on the internet with this link can view”. Note that “Private” is the default setting when you make a new presentation.</p>
-<p>See <a href="https://github.com/jhudsl/OTTR_Template/blob/main/02-chapter_of_course.Rmd">Chapter 2</a> of the template course for examples.</p>
-</div>
-<div id="adding-videos-in-text" class="section level3">
-<h3>Adding videos in text</h3>
-<p>To add a youtube video to your Rmd files use the following:</p>
-<p>To get the appropriate youtube url do the following: 1) click on the <strong>SHARE</strong> button on the lower right corner of the video on youtube 2) click on the <strong>Embed</strong> option on the far left 3) copy just the part after <code>"src ="</code> and paste the url into the <code>knitr::include_url()</code> function</p>
-<p>Again, it is important to use the <code>echo=FALSE</code> option so that only the video is shown and not the code to generate it.</p>
-<p>See <a href="https://github.com/jhudsl/OTTR_Template/blob/main/02-chapter_of_course.Rmd">Chapter 2</a> of the template course for examples.</p>
-</div>
-<div id="adding-embedded-files-to-text" class="section level3">
-<h3>Adding embedded files to text</h3>
-<p>Sometimes it is useful to include an embedded version of a website or file on a website, if there is a particularly important link and you don’t want to rely on learners clicking the link.</p>
-<p>To include such a file or website do the following:</p>
-<p><img src = "resources/images/include_url.png" width = 600></p>
-<p>Again you will need to include <code>echo = FALSE</code> to ensure that the code to generate the preview of the website or file is not included in your course material.</p>
-<p><img src = "resources/images/include_url_2.png" width = 600></p>
-<p>If you want to include a file that is not hosted online, consider hosting it on GitHub using the method described for hosting your Bookdown version of the course. See the <a href="https://github.com/jhudsl/OTTR_Template/wiki/Starting-a-new-course-with-this-template#set-up-github-pages">Set up GitHub pages</a> section.</p>
-<p>Then you would do the following, where the url is that of your hosted file:</p>
-<p><img src = "resources/images/include_url_3.png" width = 600></p>
-<p>See <a href="https://github.com/jhudsl/OTTR_Template/blob/main/02-chapter_of_course.Rmd">Chapter 2</a> of the template course for examples.</p>
+<p><a href="#ottr-entry-level">Jump to OTTR Entry Level instructions here</a> <a href="#ottr-advanced">Jump to OTTR Advanced instructions here</a></p>
 </div>
 </div>
 
