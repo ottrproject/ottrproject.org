@@ -10,7 +10,7 @@ output:
 
 First please take a look at our [code of conduct](https://github.com/jhudsl/OTTR_Template/blob/main/code_of_conduct.md) if you wish to contribute to OTTR. 
 
-OTTR relies on R Markdown and GitHub actions, however, you do not need to be familiar with either R Markdown or GitHub to use OTTR!
+OTTR relies on R Markdown and GitHub actions. You do not need to be an expert about either R Markdown or GitHub to get started using OTTR, as we will guide you through the process! However, we recommend reading up a bit about both to better understand how they work in general before diving in to our guide. These readings only take a few minutes.
 
 Please check out these resources if you are not familiar with R Markdown:
 
