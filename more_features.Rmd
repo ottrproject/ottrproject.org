@@ -167,22 +167,7 @@ cow::borrow_chapter(
 
 If you want to change the title you can use an option `remove_h1` to remove the title from the incoming borrowed chapter.
 
-````{markdown}
-
-# A new title
-
-Some new words before the borrowed chapter content.
-
-```{r, echo = FALSE, results='asis'}
-cow::borrow_chapter(
-  doc_path = "02-chapter_of_course.Rmd",
-  remove_h1 = TRUE
-)
-```
-
-Some new words after the borrowed chapter content.
-
-````
+![](resources/images/h1_header.png)
 
 ### Linking between chapters
 
