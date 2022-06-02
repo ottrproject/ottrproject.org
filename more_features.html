@@ -11,7 +11,7 @@
 
 
 
-<title>Customizing your OTTR course</title>
+<title>More Features</title>
 
 <script src="site_libs/header-attrs-2.10/header-attrs.js"></script>
 <script src="site_libs/jquery-1.11.3/jquery.min.js"></script>
@@ -505,12 +505,158 @@ div.tocify {
 
 
 
-<h1 class="title toc-ignore">Customizing your OTTR course</h1>
+<h1 class="title toc-ignore">More Features</h1>
 
 </div>
 
 
+<p>There are a lot of additional features and tools of OTTR that are discussed here!</p>
+<div id="citing-sources" class="section level2">
+<h2>Citing sources</h2>
+<p>You can generally follow the <a href="https://bookdown.org/yihui/rmarkdown-cookbook/bibliography.html">Bookdown instructions about citations</a>, but you don’t need to add the additional bibliography argument at the top of the Rmds.</p>
+<p>To add a new reference source, add to the <code>book.bib</code> file, keeping your new entry in alphabetical order.</p>
+<p>For articles (or anything with a DOI), go to <a href="https://www.doi2bib.org/">doi2bib.org</a> or <a href="https://zbib.org/">ZoteroBib</a> to get a BibTex-formatted reference that you can copy and paste the reference to the <code>book.bib</code> file.</p>
+<p>You can also use programs like Zotero or Endnote to export a .bib file and either combine with the <code>book.bib</code> or manage your references from there.</p>
+<p>Other sources can be added using this template:</p>
+<pre><code>@website{citekey,
+    author = {First Last},
+    title = {Title},
+    url  = {http://www.someurl.html},
+}</code></pre>
+<p>To reference the citations in your writing follow the <a href="https://bookdown.org/yihui/rmarkdown-cookbook/bibliography.html">bookdown instructions</a>:</p>
+<blockquote>
+<p>Items can be cited directly within the documentation using the syntax <span class="citation">@key</span> where key is the citation key in the first line of the entry, e.g., <span class="citation">@R-base</span>. To put citations in parentheses, use <span class="citation">[@key]</span>. To cite multiple entries, separate the keys by semicolons, e.g., <span class="citation">[@key-1; @key-2; @key-3]</span>. To suppress the mention of the author, add a minus sign before @, e.g., <span class="citation">[-@R-base]</span>.</p>
+</blockquote>
+<p>See <a href="https://github.com/jhudsl/OTTR_Template/blob/main/02-chapter_of_course.Rmd">Chapter 2</a> of this template course for examples.</p>
+</div>
+<div id="giving-credits-to-contributors" class="section level2">
+<h2>Giving credits to contributors</h2>
+<p>Since so many individuals contribute to our courses in so many ways. Thus, we decided to make a table of credits to make it clear who did what.</p>
+<p>Here is an example:</p>
+<div class="figure">
+<img src="https://raw.githubusercontent.com/jhudsl/OTTR_Template/main/resources/screenshots/example_credits.png" alt="" />
+<p class="caption">Credit section from a course that used this template</p>
+</div>
+<p>Please see the <a href="https://jhudatascience.org/OTTR_Template/about-the-authors.html">about section</a> of the template for descriptions of how credits should be attributed for the course.</p>
+<p>This is generated from the About.Rmd file. An About.Rmd file will already be in your course from using our template. You will need to do the following steps to update it for your course:</p>
+<ol style="list-style-type: decimal">
+<li>Fill out author names for the various roles where applicable.<br />
+</li>
+<li>Delete lines for roles that are not applicable.<br />
+</li>
+<li>Make sure roles grammatically match names. If there are multiple people include the “s” in the role name where applicable and remove the parentheses. If only one person is appropriate for a given role remove “(s)” from the role name.</li>
+<li>Ensure that each row has “|” around each cell value.</li>
+</ol>
+<p><em>Example Table</em>:</p>
+<p>The first row and additional rows based on <a href="https://bit.ly/course-credits-table">this table</a> should be added and filled in using <a href="https://www.markdownguide.org/extended-syntax/">markdown table format</a>.</p>
+<pre><code>|Credits|Names|
+|-------|-----|
+|Lead Content Instructor|FirstName LastName|</code></pre>
+<p>Links to personal websites can be added below the table to make it easier to read.</p>
+<pre><code>|Credits|Names|
+|-------|-----|
+|Lead Content Instructor|[FirstName LastName]|
 
+&lt;!-- Author information --&gt;
+
+[FirstName LastName]: link to personal website</code></pre>
+<p>These rows should be included for <em>all courses</em>:</p>
+<pre><code>|Template Publishing Engineers|[Candace Savonen], [Carrie Wright]|
+|Publishing Maintenance Engineer|[Candace Savonen]|
+|Technical Publishing Stylists|[Carrie Wright], [Candace Savonen]|
+|Package Developers[ottrpal]|[John Muschelli], [Candace Savonen], [Carrie Wright]|
+
+&lt;!-- Author information --&gt;
+
+[John Muschelli]: https://johnmuschelli.com/
+[Candace Savonen]: https://www.cansavvy.com/
+[Carrie Wright]: https://carriewright11.github.io/
+
+&lt;!-- Links --&gt;
+
+[ottrpal]: https://github.com/jhudsl/ottrpal</code></pre>
+<p>These rows should be added to all <em>Johns Hopkins</em> courses:</p>
+<pre><code>|Content Publisher|[Ira Gooding]|
+|Content Publishing Reviewer|Ira Gooding]|
+
+&lt;!-- Author information --&gt;
+
+[Ira Gooding]: https://publichealth.jhu.edu/faculty/4130/ira-gooding</code></pre>
+<p>Additionally, this row should be added for <em>all ITCR Courses</em>:</p>
+<pre><code>|Content Directors|[Jeff Leek]|
+
+&lt;!-- Author information --&gt;
+
+[Jeff Leek]: https://jtleek.com/</code></pre>
+<div id="adding-the-credits-table-to-coursera" class="section level3">
+<h3>Adding the Credits table to Coursera</h3>
+<p>In Coursera, you can add the credits table URL as an ungraded plugin (<a href="https://github.com/jhudsl/OTTR_Template/wiki/Publishing-on-Coursera#navigating-to-your-course-on-coursera">the same as described here for adding chapter content</a>). This should be added at the beginning of your course, right after the introduction.</p>
+</div>
+<div id="adding-the-credits-table-to-leanpub" class="section level3">
+<h3>Adding the Credits table to Leanpub</h3>
+<p>In Leanpub, make sure that your About.md file in your manuscript folder is listed in your Book.txt file and this Credits table will automatically be incorporated into your Leanpub course.</p>
+</div>
+</div>
+<div id="borrowing-chapters" class="section level2">
+<h2>Borrowing chapters</h2>
+<p>If you have two courses that the content and topics overlap, you may want to share written material between the two.</p>
+<p>But, if you copy and paste to share material this would create a maintenance problem because if you update one you will need to remember to copy over the other! 😱</p>
+<p>In OTTR, we try to minimize maintenance pains so to get around this, we use <code>cow::borrow_chapter()</code> from the <a href="https://jhudatascience.org/cow/index.html">jhudsl/cow</a> package. The <code>cow</code> package is already on the <code>jhudsl/course_template</code> docker image so you do not need to install it if you are using the docker image or if you are have GitHub actions do all the rendering for you.</p>
+<p>To borrow a chapter from another course, create an <code>.Rmd</code> as you normally would, with a <code>ottrpal::set_knitr_image_path()</code> in a chunk at the beginning of the file and a <a href="https://www.markdownguide.org/basic-syntax/"><code>H1</code> title</a>.</p>
+<p>Then, wherever you would like the borrowed chapter to appear, put an R chunk with this; where <code>{r, echo = FALSE, results='asis'}</code> is included in your chunk arguments.</p>
+<pre><code>cow::borrow_chapter(
+  doc_path = &quot;02-chapter_of_course.Rmd&quot;,
+  repo_name = &quot;jhudsl/OTTR_Template&quot;
+)</code></pre>
+<p>The magic of this function is that whenever the course is re-rendered it will knit the latest version of the chapter you are borrowing. Note that this chunk cannot be run interactively, just include it in your Rmd and render your course as usual.</p>
+<div id="borrowing-from-a-local-file" class="section level3">
+<h3>Borrowing from a local file</h3>
+<p>If for some reason you would like a local file incorporated, just leave off the repo_name argument and <code>cow::borrow_chapter()</code> will look for the chapter locally: Have your chunk arguments include: <code>{r, echo = FALSE, results='asis'}</code>.</p>
+<pre><code>cow::borrow_chapter(
+  doc_path = &quot;02-chapter_of_course.Rmd&quot;
+)</code></pre>
+</div>
+<div id="borrowing-from-a-private-repository" class="section level3">
+<h3>Borrowing from a private repository</h3>
+<p>If you are borrowing from a course in a private repository, you will need to supply <a href="https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/creating-a-personal-access-token">GitHub personal access token</a> using a <code>git_pat</code> argument like this: Have your chunk arguments include:<code>{r, echo = FALSE, results='asis'}</code></p>
+<pre><code>cow::borrow_chapter(
+  doc_path = &quot;02-chapter_of_course.Rmd&quot;,
+  repo_name = &quot;jhudsl/Private_Repo&quot;,
+  git_pat = &quot;12345&quot;
+)</code></pre>
+</div>
+<div id="removing-an-h1-header" class="section level3">
+<h3>Removing an h1 header</h3>
+<p>If you want to change the title you can use an option <code>remove_h1</code> to remove the title from the incoming borrowed chapter.</p>
+<p><img src="resources/images/h1_header.png" /></p>
+</div>
+<div id="linking-between-chapters" class="section level3">
+<h3>Linking between chapters</h3>
+<p>If you don’t want the material from another chapter completely copied over, you might instead just want to put a link to the Bookdown chapter. You can just use the full url. A link would look something like this:</p>
+<pre><code>![](https://jhudatascience.org/OTTR_Template/a-new-chapter.html)</code></pre>
+<p>You might want your course available for download as a docx. For example, you might be running a “train-the-trainer” workshop where trainees don’t feel comfortable using Github to edit the lessons for their own use.</p>
+<p>The following yml in <code>index.Rmd</code> allows you to render the docx with a table of contents:</p>
+<pre><code>output:
+    bookdown::word_document2:
+      toc: true</code></pre>
+<p>You can also incorporate a template docx if you have headers and logos you want to use. To incorporate a template, make sure you add the <code>reference_docx</code> argument:</p>
+<pre><code>output:
+    bookdown::word_document2:
+      reference_docx: &lt;path/to/template&gt;.docx
+      toc: true</code></pre>
+<p>Learn more about templates <a href="https://bookdown.org/yihui/rmarkdown-cookbook/word-template.html">here</a>.</p>
+</div>
+</div>
+<div id="compatibility-with-google-docs" class="section level2">
+<h2>Compatibility with Google Docs</h2>
+<p>Google Docs can be a great way to get feedback from collaborators who aren’t comfortable developing in the GitHub environment. docx versions of the course are automatically rendered in pull requests and can be downloaded from the autogenerated comment.</p>
+<ul>
+<li>Once you’ve downloaded the docx, this can be uploaded to Google Drive and shared with the individuals you would like to solicit feedback or new material from. In Google Drive, click <code>+ New</code> in the left corner and then <code>File Upload</code>. Choose the docx file you downloaded.</li>
+<li>You may also want to include a link to the commit ID the Google Doc came from so you are able to keep track of what changes have occurred since the Google doc was set up initially.</li>
+<li>So you are able to keep track of the changes to the docx version of the course, its advisable to set to “suggestions” when you share the document.</li>
+<li>Then as comments and suggestions trickle in, a lead author who is comfortable with the OTTR process can incorporate those comments into an existing or new pull request which can checked for its rendering and eventually added to the <code>main</code> content branch.</li>
+</ul>
+</div>
 
 <hr>
 <center>

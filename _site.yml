@@ -11,13 +11,13 @@ navbar:
     menu:
       - text: "Prerequisites"
         href: getting_started.html#recommended-background-information
-        icon: fa-hammer
+        icon: fa-asterisk
       - text: "Starting a new OTTR course"
         href: getting_started.html#starting-a-new-ottr-course
         icon: fa-flag-checkered
       - text: "Start writing content"
         href: sub_dir/writing_content.html
-        icon: fa-file
+        icon: fa-pen
         menu:
         - text: "Entry Level"
           href: writing_content.html#ottr-entry-level
@@ -31,6 +31,10 @@ navbar:
   - text: OTTR Examples
     href: examples.html
     icon: fa-lightbulb
+    menu:
+      - text: "Choosing between platforms"
+        href: examples.html#choosing-publishing-platforms
+        icon: fa-tasks   
   - text: Customization
     icon: fa-palette
     href: customizing.html
@@ -44,6 +48,22 @@ navbar:
       - text: "Customizing Docker"
         href: customize-docker.html
         icon: fa-gears
+  - text: More features
+    href: faqs.html
+    icon: fa-plus
+    menu:
+        - text: "Citing sources"
+          href: more_features.html#citing-sources
+          icon: fa-quote-left
+        - text: "Giving credits"
+          href: more_features.html#giving-credits-to-contributors
+          icon: fa-award
+        - text: "Borrowing chapters"
+          href: more_features.html#borrowing-chapters
+          icon: fa-bookmark
+        - text: "Compatibility with Google Docs"
+          href: more_features.html#compatibility-with-google-docs
+          icon: fa-file
   - text: Help
     href: faqs.html
     icon: fa-handshake
