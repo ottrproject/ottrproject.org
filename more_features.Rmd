@@ -131,7 +131,7 @@ To borrow a chapter from another course, create an `.Rmd` as you normally would,
 
 Then, wherever you would like the borrowed chapter to appear, put an R chunk with this:
 
-````{r, eval = FALSE}
+````
 ```{r, echo = FALSE, results='asis'}
 cow::borrow_chapter(
   doc_path = "02-chapter_of_course.Rmd",
@@ -146,8 +146,9 @@ Note that this chunk cannot be run interactively, just include it in your Rmd an
 ### Borrowing from a local file
 
 If for some reason you would like a local file incorporated, just leave off the repo_name argument and `cow::borrow_chapter()` will look for the chapter locally:
+Have your chunk arguments include: `{r, echo = FALSE, results='asis'}`.
 
-````{r, eval = FALSE}
+````
 ```{r, echo = FALSE, results='asis'}
 cow::borrow_chapter(
   doc_path = "02-chapter_of_course.Rmd"
@@ -158,15 +159,15 @@ cow::borrow_chapter(
 ### Borrowing from a private repository
 
 If you are borrowing from a course in a private repository, you will need to supply [GitHub personal access token](https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/creating-a-personal-access-token) using a `git_pat` argument like this:
+Have your chunk arguments include:`{r, echo = FALSE, results='asis'}`
 
-````{r, eval = FALSE}
+````
 ```{r, echo = FALSE, results='asis'}
 cow::borrow_chapter(
   doc_path = "02-chapter_of_course.Rmd",
   repo_name = "jhudsl/Private_Repo",
   git_pat = "12345"
 )
-```
 ````
 
 ### Removing an h1 header
