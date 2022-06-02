@@ -8,21 +8,22 @@ output:
 
 Now you have a course repository on GitHub and you're ready to start writing content!
 
-The OTTR content development process is designed around you opening pull requests! Pull requests are a way to set up changes and adds (and OTTR will test them) before you publish - this allows you to more easily check your new adds and talk about them with others!
+The OTTR content development process is designed around you opening what is called **pull requests**! Pull requests are a way to set up **proposed changes** (instead of direct changes) before you publish them. Pull requests allow for OTTR to test your proposed changes for issues like broken URLs or spelling errors. Importantly, pull requests also allow you to discuss proposed changes with others!
 
 ![](resources/images/pull_request_model.jpg)
 
 ## Method of writing content
 
-We have two recommended ways of writing content that is based on your comfort and interest level in using git and GitHub:
+We have two recommended ways of writing content that is based on your comfort and interest level in using Git and GitHub:
 
-- [OTTR Entry Level](#ottr-entry-level) - if you do not have interest in diving into GitHub, use this version. It is done completely through the GitHub web browser.
-- [OTTR Advanced](#ottr-advanced) - If you are already familiar with git and GitHub or are interested in starting to use it, we recommend this method. It will require a bit more learning but git and GitHub will be a great skill set for you to utilize; both for OTTR purposes and elsewhere for version control!
+- [OTTR Entry Level](#ottr-entry-level) - if you do not have an interest in diving into GitHub, use this version. It is done completely through the GitHub web browser.
+- [OTTR Advanced](#ottr-advanced) - If you are already familiar with Git and GitHub or are interested in starting to use them, we recommend this method. It will require a bit more learning, but Git and GitHub will be a great skill set for you to utilize; both for OTTR purposes and elsewhere for version control!
 
 ![](resources/images/methods_of_writing.jpg)
 
 OTTR checks center around pull requests so you can avoid accidentally making your mistakes live in your courses.
-When you file a pull request initiates a series of checks done automatically by GitHub actions which will help you as you add content to your course.
+
+When you file a pull request, this initiates a series of checks done automatically by GitHub actions which will help you as you add content to your course.
 
 These checks will do important things like:
 * Check that the all the urls actually take learners somewhere (`check-urls`)
@@ -38,11 +39,11 @@ You can adjust what checks are run by editing the `config_automation.yml` file. 
 
 # OTTR Entry Level
 
-You can edit and add content directly in the GitHub website if you prefer not to learn Git and GitHub (though we highly recommend it's a useful skill to integrate into your workflow -- not just for OTTR).
+You can edit and add content directly in the GitHub website if you prefer not to learn Git and GitHub (though we highly recommend it, as knowing how to use Git/GitHub is a useful skill to integrate into your workflow -- not just for OTTR).
 
 ## Create a new branch
 
-Whenever you are getting ready to prep a new set of changes you'll need to create a new branch. On your main repository page, click on the Switch Branches button.
+Whenever you are getting ready to prep a new set of changes you'll need to create a new branch. On your main repository page, click on the `Switch Branches` button.
 
 Type in a name for your new branch; something that relates to the changes you are making. For the purposes of this example, we'll call this new branch, `new-changes`.
 
@@ -50,17 +51,17 @@ Then click `Create branch: new-changes from main`.
 
 ![](resources/images/new-branch.png)
 
-Congrats! You've made a new branch. Github will automatically show you your new branch's files (which have been copied from the `main`).
+Congrats! You've made a new branch. GitHub will automatically show you your new branch's files (which have been copied from the `main`).
 
 Whenever you are making changes, you'll want to check that you are on your new branch in order to add any new changes to your pull request.
 
 ## General usage of GitHub
 
-In your OTTR repository, on your new branch, you can add/edit/rename currently existing files
+In your OTTR repository, on your new branch, you can add/edit/rename currently existing files.
 
 - [Follow GitHub's instructions about managing files through their website here](https://docs.github.com/en/repositories/working-with-files/managing-files).
 
-After every edit you make, you'll scroll down and make sure that you choose `Commit directly to the new-changes branch.` in order to add your changes to the pull request in order for the changes to be run through the OTTR checks.
+After every edit you make, scroll down and make sure that you choose `Commit directly to the new-changes branch.`. This will add your changes to the pull request and thus allowing for these changes to be run through the OTTR checks.
 
 Then click `Commit changes`.
 You will need to do this after every change to add them to your branch.
@@ -71,23 +72,23 @@ Now you are ready to open your pull request.
 
 # OTTR Advanced
 
-If you are interested in engaging with GitHub (or already know how), we recommend interacting with GitHub and git outside of the GitHub website to create your pull requests.
+If you are interested in engaging with GitHub (or already know how), we recommend interacting with GitHub and Git outside of the GitHub website to create your pull requests.
 
-If you are new to git and GitHub already it is recommended you use a git client to help you manage your branches more easily. Install [GitKraken](https://www.gitkraken.com/) for a handy way to manage your course locally. These steps shown here will show you the GitKraken way of handling files.
+If you are new to Git and GitHub, it is recommended you use a Git client to help you manage your branches more easily. Install [GitKraken](https://www.gitkraken.com/) for a handy way to manage your course locally. These steps shown here will show you the GitKraken way of handling files.
 
 If you are not new to GitHub, then we recommend skipping this section and jumping to the [`Setting Up Images` section](#set-up-images).
 
-## git clone
+## Cloning with Git
 
-It's ideal to work on your course from your computer (you do not need to install any other software besides git if you don't want to). To get going, you will need to `clone` the course repository it to your own computer. Cloning is just making a remote copy of the project local.
+It's ideal to work on your course from your computer (you do not need to install any other software besides Git if you don't want to). To get going, you will need to `clone` the course repository to your own computer. Cloning is just making a local copy on your computer of the remote version of the project on GitHub.
 
 <img src="https://docs.google.com/presentation/d/1IJ_uFxJud7OdIAr6p8ZOzvYs-SGDqa7g4cUHtUld03I/export/png?id=1IJ_uFxJud7OdIAr6p8ZOzvYs-SGDqa7g4cUHtUld03I&pageid=g1014c75158f_0_90" width="800"/>
 
-So to get started, you will need to clone your course's repository you created that we will be using for the duration of this course.
+To get started, you will need to clone your course's repository that you created, as you will be using it for the duration of writing your course.
 
 <img src="https://docs.google.com/presentation/d/1IJ_uFxJud7OdIAr6p8ZOzvYs-SGDqa7g4cUHtUld03I/export/png?id=1IJ_uFxJud7OdIAr6p8ZOzvYs-SGDqa7g4cUHtUld03I&pageid=g1014c75158f_0_166" width="800"/>
 
-To clone a GitHub repository, using GitKraken. First, click `Clone a repo`. Then, choose where you’d like the repository to be on your computer using the `Browse` button. You will need to `Copy + Paste` your new repository's url to  where it says `URL`.
+To clone a GitHub repository, using GitKraken, first, click `Clone a repo`. Then, choose where you’d like the repository to be on your computer using the `Browse` button. You will need to `Copy + Paste` your new repository's url to  where it says `URL`.
 
 Navigate to your repository on GitHub to copy the URL. Copying and pasting is advisable because any little typo will inhibit cloning.
 
@@ -95,19 +96,19 @@ Now you are ready to click `Clone the repository`! It will ask you if you'd like
 
 ## Create a branch
 
-Handling branches is where you unleash the real benefit of GitHub, but it's also the confusing part to get a hang of.
+Handling branches is where you unleash the real benefit of GitHub, but it can be confusing and a bit tricky to get a hang of.
 
 <img src="https://docs.google.com/presentation/d/1IJ_uFxJud7OdIAr6p8ZOzvYs-SGDqa7g4cUHtUld03I/export/png?id=1IJ_uFxJud7OdIAr6p8ZOzvYs-SGDqa7g4cUHtUld03I&pageid=g1014c75158f_0_266" width="800"/>
 
-The best way to get a grasp on what the branches represent is to create one and start using it.
+The best way to get a grasp of what the branches represent is to create one and start using it.
 
 <img src="https://docs.google.com/presentation/d/1IJ_uFxJud7OdIAr6p8ZOzvYs-SGDqa7g4cUHtUld03I/export/png?id=1IJ_uFxJud7OdIAr6p8ZOzvYs-SGDqa7g4cUHtUld03I&pageid=g1014c75158f_0_632" width="800"/>
 
-In GitKraken we can create a new branch; this will be your working copy. First, click the Branch button. Next, type in a branch name in the box that the cursor is blinking in. In our example, we are calling it `a-new-branch`. Now click `Enter`! Now you have a new branch!
+In GitKraken we can create a new branch; this will be your working copy. First, click the `Branch` button. Next, type in a branch name in the box that the cursor is blinking in. In our example, we are calling it `a-new-branch`. Now click `Enter`! Now you have a new branch!
 
 <img src="https://docs.google.com/presentation/d/1IJ_uFxJud7OdIAr6p8ZOzvYs-SGDqa7g4cUHtUld03I/export/png?id=1IJ_uFxJud7OdIAr6p8ZOzvYs-SGDqa7g4cUHtUld03I&pageid=g1014c75158f_0_618" width="800"/>
 
-Now we can edit our files and code however we normally would. Go ahead and make an edit to [some of the files listed in the above section](#file-changes-to-be-made).
+Now we can edit our files and code just like we normally would. Go ahead and make an edit to [some of the files listed in the above section](#file-changes-to-be-made).
 
 <img src="https://docs.google.com/presentation/d/1IJ_uFxJud7OdIAr6p8ZOzvYs-SGDqa7g4cUHtUld03I/export/png?id=1IJ_uFxJud7OdIAr6p8ZOzvYs-SGDqa7g4cUHtUld03I&pageid=g1014c75158f_0_645" width="800"/>
 
@@ -119,17 +120,17 @@ If we want to add these file changes to our current branch, we need to `commit` 
 
 <img src="https://docs.google.com/presentation/d/1IJ_uFxJud7OdIAr6p8ZOzvYs-SGDqa7g4cUHtUld03I/export/png?id=1IJ_uFxJud7OdIAr6p8ZOzvYs-SGDqa7g4cUHtUld03I&pageid=g1014c75158f_0_664" width="800"/>
 
-Now that we have changes committed to our branch we are ready to also add them to the remote, internet copy! To do this, we will need to `push` our branch.
+Now that we have changes committed to our branch we are ready to also add them to the remote, GitHub internet copy! To do this, we will need to `push` our branch.
 
 <img src="https://docs.google.com/presentation/d/1IJ_uFxJud7OdIAr6p8ZOzvYs-SGDqa7g4cUHtUld03I/export/png?id=1IJ_uFxJud7OdIAr6p8ZOzvYs-SGDqa7g4cUHtUld03I&pageid=g1014c75158f_0_686" width="800"/>
 
-To push means to add changes that are on your new branch to the remote branch (internet version). The word origin just refers to where your branch is stored on the internet. Choose your origin in the dropdown menu and click Submit.
+To **push** means to add changes that are on your new branch to the remote branch (internet version on GitHub). The word **origin** just refers to where your branch is stored on the internet. Choose your origin in the dropdown menu and click `Submit`.
 
 <img src="https://docs.google.com/presentation/d/1IJ_uFxJud7OdIAr6p8ZOzvYs-SGDqa7g4cUHtUld03I/export/png?id=1IJ_uFxJud7OdIAr6p8ZOzvYs-SGDqa7g4cUHtUld03I&pageid=g1014c75158f_0_786" width="800"/>
 
 # Open a pull request
 
-After a variable number of commits, your branch, called a-new-branch is a different version of the original code base that may have a nifty improvement to it. But our main goal is to add that nifty improvement to the main branch. To start this process of bringing in new changes to the main curated repository, we will create a pull request.
+After a variable number of commits, your branch, called `a-new-branch` is a different version of the original code base that may have a nifty improvement to it. But our main goal is to add that nifty improvement to the `main` branch. To start this process of bringing in new changes to the main curated repository, we will create a pull request.
 
 From GitHub:
 
@@ -183,14 +184,14 @@ Be careful about quotation marks: `""` as well as commas: `,`!
 
 
 ### Step 3) Commit the _bookdown.yml file changes to the current branch
-Follow the steps for how to commit changes and commit the edits to your _bookdown.yml to your current branch.
+Follow the steps for how to commit changes and commit the edits to your `_bookdown.yml` file to your current branch.
 
 ### Step 4) Go to your Pull Request to see how the checks turn out
 Go to your repository and click on the `Pull Request` button in the navbar.
 
 # Checks on the pull requests
 
-With your pull request open, the series of OTTR GitHub actions checks will commence! They will print out reports in comments on your pull request.
+With your pull request open, the series of OTTR GitHub actions checks will commence! They will print out reports as comments on your pull request.
 
 ![](https://raw.githubusercontent.com/jhudsl/OTTR_Template/main/resources/screenshots/gha-checks.png)
 
@@ -204,7 +205,7 @@ To summarize, this is what this workflow looks like:
 
 <img src="https://docs.google.com/presentation/d/1IJ_uFxJud7OdIAr6p8ZOzvYs-SGDqa7g4cUHtUld03I/export/png?id=1IJ_uFxJud7OdIAr6p8ZOzvYs-SGDqa7g4cUHtUld03I&pageid=g1014c75158f_0_675" width="800"/>
 
-For more on [what to put in a pull request's description you can read this chapter](https://jhudatascience.org/Adv_Reproducibility_in_Cancer_Informatics/engaging-in-code-review---as-an-author.html)
+For more on [what to put in a pull request's description, you can read this chapter](https://jhudatascience.org/Adv_Reproducibility_in_Cancer_Informatics/engaging-in-code-review---as-an-author.html)
 
 For more on [how to review a pull request, see this chapter](https://jhudatascience.org/Adv_Reproducibility_in_Cancer_Informatics/engaging-in-code-review---as-a-reviewer.html)
 
@@ -228,14 +229,14 @@ To maintain style and attributions for graphics and images, as well as to enable
 We encourage this strategy for several reasons:
 
 - OTTR can interact with Google Slides to allow you to get all image updates of your current Google Slides whenever you re-render the content (no juggling different file versions of your images).
-- Google Slides are easily shareable to your collaborators
-- Google Slides is free.
-- Storing your images on Google slides allows them to be in one central location and may be helpful for you to re-use the media from your course in the future.
-- This also allows you to make videos of your slides that can be added to your course using `ari`
+- Google Slides are easily shareable with your collaborators
+- Google Slides is free
+- Storing your images on Google slides allows them to be in one central location and may be helpful for you to re-use the media from your course in the future
+- You can make videos of your slides that can be added to your course using `ari`
 
 **Important:** :warning: Your Google Slide document must be set to `Anyone with a link`. See [this article for more details.](https://support.wix.com/en/article/setting-permissions-for-google-drive-files-and-folders#:~:text=Settings%20Permissions%20for%20a%20Google,edit%20and%20comment%20as%20well.) The renders will fail if this is not set!
 
-Each Rmd with images that is a part of your Bookdown needs to have this chunk at the beginning so that images are stored properly for Leanpub conversion.
+Each Rmd file with images that is a part of your Bookdown needs to have this chunk at the beginning so that images are stored properly for Leanpub conversion.
 
 If you are unfamiliar with [how R Markdown code chunks work, read this](https://rmarkdown.rstudio.com/lesson-3.html).
 
@@ -246,6 +247,7 @@ Next, import the appropriate theme (see [this video](https://youtu.be/pNbwF263yY
 ## Accessibility
 
 Each slide and image added to the courses should be accessible so every member of your audience can use your content.
+
 There are two things to check for each slide:
 
 - [ ] Each slide is described in the notes of the slide so learners relying on a screen reader can access the content. See https://lastcallmedia.com/blog/accessible-comics for more guidance on this.

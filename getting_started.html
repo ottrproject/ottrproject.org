@@ -13,8 +13,8 @@
 
 <title>Getting started</title>
 
-<script src="site_libs/header-attrs-2.11/header-attrs.js"></script>
-<script src="site_libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<script src="site_libs/header-attrs-2.10/header-attrs.js"></script>
+<script src="site_libs/jquery-1.11.3/jquery.min.js"></script>
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <link href="site_libs/bootstrap-3.3.5/css/bootstrap.min.css" rel="stylesheet" />
 <script src="site_libs/bootstrap-3.3.5/js/bootstrap.min.js"></script>
@@ -514,7 +514,7 @@ div.tocify {
 <h2>Prerequisites for using OTTR</h2>
 <ul>
 <li><p>Please take a look at the <a href="https://github.com/jhudsl/OTTR_Template/blob/main/code_of_conduct.md">code of conduct</a>.</p></li>
-<li><p>If you are not familiar with <strong>Git and Github</strong>, we recommend going through these chapters from our Reproducibility courses for quick orientation:</p>
+<li><p>If you are not familiar with <strong>Git and GitHub</strong>, we recommend going through these chapters from our Reproducibility courses for quick orientation:</p>
 <ul>
 <li><a href="https://jhudatascience.org/Reproducibility_in_Cancer_Informatics/making-your-project-open-source-with-github.html">Why GitHub</a></li>
 <li><a href="https://jhudatascience.org/Adv_Reproducibility_in_Cancer_Informatics/using-version-control-with-github.html">Using GitHub</a></li>
@@ -543,30 +543,30 @@ div.tocify {
 </div>
 </div>
 <div id="your-course-must-be-set-to-public-for-all-github-actions-to-work." class="section level3">
-<h3>3. Your course must be set to <code>public</code> for all Github actions to work.</h3>
+<h3>3. Your course must be set to <code>public</code> for all GitHub actions to work.</h3>
 <p>In particular, the rendered preview on pull requests won’t work, but you can alternatively preview the content by re-rendering locally, we will cover this later.</p>
 </div>
 <div id="set-up-a-git-client" class="section level3">
 <h3>4. Set up a Git client</h3>
-<p>If you do not have a method of working with Git already it is recommended you use a git client to help you manage your branches more easily. Install <a href="https://www.gitkraken.com/">GitKraken</a> for a handy way to manage your course locally.</p>
+<p>If you do not have a method of working with Git already it is recommended you use a Git client to help you manage your branches more easily. Install <a href="https://www.gitkraken.com/">GitKraken</a> for a handy way to manage your course locally.</p>
 </div>
 <div id="add-jhudsl-robot-as-a-collaborator" class="section level3">
 <h3>5. Add jhudsl-robot as a collaborator</h3>
 <p>*You can skip this step if your course is in the <code>jhudsl</code> organization.</p>
-<p>The <a href="https://github.com/jhudsl/OTTR_Template/wiki/How-to-set-up-and-customize-GitHub-actions-robots">Github actions</a> in this repository need permissions to fully function. To this end, you need to add the <code>jhudsl-robot</code> as a collaborator on your repository with write permissions.</p>
+<p>The <a href="https://github.com/jhudsl/OTTR_Template/wiki/How-to-set-up-and-customize-GitHub-actions-robots">GitHub actions</a> in this repository need permissions to fully function. To this end, you need to add the <code>jhudsl-robot</code> as a collaborator on your repository with write permissions.</p>
 <p>In your repository, go to your <code>Settings</code> &gt; <code>Collaborators &amp; Teams</code> and click on <code>Add people</code>. In the pop up window, search for and add <code>jhudsl-robot</code>.</p>
 <p><img src="https://github.com/jhudsl/OTTR_Template/raw/main/resources/screenshots/add-jhudsl-robot.png" width = 400></p>
 <p>Choose the <code>write</code> option then click <code>Add jhudsl-robot to this repository</code>.</p>
 </div>
 <div id="set-up-your-github-personal-access-token" class="section level3">
-<h3>6. Set up your Github Personal access token</h3>
+<h3>6. Set up your GitHub Personal access token</h3>
 <p>The OTTR robots need permissions to run some of the actions.</p>
 <p>To give them permission for all the actions, you need to set a GitHub secret we will call <code>GH_PAT</code>. Go to <code>Settings</code> &gt; <code>Secrets</code> and scroll down to <code>Repository secrets</code>. <a href="https://docs.github.com/en/actions/security-guides/encrypted-secrets">Read more about GitHub secrets here</a> if you have general questions.</p>
 <p>If you have organization admin privileges and plan on making multiple courses with OTTR, you can set <code>GH_PAT</code> as an organization secret so you don’t have to do this again You only need to do this once as an organization (if this course is under <code>jhudsl</code> you don’t need to do this step).</p>
 <ul>
 <li>Click <code>New repository secret</code>/<code>New organization secret</code> button.</li>
 <li>Under name you must use <code>GH_PAT</code>.</li>
-<li>For <code>value</code>: Create a personal access token <a href="https://docs.github.com/en/github/authenticating-to-github/creating-a-personal-access-token#creating-a-token">following these instructions</a>. Underneath <code>Select scopes</code>, check both <code>repo</code> and <code>workflow</code>. Then copy the PAT and save as the value. Your Github actions should all be able to run smoothly now.</li>
+<li>For <code>value</code>: Create a personal access token <a href="https://docs.github.com/en/github/authenticating-to-github/creating-a-personal-access-token#creating-a-token">following these instructions</a>. Underneath <code>Select scopes</code>, check both <code>repo</code> and <code>workflow</code>. Then copy the PAT and save as the value. Your GitHub actions should all be able to run smoothly now.</li>
 </ul>
 </div>
 <div id="set-up-github-pages" class="section level3">
@@ -641,10 +641,10 @@ Then check the box that says <code>Require pull requests before merging</code>.<
 </div>
 <div id="methods-of-writing-content" class="section level3">
 <h3>Methods of writing content</h3>
-<p>We have two recommended ways of writing content that is based on your comfort and interest level in using git and GitHub:</p>
+<p>We have two recommended ways of writing content that is based on your comfort and interest level in using Git and GitHub:</p>
 <ul>
 <li><a href="#ottr-entry-level">OTTR Entry Level</a> - if you do not have interest in diving into GitHub, use this version. It is done completely through the GitHub web browser.</li>
-<li><a href="#ottr-advanced">OTTR Advanced</a> - If you are already familiar with git and GitHub or are interested in starting to use it, we recommend this method. It will require a bit more learning but git and GitHub will be a great skill set for you to utilize; both for OTTR purposes and elsewhere for version control!</li>
+<li><a href="#ottr-advanced">OTTR Advanced</a> - If you are already familiar with Git and GitHub or are interested in starting to use it, we recommend this method. It will require a bit more learning, but Git and GitHub will be a great skill set for you to utilize; both for OTTR purposes and elsewhere for version control!</li>
 </ul>
 <p><a href="#ottr-entry-level">Jump to OTTR Entry Level instructions here</a> <a href="#ottr-advanced">Jump to OTTR Advanced instructions here</a></p>
 </div>
