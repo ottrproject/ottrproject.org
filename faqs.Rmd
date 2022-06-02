@@ -99,3 +99,21 @@ rmd_files: ["index.Rmd",
             "References.Rmd"]
 ```
 Commit the changes to your `_bookdown.yml` and see if the preview GitHub action runs appropriately.
+
+## Ask a question on the Google Group
+
+You can always start a discussion on the [Discussions](https://github.com/jhudsl/OTTR_Template/discussions) tab above. You can also join our [Google Group](https://groups.google.com/g/jhudsl) to ask questions and keep in touch with the OTTR community.
+
+**To join the Google Group:**  
+
+- Go to [https://groups.google.com/g/jhudsl](https://groups.google.com/g/jhudsl).
+- Click "Ask to join group". You need to be signed in to a Google account.
+- You will be prompted for some information, such as your display name and your subscription preference. We recommend subscribing to "Combined updates" to avoid flooding your inbox, but you can always change this later.
+
+To start a discussion:
+
+- Click on "New conversation".
+- Provide a relevant subject and as much detail as you can about your problem/concern/idea.
+- Click "Post message".
+
+Remember that everyone can see your post. This is a good thing because if you need help, chances are someone down the line will too. This public forum ensures the next person can figure things out!
