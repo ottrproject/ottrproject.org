@@ -13,8 +13,8 @@
 
 <title>More Features</title>
 
-<script src="site_libs/header-attrs-2.11/header-attrs.js"></script>
-<script src="site_libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<script src="site_libs/header-attrs-2.10/header-attrs.js"></script>
+<script src="site_libs/jquery-1.11.3/jquery.min.js"></script>
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <link href="site_libs/bootstrap-3.3.5/css/bootstrap.min.css" rel="stylesheet" />
 <script src="site_libs/bootstrap-3.3.5/js/bootstrap.min.js"></script>
@@ -524,7 +524,9 @@ div.tocify {
     url  = {http://www.someurl.html},
 }</code></pre>
 <p>To reference the citations in your writing follow the <a href="https://bookdown.org/yihui/rmarkdown-cookbook/bibliography.html">bookdown instructions</a>:</p>
-<pre><code>Items can be cited directly within the documentation using the syntax @key where key is the citation key in the first line of the entry, e.g., @R-base. To put citations in parentheses, use [@key]. To cite multiple entries, separate the keys by semicolons, e.g., [@key-1; @key-2; @key-3]. To suppress the mention of the author, add a minus sign before @, e.g., [-@R-base].</code></pre>
+<blockquote>
+<p>Items can be cited directly within the documentation using the syntax <span class="citation">@key</span> where key is the citation key in the first line of the entry, e.g., <span class="citation">@R-base</span>. To put citations in parentheses, use <span class="citation">[@key]</span>. To cite multiple entries, separate the keys by semicolons, e.g., <span class="citation">[@key-1; @key-2; @key-3]</span>. To suppress the mention of the author, add a minus sign before @, e.g., <span class="citation">[-@R-base]</span>.</p>
+</blockquote>
 <p>See <a href="https://github.com/jhudsl/OTTR_Template/blob/main/02-chapter_of_course.Rmd">Chapter 2</a> of this template course for examples.</p>
 </div>
 <div id="giving-credits-to-contributors" class="section level2">
@@ -581,12 +583,11 @@ div.tocify {
 
 [Ira Gooding]: https://publichealth.jhu.edu/faculty/4130/ira-gooding</code></pre>
 <p>Additionally, this row should be added for <em>all ITCR Courses</em>:</p>
-<pre><code>|Content Directors|[Jeff Leek], [Sarah Wheelan]|
+<pre><code>|Content Directors|[Jeff Leek]|
 
 &lt;!-- Author information --&gt;
 
-[Jeff Leek]: https://jtleek.com/
-[Sarah Wheelan]: https://www.hopkinsmedicine.org/profiles/details/sarah-wheelan</code></pre>
+[Jeff Leek]: https://jtleek.com/</code></pre>
 <div id="adding-the-credits-table-to-coursera" class="section level3">
 <h3>Adding the Credits table to Coursera</h3>
 <p>In Coursera, you can add the credits table URL as an ungraded plugin (<a href="https://github.com/jhudsl/OTTR_Template/wiki/Publishing-on-Coursera#navigating-to-your-course-on-coursera">the same as described here for adding chapter content</a>). This should be added at the beginning of your course, right after the introduction.</p>
@@ -602,49 +603,32 @@ div.tocify {
 <p>But, if you copy and paste to share material this would create a maintenance problem because if you update one you will need to remember to copy over the other! 😱</p>
 <p>In OTTR, we try to minimize maintenance pains so to get around this, we use <code>cow::borrow_chapter()</code> from the <a href="https://jhudatascience.org/cow/index.html">jhudsl/cow</a> package. The <code>cow</code> package is already on the <code>jhudsl/course_template</code> docker image so you do not need to install it if you are using the docker image or if you are have GitHub actions do all the rendering for you.</p>
 <p>To borrow a chapter from another course, create an <code>.Rmd</code> as you normally would, with a <code>ottrpal::set_knitr_image_path()</code> in a chunk at the beginning of the file and a <a href="https://www.markdownguide.org/basic-syntax/"><code>H1</code> title</a>.</p>
-<p>Then, wherever you would like the borrowed chapter to appear, put an R chunk with this:</p>
-<pre class="r"><code>```{r, echo = FALSE, results=&#39;asis&#39;}
-cow::borrow_chapter(
+<p>Then, wherever you would like the borrowed chapter to appear, put an R chunk with this; where <code>{r, echo = FALSE, results='asis'}</code> is included in your chunk arguments.</p>
+<pre><code>cow::borrow_chapter(
   doc_path = &quot;02-chapter_of_course.Rmd&quot;,
   repo_name = &quot;jhudsl/OTTR_Template&quot;
-)
-```</code></pre>
+)</code></pre>
 <p>The magic of this function is that whenever the course is re-rendered it will knit the latest version of the chapter you are borrowing. Note that this chunk cannot be run interactively, just include it in your Rmd and render your course as usual.</p>
 <div id="borrowing-from-a-local-file" class="section level3">
 <h3>Borrowing from a local file</h3>
-<p>If for some reason you would like a local file incorporated, just leave off the repo_name argument and <code>cow::borrow_chapter()</code> will look for the chapter locally:</p>
-<pre class="r"><code>```{r, echo = FALSE, results=&#39;asis&#39;}
-cow::borrow_chapter(
+<p>If for some reason you would like a local file incorporated, just leave off the repo_name argument and <code>cow::borrow_chapter()</code> will look for the chapter locally: Have your chunk arguments include: <code>{r, echo = FALSE, results='asis'}</code>.</p>
+<pre><code>cow::borrow_chapter(
   doc_path = &quot;02-chapter_of_course.Rmd&quot;
-)
-```</code></pre>
+)</code></pre>
 </div>
 <div id="borrowing-from-a-private-repository" class="section level3">
 <h3>Borrowing from a private repository</h3>
-<p>If you are borrowing from a course in a private repository, you will need to supply <a href="https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/creating-a-personal-access-token">GitHub personal access token</a> using a <code>git_pat</code> argument like this:</p>
-<pre class="r"><code>```{r, echo = FALSE, results=&#39;asis&#39;}
-cow::borrow_chapter(
+<p>If you are borrowing from a course in a private repository, you will need to supply <a href="https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/creating-a-personal-access-token">GitHub personal access token</a> using a <code>git_pat</code> argument like this: Have your chunk arguments include:<code>{r, echo = FALSE, results='asis'}</code></p>
+<pre><code>cow::borrow_chapter(
   doc_path = &quot;02-chapter_of_course.Rmd&quot;,
   repo_name = &quot;jhudsl/Private_Repo&quot;,
   git_pat = &quot;12345&quot;
-)
-```</code></pre>
+)</code></pre>
 </div>
 <div id="removing-an-h1-header" class="section level3">
 <h3>Removing an h1 header</h3>
 <p>If you want to change the title you can use an option <code>remove_h1</code> to remove the title from the incoming borrowed chapter.</p>
-<pre class="r"><code># A new title
-
-Some new words before the borrowed chapter content.
-
-```{r, echo = FALSE, results=&#39;asis&#39;}
-cow::borrow_chapter(
-  doc_path = &quot;02-chapter_of_course.Rmd&quot;,
-  remove_h1 = TRUE
-)
-```
-
-Some new words after the borrowed chapter content.</code></pre>
+<p><img src="resources/images/h1_header.png" /></p>
 </div>
 <div id="linking-between-chapters" class="section level3">
 <h3>Linking between chapters</h3>
