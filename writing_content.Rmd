@@ -65,9 +65,9 @@ Congrats! You've made a new branch. GitHub will automatically show you your new 
 
 Whenever you are making changes, you'll want to check that you are on your new branch in order to add any new changes to your pull request.
 
-## General usage of GitHub
+## Committing changes
 
-In your OTTR repository, on your new branch, you can add/edit/rename currently existing files.
+In your OTTR repository, on your new branch, you can now add/edit/rename currently existing files while protexting your `main` branch. Adding changes to a branch is called making `commits`.
 
 - [Follow GitHub's instructions about managing files through their website here](https://docs.github.com/en/repositories/working-with-files/managing-files).
 
@@ -118,7 +118,11 @@ In GitKraken we can create a new branch; this will be your working copy. First, 
 
 <img src="https://docs.google.com/presentation/d/1IJ_uFxJud7OdIAr6p8ZOzvYs-SGDqa7g4cUHtUld03I/export/png?id=1IJ_uFxJud7OdIAr6p8ZOzvYs-SGDqa7g4cUHtUld03I&pageid=g1014c75158f_0_618" width="800"/>
 
-Now we can edit our files and code just like we normally would. Go ahead and make an edit to [some of the files listed in the above section](#file-changes-to-be-made).
+## Committing changes
+
+Now we can add/edit/rename currently existing files while protecting your `main` branch. Adding changes to a branch is called making `commits`.
+
+To commit changes, first, edit a file and code just like we normally would (you can use any text editor). Go ahead and make an edit to [some of the files listed in the above section](#file-changes-to-be-made).
 
 <img src="https://docs.google.com/presentation/d/1IJ_uFxJud7OdIAr6p8ZOzvYs-SGDqa7g4cUHtUld03I/export/png?id=1IJ_uFxJud7OdIAr6p8ZOzvYs-SGDqa7g4cUHtUld03I&pageid=g1014c75158f_0_645" width="800"/>
 
@@ -129,6 +133,8 @@ If you've made a change to any file in your repository, it will appear in GitKra
 If we want to add these file changes to our current branch, we need to `commit` them.
 
 <img src="https://docs.google.com/presentation/d/1IJ_uFxJud7OdIAr6p8ZOzvYs-SGDqa7g4cUHtUld03I/export/png?id=1IJ_uFxJud7OdIAr6p8ZOzvYs-SGDqa7g4cUHtUld03I&pageid=g1014c75158f_0_664" width="800"/>
+
+## Pushing changes
 
 Now that we have changes committed to our branch we are ready to also add them to the remote, GitHub internet copy! To do this, we will need to `push` our branch.
 
@@ -157,6 +163,27 @@ Now we can open up a pull request if we go to our GitHub repository on GitHub.
 After you click on `Compare & pull request` you'll be taken to a screen where you can add information about your changes. After you are done writing your description, click `Create Pull Request`! (If you don't have your pull request description _perfect_ don't worry about it, you can always edit it later).
 
 Congrats! You've just opened a pull request! For every set of changes you'll make to your course, you will want to follow this similar set of steps.
+
+# Checks on the pull requests
+
+With your pull request open, the series of OTTR GitHub actions checks will commence! They will print out reports as comments on your pull request.
+
+![](https://raw.githubusercontent.com/jhudsl/OTTR_Template/main/resources/screenshots/gha-checks.png)
+
+Read those comments to begin addressing the problems with more commits to your branch.
+
+You can adjust what checks are run by editing the `config_automation.yml` file. This is further discussed in this section about [the GitHub Actions](https://github.com/jhudsl/OTTR_Template/wiki/How-to-set-up-and-customize-GitHub-actions-robots).
+
+If you need more information on failed GitHub actions you can scroll to the bottom of your pull request where the status of the checks are shown and click on `Details` for more information. If you are unsure what the error message means and have trouble addressing it, please [file an issue on the OTTR_Template repository to get help](https://github.com/jhudsl/OTTR_Template/issues/new?assignees=cansavvy&labels=bug&template=course-template-problem-report.md).
+
+To summarize, this is what this workflow looks like:
+
+<img src="https://docs.google.com/presentation/d/1IJ_uFxJud7OdIAr6p8ZOzvYs-SGDqa7g4cUHtUld03I/export/png?id=1IJ_uFxJud7OdIAr6p8ZOzvYs-SGDqa7g4cUHtUld03I&pageid=g1014c75158f_0_675" width="800"/>
+
+For more on [what to put in a pull request's description, you can read this chapter](https://jhudatascience.org/Adv_Reproducibility_in_Cancer_Informatics/engaging-in-code-review---as-an-author.html)
+
+For more on [how to review a pull request, see this chapter](https://jhudatascience.org/Adv_Reproducibility_in_Cancer_Informatics/engaging-in-code-review---as-a-reviewer.html)
+
 
 # Adding new chapters
 
@@ -198,26 +225,6 @@ Follow the steps for how to commit changes and commit the edits to your `_bookdo
 
 ### Step 4) Go to your Pull Request to see how the checks turn out
 Go to your repository and click on the `Pull Request` button in the navbar.
-
-# Checks on the pull requests
-
-With your pull request open, the series of OTTR GitHub actions checks will commence! They will print out reports as comments on your pull request.
-
-![](https://raw.githubusercontent.com/jhudsl/OTTR_Template/main/resources/screenshots/gha-checks.png)
-
-Read those comments to begin addressing the problems with more commits to your branch.
-
-You can adjust what checks are run by editing the `config_automation.yml` file. This is further discussed in this section about [the GitHub Actions](https://github.com/jhudsl/OTTR_Template/wiki/How-to-set-up-and-customize-GitHub-actions-robots).
-
-If you need more information on failed GitHub actions you can scroll to the bottom of your pull request where the status of the checks are shown and click on `Details` for more information. If you are unsure what the error message means and have trouble addressing it, please [file an issue on the OTTR_Template repository to get help](https://github.com/jhudsl/OTTR_Template/issues/new?assignees=cansavvy&labels=bug&template=course-template-problem-report.md).
-
-To summarize, this is what this workflow looks like:
-
-<img src="https://docs.google.com/presentation/d/1IJ_uFxJud7OdIAr6p8ZOzvYs-SGDqa7g4cUHtUld03I/export/png?id=1IJ_uFxJud7OdIAr6p8ZOzvYs-SGDqa7g4cUHtUld03I&pageid=g1014c75158f_0_675" width="800"/>
-
-For more on [what to put in a pull request's description, you can read this chapter](https://jhudatascience.org/Adv_Reproducibility_in_Cancer_Informatics/engaging-in-code-review---as-an-author.html)
-
-For more on [how to review a pull request, see this chapter](https://jhudatascience.org/Adv_Reproducibility_in_Cancer_Informatics/engaging-in-code-review---as-a-reviewer.html)
 
 ## More resources for learning GitHub
 
