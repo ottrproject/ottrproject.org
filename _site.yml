@@ -32,9 +32,13 @@ navbar:
     href: examples.html
     icon: fa-lightbulb
     menu:
+      - text: "OTTR for websites"
+        href: examples.html#OTTR_website
+      - text: "OTTR 'babies'"
+        href: examples.html#OTTR_“baby”_template
       - text: "Choosing between platforms"
         href: examples.html#choosing-publishing-platforms
-        icon: fa-tasks   
+        icon: fa-tasks
   - text: Customization
     icon: fa-palette
     href: customizing.html

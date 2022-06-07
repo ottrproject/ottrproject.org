@@ -8,7 +8,7 @@ output:
 
 ## Prerequisites for using OTTR
 
-First please take a look at our [code of conduct](https://github.com/jhudsl/OTTR_Template/blob/main/code_of_conduct.md) if you wish to contribute to OTTR. 
+First please take a look at our [code of conduct](https://github.com/jhudsl/OTTR_Template/blob/main/code_of_conduct.md) if you wish to contribute to OTTR.
 
 OTTR relies on R Markdown and GitHub actions. You do not need to be an expert about either R Markdown or GitHub to get started using OTTR, as we will guide you through the process! However, we recommend reading up a bit about both to better understand how they work in general before diving in to our guide. These readings only take a few minutes.
 
@@ -22,14 +22,14 @@ If you are not familiar with **Git and GitHub**, we recommend going through thes
 
   - [Why GitHub](https://jhudatascience.org/Reproducibility_in_Cancer_Informatics/making-your-project-open-source-with-github.html)
   - [Using GitHub](https://jhudatascience.org/Adv_Reproducibility_in_Cancer_Informatics/using-version-control-with-github.html)
-  
+
 
 We have two recommended ways of writing content based on your comfort and interest level in using Git and GitHub:
 
-- [OTTR Entry Level](#ottr-entry-level) - if you do not have interest in diving into GitHub, use this version. It is done completely through the GitHub web browser.
-- [OTTR Advanced](#ottr-advanced) - If you are already familiar with Git and GitHub or are interested in starting to use it, we recommend this method. It will require a bit more learning, but Git and GitHub will be a great skill set for you to utilize; both for OTTR purposes and elsewhere for version control!
+- [OTTR Entry Level]https://www.ottrproject.org/writing_content.html#ottr-entry-level) - if you do not have interest in diving into GitHub, use this version. It is done completely through the GitHub web browser.
+- [OTTR Advanced](https://www.ottrproject.org/writing_content.html#ottr-advanced) - If you are already familiar with Git and GitHub or are interested in starting to use it, we recommend this method. It will require a bit more learning, but Git and GitHub will be a great skill set for you to utilize; both for OTTR purposes and elsewhere for version control!
 
-If you choose to use our OTTR Advanced guidance, you will need a method for working with git. 
+If you choose to use our OTTR Advanced guidance, you will need a method for working with git.
 
 If you do not have a method of working with Git already it is recommended you use a Git client to help you manage your branches more easily. Install [GitKraken](https://www.gitkraken.com/) for a handy way to manage your course locally.
 
@@ -40,6 +40,9 @@ If you do not have a method of working with Git already it is recommended you us
 ### 1. Create a repository from this template
 
 In the upper right of the [landing page for this repository](https://github.com/jhudsl/OTTR_Template/tree/1.8), click the green `Use this template` button and follow the steps to set up your course's GitHub repository.
+
+\*If you want to use OTTR Website or a different spin off go to that respective repository:
+- [OTTR Website](https://github.com/jhudsl/OTTR_Template_Website)
 
 ![Where is the `Use this template` button?](https://raw.githubusercontent.com/jhudsl/OTTR_Template/main/resources/screenshots/template_button.png)
 
@@ -157,4 +160,3 @@ Again we have two recommended ways of writing content based on your comfort and 
 [Jump to OTTR Advanced instructions here](#ottr-advanced)
 
 Now you are ready to start writing content!
-
