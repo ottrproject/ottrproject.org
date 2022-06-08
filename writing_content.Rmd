@@ -177,15 +177,22 @@ From GitHub:
 
 Pull Requests are the meat of how code changes and improvements get reviewed and incorporated! A vast majority of the benefits of incorporating GitHub into your workflow centers around fully utilizing the power of pull requests!
 
-<img src="https://docs.google.com/presentation/d/1IJ_uFxJud7OdIAr6p8ZOzvYs-SGDqa7g4cUHtUld03I/export/png?id=1IJ_uFxJud7OdIAr6p8ZOzvYs-SGDqa7g4cUHtUld03I&pageid=g1014c75158f_0_751" width="800"/>
+![](resources/images/pull_request.png)
 
 Now we can open up a pull request if we go to our GitHub repository on GitHub.
 
-<img src="https://docs.google.com/presentation/d/1IJ_uFxJud7OdIAr6p8ZOzvYs-SGDqa7g4cUHtUld03I/export/png?id=1IJ_uFxJud7OdIAr6p8ZOzvYs-SGDqa7g4cUHtUld03I&pageid=g1014c75158f_0_713" width="800"/>
+![](resources/images/open_pr.png)
 
 After you click on `Compare & pull request` you'll be taken to a screen where you can add information about your changes. After you are done writing your description, click `Create Pull Request`! (If you don't have your pull request description _perfect_ don't worry about it, you can always edit it later).
 
 Congrats! You've just opened a pull request! For every set of changes you'll make to your course, you will want to follow this similar set of steps.
+
+**To summarize, here's what those steps are:**  
+
+
+![](resources/images/summary.png)
+
+![](resources/images/summary_2.png)
 
 # Checks on the pull requests
 

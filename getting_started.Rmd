@@ -41,7 +41,8 @@ If you do not have a method of working with Git already it is recommended you us
 
 In the upper right of the [landing page for this repository](https://github.com/jhudsl/OTTR_Template/tree/1.8), click the green `Use this template` button and follow the steps to set up your course's GitHub repository.
 
-\*If you want to use OTTR Website or a different spin off go to that respective repository:
+\*If you want to use OTTR Website or a different spin off go to that respective repository:  
+
 - [OTTR Website](https://github.com/jhudsl/OTTR_Template_Website)
 
 ![Where is the `Use this template` button?](https://raw.githubusercontent.com/jhudsl/OTTR_Template/main/resources/screenshots/template_button.png)
