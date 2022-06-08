@@ -215,7 +215,10 @@ Adding new chapters to your OTTR course, requires some specific steps in additio
 
 ### Step 1) Add a new chapter Rmd file
 
-Follow the instructions for [adding a new file](](https://docs.github.com/en/repositories/working-with-files/managing-files/adding-a-file-to-a-repository)), but make sure that you name the file something ending in `.Rmd` and add it to your new branch.
+Follow the instructions for adding a new file, but make sure that you name the file something ending in `.Rmd` and add it to your `new branch` whatever it is called.
+
+- For `Entry Level` adding a new file [read this](https://docs.github.com/en/repositories/working-with-files/managing-files/adding-a-file-to-a-repository).
+- For `Advanced` adding a new file - you'll create this file locally using RStudio or a text editor and follow the steps to add, commit and push those to your new branch.
 
 ### Step 2) Add the name of your new chapter to your _bookdown.yml file
 
@@ -243,7 +246,6 @@ output_dir: "docs"
 
 **Important:** Notice how only one line is different - the one that says `03-chapter_of_course.Rmd",`
 Be careful about quotation marks: `""` as well as commas: `,`!
-
 
 ### Step 3) Commit the _bookdown.yml file changes to the current branch
 Follow the steps for how to commit changes and commit the edits to your `_bookdown.yml` file to your current branch.
