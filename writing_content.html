@@ -359,6 +359,13 @@ div.tocify {
       </a>
       <ul class="dropdown-menu" role="menu">
         <li>
+          <a href="writing_content.html">
+            <span class="fa fa-pen"></span>
+             
+            Choosing a writing method
+          </a>
+        </li>
+        <li>
           <a href="writing_content.html#ottr-entry-level">
             <span class="fa fa-circle"></span>
              
@@ -542,7 +549,7 @@ div.tocify {
 <p>You can edit and add content directly in the GitHub website if you prefer not to learn Git and GitHub (though we highly recommend it, as knowing how to use Git/GitHub is a useful skill to integrate into your workflow – not just for OTTR).</p>
 <div id="create-a-new-branch" class="section level2">
 <h2>Create a new branch</h2>
-<p>With GitHub in order to keep your OTTR course preserved content and code is managed through the use of branches (basically just tracked copies of your whole repository). To explain branches we’ll mainly refer to two branches: your <code>main</code> branch:</p>
+<p>With GitHub in order to keep your OTTR course preserved content and code is managed through the use of branches. To explain branches we’ll mainly refer to two branches: your <code>main</code> branch:</p>
 <p><img src="resources/images/main_branch.png" /></p>
 <p>The <code>main</code> branch is what your content will be published from and it will be live to any learners looking at your course. You will want to keep this <code>main</code> branch as preserved and well curated as possible!</p>
 <p>So when you are ready to add more content you will want to have an isolated copy of your files to work from that keeps your main branch safe as you work. You can name the branch you work from whatever you like – its recommended you name it something related to the changes you are working on</p>
@@ -552,6 +559,7 @@ div.tocify {
 <p>Then click <code>Create branch: new-changes from main</code>.</p>
 <p><img src="resources/images/new-branch.png" /></p>
 <p>Congrats! You’ve made a new branch. GitHub will automatically show you your new branch’s files (which have been copied from the <code>main</code>).</p>
+<p><img src="resources/images/main_branch_safe.png" /></p>
 <p>Whenever you are making changes, you’ll want to check that you are on your new branch in order to add any new changes to your pull request.</p>
 </div>
 <div id="committing-changes" class="section level2">
@@ -575,39 +583,48 @@ div.tocify {
 <p>If you are not new to GitHub, then we recommend skipping this section and jumping to the <a href="#set-up-images"><code>Setting Up Images</code> section</a>.</p>
 <div id="cloning-with-git" class="section level2">
 <h2>Cloning with Git</h2>
-<p>It’s ideal to work on your course from your computer (you do not need to install any other software besides Git if you don’t want to). To get going, you will need to <code>clone</code> the course repository to your own computer. Cloning is just making a local copy on your computer of the remote version of the project on GitHub.</p>
-<p><img src="https://docs.google.com/presentation/d/1IJ_uFxJud7OdIAr6p8ZOzvYs-SGDqa7g4cUHtUld03I/export/png?id=1IJ_uFxJud7OdIAr6p8ZOzvYs-SGDqa7g4cUHtUld03I&pageid=g1014c75158f_0_90" width="800"/></p>
+<p>In the GitHub workflow (when not using our Entry-Level writing method), files exist online (remote) and on your computer (local).</p>
+<p><img src="resources/images/remote.png" /></p>
+<p>To get going, you will need to <code>clone</code> the course repository to your own computer. Having a local copy of the files you are working from makes it easier to work from. Cloning is just making a local copy on your computer of the remote version of the project on GitHub.</p>
+<p><img src="resources/images/cloning.png" /></p>
 <p>To get started, you will need to clone your course’s repository that you created, as you will be using it for the duration of writing your course.</p>
-<p><img src="https://docs.google.com/presentation/d/1IJ_uFxJud7OdIAr6p8ZOzvYs-SGDqa7g4cUHtUld03I/export/png?id=1IJ_uFxJud7OdIAr6p8ZOzvYs-SGDqa7g4cUHtUld03I&pageid=g1014c75158f_0_166" width="800"/></p>
 <p>To clone a GitHub repository, using GitKraken, first, click <code>Clone a repo</code>. Then, choose where you’d like the repository to be on your computer using the <code>Browse</code> button. You will need to <code>Copy + Paste</code> your new repository’s url to where it says <code>URL</code>.</p>
+<p><img src="resources/images/cloning_2.png" /></p>
 <p>Navigate to your repository on GitHub to copy the URL. Copying and pasting is advisable because any little typo will inhibit cloning.</p>
 <p>Now you are ready to click <code>Clone the repository</code>! It will ask you if you’d like to <code>Open Now</code>, click that.</p>
 </div>
-<div id="create-a-branch" class="section level2">
-<h2>Create a branch</h2>
-<p>Handling branches is where you unleash the real benefit of GitHub, but it can be confusing and a bit tricky to get a hang of.</p>
-<p><img src="https://docs.google.com/presentation/d/1IJ_uFxJud7OdIAr6p8ZOzvYs-SGDqa7g4cUHtUld03I/export/png?id=1IJ_uFxJud7OdIAr6p8ZOzvYs-SGDqa7g4cUHtUld03I&pageid=g1014c75158f_0_266" width="800"/></p>
+<div id="create-a-new-branch-1" class="section level2">
+<h2>Create a new branch</h2>
+<p>Handling branches is where you unleash the real benefit of GitHub, but it can be confusing at first.</p>
+<p>With GitHub in order to keep your OTTR course preserved content and code is managed through the use of branches.</p>
+<p>To explain branches we’ll mainly refer to two branches: your <code>main</code> branch:</p>
+<p><img src="resources/images/main_branch.png" /></p>
+<p>The <code>main</code> branch is what your content will be published from and it will be live to any learners looking at your course. You will want to keep this <code>main</code> branch as preserved and well curated as possible!</p>
+<p>So when you are ready to add more content you will want to have an isolated copy of your files to work from that keeps your main branch safe as you work. You can name the branch you work from whatever you like – its recommended you name it something related to the changes you are working on</p>
 <p>The best way to get a grasp of what the branches represent is to create one and start using it.</p>
-<p><img src="https://docs.google.com/presentation/d/1IJ_uFxJud7OdIAr6p8ZOzvYs-SGDqa7g4cUHtUld03I/export/png?id=1IJ_uFxJud7OdIAr6p8ZOzvYs-SGDqa7g4cUHtUld03I&pageid=g1014c75158f_0_632" width="800"/></p>
+<p><img src="resources/images/a_new_branch_gitkraken.png" /></p>
 <p>In GitKraken we can create a new branch; this will be your working copy. First, click the <code>Branch</code> button. Next, type in a branch name in the box that the cursor is blinking in. In our example, we are calling it <code>a-new-branch</code>. Now click <code>Enter</code>! Now you have a new branch!</p>
-<p><img src="https://docs.google.com/presentation/d/1IJ_uFxJud7OdIAr6p8ZOzvYs-SGDqa7g4cUHtUld03I/export/png?id=1IJ_uFxJud7OdIAr6p8ZOzvYs-SGDqa7g4cUHtUld03I&pageid=g1014c75158f_0_618" width="800"/></p>
+<p><img src="resources/images/main_branch_safe.png" /></p>
+<p>Now we can add/edit/rename currently existing files in our new branch, knowing that the content and code in the <code>main</code> branch is safe.</p>
 </div>
 <div id="committing-changes-1" class="section level2">
 <h2>Committing changes</h2>
-<p>Now we can add/edit/rename currently existing files while protecting your <code>main</code> branch. Adding changes to a branch is called making <code>commits</code>.</p>
-<p>To commit changes, first, edit a file and code just like we normally would (you can use any text editor). Go ahead and make an edit to <a href="#file-changes-to-be-made">some of the files listed in the above section</a>.</p>
-<p><img src="https://docs.google.com/presentation/d/1IJ_uFxJud7OdIAr6p8ZOzvYs-SGDqa7g4cUHtUld03I/export/png?id=1IJ_uFxJud7OdIAr6p8ZOzvYs-SGDqa7g4cUHtUld03I&pageid=g1014c75158f_0_645" width="800"/></p>
+<p>Adding changes to a branch is called making <code>commits</code>. To modify any files in a branch we have to first 1) Make our changes as we normally would and then 2) Commit those changes.</p>
+<p>To commit changes, first, edit a file, you can use any text editor you prefer (can double click a file locally to open it up). For the purposes of this example, it doesn’t matter what change you make just make it small and something you’ll notice later.</p>
+<p><img src="resources/images/edit_a_file.png" /></p>
 <p>If you’ve made a change to any file in your repository, it will appear in GitKraken and you can click on it to see the differences.</p>
-<p><img src="https://docs.google.com/presentation/d/1IJ_uFxJud7OdIAr6p8ZOzvYs-SGDqa7g4cUHtUld03I/export/png?id=1IJ_uFxJud7OdIAr6p8ZOzvYs-SGDqa7g4cUHtUld03I&pageid=g1014c75158f_0_652" width="800"/></p>
+<p><img src="resources/images/add_file.png" /></p>
 <p>If we want to add these file changes to our current branch, we need to <code>commit</code> them.</p>
-<p><img src="https://docs.google.com/presentation/d/1IJ_uFxJud7OdIAr6p8ZOzvYs-SGDqa7g4cUHtUld03I/export/png?id=1IJ_uFxJud7OdIAr6p8ZOzvYs-SGDqa7g4cUHtUld03I&pageid=g1014c75158f_0_664" width="800"/></p>
+<p><img src="resources/images/commit_a_file.png" /></p>
+<p>Great! Now the changes you’ve made have been added to your local branch.</p>
 </div>
 <div id="pushing-changes" class="section level2">
 <h2>Pushing changes</h2>
-<p>Now that we have changes committed to our branch we are ready to also add them to the remote, GitHub internet copy! To do this, we will need to <code>push</code> our branch.</p>
-<p><img src="https://docs.google.com/presentation/d/1IJ_uFxJud7OdIAr6p8ZOzvYs-SGDqa7g4cUHtUld03I/export/png?id=1IJ_uFxJud7OdIAr6p8ZOzvYs-SGDqa7g4cUHtUld03I&pageid=g1014c75158f_0_686" width="800"/></p>
+<p>Note that when you’ve committed your changes locally, those changes won’t be on the online version of your repository. To get them to the remote, GitHub internet copy, we will need to <code>push</code> your commits.</p>
+<p>Now that we have changes committed to our branch we are ready to also add them to the remote, GitHub internet copy!</p>
+<p><img src="resources/images/push_changes.png" /></p>
 <p>To <strong>push</strong> means to add changes that are on your new branch to the remote branch (internet version on GitHub). The word <strong>origin</strong> just refers to where your branch is stored on the internet. Choose your origin in the dropdown menu and click <code>Submit</code>.</p>
-<p><img src="https://docs.google.com/presentation/d/1IJ_uFxJud7OdIAr6p8ZOzvYs-SGDqa7g4cUHtUld03I/export/png?id=1IJ_uFxJud7OdIAr6p8ZOzvYs-SGDqa7g4cUHtUld03I&pageid=g1014c75158f_0_786" width="800"/></p>
+<p><img src="resources/images/push_changes_gitkraken.png" /></p>
 </div>
 </div>
 <div id="open-a-pull-request" class="section level1">
@@ -618,11 +635,13 @@ div.tocify {
 <p>Pull requests let you tell others about changes you’ve pushed to a GitHub repository. Once a pull request is sent, interested parties can review the set of changes, discuss potential modifications, and even push follow-up commits if necessary.</p>
 </blockquote>
 <p>Pull Requests are the meat of how code changes and improvements get reviewed and incorporated! A vast majority of the benefits of incorporating GitHub into your workflow centers around fully utilizing the power of pull requests!</p>
-<p><img src="https://docs.google.com/presentation/d/1IJ_uFxJud7OdIAr6p8ZOzvYs-SGDqa7g4cUHtUld03I/export/png?id=1IJ_uFxJud7OdIAr6p8ZOzvYs-SGDqa7g4cUHtUld03I&pageid=g1014c75158f_0_751" width="800"/></p>
+<p><img src="resources/images/pull_request.png" /></p>
 <p>Now we can open up a pull request if we go to our GitHub repository on GitHub.</p>
-<p><img src="https://docs.google.com/presentation/d/1IJ_uFxJud7OdIAr6p8ZOzvYs-SGDqa7g4cUHtUld03I/export/png?id=1IJ_uFxJud7OdIAr6p8ZOzvYs-SGDqa7g4cUHtUld03I&pageid=g1014c75158f_0_713" width="800"/></p>
+<p><img src="resources/images/open_pr.png" /></p>
 <p>After you click on <code>Compare &amp; pull request</code> you’ll be taken to a screen where you can add information about your changes. After you are done writing your description, click <code>Create Pull Request</code>! (If you don’t have your pull request description <em>perfect</em> don’t worry about it, you can always edit it later).</p>
 <p>Congrats! You’ve just opened a pull request! For every set of changes you’ll make to your course, you will want to follow this similar set of steps.</p>
+<p><strong>To summarize, here’s what those steps are:</strong></p>
+<p><img src="resources/images/summary.png" /></p>
 </div>
 <div id="checks-on-the-pull-requests" class="section level1">
 <h1>Checks on the pull requests</h1>
@@ -631,17 +650,20 @@ div.tocify {
 <p>Read those comments to begin addressing the problems with more commits to your branch.</p>
 <p>You can adjust what checks are run by editing the <code>config_automation.yml</code> file. This is further discussed in this section about <a href="https://github.com/jhudsl/OTTR_Template/wiki/How-to-set-up-and-customize-GitHub-actions-robots">the GitHub Actions</a>.</p>
 <p>If you need more information on failed GitHub actions you can scroll to the bottom of your pull request where the status of the checks are shown and click on <code>Details</code> for more information. If you are unsure what the error message means and have trouble addressing it, please <a href="https://github.com/jhudsl/OTTR_Template/issues/new?assignees=cansavvy&amp;labels=bug&amp;template=course-template-problem-report.md">file an issue on the OTTR_Template repository to get help</a>.</p>
-<p>To summarize, this is what this workflow looks like:</p>
-<p><img src="https://docs.google.com/presentation/d/1IJ_uFxJud7OdIAr6p8ZOzvYs-SGDqa7g4cUHtUld03I/export/png?id=1IJ_uFxJud7OdIAr6p8ZOzvYs-SGDqa7g4cUHtUld03I&pageid=g1014c75158f_0_675" width="800"/></p>
 <p>For more on <a href="https://jhudatascience.org/Adv_Reproducibility_in_Cancer_Informatics/engaging-in-code-review---as-an-author.html">what to put in a pull request’s description, you can read this chapter</a></p>
 <p>For more on <a href="https://jhudatascience.org/Adv_Reproducibility_in_Cancer_Informatics/engaging-in-code-review---as-a-reviewer.html">how to review a pull request, see this chapter</a></p>
+<p><img src="resources/images/summary_2.png" /></p>
 </div>
 <div id="adding-new-chapters" class="section level1">
 <h1>Adding new chapters</h1>
 <p>Adding new chapters to your OTTR course, requires some specific steps in addition to what we’ve discussed here.</p>
 <div id="step-1-add-a-new-chapter-rmd-file" class="section level3">
 <h3>Step 1) Add a new chapter Rmd file</h3>
-<p>Follow the instructions for <a href="%5D(https://docs.github.com/en/repositories/working-with-files/managing-files/adding-a-file-to-a-repository)">adding a new file</a>, but make sure that you name the file something ending in <code>.Rmd</code> and add it to your new branch.</p>
+<p>Follow the instructions for adding a new file, but make sure that you name the file something ending in <code>.Rmd</code> and add it to your <code>new branch</code> whatever it is called.</p>
+<ul>
+<li>For <code>Entry Level</code> adding a new file <a href="https://docs.github.com/en/repositories/working-with-files/managing-files/adding-a-file-to-a-repository">read this</a>.</li>
+<li>For <code>Advanced</code> adding a new file - you’ll create this file locally using RStudio or a text editor and follow the steps to add, commit and push those to your new branch.</li>
+</ul>
 </div>
 <div id="step-2-add-the-name-of-your-new-chapter-to-your-_bookdown.yml-file" class="section level3">
 <h3>Step 2) Add the name of your new chapter to your _bookdown.yml file</h3>
