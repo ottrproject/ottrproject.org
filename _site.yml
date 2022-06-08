@@ -19,6 +19,9 @@ navbar:
         href: sub_dir/writing_content.html
         icon: fa-pen
         menu:
+        - text: "Choosing a writing method"
+          href: writing_content.html
+          icon: fa-pen
         - text: "Entry Level"
           href: writing_content.html#ottr-entry-level
           icon: fa-circle
