@@ -157,7 +157,7 @@ _If you have any questions about the implications of any of these updates or fil
 
 Again we have two recommended ways of writing content based on your comfort and interest level in using Git and GitHub:
 
-[Jump to OTTR Entry Level instructions here](#ottr-entry-level)
-[Jump to OTTR Advanced instructions here](#ottr-advanced)
+[Jump to OTTR Entry Level instructions here](./writing_content.html#ottr-entry-level)
+[Jump to OTTR Advanced instructions here](./writing_content.html#ottr-advanced)
 
 Now you are ready to start writing content!
