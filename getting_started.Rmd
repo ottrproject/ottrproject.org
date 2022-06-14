@@ -118,6 +118,8 @@ For `Branch name pattern`, put `main`.
 _Protect the main branch_:  
 Then check the box that says `Require pull requests before merging`.
 
+\* Note that if the user whose personal access token does not have admin privileges for step `6. Set up your GitHub personal access token`, then you will need to skip this setting.
+
 _Make sure branches are updated_:  
 - Check the box that says `Require status checks to pass before merging`.
 - Underneath this also check the box that says `Require branches to be up to date before merging`.
