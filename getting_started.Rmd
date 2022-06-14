@@ -26,7 +26,7 @@ If you are not familiar with **Git and GitHub**, we recommend going through thes
 
 We have two recommended ways of writing content based on your comfort and interest level in using Git and GitHub:
 
-- [OTTR Entry Level]https://www.ottrproject.org/writing_content.html#ottr-entry-level) - if you do not have interest in diving into GitHub, use this version. It is done completely through the GitHub web browser.
+- [OTTR Entry Level](https://www.ottrproject.org/writing_content.html#ottr-entry-level) - if you do not have interest in diving into GitHub, use this version. It is done completely through the GitHub web browser.
 - [OTTR Advanced](https://www.ottrproject.org/writing_content.html#ottr-advanced) - If you are already familiar with Git and GitHub or are interested in starting to use it, we recommend this method. It will require a bit more learning, but Git and GitHub will be a great skill set for you to utilize; both for OTTR purposes and elsewhere for version control!
 
 If you choose to use our OTTR Advanced guidance, you will need a method for working with git.
@@ -118,6 +118,8 @@ For `Branch name pattern`, put `main`.
 _Protect the main branch_:  
 Then check the box that says `Require pull requests before merging`.
 
+\* Note that if the user whose personal access token does not have admin privileges for step `6. Set up your GitHub personal access token`, then you will need to skip this setting.
+
 _Make sure branches are updated_:  
 - Check the box that says `Require status checks to pass before merging`.
 - Underneath this also check the box that says `Require branches to be up to date before merging`.
@@ -157,7 +159,7 @@ _If you have any questions about the implications of any of these updates or fil
 
 Again we have two recommended ways of writing content based on your comfort and interest level in using Git and GitHub:
 
-[Jump to OTTR Entry Level instructions here](#ottr-entry-level)
-[Jump to OTTR Advanced instructions here](#ottr-advanced)
+[Jump to OTTR Entry Level instructions here](./writing_content.html#ottr-entry-level)
+[Jump to OTTR Advanced instructions here](./writing_content.html#ottr-advanced)
 
 Now you are ready to start writing content!
