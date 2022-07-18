@@ -89,9 +89,7 @@ Then copy the PAT and save as the value. Your GitHub actions should all be able 
 
 ### 7. Set up GitHub pages
 
-Go to `Settings` > `Pages`.
-
-![Find pages settings](https://raw.githubusercontent.com/jhudsl/OTTR_Template/main/resources/screenshots/pages_settings.png)
+In your repository, go to `Settings` > `Pages`.
 
 ![Change pages settings](https://raw.githubusercontent.com/jhudsl/OTTR_Template/main/resources/screenshots/change_pages_settings.png)
 
@@ -103,7 +101,7 @@ Go to `Settings` > `Pages`.
 
 The URL for your material will be your `main github pages url` +  `/` + `your OTTR repository name` and it will be displayed underneath your `Settings` > `Pages` if you aren't sure.
 
-By default, Github pages is sent to a url that looks like `username.github.io` where `username` is either your individual user name or your organization's name. However, you can set your GitHub pages URL to be custom (like we have in this example here - `jhudatascience.org`). So it is likely your pages URL is something like `username.github.io/your_ottr_repository_name`. 
+By default, Github pages is sent to a url that looks like `username.github.io` where `username` is either your individual user name or your organization's name. However, you can set your GitHub pages URL to be custom (like we have in this example here - `jhudatascience.org`). So it is likely your pages URL is something like `username.github.io/your_ottr_repository_name`.
 
 For more information about GitHub pages we recommend you reference the [GitHub documentation here](https://docs.github.com/en/pages/quickstart).
 

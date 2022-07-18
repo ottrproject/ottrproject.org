@@ -23,6 +23,7 @@ Navigate to the top of your repository.
 
 [Download this file](https://raw.githubusercontent.com/jhudsl/OTTR_Template/main/scripts/ottr-fy.R).
 
+You can do this by using wget, or by just using the link above and saving it as `ottr-fy.R` in the top of your repository.
 ```
 wget 'https://raw.githubusercontent.com/jhudsl/OTTR_Template/main/scripts/ottr-fy.R'
 ```
@@ -57,13 +58,24 @@ You've downloaded a script that will download the necessary files to run OTTR in
 - config_automation.yml
 - assets/style.css
 
-If you are sure your own files won't be overwritten, run this this script from your command line:
+If you are sure your own files won't be overwritten, run this this script from your command line.
+Note if your GitHub repository is not configured, this script will not work.
+
 ```
 Rscript ottr-fy.R
 ```
 
-After this runs and downloads these files, you'll want to commit these files to your GitHub.
-Make sure to commit this to your branch/repository. 
+This script will automatically:
+1) Open a new branch called `robot/ottrfy`.
+2) Add the OTTR files listed above.
+3) Add, commit, and push this branch to an `origin`
+
+After that, you should go to your repository and open up a pull request.
+The OTTR automation tasks should happen on this pull request automatically.
+
+If they do not automatically start running, you may also want to check in your `Settings` > `Actions` that `Allow all actions and reusable workflows` is chosen.  
+
+Check on this pull request your files and that nothing horrible has happened to your original files (like being overwritten or deleted).
 
 ### 2. Add your Rmd or md files to the `_bookdown.yml` file
 
