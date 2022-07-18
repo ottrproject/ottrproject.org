@@ -8,7 +8,7 @@ output:
 
 ### Changing title
 
-The title is specified on the index.Rmd page in the yml header. Modify the yaml header to change the title for your course.
+The title is specified on the `index.Rmd` page in the yml header. Modify the yaml header to change the title for your course.
 
 ```
 ---
@@ -31,6 +31,8 @@ For example, if you are creating an ITCR course, you will need the files in `sty
 1. On a new branch, copy the `style-sets/<set-name>/index.Rmd` and `style-sets/<set-name>/_output.yml` to the top of the repository to overwrite the default `index.Rmd` and `_output.yml`.
 1. Copy over all the files in the `style-sets/<set-name>/copy-to-assets` to the `assets` folder in the top of the repository.
 1. [Create a pull request](https://github.com/jhudsl/OTTR_Template/wiki/About-pull-request-review) with these changes, and double check the rendered preview to make sure that the style is what you are looking for.
+
+[Read here](https://bookdown.org/yihui/bookdown/output-formats.html) for more about how to customize your `_output.yml` file -- which is ultimately a part of how bookdown works. 
 
 ## Creating your own style
 
