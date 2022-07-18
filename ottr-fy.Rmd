@@ -87,7 +87,9 @@ One reason that this will fail is that you will need to edit `_bookdown.yml` to 
 [Follow these instructions](https://www.ottrproject.org/writing_content.html#Step_2_Add_the_name_of_your_new_chapter_to_your__bookdownyml_file) to add your Rmds and mds to the _bookdown.yml file.
 
 Make sure to commit this to your branch.
-You will also likely want to update your `_output.yml` file. [Read here](https://bookdown.org/yihui/bookdown/output-formats.html) for more about how to customize this `_output.yml` file. 
+You will also likely want to update your `_output.yml` file. [Read here](https://bookdown.org/yihui/bookdown/output-formats.html) for more about how to customize this `_output.yml` file.
+
+*\ Note! Don't merge this pull request before you finish adding a few settings as described in this next step.
 
 ### 3. Set up your repository with the proper settings
 
