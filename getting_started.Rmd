@@ -101,7 +101,13 @@ Go to `Settings` > `Pages`.
 
 ![Enforce HTTPS](https://raw.githubusercontent.com/jhudsl/OTTR_Template/main/resources/screenshots/change_https.png)
 
-\* Note that if you go to your pages url right now (before you've pushed any file changes) you might see a 404 error because nothing has been triggered to be rendered. You can check your url pages after you file your first pull request (which we will guide you through [in the next section](https://github.com/jhudsl/OTTR_Template/wiki/Start-editing-your-course)).
+The URL for your material will be your `main github pages url` +  `/` + `your OTTR repository name` and it will be displayed underneath your `Settings` > `Pages` if you aren't sure.
+
+By default, Github pages is sent to a url that looks like `username.github.io` where `username` is either your individual user name or your organization's name. However, you can set your GitHub pages URL to be custom (like we have in this example here - `jhudatascience.org`). So it is likely your pages URL is something like `username.github.io/your_ottr_repository_name`. 
+
+For more information about GitHub pages we recommend you reference the [GitHub documentation here](https://docs.github.com/en/pages/quickstart).
+
+\* **Warning**: if you go to your pages url right now (before you've pushed any file changes) you might see a 404 error because nothing has been triggered to be rendered. You can check your url pages after you file your first pull request (which we will guide you through [in the next section](https://github.com/jhudsl/OTTR_Template/wiki/Start-editing-your-course)).
 
 ### 8. Set up branch rules
 
