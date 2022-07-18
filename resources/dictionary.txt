@@ -33,6 +33,8 @@ DOI
 docx
 dropdown
 EndNote
+fy
+fying
 favicon
 Favicons
 github
@@ -68,6 +70,7 @@ Rmd's
 RStudio
 spinoff
 StackOverflow
+toc
 uncommented
 useR
 yaml

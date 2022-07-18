@@ -8,7 +8,7 @@ output:
 
 In some cases, if you have R Markdown files, markdown files, or even better, a bookdown set of files in an existing repository that you would like OTTR-fy you can do that following these steps.
 This method is a bit trickier and riskier than creating a repository from scratch and is still under some testing.
-So we recommend generally avoiding this strategy unless its unavoidables.
+So we recommend generally avoiding this strategy unless its unavoidable.
 
 This set of steps also assumes you are more familiar with GitHub.
 
