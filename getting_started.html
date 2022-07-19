@@ -483,6 +483,9 @@ div.tocify {
         Compatibility with Google Docs
       </a>
     </li>
+    <li>
+      <a href="ottr-fy.html">OTTR-fying an existing repository</a>
+    </li>
   </ul>
 </li>
 <li>
@@ -596,11 +599,7 @@ div.tocify {
 </div>
 <div id="set-up-github-pages" class="section level3">
 <h3>7. Set up GitHub pages</h3>
-<p>Go to <code>Settings</code> &gt; <code>Pages</code>.</p>
-<div class="figure">
-<img src="https://raw.githubusercontent.com/jhudsl/OTTR_Template/main/resources/screenshots/pages_settings.png" alt="" />
-<p class="caption">Find pages settings</p>
-</div>
+<p>In your repository, go to <code>Settings</code> &gt; <code>Pages</code>.</p>
 <div class="figure">
 <img src="https://raw.githubusercontent.com/jhudsl/OTTR_Template/main/resources/screenshots/change_pages_settings.png" alt="" />
 <p class="caption">Change pages settings</p>
@@ -616,7 +615,10 @@ div.tocify {
 <img src="https://raw.githubusercontent.com/jhudsl/OTTR_Template/main/resources/screenshots/change_https.png" alt="" />
 <p class="caption">Enforce HTTPS</p>
 </div>
-<p>* Note that if you go to your pages url right now (before you’ve pushed any file changes) you might see a 404 error because nothing has been triggered to be rendered. You can check your url pages after you file your first pull request (which we will guide you through <a href="https://github.com/jhudsl/OTTR_Template/wiki/Start-editing-your-course">in the next section</a>).</p>
+<p>The URL for your material will be your <code>main github pages url</code> + <code>/</code> + <code>your OTTR repository name</code> and it will be displayed underneath your <code>Settings</code> &gt; <code>Pages</code> if you aren’t sure.</p>
+<p>By default, Github pages is sent to a url that looks like <code>username.github.io</code> where <code>username</code> is either your individual user name or your organization’s name. However, you can set your GitHub pages URL to be custom (like we have in this example here - <code>jhudatascience.org</code>). So it is likely your pages URL is something like <code>username.github.io/your_ottr_repository_name</code>.</p>
+<p>For more information about GitHub pages we recommend you reference the <a href="https://docs.github.com/en/pages/quickstart">GitHub documentation here</a>.</p>
+<p>* <strong>Warning</strong>: if you go to your pages url right now (before you’ve pushed any file changes) you might see a 404 error because nothing has been triggered to be rendered. You can check your url pages after you file your first pull request (which we will guide you through <a href="https://github.com/jhudsl/OTTR_Template/wiki/Start-editing-your-course">in the next section</a>).</p>
 </div>
 <div id="set-up-branch-rules" class="section level3">
 <h3>8. Set up branch rules</h3>

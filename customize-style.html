@@ -483,6 +483,9 @@ div.tocify {
         Compatibility with Google Docs
       </a>
     </li>
+    <li>
+      <a href="ottr-fy.html">OTTR-fying an existing repository</a>
+    </li>
   </ul>
 </li>
 <li>
@@ -525,7 +528,7 @@ div.tocify {
 
 <div id="changing-title" class="section level3">
 <h3>Changing title</h3>
-<p>The title is specified on the index.Rmd page in the yml header. Modify the yaml header to change the title for your course.</p>
+<p>The title is specified on the <code>index.Rmd</code> page in the yml header. Modify the yaml header to change the title for your course.</p>
 <pre><code>---
 title: &quot;Title of Course&quot;
 ---</code></pre>
@@ -543,6 +546,7 @@ title: &quot;Title of Course&quot;
 <li>Copy over all the files in the <code>style-sets/&lt;set-name&gt;/copy-to-assets</code> to the <code>assets</code> folder in the top of the repository.</li>
 <li><a href="https://github.com/jhudsl/OTTR_Template/wiki/About-pull-request-review">Create a pull request</a> with these changes, and double check the rendered preview to make sure that the style is what you are looking for.</li>
 </ol>
+<p><a href="https://bookdown.org/yihui/bookdown/output-formats.html">Read here</a> for more about how to customize your <code>_output.yml</code> file – which is ultimately a part of how bookdown works.</p>
 </div>
 </div>
 <div id="creating-your-own-style" class="section level2">
@@ -554,7 +558,7 @@ title: &quot;Title of Course&quot;
 <p>Here you can see that by default the Data Science Lab (dasl) favicon will be used.</p>
 <pre><code>---
 title: &quot;Course Name &quot;
-date: &quot;June, 2022&quot;
+date: &quot;July, 2022&quot;
 site: bookdown::bookdown_site
 documentclass: book
 bibliography: [book.bib, packages.bib]
