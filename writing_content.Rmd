@@ -69,7 +69,7 @@ Whenever you are making changes, you'll want to check that you are on your new b
 
 ## Committing changes
 
-In your OTTR repository, on your new branch, you can now add/edit/rename currently existing files while protexting your `main` branch. Adding changes to a branch is called making `commits`.
+In your OTTR repository, on your new branch, you can now add/edit/rename currently existing files while protecting your `main` branch. Adding changes to a branch is called making `commits`.
 
 - [Follow GitHub's instructions about managing files through their website here](https://docs.github.com/en/repositories/working-with-files/managing-files).
 

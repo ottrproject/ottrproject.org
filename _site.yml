@@ -71,6 +71,8 @@ navbar:
         - text: "Compatibility with Google Docs"
           href: more_features.html#compatibility-with-google-docs
           icon: fa-file
+        - text: OTTR-fying an existing repository
+          href: ottr-fy.html
   - text: Help
     href: faqs.html
     icon: fa-handshake
