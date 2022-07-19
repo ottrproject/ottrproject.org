@@ -48,6 +48,7 @@ You've downloaded a script that will download the necessary files to run OTTR in
 - assets/toc_close.css
 
 #### Files you'll need to edit to customize
+\* These files also will not be downloaded if you already have set up your repository as a bookdown website and specify this in the upcoming command.
 
 - _bookdown.yml
 - _output.yml
@@ -60,12 +61,15 @@ You've downloaded a script that will download the necessary files to run OTTR in
 - config_automation.yml
 - assets/style.css
 
-If you are sure your own files won't be overwritten, run this this script from your command line.
-Note if your GitHub repository is not configured, this script will not work.
-
+Run this this script from your command line if your repository is not already a bookdown website. 
 ```
 Rscript ottr-fy.R
 ```
+If your repository is already configured as a bookdown website, then run this command (aka use the `--bookdown` flag):
+```
+Rscript ottr-fy.R --bookdown
+```
+Note if your GitHub repository is not configured, this script will not work.
 
 This script will automatically:
 1) Open a new branch called `robot/ottrfy`.
