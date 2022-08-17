@@ -36,19 +36,22 @@ navbar:
     icon: fa-lightbulb
     menu:
       - text: "OTTR course examples"
-        href: examples.html#ottr_course_examples
+        href: examples.html#ottr-course-examples
       - text: "Choosing between platforms"
         href: examples.html#choosing-publishing-platforms
         icon: fa-tasks
       - text: "OTTR spinoff 'babies'"
-        href: examples.html#ottr_spinoff_babies
+        href: examples.html#ottr-spinoff-babies
         menu:
+            - text: "What is an OTTR baby"
+              href: examples.html#ottr-spinoff-babies
             - text: "OTTR for websites"
-              href: examples.html#ottr_website
+              href: examples.html#ottr-website
             - text: "OTTR for AnVIL"
-              href: examples.html#anvil_template
+              href: examples.html#anvil-template
             - text: "OTTR for DataTrail"
-              href: examples.html#datatrail_template
+              href: examples.html#datatrail-template
+          
   - text: Customization
     icon: fa-palette
     href: customizing.html
