@@ -10,13 +10,13 @@ navbar:
     icon: fa-play
     menu:
       - text: "Prerequisites"
-        href: getting_started.html#recommended-background-information
+        href: getting_started.html#prerequisites_for_using_ottr
         icon: fa-asterisk
       - text: "Starting a new OTTR course"
         href: getting_started.html#starting-a-new-ottr-course
         icon: fa-flag-checkered
       - text: "Start writing content"
-        href: sub_dir/writing_content.html
+        href: writing_content.html
         icon: fa-pen
         menu:
         - text: "Choosing a writing method"
@@ -28,20 +28,27 @@ navbar:
         - text: "Advanced"
           href: writing_content.html#ottr-advanced
           icon: fa-square
-      - text: "Set up images"
-        href: sub_dir/writing_content.html#set-up-images
-        icon: fa-images
+        - text: "Set up images"
+          href: writing_content.html#set-up-images
+          icon: fa-images
   - text: OTTR Examples
     href: examples.html
     icon: fa-lightbulb
     menu:
-      - text: "OTTR for websites"
-        href: examples.html#OTTR_website
-      - text: "OTTR 'babies'"
-        href: examples.html#OTTR_“baby”_template
+      - text: "OTTR course examples"
+        href: examples.html#ottr_course_examples
       - text: "Choosing between platforms"
         href: examples.html#choosing-publishing-platforms
         icon: fa-tasks
+      - text: "OTTR spinoff 'babies'"
+        href: examples.html#ottr_spinoff_babies
+        menu:
+            - text: "OTTR for websites"
+              href: examples.html#ottr_website
+            - text: "OTTR for AnVIL"
+              href: examples.html#anvil_template
+            - text: "OTTR for DataTrail"
+              href: examples.html#datatrail_template
   - text: Customization
     icon: fa-palette
     href: customizing.html

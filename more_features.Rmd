@@ -23,7 +23,7 @@ Other sources can be added using this template:
 @website{citekey,
     author = {First Last},
     title = {Title},
-    url  = {http://www.someurl.html},
+    url  = {www.website.com},
 }
 ```
 
