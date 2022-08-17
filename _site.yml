@@ -10,13 +10,13 @@ navbar:
     icon: fa-play
     menu:
       - text: "Prerequisites"
-        href: getting_started.html#recommended-background-information
+        href: getting_started.html#Prerequisites_for_using_OTTR
         icon: fa-asterisk
       - text: "Starting a new OTTR course"
         href: getting_started.html#starting-a-new-ottr-course
         icon: fa-flag-checkered
       - text: "Start writing content"
-        href: sub_dir/writing_content.html
+        href: writing_content.html
         icon: fa-pen
         menu:
         - text: "Choosing a writing method"
@@ -38,7 +38,7 @@ navbar:
       - text: "OTTR for websites"
         href: examples.html#OTTR_website
       - text: "OTTR 'babies'"
-        href: examples.html#OTTR_“baby”_template
+        href: examples.html#OTTR_"baby"_template
       - text: "Choosing between platforms"
         href: examples.html#choosing-publishing-platforms
         icon: fa-tasks
