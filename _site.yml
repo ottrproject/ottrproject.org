@@ -10,7 +10,7 @@ navbar:
     icon: fa-play
     menu:
       - text: "Prerequisites"
-        href: getting_started.html#Prerequisites_for_using_OTTR
+        href: getting_started.html#prerequisites_for_using_ottr
         icon: fa-asterisk
       - text: "Starting a new OTTR course"
         href: getting_started.html#starting-a-new-ottr-course
