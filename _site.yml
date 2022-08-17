@@ -28,9 +28,9 @@ navbar:
         - text: "Advanced"
           href: writing_content.html#ottr-advanced
           icon: fa-square
-      - text: "Set up images"
-        href: sub_dir/writing_content.html#set-up-images
-        icon: fa-images
+        - text: "Set up images"
+          href: writing_content.html#set-up-images
+          icon: fa-images
   - text: OTTR Examples
     href: examples.html
     icon: fa-lightbulb
