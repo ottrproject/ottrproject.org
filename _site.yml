@@ -2,10 +2,10 @@ name: Open-source Tools for Training Resources
 output_dir: '.'
 navbar:
   left:
-  - text: About OTTR
+  - text: "About OTTR"
     href: index.html
     icon: fa-home
-  - text: Getting Started
+  - text: "Getting Started"
     href: getting_started.html
     icon: fa-play
     menu:
@@ -31,30 +31,40 @@ navbar:
         - text: "Set up images"
           href: writing_content.html#set-up-images
           icon: fa-images
-  - text: OTTR Examples
+  - text: "OTTR Course Creation"
     href: examples.html
     icon: fa-lightbulb
     menu:
       - text: "OTTR course examples"
         href: examples.html#ottr-course-examples
+        icon: fa-book
       - text: "Choosing between platforms"
         href: examples.html#choosing-publishing-platforms
         icon: fa-tasks
-      - text: "OTTR spinoff 'babies'"
+      - text: "OTTR spinoff babies"
         href: examples.html#ottr-spinoff-babies
+        icon: glyphicon-baby-formula
         menu:
-            - text: "What is an OTTR baby"
-              href: examples.html#ottr-spinoff-babies
-            - text: "OTTR for websites"
-              href: examples.html#ottr-website
-            - text: "OTTR for AnVIL"
-              href: examples.html#anvil-template
-            - text: "OTTR for DataTrail"
-              href: examples.html#datatrail-template
-          
-  - text: Customization
-    icon: fa-palette
+          - text: "What is an OTTR baby"
+            href: examples.html#ottr-spinoff-babies
+          - text: "OTTR for websites"
+            href: examples.html#ottr-website
+          - text: "OTTR for AnVIL"
+            href: examples.html#anvil-template
+          - text: "OTTR for DataTrail"
+            href: examples.html#datatrail-template
+      - text: "Publishing"
+        icon: glyphicon-share
+        menu:
+            - text: "Publishing with Bookdown"
+              href: examples.html#publishing-with-bookdown
+            - text: "Publishing with Leanpub"
+              href: examples.html#publishing-with-leanpub
+            - text: "Publishing with Coursera"
+              href: examples.html#publishing-with-coursera
+  - text: "Customization"
     href: customizing.html
+    icon: fa-palette
     menu:
       - text: "Customizing Checks"
         href: customize-robots.html
@@ -65,7 +75,7 @@ navbar:
       - text: "Customizing Docker"
         href: customize-docker.html
         icon: fa-gears
-  - text: More features
+  - text: "More features"
     href: faqs.html
     icon: fa-plus
     menu:
@@ -83,13 +93,15 @@ navbar:
           icon: fa-file
         - text: OTTR-fying an existing repository
           href: ottr-fy.html
-  - text: Help
+          icon: glyphicon-sunglasses
+          #icon: fa-otter # when bookdown gets updated hopefuly will have this
+  - text: "Help"
     href: faqs.html
     icon: fa-handshake
-  - text: GitHub
+  - text: "GitHub"
     href: https://github.com/jhudsl/OTTR_Template
     icon: fa-github
-  - text: Feedback
+  - text: "Feedback"
     icon: fa-comment
     href: https://forms.gle/jvFjnhqt5V1E9LbQ9
 
