@@ -6,9 +6,9 @@ output:
     toc_float: true
 ---
 
-## OTTR course
+## OTTR course examples
 
-Here's an example of a course made with the [main OTTR Template](https://github.com/jhudsl/OTTR_Template) and has been published in three platforms: Bookdown, Leanpub and Coursera.
+Here is a list of examplescourses made with the [main OTTR Template](https://github.com/jhudsl/OTTR_Template) and has been published in three platforms: Bookdown, Leanpub and Coursera.
 
 _Introduction to Reproducibility in Cancer Informatics:_  
 
@@ -16,6 +16,13 @@ _Introduction to Reproducibility in Cancer Informatics:_
   - [Bookdown website](https://jhudatascience.org/Reproducibility_in_Cancer_Informatics/introduction.html)  
   - [Leanpub course](https://leanpub.com/universities/courses/jhu/cancer-informatics-for-research-leaders)  
   - [Coursera course](https://www.coursera.org/learn/intro-reproducibility-cancer-informatics)  
+  
+_Computing for Cancer Informatics:_  
+
+- [GitHub repository and source code](https://github.com/jhudsl/Computing_for_Cancer_Informatics)
+  - [Bookdown website](https://jhudatascience.org/Computing_for_Cancer_Informatics/)  
+  - [Leanpub course](https://leanpub.com/universities/courses/jhu/cancer-informatics-computing)  
+  - [Coursera course](https://www.coursera.org/learn/computing-for-cancer-informatics)  
 
 
 # Choosing publishing platforms
@@ -31,19 +38,41 @@ Depending on your goals and intended audience you may want to publish just one o
 - [Publishing with Leanpub](#Publishing-on-Leanpub)
 - [Publishing with Coursera](#Publishing-on-Coursera)
 
-# OTTR website
+# OTTR spinoff babies
+We are working to create other versions of our original template for specific uses. This could be a technical variation to do something more simple, something tangential, or something more complex compared to the original OTTR template.
 
-This website itself is an example of website only OTTR made with the spinoff repository: [OTTR_Template_Website](https://github.com/jhudsl/OTTR_Template_Website).
+We also noticed that if specific branding or variations of the original template need to be used many times, it's often easier to create a new template. 
+
+We affectionately call these spinoff templates OTTR "babies".
+
+If you find yourself making a full set of courses and multiple repositories from OTTR, you may want to make a template from our template (If you need to go this route, we recommend talking directly to the OTTR maintainers by filing a GitHub issue and assigning `@cansavvy` and `@carriewright11`). Also please reach out if you have any other fun ideas!
+
+## OTTR website
+
+A simplified spinoff template of the original OTTR was created to make websites: 
+
+- [OTTR_Template_Website](https://github.com/jhudsl/OTTR_Template_Website) - This is an example of how a website will look using this template, as well as guidance on how to make such a website.
 
 - [GitHub repository and source code](https://github.com/jhudsl/ottr-website)  
 
-# OTTR "baby" template
+## AnVIL template
 
 This is a template made from our main OTTR Template that is used for a set of courses being made for the [AnVIL set of cloud tools](https://anvilproject.org/)
 
 - [GitHub repository and source code](https://github.com/jhudsl/AnVIL_Template)  
 
-If you find yourself making a full set of courses and multiple repositories from OTTR, you may want to make a template from our template (If you need to go this route, we recommend talking directly to the OTTR maintainers by filing a GitHub issue and assigning `@cansavvy` and `@carriewright11`).
+
+Courses will look similar to this [link](https://jhudatascience.org/AnVIL_Template/).
+
+## DataTrail template
+
+This is a template made from our main OTTR Template that will be used for a set of courses being made for the [DataTrail](https://www.datatrail.org/)
+
+- [GitHub repository and source code](https://github.com/datatrail-jhu/DataTrail_Template)
+
+Courses will look similar to this [link](https://datatrail-jhu.github.io/DataTrail_Template/introduction.html).
+
+
 
 # Publishing with Bookdown
 
