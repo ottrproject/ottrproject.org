@@ -16,7 +16,7 @@ _Introduction to Reproducibility in Cancer Informatics:_
   - [Bookdown website](https://jhudatascience.org/Reproducibility_in_Cancer_Informatics/introduction.html)  
   - [Leanpub course](https://leanpub.com/universities/courses/jhu/cancer-informatics-for-research-leaders)  
   - [Coursera course](https://www.coursera.org/learn/intro-reproducibility-cancer-informatics)  
-  
+
 _Computing for Cancer Informatics:_  
 
 - [GitHub repository and source code](https://github.com/jhudsl/Computing_for_Cancer_Informatics)
@@ -41,7 +41,7 @@ Depending on your goals and intended audience you may want to publish just one o
 # OTTR spinoff babies
 We are working to create other versions of our original template for specific uses. This could be a technical variation to do something more simple, something tangential, or something more complex compared to the original OTTR template.
 
-We also noticed that if specific branding or variations of the original template need to be used many times, it's often easier to create a new template. 
+We also noticed that if specific branding or variations of the original template need to be used many times, it's often easier to create a new template.
 
 We affectionately call these spinoff templates OTTR "babies".
 
@@ -49,11 +49,11 @@ If you find yourself making a full set of courses and multiple repositories from
 
 ## OTTR website
 
-A simplified spinoff template of the original OTTR was created to make websites: 
+A simplified spinoff template of the original OTTR was created to make websites:
 
-- [OTTR_Template_Website](https://github.com/jhudsl/OTTR_Template_Website) - This is an example of how a website will look using this template, as well as guidance on how to make such a website.
+- [OTTR_Template_Website](https://jhudatascience.org/OTTR_Template_Website/) - This is an example of how a website will look using this template, as well as guidance on how to make such a website.
 
-- [GitHub repository and source code](https://github.com/jhudsl/ottr-website)  
+- Go to the [OTTR_Template_Website](https://jhudatascience.org/OTTR_Template_Website/) to get started.
 
 ## AnVIL template
 
