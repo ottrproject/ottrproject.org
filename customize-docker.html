@@ -575,8 +575,12 @@ div.tocify {
 <h2>Using the jhudsl/course_template Docker image</h2>
 <p>If your course doesn’t require any additional packages to run, then you do not need to set up Docker locally but <a href="https://hub.docker.com/repository/docker/jhudsl/course_template">this Docker image: jhudsl/course_template</a> will run and re-render all of your changes as you add them.</p>
 <p>We advise you use the <code>jhudsl/course_template:main</code> tagged image as opposed to the <code>latest</code>. The <code>main</code> is what is ready for use, while the <code>latest</code> may be under development. All GitHub actions by default use the <code>jhudsl/course_template:main</code>.</p>
-<p>If you are new to Docker, you may find it helpful to read this <a href="https://jhudatascience.org/Adv_Reproducibility_in_Cancer_Informatics/launching-a-docker-image.html">introduction to Docker</a>. - You will need to <a href="https://hub.docker.com/">sign up with a Docker account</a> if you don’t have one.<br />
-- If you haven’t installed Docker desktop (or need to update it), you can do <a href="https://docs.docker.com/get-docker/">so here</a>.</p>
+<p>If you are new to Docker, you may find it helpful to read this <a href="https://jhudatascience.org/Adv_Reproducibility_in_Cancer_Informatics/launching-a-docker-image.html">introduction to Docker</a>.</p>
+<ul>
+<li>You will need to <a href="https://hub.docker.com/">sign up with a Docker account</a> if you don’t have one.<br />
+</li>
+<li>If you haven’t installed Docker desktop (or need to update it), you can do <a href="https://docs.docker.com/get-docker/">so here</a>.</li>
+</ul>
 <p>If your Docker desktop is running, you should see a Docker whale in your tool bar. On Macs, this will be on the bar on the top of your screen; in Windows, on the bottom right.</p>
 <p>A Docker image is similar to a virtual machine - it contains preinstalled software in a preconfigured environment. Docker images can be downloaded from DockerHub, or you can create your own.</p>
 <p>We have created the <code>course_template:main</code> image as a starting point; you can download it from <code>jhudsl/course_template:main</code> on DockerHub using the docker pull command we have below. To pull the docker image associated with this template, you can run this command below in your command line. This may take a while.</p>
