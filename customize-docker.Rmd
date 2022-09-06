@@ -15,6 +15,7 @@ If your course doesn't require any additional packages to run, then you do not n
 We advise you use the `jhudsl/course_template:main` tagged image as opposed to the `latest`. The `main` is what is ready for use, while the `latest` may be under development. All GitHub actions by default use the `jhudsl/course_template:main`.
 
 If you are new to Docker, you may find it helpful to read this [introduction to Docker](https://jhudatascience.org/Adv_Reproducibility_in_Cancer_Informatics/launching-a-docker-image.html).
+
 - You will need to [sign up with a Docker account](https://hub.docker.com/) if you don't have one.  
 - If you haven't installed Docker desktop (or need to update it), you can do [so here](https://docs.docker.com/get-docker/).  
 
