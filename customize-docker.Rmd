@@ -100,7 +100,7 @@ For `Secret`: put your login username for https://hub.docker.com/
 
 _Name: `DOCKERHUB_TOKEN`_:   
 For `Secret`: put an access token for Dockerhub.
-You can create this by following [these instructions](https://docs.docker.com/docker-hub/access-tokens/#create-an-access-token).
+You can create this by following [these instructions](https://docs.docker.com/docker-hub/access-tokens/#create-an-access-token). Choose the `read,write,delete` option.
 
 ### Updating workflows for new Docker image
 
