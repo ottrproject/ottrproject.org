@@ -150,7 +150,7 @@ name.
 
 ![](resources/images/intro_file.png)
 
-Now click on the edit button to make a change.
+Now click on the edit button to make a change. Notice that it shows what branch we are working on.
 
 ![](resources/images/edit-button.png)
 
