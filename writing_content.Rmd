@@ -4,8 +4,8 @@ output:
   html_document:
     toc: true
     toc_float: true
-editor_options: 
-  markdown: 
+editor_options:
+  markdown:
     wrap: 72
 ---
 
@@ -518,7 +518,7 @@ There are two things to check for each slide:
 
 -   [ ] Each slide is described in the notes of the slide so learners
     relying on a screen reader can access the content. See
-    <https://lastcallmedia.com/blog/accessible-comics> for more guidance
+    https://lastcallmedia.com/blog/accessible-comics for more guidance
     on this.
 
 -   [ ] The color palette choices of the slide are contrasted in a way
