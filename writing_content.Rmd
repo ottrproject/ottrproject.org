@@ -87,36 +87,37 @@ are working on
 ![](resources/images/working_branch.png)
 
 To create a new branch through the GitHub website, you will go to your
-main course repository page, click on the branch changing button that says `main`.
+main course repository page, click on the branch changing button that
+says `main`.
 
 ![](resources/images/branch-button.png)
 
-
 Type in a name for your new branch; something that relates to the
 changes you are making. For the purposes of this example, we'll call
-this new branch, `new-changes`.
+this new branch, `a-new-branch`.
 
 ![](resources/images/new-branch.png)
 
 Then click `Create branch: new-changes from main`.
-
 
 ![](resources/images/new-branch-create.png)
 
 Congrats! You've made a new branch. GitHub will automatically show you
 your new branch's files (which have been copied from the `main`).
 
-You can tell that you are on the new branch as the left corner branch tab now says the name of our new branch (`new-changes`). 
-
+You can tell that you are on the new branch as the left corner branch
+tab now says the name of our new branch (`a-new-branch`).
 
 ![](resources/images/new-branch-result.png)
 
-Now that we have a copy of all the files from the `main` branch, we can safely work on them in the `new-changes` branch.
+Now that we have a copy of all the files from the `main` branch, we can
+safely work on them in the `a-new-branch` branch.
 
 ![](resources/images/main_branch_safe.png)
 
 Whenever you are making changes, you'll want to check that you are on
-your new branch in order to add any new changes to your pull request, just look at the left upper corner to make sure!
+your new branch in order to add any new changes to your pull request,
+just look at the left upper corner to make sure!
 
 Now let's try making some changes.
 
@@ -126,7 +127,10 @@ In your OTTR repository, on your new branch, you can now add/edit/rename
 currently existing files while protecting your `main` branch. Adding
 changes to a branch is called making `commits`.
 
-We will describe how to edit existing files below, however, GitHub has great information about how to create and remove files. Additionally GitHub is always making changes, so if our instruction seem out of date, definitely checkout what GitHub's current documentation:
+We will describe how to edit existing files below, however, GitHub has
+great information about how to create and remove files. Additionally
+GitHub is always making changes, so if our instruction seem out of date,
+definitely checkout what GitHub's current documentation:
 
 -   [Follow GitHub's instructions about managing files through their
     website
@@ -140,20 +144,27 @@ through the OTTR checks.
 Then click `Commit changes`. You will need to do this after every change
 to add them to your branch.
 
-As an example, we will show a simple change to the file called `01-intro.Rmd`. Scroll down to the this file and click on this file name. 
+As an example, we will show a simple change to the file called
+`01-intro.Rmd`. Scroll down to the this file and click on this file
+name.
 
-![](resources/images/intro_file.png)
+![](resources/images/intro_file.png) 
+
+
 Now click on the edit button to make a change.
 
 ![](resources/images/edit-button.png)
 
 Make an edit, such as adding to the introduction like so.
 
-![](resources/images/first_edit.png)
-You can preview how it looks by pressing the `Preview changes` button.
+![](resources/images/first_edit.png) 
+
+You can preview how it looks by pressing the `Preview changes` button. Red will indicate new deletions and green will indicate new additions.
+
 ![](resources/images/first_edit_preview.png)
 
-Then write a message about what changes you made and press the `commit changes` button.
+Then write a message about what changes you made and press the
+`commit changes` button.
 
 ![](resources/images/first_edit_commit.png)
 
@@ -290,11 +301,12 @@ origin in the dropdown menu and click `Submit`.
 
 # Open a pull request {#open-a-pull-request}
 
-After a variable number of commits, your branch, called `a-new-branch`
-is a different version of the original code base that may have a nifty
-improvement to it. But our main goal is to add that nifty improvement to
-the `main` branch. To start this process of bringing in new changes to
-the main curated repository, we will create a pull request.
+After a variable number of commits, your branch, perhaps called
+`a-new-branch` or `new-changes` is a different version of the original
+code base that may have a nifty improvement to it. But our main goal is
+to add that nifty improvement to the `main` branch. To start this
+process of bringing in new changes to the main curated repository, we
+will create a pull request.
 
 From GitHub:
 
