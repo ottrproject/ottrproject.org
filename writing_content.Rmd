@@ -148,8 +148,7 @@ As an example, we will show a simple change to the file called
 `01-intro.Rmd`. Scroll down to the this file and click on this file
 name.
 
-![](resources/images/intro_file.png) 
-
+![](resources/images/intro_file.png)
 
 Now click on the edit button to make a change.
 
@@ -157,9 +156,10 @@ Now click on the edit button to make a change.
 
 Make an edit, such as adding to the introduction like so.
 
-![](resources/images/first_edit.png) 
+![](resources/images/first_edit.png)
 
-You can preview how it looks by pressing the `Preview changes` button. Red will indicate new deletions and green will indicate new additions.
+You can preview how it looks by pressing the `Preview changes` button.
+Red will indicate new deletions and green will indicate new additions.
 
 ![](resources/images/first_edit_preview.png)
 
@@ -302,11 +302,11 @@ origin in the dropdown menu and click `Submit`.
 # Open a pull request {#open-a-pull-request}
 
 After a variable number of commits, your branch, perhaps called
-`a-new-branch` or `new-changes` is a different version of the original
-code base that may have a nifty improvement to it. But our main goal is
-to add that nifty improvement to the `main` branch. To start this
-process of bringing in new changes to the main curated repository, we
-will create a pull request.
+`a-new-branch` or any other new branch you might have made, is a
+different version of the original code base that may have a nifty
+improvement to it. But our main goal is to add that nifty improvement to
+the `main` branch. To start this process of bringing in new changes to
+the main curated repository, we will create a **pull request**.
 
 From GitHub:
 
@@ -315,7 +315,7 @@ From GitHub:
 > review the set of changes, discuss potential modifications, and even
 > push follow-up commits if necessary.
 
-Pull Requests are the meat of how code changes and improvements get
+Pull requests are the meat of how code changes and improvements get
 reviewed and incorporated! A vast majority of the benefits of
 incorporating GitHub into your workflow centers around fully utilizing
 the power of pull requests!
@@ -323,9 +323,31 @@ the power of pull requests!
 ![](resources/images/pull_request.png)
 
 Now we can open up a pull request if we go to our GitHub repository on
-GitHub.
+GitHub. You might need to migrate back to the main page for your
+repository and can do so by simply clicking on the blue name of your
+repository at the top. Then you will see something like this yellow
+banner message, where there is a button that says
+`Compare & pull request`.
 
 ![](resources/images/open_pr.png)
+
+<details>
+
+<summary>If you don't see the pull request message, click
+here.</summary>
+
+Note that sometimes if you have used the same branch multiple times you
+may need some extra steps to create a pull request. This will involve
+first clicking on the branch tab (which may have a different number).
+
+![](resources/images/branch_tab.png)
+
+Then click on the `New Pull Request` button for the branch you want to
+work on. Be careful that is the branch you intend.
+
+![](resources/images/new_PR_2.png)
+
+</details>
 
 After you click on `Compare & pull request` you'll be taken to a screen
 where you can add information about your changes. After you are done
