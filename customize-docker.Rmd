@@ -96,10 +96,10 @@ To give them permission for all these Docker actions, you need to set a GitHub s
 - The login information in these GitHub secrets must be from an account that has write permissions to the Docker image you wish to manage).
 
 _Name: `DOCKERHUB_USERNAME`_:  
-For `value`: put your login username for https://hub.docker.com/
+For `Secret`: put your login username for https://hub.docker.com/
 
 _Name: `DOCKERHUB_TOKEN`_:   
-For `value`: put an access token for Dockerhub.
+For `Secret`: put an access token for Dockerhub.
 You can create this by following [these instructions](https://docs.docker.com/docker-hub/access-tokens/#create-an-access-token).
 
 ### Updating workflows for new Docker image
