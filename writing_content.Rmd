@@ -492,7 +492,7 @@ We encourage this strategy for several reasons:
 -   You can make videos of your slides that can be added to your course
     using `ari`
 
-**Important:** :warning: Your Google Slide document must be set to
+**Important:** ⚠️ Your Google Slide document must be set to
 `Anyone with a link`. See [this article for more
 details.](https://support.wix.com/en/article/setting-permissions-for-google-drive-files-and-folders#:~:text=Settings%20Permissions%20for%20a%20Google,edit%20and%20comment%20as%20well.)
 The renders will fail if this is not set!
