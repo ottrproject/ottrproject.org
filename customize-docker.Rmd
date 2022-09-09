@@ -195,3 +195,15 @@ You can use GitHub actions to do this by going to your course's GitHub repositor
 Click on `run workflow` type in `true` underneath `Push to Dockerhub?`.
 
 Then click `Run`. If your Dockerfile builds an image successfully it will automatically be pushed to Dockerhub.
+
+#### Github action for testing your Docker image
+
+For your personalized docker image, you can store the Dockerfile anywhere. In order for OTTR/GitHub actions to use it, it must be pushed to Dockerhub.
+
+It may be easiest to store it in the OTTR-made repository you are working from.
+
+In whichever repository you choose to store your Dockerfile, its recommended you use a GitHub action to automatically test it when you make changes. You can use our Docker handling [GitHub action here as a starting point](https://github.com/jhudsl/ottr_docker/blob/main/.github/workflows/docker-test.yml).
+
+You may need to modify this for your own purposes. And you will definitely need to set up the Dockerhub credentials as described above.
+
+For other information about how to modify this GitHub action, we recommend looking at the GitHub actions documentation to become more familiar with how to customize it: https://docs.github.com/en/actions.
