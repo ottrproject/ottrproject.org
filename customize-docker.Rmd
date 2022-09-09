@@ -216,4 +216,6 @@ If you do choose to use the action manually, then you can use this by going to `
 - `tag` - Optionally, what tag you wish the built docker image to have
 - `Push to Dockerhub?` TRUE or FALSE whether you wish this docker image to be pushed to Dockerhub.
 
+![](resources/images/docker-gha.png)
+
 For more guidance on how to personalize Docker images, we recommend [joining the Google Group and asking questions on there](https://www.ottrproject.org/faqs.html#Ask_a_question_on_the_Google_Group). Or file a GitHub issue on the relevant repository.
