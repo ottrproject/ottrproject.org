@@ -77,5 +77,6 @@ yaml
 yml
 youtube
 templated
+wget
 ZoteroBib
 Zotero

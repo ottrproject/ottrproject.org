@@ -90,13 +90,6 @@ jobs:
           results=$(Rscript "scripts/spell-check.R")
           echo "::set-output name=sp_chk_results::$results"
 
-      - name: Archive spelling errors
-        if: ${{ steps.spell_check_run.outputs.sp_chk_results > 0 }}
-        uses: actions/upload-artifact@v2
-        with:
-          name: spell-check-results
-          path: check_reports/spell_check_results.tsv
-
       - name: Commit spell check errors
         run: |
           branch_name='preview-${{ github.event.pull_request.number }}'
@@ -111,12 +104,7 @@ jobs:
           GH_PAT: ${{ secrets.GH_PAT }}
         run: |
           branch_name='preview-${{ github.event.pull_request.number }}'
-          if ${{ needs.yaml-check.outputs.public_repository }} == 'true'
-          then
-            sp_error_url=https://raw.githubusercontent.com/${GITHUB_REPOSITORY}/$branch_name/check_reports/spell_check_results.tsv
-          else
-            sp_error_url=https://github.com/${GITHUB_REPOSITORY}/blob/$branch_name/check_reports/spell_check_results.tsv
-          fi
+          sp_error_url=https://raw.githubusercontent.com/${GITHUB_REPOSITORY}/$branch_name/check_reports/spell_check_results.tsv
           echo ::set-output name=time::$(date +'%Y-%m-%d')
           echo ::set-output name=commit_id::$GITHUB_SHA
           echo ::set-output name=sp_error_url::$sp_error_url
@@ -194,7 +182,7 @@ jobs:
         git add --force check_reports/url_checks.tsv || echo "No changes to commit"
         git commit -m 'Add URL check file' || echo "No changes to commit"
         git fetch
-        git merge -s recursive --strategy-option=theirs origin/${{ github.head_ref }} --allow-unrelated-histories
+        git merge -s recursive --strategy-option=ours origin/${{ github.head_ref }} --allow-unrelated-histories
         git push --force origin $branch_name || echo "No changes to commit"
 
     - name: Build components of the spell check comment

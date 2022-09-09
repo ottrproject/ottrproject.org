@@ -8,7 +8,7 @@ output:
 
 ## OTTR course examples
 
-Here is a list of examplescourses made with the [main OTTR Template](https://github.com/jhudsl/OTTR_Template) and has been published in three platforms: Bookdown, Leanpub and Coursera.
+Here is a list of examples courses made with the [main OTTR Template](https://github.com/jhudsl/OTTR_Template) and has been published in three platforms: Bookdown, Leanpub and Coursera.
 
 _Introduction to Reproducibility in Cancer Informatics:_  
 
