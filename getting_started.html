@@ -637,8 +637,8 @@ div.tocify {
 <p>If you have organization admin privileges and plan on making multiple courses with OTTR, you can set <code>GH_PAT</code> as an organization secret so you don’t have to do this again. You only need to do this once as an organization (if this course is under <code>jhudsl</code> you don’t need to do this step).</p>
 <ul>
 <li>Click <code>New repository secret</code>/<code>New organization secret</code> button.</li>
-<li>Under name you must use <code>GH_PAT</code>.</li>
-<li>For <code>value</code>: Create a personal access token <a href="https://docs.github.com/en/github/authenticating-to-github/creating-a-personal-access-token#creating-a-token">following these instructions</a>. Underneath <code>Select scopes</code>, check both <code>repo</code> and <code>workflow</code>. Then copy the PAT and save as the value. Your GitHub actions should all be able to run smoothly now.</li>
+<li>Under <code>Name</code> you must use <code>GH_PAT</code>.</li>
+<li>For <code>Secret</code>: Create a personal access token <a href="https://docs.github.com/en/github/authenticating-to-github/creating-a-personal-access-token#creating-a-token">following these instructions</a>. Underneath <code>Select scopes</code>, check both <code>repo</code> and <code>workflow</code>. Then copy the PAT and save as the secret. Your GitHub actions should all be able to run smoothly now.</li>
 </ul>
 </div>
 <div id="set-up-github-pages" class="section level3">

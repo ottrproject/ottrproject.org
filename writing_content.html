@@ -601,22 +601,39 @@ div.tocify {
 <p>The <code>main</code> branch is what your content will be published from and it will be live to any learners looking at your course. You will want to keep this <code>main</code> branch as preserved and well curated as possible!</p>
 <p>So when you are ready to add more content you will want to have an isolated copy of your files to work from that keeps your main branch safe as you work. You can name the branch you work from whatever you like – its recommended you name it something related to the changes you are working on</p>
 <p><img src="resources/images/working_branch.png" /></p>
-<p>To create a new branch through the GitHub website, you will go to your main course repository page, click on the <code>Switch Branches</code> button.</p>
-<p>Type in a name for your new branch; something that relates to the changes you are making. For the purposes of this example, we’ll call this new branch, <code>new-changes</code>.</p>
-<p>Then click <code>Create branch: new-changes from main</code>.</p>
+<p>To create a new branch through the GitHub website, you will go to your main course repository page, click on the branch changing button that says <code>main</code>.</p>
+<p><img src="resources/images/branch-button.png" /></p>
+<p>Type in a name for your new branch; something that relates to the changes you are making. For the purposes of this example, we’ll call this new branch, <code>a-new-branch</code>.</p>
 <p><img src="resources/images/new-branch.png" /></p>
+<p>Then click <code>Create branch: new-changes from main</code>.</p>
+<p><img src="resources/images/new-branch-create.png" /></p>
 <p>Congrats! You’ve made a new branch. GitHub will automatically show you your new branch’s files (which have been copied from the <code>main</code>).</p>
+<p>You can tell that you are on the new branch as the left corner branch tab now says the name of our new branch (<code>a-new-branch</code>).</p>
+<p><img src="resources/images/new-branch-result.png" /></p>
+<p>Now that we have a copy of all the files from the <code>main</code> branch, we can safely work on them in the <code>a-new-branch</code> branch.</p>
 <p><img src="resources/images/main_branch_safe.png" /></p>
-<p>Whenever you are making changes, you’ll want to check that you are on your new branch in order to add any new changes to your pull request.</p>
+<p>Whenever you are making changes, you’ll want to check that you are on your new branch in order to add any new changes to your pull request, just look at the left upper corner to make sure!</p>
+<p>Now let’s try making some changes.</p>
 </div>
 <div id="committing-changes" class="section level2">
 <h2>Committing changes</h2>
 <p>In your OTTR repository, on your new branch, you can now add/edit/rename currently existing files while protecting your <code>main</code> branch. Adding changes to a branch is called making <code>commits</code>.</p>
+<p>We will describe how to edit existing files below, however, GitHub has great information about how to create and remove files. Additionally GitHub is always making changes, so if our instruction seem out of date, definitely checkout what GitHub’s current documentation:</p>
 <ul>
 <li><a href="https://docs.github.com/en/repositories/working-with-files/managing-files">Follow GitHub’s instructions about managing files through their website here</a>.</li>
 </ul>
 <p>After every edit you make, scroll down and make sure that you choose <code>Commit directly to the new-changes branch.</code>. This will add your changes to the pull request and thus allowing for these changes to be run through the OTTR checks.</p>
 <p>Then click <code>Commit changes</code>. You will need to do this after every change to add them to your branch.</p>
+<p>As an example, we will show a simple change to the file called <code>01-intro.Rmd</code>. Scroll down to the this file and click on this file name.</p>
+<p><img src="resources/images/intro_file.png" /></p>
+<p>Now click on the edit button to make a change. Notice that it shows what branch we are working on.</p>
+<p><img src="resources/images/edit-button.png" /></p>
+<p>Make an edit, such as adding to the introduction like so.</p>
+<p><img src="resources/images/first_edit.png" /></p>
+<p>You can preview how it looks by pressing the <code>Preview changes</code> button. Red will indicate new deletions and green will indicate new additions.</p>
+<p><img src="resources/images/first_edit_preview.png" /></p>
+<p>Then write a message about what changes you made and press the <code>commit changes</code> button.</p>
+<p><img src="resources/images/first_edit_commit.png" /></p>
 <p>Now you are ready to open your pull request.</p>
 <ul>
 <li><a href="#open-a-pull-request">Jump to that section to read how to do this!</a></li>
@@ -676,15 +693,24 @@ div.tocify {
 </div>
 <div id="open-a-pull-request" class="section level1">
 <h1>Open a pull request</h1>
-<p>After a variable number of commits, your branch, called <code>a-new-branch</code> is a different version of the original code base that may have a nifty improvement to it. But our main goal is to add that nifty improvement to the <code>main</code> branch. To start this process of bringing in new changes to the main curated repository, we will create a pull request.</p>
+<p>After a variable number of commits, your branch, perhaps called <code>a-new-branch</code> or any other new branch you might have made, is a different version of the original code base that may have a nifty improvement to it. But our main goal is to add that nifty improvement to the <code>main</code> branch. To start this process of bringing in new changes to the main curated repository, we will create a <strong>pull request</strong>.</p>
 <p>From GitHub:</p>
 <blockquote>
 <p>Pull requests let you tell others about changes you’ve pushed to a GitHub repository. Once a pull request is sent, interested parties can review the set of changes, discuss potential modifications, and even push follow-up commits if necessary.</p>
 </blockquote>
-<p>Pull Requests are the meat of how code changes and improvements get reviewed and incorporated! A vast majority of the benefits of incorporating GitHub into your workflow centers around fully utilizing the power of pull requests!</p>
+<p>Pull requests are the meat of how code changes and improvements get reviewed and incorporated! A vast majority of the benefits of incorporating GitHub into your workflow centers around fully utilizing the power of pull requests!</p>
 <p><img src="resources/images/pull_request.png" /></p>
-<p>Now we can open up a pull request if we go to our GitHub repository on GitHub.</p>
+<p>Now we can open up a pull request if we go to our GitHub repository on GitHub. You might need to migrate back to the main page for your repository and can do so by simply clicking on the blue name of your repository at the top. Then you will see something like this yellow banner message, where there is a button that says <code>Compare &amp; pull request</code>.</p>
 <p><img src="resources/images/open_pr.png" /></p>
+<details>
+<summary>
+If you don’t see the pull request message, click here.
+</summary>
+<p>Note that sometimes if you have used the same branch multiple times you may need some extra steps to create a pull request. This will involve first clicking on the branch tab (which may have a different number).</p>
+<p><img src="resources/images/branch_tab.png" /></p>
+<p>Then click on the <code>New Pull Request</code> button for the branch you want to work on. Be careful that is the branch you intend.</p>
+<p><img src="resources/images/new_PR_2.png" /></p>
+</details>
 <p>After you click on <code>Compare &amp; pull request</code> you’ll be taken to a screen where you can add information about your changes. After you are done writing your description, click <code>Create Pull Request</code>! (If you don’t have your pull request description <em>perfect</em> don’t worry about it, you can always edit it later).</p>
 <p>Congrats! You’ve just opened a pull request! For every set of changes you’ll make to your course, you will want to follow this similar set of steps.</p>
 <p><strong>To summarize, here’s what those steps are:</strong></p>
@@ -766,10 +792,10 @@ output_dir: &quot;docs&quot;  </code></pre>
 <li>Storing your images on Google slides allows them to be in one central location and may be helpful for you to re-use the media from your course in the future</li>
 <li>You can make videos of your slides that can be added to your course using <code>ari</code></li>
 </ul>
-<p><strong>Important:</strong> :warning: Your Google Slide document must be set to <code>Anyone with a link</code>. See <a href="https://support.wix.com/en/article/setting-permissions-for-google-drive-files-and-folders#:~:text=Settings%20Permissions%20for%20a%20Google,edit%20and%20comment%20as%20well.">this article for more details.</a> The renders will fail if this is not set!</p>
+<p><strong>Important:</strong> ⚠️ Your Google Slide document must be set to <code>Anyone with a link</code>. See <a href="https://support.wix.com/en/article/setting-permissions-for-google-drive-files-and-folders#:~:text=Settings%20Permissions%20for%20a%20Google,edit%20and%20comment%20as%20well.">this article for more details.</a> The renders will fail if this is not set!</p>
 <p>Each Rmd file with images that is a part of your Bookdown needs to have this chunk at the beginning so that images are stored properly for Leanpub conversion.</p>
 <p>If you are unfamiliar with <a href="https://rmarkdown.rstudio.com/lesson-3.html">how R Markdown code chunks work, read this</a>.</p>
-<p><img src = "resources/images/set_knitr_image_path.png" width = 400></p>
+<p><img src="resources/images/set_knitr_image_path.png" width="400"/></p>
 <p>Next, import the appropriate theme (see <a href="https://youtu.be/pNbwF263yY8">this video</a> for assistance):</p>
 <div id="accessibility" class="section level2">
 <h2>Accessibility</h2>
@@ -785,7 +811,7 @@ The color palette choices of the slide are contrasted in a way that is friendly 
 <div id="adding-images-and-graphics-in-text" class="section level2">
 <h2>Adding images and graphics in text</h2>
 <p>All images should be included in your Google Slides with the captions we discussed above. To add images in the text in your Rmd, use the <code>ottrpal::include_slide()</code> within an <a href="https://bookdown.org/yihui/rmarkdown/r-code.html">R code chunk</a>.</p>
-<p><img src = "resources/images/include_slide.png" width = 600></p>
+<p><img src="resources/images/include_slide.png" width="600"/></p>
 <p>You can obtain the <google_slide_url> by viewing the slide with the image you want to add and copying the address from the browser search bar.</p>
 <div class="figure">
 <img src="https://raw.githubusercontent.com/jhudsl/OTTR_Template/main/resources/screenshots/slide_url.png" alt="" />
@@ -794,7 +820,7 @@ The color palette choices of the slide are contrasted in a way that is friendly 
 <p>Also add notes (the same as the <code>fig.alt</code> text) to each slide in the google slide presentation describing the text or images of the slide to allow for the content to be accessible to vision impaired individuals, as this can be converted to audio. Note that you can’t have any line breaks within the <code>fig.alt</code> text. If there are no line breaks the text should appear blue within the code chunk.</p>
 <p>The <code>echo=FALSE</code> ensures that the r code is hidden from your course, while the <code>out.width = "100%"</code> is used to size the image. We generally recommend going with larger images.</p>
 <p><em>You must define <code>fig.alt</code> in the code chunk options/parameters to pass to <code>knitr</code>.</em> You can adjust the size(fig.hight, fig.width, out.width, out.height), alignment (fig.align), or caption (fig.cap) of the image you can use these arguments in the code chunk tag:</p>
-<p><img src = "resources/images/header.png" width = 400></p>
+<p><img src="resources/images/header.png" width="400"/></p>
 <p>Google Slides must be <strong>public</strong>. Share settings must be set to “Anyone on the internet with this link can view”. Note that “Private” is the default setting when you make a new presentation.</p>
 <p>See <a href="https://github.com/jhudsl/OTTR_Template/blob/main/02-chapter_of_course.Rmd">Chapter 2</a> of the template course for examples.</p>
 </div>
@@ -809,12 +835,12 @@ The color palette choices of the slide are contrasted in a way that is friendly 
 <h2>Adding embedded files to text</h2>
 <p>Sometimes it is useful to include an embedded version of a website or file on a website, if there is a particularly important link and you don’t want to rely on learners clicking the link.</p>
 <p>To include such a file or website do the following:</p>
-<p><img src = "resources/images/include_url.png" width = 600></p>
+<p><img src="resources/images/include_url.png" width="600"/></p>
 <p>Again you will need to include <code>echo = FALSE</code> to ensure that the code to generate the preview of the website or file is not included in your course material.</p>
-<p><img src = "resources/images/include_url_2.png" width = 600></p>
+<p><img src="resources/images/include_url_2.png" width="600"/></p>
 <p>If you want to include a file that is not hosted online, consider hosting it on GitHub using the method described for hosting your Bookdown version of the course. See the <a href="https://github.com/jhudsl/OTTR_Template/wiki/Starting-a-new-course-with-this-template#set-up-github-pages">Set up GitHub pages</a> section.</p>
 <p>Then you would do the following, where the url is that of your hosted file:</p>
-<p><img src = "resources/images/include_url_3.png" width = 600></p>
+<p><img src="resources/images/include_url_3.png" width="600"/></p>
 <p>See <a href="https://github.com/jhudsl/OTTR_Template/blob/main/02-chapter_of_course.Rmd">Chapter 2</a> of the template course for examples.</p>
 </div>
 </div>
