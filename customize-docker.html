@@ -571,10 +571,10 @@ div.tocify {
 
 
 <p>Particularly for courses that involve running example code, it’s highly recommended that you use a Docker image for development to maintain software version consistency across course developers.</p>
-<div id="using-the-jhudslcourse_template-docker-image" class="section level2">
-<h2>Using the jhudsl/course_template Docker image</h2>
-<p>If your course doesn’t require any additional packages to run, then you do not need to set up Docker locally but <a href="https://hub.docker.com/repository/docker/jhudsl/course_template">this Docker image: jhudsl/course_template</a> will run and re-render all of your changes as you add them.</p>
-<p>We advise you use the <code>jhudsl/course_template:main</code> tagged image as opposed to the <code>latest</code>. The <code>main</code> is what is ready for use, while the <code>latest</code> may be under development. All GitHub actions by default use the <code>jhudsl/course_template:main</code>.</p>
+<div id="using-the-base_ottr-docker-image" class="section level2">
+<h2>Using the base_ottr Docker image</h2>
+<p>If your course doesn’t require any additional packages to run, then you do not need to set up Docker locally but <a href="https://hub.docker.com/repository/docker/jhudsl/base_ottr">this Docker image: jhudsl/base_ottr</a> will run and re-render all of your changes as you add them.</p>
+<p>We advise you use the <code>jhudsl/base_ottr:main</code> tagged image as opposed to the <code>latest</code>. The <code>main</code> is what is ready for use, while the <code>latest</code> may be under development. All GitHub actions by default use the <code>jhudsl/base_ottr:main</code>.</p>
 <p>If you are new to Docker, you may find it helpful to read this <a href="https://jhudatascience.org/Adv_Reproducibility_in_Cancer_Informatics/launching-a-docker-image.html">introduction to Docker</a>.</p>
 <ul>
 <li>You will need to <a href="https://hub.docker.com/">sign up with a Docker account</a> if you don’t have one.<br />
@@ -583,15 +583,15 @@ div.tocify {
 </ul>
 <p>If your Docker desktop is running, you should see a Docker whale in your tool bar. On Macs, this will be on the bar on the top of your screen; in Windows, on the bottom right.</p>
 <p>A Docker image is similar to a virtual machine - it contains preinstalled software in a preconfigured environment. Docker images can be downloaded from DockerHub, or you can create your own.</p>
-<p>We have created the <code>course_template:main</code> image as a starting point; you can download it from <code>jhudsl/course_template:main</code> on DockerHub using the docker pull command we have below. To pull the docker image associated with this template, you can run this command below in your command line. This may take a while.</p>
-<pre><code>docker pull jhudsl/course_template:main</code></pre>
-<p>This pulls the course_template:main image from Docker Hub and copies it to your computer. It will be placed in your local collection of Docker images, managed by Docker (not in your pwd). If you get an error, it may be because you forgot to have your Docker desktop running… see above.</p>
+<p>We have created the <code>base_ottr:main</code> image as a starting point; you can download it from <code>jhudsl/base_ottr:main</code> on DockerHub using the docker pull command we have below. To pull the docker image associated with this template, you can run this command below in your command line. This may take a while.</p>
+<pre><code>docker pull jhudsl/base_ottr:main</code></pre>
+<p>This pulls the base_ottr:main image from Docker Hub and copies it to your computer. It will be placed in your local collection of Docker images, managed by Docker (not in your pwd). If you get an error, it may be because you forgot to have your Docker desktop running… see above.</p>
 <p>To use the Docker image associated with the course template, first navigate to the the top of this GitHub repository. Now you can start up the Docker container using the command below.</p>
-<p>This runs your local copy of the course_template:main image (which you downloaded from DockerHub). The option <code>-v $PWD:/home/rstudio</code> mounts pwd (this repo) and makes it available at <code>/home/rstudio</code> within the container. Replace all of <code>&lt;CHOOSE_PASSWORD&gt;</code> (including the <code>&lt;</code> and <code>&gt;</code>) with a password of your choosing.</p>
+<p>This runs your local copy of the base_ottr:main image (which you downloaded from DockerHub). The option <code>-v $PWD:/home/rstudio</code> mounts pwd (this repo) and makes it available at <code>/home/rstudio</code> within the container. Replace all of <code>&lt;CHOOSE_PASSWORD&gt;</code> (including the <code>&lt;</code> and <code>&gt;</code>) with a password of your choosing.</p>
 <p><em>On a Mac</em>:</p>
-<pre><code>docker run -it -v $PWD:/home/rstudio -e PASSWORD=&lt;CHOOSE_PASSWORD&gt; -p 8787:8787 jhudsl/course_template:main</code></pre>
+<pre><code>docker run -it -v $PWD:/home/rstudio -e PASSWORD=&lt;CHOOSE_PASSWORD&gt; -p 8787:8787 jhudsl/base_ottr:main</code></pre>
 <p><em>On a Windows</em>:</p>
-<pre><code>docker run -it -v %CD%:/home/rstudio -e PASSWORD=&lt;CHOOSE_PASSWORD&gt; -p 8787:8787 jhudsl/course_template:main</code></pre>
+<pre><code>docker run -it -v %CD%:/home/rstudio -e PASSWORD=&lt;CHOOSE_PASSWORD&gt; -p 8787:8787 jhudsl/base_ottr:main</code></pre>
 <p>Do not close this window, but you can minimize it. Open up a new command line window and run the command: <code>docker ps</code>, you should see a container is up and running!</p>
 <p><em>Couple other handy Docker commands:</em></p>
 <ul>
@@ -612,6 +612,7 @@ div.tocify {
 <div id="starting-a-new-docker-image" class="section level2">
 <h2>Starting a new Docker image</h2>
 <p>Should you find that your course needs additional packages beyond what’s included in the template, you should probably start a new Docker image and you’ll need to do these steps to get this going:</p>
+<p>There’s a library of other <a href="https://github.com/jhudsl/ottr_docker">ottr-ready docker images that you can see here</a>. If you would like to contribute your own customized docker image that works with OTTR, please file a pull request!</p>
 <ol style="list-style-type: decimal">
 <li>Create a <a href="https://hub.docker.com/signup">Dockerhub account</a> if you don’t have one.</li>
 <li>Create a new Docker image on your Dockerhub account. <a href="https://jhudatascience.org/Adv_Reproducibility_in_Cancer_Informatics/launching-a-docker-image.html">Follow these instructions if you don’t know how to do that</a>.</li>
@@ -635,15 +636,15 @@ For <code>Secret</code>: put an access token for Dockerhub. You can create this 
 </div>
 <div id="updating-workflows-for-new-docker-image" class="section level3">
 <h3>Updating workflows for new Docker image</h3>
-<p>To make sure that your new Docker image is being used for rendering in the GitHub actions, you need to change the <code>rendering-docker-image:</code> from the default of <code>jhudsl/course_template:main</code> and replace it with your docker image tag.</p>
+<p>To make sure that your new Docker image is being used for rendering in the GitHub actions, you need to change the <code>rendering-docker-image:</code> from the default of <code>jhudsl/base_ottr:main</code> and replace it with your docker image tag.</p>
 <p>Then start a new branch so that you can submit a new pull request with your changes.</p>
 <p>Now, when you file a pull request, the Dockerfile build for your docker image will be tested automatically by the <a href="https://github.com/jhudsl/OTTR_Template/wiki/How-to-set-up-and-customize-GitHub-actions-robots">GitHub actions</a> if <code>docker-test</code> is set to <code>yes</code>. The default is <code>docker-test: no</code></p>
 </div>
 <div id="modifying-the-dockerfile-for-a-new-image" class="section level3">
 <h3>Modifying the Dockerfile for a new image</h3>
 <p><a href="https://jhudatascience.org/Adv_Reproducibility_in_Cancer_Informatics/modifying-a-docker-image.html">Read this chapter for instructions on how to modify Docker images</a></p>
-<p>You will probably want to create your Docker image by using the <code>jhudsl/course_template:main</code> as your base – this means that all the packages that are in our <code>jhudsl/course_template:main</code> image will be included in the Docker image you build.</p>
-<pre><code>FROM jhudsl/course_template:main</code></pre>
+<p>You will probably want to create your Docker image by using the <code>jhudsl/base_ottr:main</code> as your base – this means that all the packages that are in our <code>jhudsl/base_ottr:main</code> image will be included in the Docker image you build.</p>
+<pre><code>FROM jhudsl/base_ottr:main</code></pre>
 <p>You can take a look at this <a href="https://github.com/jhudsl/OTTR_Template/blob/main/resources/TEMPLATE_Dockerfile">Dockerfile template we’ve set up here</a> (note that the commands would need to be uncommented and real package names put in place of <code>package_name</code>’s).</p>
 <div id="template-commands-for-adding-packages-to-the-dockerfile" class="section level4">
 <h4>Template commands for adding packages to the Dockerfile</h4>
@@ -690,6 +691,26 @@ For <code>Secret</code>: put an access token for Dockerhub. You can create this 
 <p>You can use GitHub actions to do this by going to your course’s GitHub repository, go to <code>Actions</code> and then to <code>Test build of Dockerfile</code>.</p>
 <p>Click on <code>run workflow</code> type in <code>true</code> underneath <code>Push to Dockerhub?</code>.</p>
 <p>Then click <code>Run</code>. If your Dockerfile builds an image successfully it will automatically be pushed to Dockerhub.</p>
+</div>
+<div id="github-actions-for-handling-your-docker-image" class="section level4">
+<h4>Github actions for handling your Docker image</h4>
+<p>For your personalized docker image, you can store the Dockerfile anywhere. In order for OTTR/GitHub actions to use it, it must be pushed to Dockerhub.</p>
+<p>It may be easiest to store it in the OTTR-made repository you are working from.</p>
+<p>In whichever repository you choose to store your Dockerfile, its recommended you use a GitHub action to automatically test it when you make changes. You can use our Docker handling <a href="https://github.com/jhudsl/OTTR_Template/blob/main/.github/workflows/docker-test.yml">GitHub action here as a starting point</a>.</p>
+<p>You will need to modify this GHA for your own purposes:</p>
+<ul>
+<li>The action linked above, as is, will only run on manual trigger and manually specifying the directory the Dockerfile is in. For having the trigger run automatically, we recommend setting up a <a href="https://docs.github.com/en/actions/using-workflows/events-that-trigger-workflows">GitHub action trigger</a>.</li>
+<li>You will definitely need to set up the Dockerhub credentials as described above.</li>
+<li>For other information about how to modify this GitHub action, we recommend looking at the GitHub actions documentation to become more familiar with how to customize it: <a href="https://docs.github.com/en/actions" class="uri">https://docs.github.com/en/actions</a>.</li>
+</ul>
+<p>If you do choose to use the action manually, then you can use this by going to <code>Actions</code>, clicking on <code>Build Docker Image</code> &gt; <code>run workflow</code> and write in:</p>
+<ul>
+<li><code>directory</code> - Which your Dockerfile is located in this repository</li>
+<li><code>tag</code> - Optionally, what tag you wish the built docker image to have</li>
+<li><code>Push to Dockerhub?</code> TRUE or FALSE whether you wish this docker image to be pushed to Dockerhub.</li>
+</ul>
+<p><img src="resources/images/docker-gha.png" /></p>
+<p>For more guidance on how to personalize Docker images, we recommend <a href="https://www.ottrproject.org/faqs.html#Ask_a_question_on_the_Google_Group">joining the Google Group and asking questions on there</a>. Or file a GitHub issue on the relevant repository.</p>
 </div>
 </div>
 </div>
