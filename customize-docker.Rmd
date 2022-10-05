@@ -195,3 +195,27 @@ You can use GitHub actions to do this by going to your course's GitHub repositor
 Click on `run workflow` type in `true` underneath `Push to Dockerhub?`.
 
 Then click `Run`. If your Dockerfile builds an image successfully it will automatically be pushed to Dockerhub.
+
+#### Github actions for handling your Docker image
+
+For your personalized docker image, you can store the Dockerfile anywhere. In order for OTTR/GitHub actions to use it, it must be pushed to Dockerhub.
+
+It may be easiest to store it in the OTTR-made repository you are working from.
+
+In whichever repository you choose to store your Dockerfile, its recommended you use a GitHub action to automatically test it when you make changes. You can use our Docker handling [GitHub action here as a starting point](https://github.com/jhudsl/OTTR_Template/blob/main/.github/workflows/docker-test.yml).
+
+You will need to modify this GHA for your own purposes:
+
+- The action linked above, as is, will only run on manual trigger and manually specifying the directory the Dockerfile is in. For having the trigger run automatically, we recommend setting up a [GitHub action trigger](https://docs.github.com/en/actions/using-workflows/events-that-trigger-workflows).
+- You will definitely need to set up the Dockerhub credentials as described above.
+- For other information about how to modify this GitHub action, we recommend looking at the GitHub actions documentation to become more familiar with how to customize it: https://docs.github.com/en/actions.
+
+If you do choose to use the action manually, then you can use this by going to `Actions`, clicking on `Build Docker Image` > `run workflow` and write in:
+
+- `directory` - Which your Dockerfile is located in this repository
+- `tag` - Optionally, what tag you wish the built docker image to have
+- `Push to Dockerhub?` TRUE or FALSE whether you wish this docker image to be pushed to Dockerhub.
+
+![](resources/images/docker-gha.png)
+
+For more guidance on how to personalize Docker images, we recommend [joining the Google Group and asking questions on there](https://www.ottrproject.org/faqs.html#Ask_a_question_on_the_Google_Group). Or file a GitHub issue on the relevant repository.
