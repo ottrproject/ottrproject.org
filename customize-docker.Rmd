@@ -80,6 +80,8 @@ To log in, you'll need to use `rstudio` as the username and whatever password yo
 
 Should you find that your course needs additional packages beyond what's included in the template, you should probably start a new Docker image and you'll need to do these steps to get this going:
 
+There's a library of other [ottr-ready docker images that you can see here](https://github.com/jhudsl/ottr_docker). If you would like to contribute your own customized docker image that works with OTTR, please file a pull request!
+
 1) Create a [Dockerhub account](https://hub.docker.com/signup) if you don't have one.
 2) Create a new Docker image on your Dockerhub account. [Follow these instructions if you don't know how to do that](https://jhudatascience.org/Adv_Reproducibility_in_Cancer_Informatics/launching-a-docker-image.html).
 3) [Set up Dockerhub secrets in your repository or organization](#set-dockerhub-related-secrets).   
