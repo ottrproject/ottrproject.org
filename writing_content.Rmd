@@ -46,11 +46,11 @@ to your course.
 
 These checks will do important things like:  
 
-\* Check that the all the urls actually take learners somewhere (`check-urls`) 
-\* Check that the code is styled using the `styler` package (`style-and-sp-check`) 
-\* Check that the spelling is correct using the `spelling` package (`style-and-sp-check`) 
-\* Create previews of the rendered versions of the course (`render-preview`) 
-\* Check the formatting of any quizzes (`check-quizzes`)
+* Check that the all the urls actually take learners somewhere (`check-urls`) 
+* Check that the code is styled using the `styler` package (`style-and-sp-check`) 
+* Check that the spelling is correct using the `spelling` package (`style-and-sp-check`) 
+* Create previews of the rendered versions of the course (`render-preview`) 
+* Check the formatting of any quizzes (`check-quizzes`)
 
 You can adjust what checks are run by editing the
 `config_automation.yml` file. This is further discussed in this section
