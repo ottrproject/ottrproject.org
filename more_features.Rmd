@@ -40,7 +40,6 @@ This will automatically list references at the bottom of each chapter included i
 
 Alternatively, you can add a header for this list of references as the last header in any other Rmd file that is listed as the final file of the `_bookdown.yml` file. 
 
-
 ## Giving credits to contributors
 
 Since so many individuals contribute to our courses in so many ways.  Thus, we decided to make a table of credits to make it clear who did what.
