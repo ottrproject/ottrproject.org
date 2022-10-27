@@ -388,10 +388,10 @@ help](https://github.com/jhudsl/OTTR_Template/issues/new?assignees=cansavvy&labe
 
 For more on [what to put in a pull request's description, you can read
 this
-chapter](https://jhudatascience.org/Adv_Reproducibility_in_Cancer_Informatics/engaging-in-code-review---as-an-author.html)
+chapter](https://jhudatascience.org/Adv_Reproducibility_in_Cancer_Informatics/engaging-in-code-review---as-an-author.html).
 
 For more on [how to review a pull request, see this
-chapter](https://jhudatascience.org/Adv_Reproducibility_in_Cancer_Informatics/engaging-in-code-review---as-a-reviewer.html)
+chapter](https://jhudatascience.org/Adv_Reproducibility_in_Cancer_Informatics/engaging-in-code-review---as-a-reviewer.html).
 
 
 <div class = "notice"> 
