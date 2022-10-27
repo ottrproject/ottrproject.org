@@ -393,6 +393,12 @@ chapter](https://jhudatascience.org/Adv_Reproducibility_in_Cancer_Informatics/en
 For more on [how to review a pull request, see this
 chapter](https://jhudatascience.org/Adv_Reproducibility_in_Cancer_Informatics/engaging-in-code-review---as-a-reviewer.html)
 
+
+<div class = "notice"> 
+If you encounter situations where a spelling report or URL report doesn't look as expected, you may just need to **refresh the page** or **make another commit** to your pull request. 
+</div>
+
+
 ![](resources/images/summary_2.png)
 
 # Adding new chapters

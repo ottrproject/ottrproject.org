@@ -101,9 +101,51 @@
     border-color: #aaf0d1;
 }
 
+/* Style Boxes */
+div.notice, div.warning, div.github, div.dictionary, div.reflection {
+  border-style: solid;
+  padding: 1em;
+  margin: 1em 0;
+  padding-left: 100px;
+  min-height: 120px;
+  background-repeat: no-repeat;
+}
 
+div.notice{
+  border: 4px #00C1D5;
+  background-size: 70px;
+  background-position: 15px center;
+  background-color: #e8ebee;
+  background-image: url("../assets/box_images/note.png");
+}
+div.warning{
+  border: 4px #e0471c;
+  background-size: 70px;
+  background-position: 15px center;
+  background-color: #e8ebee;
+  background-image: url("../assets/box_images/warning.png");
+}
+div.github{
+  border: 4px #000000;
+  background-size: 70px;
+  background-position: 15px center;
+  background-color: #e8ebee;
+  background-image: url("../assets/box_images/github.png");
+}
 
-
-
+div.dictionary{
+  border: 4px #00C1D5;
+  background-size: 70px;
+  background-position: 15px center;
+  background-color: #e8ebee;
+  background-image: url("../assets/box_images/dictionary.png");
+}
+div.reflection{
+  border: 4px #00C1D5;
+  background-size: 90px;
+  background-position: 15px center;
+  background-color: #e8ebee;
+  background-image: url("../assets/box_images/thinking_face.png");
+}
 
 
