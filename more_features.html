@@ -588,6 +588,12 @@ div.tocify {
 <p>Items can be cited directly within the documentation using the syntax <span class="citation">@key</span> where key is the citation key in the first line of the entry, e.g., <span class="citation">@R-base</span>. To put citations in parentheses, use <span class="citation">[@key]</span>. To cite multiple entries, separate the keys by semicolons, e.g., <span class="citation">[@key-1; @key-2; @key-3]</span>. To suppress the mention of the author, add a minus sign before @, e.g., <span class="citation">[-@R-base]</span>.</p>
 </blockquote>
 <p>See <a href="https://github.com/jhudsl/OTTR_Template/blob/main/02-chapter_of_course.Rmd">Chapter 2</a> of this template course for examples.</p>
+<p>This will automatically list references at the bottom of each chapter included in your course, as well as at the end of your course. Thus it is important to keep the <code>References.Rmd</code> file and to keep this as the last part of the <code>_bookdown.yml</code> file as it is in the template, so that this full list of references will be listed in a place that makes sense.</p>
+<div class="figure">
+<img src="resources/images/references_bookdown.png" alt="" />
+<p class="caption">_bookdown.yml file showing the references file as the last file</p>
+</div>
+<p>Alternatively, you can add a header for this list of references as the last header in any other Rmd file that is listed as the final file of the <code>_bookdown.yml</code> file.</p>
 </div>
 <div id="giving-credits-to-contributors" class="section level2">
 <h2>Giving credits to contributors</h2>

@@ -34,6 +34,12 @@ To reference the citations in your writing follow the [bookdown instructions](ht
 
 See [Chapter 2](https://github.com/jhudsl/OTTR_Template/blob/main/02-chapter_of_course.Rmd) of this template course for examples.
 
+This will automatically list references at the bottom of each chapter included in your course, as well as at the end of your course. Thus it is important to keep the `References.Rmd` file and to keep this as the last part of the `_bookdown.yml` file as it is in the template, so that this full list of references will be listed in a place that makes sense. 
+
+![_bookdown.yml file showing the references file as the last file](resources/images/references_bookdown.png)
+
+Alternatively, you can add a header for this list of references as the last header in any other Rmd file that is listed as the final file of the `_bookdown.yml` file. 
+
 ## Giving credits to contributors
 
 Since so many individuals contribute to our courses in so many ways.  Thus, we decided to make a table of credits to make it clear who did what.
