@@ -39,6 +39,7 @@ favicon
 Favicons
 github
 github
+GHA
 Github
 GitKraken
 GoogleSlides
@@ -57,6 +58,7 @@ Markdown
 md's
 md
 navbar
+ottr
 ottrpal
 pre
 preconfigured
