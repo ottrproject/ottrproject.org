@@ -1,6 +1,6 @@
 # Candace Savonen Dec 2021
 
-name: Pull Request
+name: Render site
 
 on:
   pull_request:
