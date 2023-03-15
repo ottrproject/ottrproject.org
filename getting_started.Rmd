@@ -78,14 +78,17 @@ Choose the `write` option then click `Add jhudsl-robot to this repository`.
 
 The OTTR robots need permissions to run some of the actions.
 
-To give them permission for all the actions, you need to set a GitHub secret we will call `GH_PAT`. Go to `Settings` > `Secrets` and scroll down to `Repository secrets`. [Read more about GitHub secrets here](https://docs.github.com/en/actions/security-guides/encrypted-secrets) if you have general questions.
+To give them permission for all the actions, you need to set a GitHub secret we will call `GH_PAT`. Go to `Settings` > `Secrets and variables` on the left side menu > `Actions`. On this page, scroll down to `Repository secrets`. [Read more about GitHub secrets here](https://docs.github.com/en/actions/security-guides/encrypted-secrets) if you have general questions.
 
 If you have organization admin privileges and plan on making multiple courses with OTTR, you can set `GH_PAT` as an organization secret so you don't have to do this again. You only need to do this once as an organization (if this course is under `jhudsl` you don't need to do this step).
 
 - Click `New repository secret`/`New organization secret` button.
 - Under `Name` you must use `GH_PAT`.
-- For `Secret`: Create a personal access token [following these instructions](https://docs.github.com/en/github/authenticating-to-github/creating-a-personal-access-token#creating-a-token). Underneath `Select scopes`, check both `repo` and `workflow`.
-Then copy the PAT and save as the secret. Your GitHub actions should all be able to run smoothly now.
+- For `Secret`: Create a personal access token [following these instructions](https://docs.github.com/en/github/authenticating-to-github/creating-a-personal-access-token#creating-a-token). 
+- Underneath `Select scopes`, check both `repo` and `workflow`.
+- Then copy the PAT and save as the secret. 
+
+Your GitHub actions should all be able to run smoothly now.
 
 ### 7. Set up GitHub pages
 
