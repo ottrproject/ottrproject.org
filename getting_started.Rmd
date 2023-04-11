@@ -74,6 +74,10 @@ In the pop up window, search for and add `jhudsl-robot`.
 
 Choose the `write` option then click `Add jhudsl-robot to this repository`.
 
+If you have a personal repository, or a organization that hasn't used github actions before, you'll also need to check that workflow actions have been enabled. Go to the `Settings` and then `Actions` Make sure that you've given read and write permissions and have also checked `Allow GitHub Actions to create and approve pull requests`. 
+
+<img src="https://github.com/jhudsl/ottr-website/raw/main/resources/images/workflow-permissions.png" width = 500>
+
 ### 6. Set up your GitHub personal access token
 
 The OTTR robots need permissions to run some of the actions.
