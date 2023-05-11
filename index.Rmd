@@ -2,6 +2,8 @@
 title: "OTTR: Open-source Tools for Training Resources"
 output:
   html_document:
+    includes:
+      in_header: GA_Script.Rhtml
     toc: true
     toc_float: true
 ---

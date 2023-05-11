@@ -40,6 +40,10 @@ This will automatically list references at the bottom of each chapter included i
 
 Alternatively, you can add a header for this list of references as the last header in any other Rmd file that is listed as the final file of the `_bookdown.yml` file. 
 
+If you would like to suppress having references listed at the end of each chapter, you can add a line that says `split_bib: false`  to your `_output.yml` file.
+
+![_output.yml file showing the split.bibset to false](resources/images/false_split_ref.png)
+
 ## Giving credits to contributors
 
 Since so many individuals contribute to our courses in so many ways.  Thus, we decided to make a table of credits to make it clear who did what.

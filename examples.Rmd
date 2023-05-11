@@ -53,7 +53,7 @@ A simplified spinoff template of the original OTTR was created to make websites:
 
 - [OTTR_Template_Website](https://jhudatascience.org/OTTR_Template_Website/) - This is an example of how a website will look using this template, as well as guidance on how to make such a website.
 
-- Go to the [OTTR_Template_Website](https://jhudatascience.org/OTTR_Template_Website/) to get started.
+- Go to the [OTTR_Template_Website](https://github.com/jhudsl/OTTR_Template_Website) to get started.
 
 ## AnVIL template
 
