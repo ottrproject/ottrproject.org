@@ -3,6 +3,7 @@
 name: Render site
 
 on:
+  workflow_dispatch:
   pull_request:
     branches: [ main, staging ]
 
