@@ -296,7 +296,7 @@ The Github actions set up in the render-all.yml render your course material in a
 This Coursera version is identical except that the table of contents bar on the left side has been dropped so as to not confuse Coursera users about navigating the course.
 These files can be previewed in the `docs/no_toc` folder and a link to the Coursera version is printed out in a GitHub comment in your pull request by `render-preview.yml`.
 
-If you have written your quizzes in Leanpub format first, `render-all.yml` github action will convert those quizzes so they are ready for upload to Coursera.
+If you have written your quizzes in Leanpub format first, `pull-request.yml` github action will convert those quizzes so they are ready for upload to Coursera.
 
 Or alternatively if you do not wish to have a Leanpub version of your course, you can write your quizzes directly on Coursera's website.
 You can download the quiz you write on their website as a yaml and store it on your repository as well.

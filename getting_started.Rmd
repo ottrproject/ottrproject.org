@@ -74,11 +74,20 @@ In the pop up window, search for and add `jhudsl-robot`.
 
 Choose the `write` option then click `Add jhudsl-robot to this repository`.
 
-If you have a personal repository, or a organization that hasn't used github actions before, you'll also need to check that workflow actions have been enabled. Go to the `Settings` and then `Actions` Make sure that you've given read and write permissions and have also checked `Allow GitHub Actions to create and approve pull requests`. 
+### 6. In personal repositories: check your settings
+
+If you have a personal repository, or a organization that hasn't used Github Actions before, you'll also need to check that workflow actions have been enabled. 
+
+Go to the `Settings` and then `Actions` Make sure that you've:
+1. Given `read and write permissions` and ...
+2. have also checked `Allow GitHub Actions to create and approve pull requests`.
+
+Then click `Save`
 
 <img src="https://github.com/jhudsl/ottr-website/raw/main/resources/images/workflow-permissions.png" width = 500>
 
-### 6. Set up your GitHub personal access token
+
+### 7. Set up your GitHub personal access token
 
 The OTTR robots need permissions to run some of the actions.
 
@@ -94,7 +103,7 @@ If you have organization admin privileges and plan on making multiple courses wi
 
 Your GitHub actions should all be able to run smoothly now.
 
-### 7. Set up GitHub pages
+### 8. Set up GitHub pages
 
 In your repository, go to `Settings` > `Pages`.
 
@@ -114,7 +123,7 @@ For more information about GitHub pages we recommend you reference the [GitHub d
 
 \* **Warning**: if you go to your pages url right now (before you've pushed any file changes) you might see a 404 error because nothing has been triggered to be rendered. You can check your url pages after you file your first pull request (which we will guide you through [in the next section](https://github.com/jhudsl/OTTR_Template/wiki/Start-editing-your-course)).
 
-### 8. Set up branch rules
+### 9. Set up branch rules
 
 \* Don't set these settings right away! Wait a few minutes after starting your repository.
 
@@ -139,7 +148,7 @@ _Make sure branches are updated_:
 
 After setting up these new branch items, click `Create` and `Save changes`.
 
-### 9. Enroll your repository for OTTR updates
+### 10. Enroll your repository for OTTR updates
 
 This original course template: https://github.com/jhudsl/OTTR_Template is always a work in progress.
 We are working on adding more features and smoothing out bugs as we go (this is also why [your feedback is greatly appreciated](https://github.com/jhudsl/OTTR_Template/issues/new/choose)).
