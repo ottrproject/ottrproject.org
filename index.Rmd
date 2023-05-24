@@ -59,7 +59,7 @@ OTTR was created by members of the [Johns Hopkins Data Science Lab](https://jhud
 
 Here's the BibTeX formatted citation for the pre-print:
 ```
-@misc{https://doi.org/10.48550/arxiv.2203.07083,
+@misc{ottr,
   doi = {10.48550/ARXIV.2203.07083},
   url = {https://arxiv.org/abs/2203.07083},
   author = {Savonen, Candace and Wright, Carrie and Hoffman, Ava M. and Muschelli, John and Cox, Katherine and Tan, Frederick J. and Leek, Jeffrey T.},
