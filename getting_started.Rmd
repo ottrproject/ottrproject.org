@@ -97,7 +97,7 @@ If you have organization admin privileges and plan on making multiple courses wi
 
 - Click `New repository secret`/`New organization secret` button.
 - Under `Name` you must use `GH_PAT`.
-- For `Secret`: Create a personal access token [following these instructions](https://docs.github.com/en/github/authenticating-to-github/creating-a-personal-access-token#creating-a-token).
+- For `Secret`: Create a personal access token [following these instructions](https://docs.github.com/en/github/authenticating-to-github/creating-a-personal-access-token#creating-a-token) to create a "Classic" token (and not a "Fine-grained token").
 - Underneath `Select scopes`, check both `repo` and `workflow`.
 - Then copy the PAT and save as the secret.
 
