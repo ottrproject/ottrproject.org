@@ -140,7 +140,7 @@ In your [config_automation.yml file](https://github.com/jhudsl/OTTR_Template/wik
 
 A third option you may consider for Leanpub publishing while you are making edits to the config_automation.yml file is whether you'd like to manually specify the order of your chapters and quizzes by creating the [Book.txt file](https://leanpub.com/lfm/read#leanpub-auto-the-booktxt-file) by hand or whether you'd like this to be [automatically generated based on file and quiz numbering.](https://jhudatascience.org/ottrpal/#about-the-booktxt-file). Read more about this [in the upcoming section](https://www.ottrproject.org/examples.html#Setting_up_quizzes).
 
-By default `make-book-txt: TRUE`, meaning the order of your chapters and quizzes will attempt to be automatically determined by numbering, but if you'd like to manually specify what order the chapters and quizzes should come in on Leanpub, then set this to `make-book-txt: FALSE`.
+By default `make-book-txt: TRUE` will use the numbering in the names of the documents for chapters and quizzes to order them, but if you'd like to specify the order for the chapters and quizzes to be different on Leanpub, then set this to `make-book-txt: FALSE`, so as not to override the book.txt file that you would make manually.
 
 After you've made your desired changes to the `config_automation.yml` file, file a pull request with these changes and merge these to main.
 When you file a pull request, the quiz formatting will be checked automatically and reported on in a link on a comment in your pull request.
