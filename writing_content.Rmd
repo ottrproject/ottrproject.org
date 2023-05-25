@@ -40,7 +40,7 @@ comfort and interest level in using Git and GitHub:
 OTTR checks center around pull requests so you can avoid accidentally
 making your mistakes live in your courses.
 
-The live content is automatically created and stored in the `docs` folder. As our writing process guide here will inform you, you should NOT make direct changes to the `docs` folder. The automation processes will prep these files; you do not make direct changes to these. Go through this section to understand how to edit your files and write your course. 
+The live content is automatically created and stored in the `docs` folder. As our writing process guide here will inform you, you should NOT make direct changes to the `docs` folder. The automation processes will prep these files; you do not make direct changes to these. Go through this section to understand how to edit your files and write your course.
 
 When you file a pull request, this initiates a series of checks done
 automatically by GitHub actions which will help you as you add content
@@ -48,10 +48,10 @@ to your course.
 
 These checks will do important things like:  
 
-* Check that the all the urls actually take learners somewhere (`check-urls`) 
-* Check that the code is styled using the `styler` package (`style-and-sp-check`) 
-* Check that the spelling is correct using the `spelling` package (`style-and-sp-check`) 
-* Create previews of the rendered versions of the course (`render-preview`) 
+* Check that the all the urls actually take learners somewhere (`check-urls`)
+* Check that the code is styled using the `styler` package (`style-and-sp-check`)
+* Check that the spelling is correct using the `spelling` package (`style-and-sp-check`)
+* Create previews of the rendered versions of the course (`render-preview`)
 * Check the formatting of any quizzes (`check-quizzes`)
 
 You can adjust what checks are run by editing the
@@ -396,8 +396,8 @@ For more on [how to review a pull request, see this
 chapter](https://jhudatascience.org/Adv_Reproducibility_in_Cancer_Informatics/engaging-in-code-review---as-a-reviewer.html).
 
 
-<div class = "notice"> 
-If you encounter situations where a spelling report or URL report doesn't look as expected, you may just need to **refresh the page** or **make another commit** to your pull request. 
+<div class = "notice">
+If you encounter situations where a spelling report or URL report doesn't look as expected, you may just need to **refresh the page** or **make another commit** to your pull request.
 </div>
 
 
@@ -463,21 +463,13 @@ navbar.
 
 ## More resources for learning GitHub
 
--   [Using version control with
-    GitHub](https://jhudatascience.org/Adv_Reproducibility_in_Cancer_Informatics/using-version-control-with-github.html)
--   [Happy Git and GitHub for the useR](https://happygitwithr.com/)
--   [GitHub for data
-    scientists](https://towardsdatascience.com/introduction-to-github-for-data-scientists-2cf8b9b25fba)
--   [Intro to
-    GitHub](https://lab.github.com/githubtraining/introduction-to-github)
--   [First Day on
-    GitHub](https://lab.github.com/githubtraining/first-day-on-github)
--   [First Week on
-    GitHub](https://lab.github.com/githubtraining/first-week-on-github)
--   [GitHub docs about creating a Pull
-    Request](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/creating-a-pull-request)
--   [Making a Pull
-    Request](https://www.atlassian.com/git/tutorials/making-a-pull-request)
+- [Using version control with GitHub](https://jhudatascience.org/Adv_Reproducibility_in_Cancer_Informatics/using-version-control-with-github.html)
+- [Happy Git and GitHub for the useR](https://happygitwithr.com/)
+- [Using Version Control with GitHub](https://jhudatascience.org/Adv_Reproducibility_in_Cancer_Informatics/using-version-control-with-github.html)
+- [Using GitHub in a workflow in RStudio](https://hutchdatascience.org/Tools_for_Reproducible_Workflows_in_R/using-github-in-a-workflow.html)
+- [GitHub for datascientists](https://towardsdatascience.com/introduction-to-github-for-data-scientists-2cf8b9b25fba)
+- [GitHub docs about creating a Pull Request](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/creating-a-pull-request)
+- [Making a Pull Request](https://www.atlassian.com/git/tutorials/making-a-pull-request)
 
 ------------------------------------------------------------------------
 

@@ -76,7 +76,7 @@ Choose the `write` option then click `Add jhudsl-robot to this repository`.
 
 ### 6. In personal repositories: check your settings
 
-If you have a personal repository, or a organization that hasn't used Github Actions before, you'll also need to check that workflow actions have been enabled. 
+If you have a personal repository, or a organization that hasn't used Github Actions before, you'll also need to check that workflow actions have been enabled.
 
 Go to the `Settings` and then `Actions` Make sure that you've:
 1. Given `read and write permissions` and ...
@@ -97,9 +97,9 @@ If you have organization admin privileges and plan on making multiple courses wi
 
 - Click `New repository secret`/`New organization secret` button.
 - Under `Name` you must use `GH_PAT`.
-- For `Secret`: Create a personal access token [following these instructions](https://docs.github.com/en/github/authenticating-to-github/creating-a-personal-access-token#creating-a-token). 
+- For `Secret`: Create a personal access token [following these instructions](https://docs.github.com/en/github/authenticating-to-github/creating-a-personal-access-token#creating-a-token) to create a "Classic" token (and not a "Fine-grained token").
 - Underneath `Select scopes`, check both `repo` and `workflow`.
-- Then copy the PAT and save as the secret. 
+- Then copy the personal access token and save as a secret in the repository that you made from our template.
 
 Your GitHub actions should all be able to run smoothly now.
 
@@ -151,7 +151,7 @@ After setting up these new branch items, click `Create` and `Save changes`.
 ### 10. Enroll your repository for OTTR updates
 
 This original course template: https://github.com/jhudsl/OTTR_Template is always a work in progress.
-We are working on adding more features and smoothing out bugs as we go (this is also why [your feedback is greatly appreciated](https://github.com/jhudsl/OTTR_Template/issues/new/choose)).
+We are working on adding more features and smoothing out bugs as we go. This is also why [your feedback is greatly appreciated](https://github.com/jhudsl/OTTR_Template/issues/new/choose).
 
 When updates are made to files that aren't specific to the course content but instead run checks and other processes in the original repository, pull requests are filed automatically to any downstream repositories made from this template.
 
