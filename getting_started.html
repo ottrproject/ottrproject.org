@@ -630,19 +630,29 @@ div.tocify {
 <p><img src="https://github.com/jhudsl/OTTR_Template/raw/main/resources/screenshots/add-jhudsl-robot.png" width = 400></p>
 <p>Choose the <code>write</code> option then click <code>Add jhudsl-robot to this repository</code>.</p>
 </div>
+<div id="in-personal-repositories-check-your-settings" class="section level3">
+<h3>6. In personal repositories: check your settings</h3>
+<p>If you have a personal repository, or a organization that hasn’t used Github Actions before, you’ll also need to check that workflow actions have been enabled.</p>
+<p>Go to the <code>Settings</code> and then <code>Actions</code> Make sure that you’ve: 1. Given <code>read and write permissions</code> and … 2. have also checked <code>Allow GitHub Actions to create and approve pull requests</code>.</p>
+<p>Then click <code>Save</code></p>
+<p><img src="https://github.com/jhudsl/ottr-website/raw/main/resources/images/workflow-permissions.png" width = 500></p>
+</div>
 <div id="set-up-your-github-personal-access-token" class="section level3">
-<h3>6. Set up your GitHub personal access token</h3>
+<h3>7. Set up your GitHub personal access token</h3>
 <p>The OTTR robots need permissions to run some of the actions.</p>
-<p>To give them permission for all the actions, you need to set a GitHub secret we will call <code>GH_PAT</code>. Go to <code>Settings</code> &gt; <code>Secrets</code> and scroll down to <code>Repository secrets</code>. <a href="https://docs.github.com/en/actions/security-guides/encrypted-secrets">Read more about GitHub secrets here</a> if you have general questions.</p>
+<p>To give them permission for all the actions, you need to set a GitHub secret we will call <code>GH_PAT</code>. Go to <code>Settings</code> &gt; <code>Secrets and variables</code> on the left side menu &gt; <code>Actions</code>. On this page, scroll down to <code>Repository secrets</code>. <a href="https://docs.github.com/en/actions/security-guides/encrypted-secrets">Read more about GitHub secrets here</a> if you have general questions.</p>
 <p>If you have organization admin privileges and plan on making multiple courses with OTTR, you can set <code>GH_PAT</code> as an organization secret so you don’t have to do this again. You only need to do this once as an organization (if this course is under <code>jhudsl</code> you don’t need to do this step).</p>
 <ul>
 <li>Click <code>New repository secret</code>/<code>New organization secret</code> button.</li>
 <li>Under <code>Name</code> you must use <code>GH_PAT</code>.</li>
-<li>For <code>Secret</code>: Create a personal access token <a href="https://docs.github.com/en/github/authenticating-to-github/creating-a-personal-access-token#creating-a-token">following these instructions</a>. Underneath <code>Select scopes</code>, check both <code>repo</code> and <code>workflow</code>. Then copy the PAT and save as the secret. Your GitHub actions should all be able to run smoothly now.</li>
+<li>For <code>Secret</code>: Create a personal access token <a href="https://docs.github.com/en/github/authenticating-to-github/creating-a-personal-access-token#creating-a-token">following these instructions</a>.</li>
+<li>Underneath <code>Select scopes</code>, check both <code>repo</code> and <code>workflow</code>.</li>
+<li>Then copy the PAT and save as the secret.</li>
 </ul>
+<p>Your GitHub actions should all be able to run smoothly now.</p>
 </div>
 <div id="set-up-github-pages" class="section level3">
-<h3>7. Set up GitHub pages</h3>
+<h3>8. Set up GitHub pages</h3>
 <p>In your repository, go to <code>Settings</code> &gt; <code>Pages</code>.</p>
 <div class="figure">
 <img src="https://raw.githubusercontent.com/jhudsl/OTTR_Template/main/resources/screenshots/change_pages_settings.png" alt="" />
@@ -665,7 +675,7 @@ div.tocify {
 <p>* <strong>Warning</strong>: if you go to your pages url right now (before you’ve pushed any file changes) you might see a 404 error because nothing has been triggered to be rendered. You can check your url pages after you file your first pull request (which we will guide you through <a href="https://github.com/jhudsl/OTTR_Template/wiki/Start-editing-your-course">in the next section</a>).</p>
 </div>
 <div id="set-up-branch-rules" class="section level3">
-<h3>8. Set up branch rules</h3>
+<h3>9. Set up branch rules</h3>
 <p>* Don’t set these settings right away! Wait a few minutes after starting your repository.</p>
 <p>Go to <code>Settings</code> &gt; <code>Branches</code> and click <code>Add rule</code>. This is only possible if you have GitHub Pro, Team, or Enterprise access. We recommend seeing if your organization can give you access if you do not already have access. To get this access through your organization, you will need to transfer ownership of your repo to your organization. See <a href="https://docs.github.com/en/repositories/creating-and-managing-repositories/transferring-a-repository">here</a> about how to do this.</p>
 <div class="figure">
@@ -689,7 +699,7 @@ Then check the box that says <code>Require pull requests before merging</code>.<
 <p>After setting up these new branch items, click <code>Create</code> and <code>Save changes</code>.</p>
 </div>
 <div id="enroll-your-repository-for-ottr-updates" class="section level3">
-<h3>9. Enroll your repository for OTTR updates</h3>
+<h3>10. Enroll your repository for OTTR updates</h3>
 <p>This original course template: <a href="https://github.com/jhudsl/OTTR_Template" class="uri">https://github.com/jhudsl/OTTR_Template</a> is always a work in progress. We are working on adding more features and smoothing out bugs as we go (this is also why <a href="https://github.com/jhudsl/OTTR_Template/issues/new/choose">your feedback is greatly appreciated</a>).</p>
 <p>When updates are made to files that aren’t specific to the course content but instead run checks and other processes in the original repository, pull requests are filed automatically to any downstream repositories made from this template.</p>
 <p><strong>To enroll in these automatic update pull requests, the new course’s repository name will need to be added to <a href="https://github.com/jhudsl/OTTR_Template/edit/main/.github/sync.yml">this file in the original template</a></strong></p>
