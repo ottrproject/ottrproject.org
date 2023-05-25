@@ -679,8 +679,14 @@ output_dir: &quot;docs&quot;  </code></pre>
 <div id="setting-up-leanpub-related-github-actions" class="section level3">
 <h3>Setting up Leanpub-related GitHub actions</h3>
 <p>When you are ready to begin publishing to Leanpub, you will want to turn on a few Github Actions that are included in the template but by default, turned off.</p>
-<p>In your <a href="https://github.com/jhudsl/OTTR_Template/wiki/How-to-set-up-and-customize-GitHub-actions-robots">config_automation.yml file</a>, you will need to turn on two actions in particular: - <code>render-leanpub: yes</code> - <code>check-quizzes:yes</code></p>
-<p>File a pull request with these changes and merge these to main. When you file a pull request, the quiz formatting will be checked automatically and reported on in a link on a comment in your pull request.</p>
+<p>In your <a href="https://github.com/jhudsl/OTTR_Template/wiki/How-to-set-up-and-customize-GitHub-actions-robots">config_automation.yml file</a>, you will need to turn on two actions in particular:</p>
+<ul>
+<li><code>render-leanpub: yes</code></li>
+<li><code>check-quizzes:yes</code></li>
+</ul>
+<p>A third option you may consider for Leanpub publishing while you are making edits to the config_automation.yml file is whether you’d like to manually specify the order of your chapters and quizzes by creating the <a href="https://leanpub.com/lfm/read#leanpub-auto-the-booktxt-file">Book.txt file</a> by hand or whether you’d like this to be <a href="https://jhudatascience.org/ottrpal/#about-the-booktxt-file">automatically generated based on file and quiz numbering.</a>. Read more about this <a href="https://www.ottrproject.org/examples.html#Setting_up_quizzes">in the upcoming section</a>.</p>
+<p>By default <code>make-book-txt: TRUE</code> will use the numbering in the names of the documents for chapters and quizzes to order them, but if you’d like to specify the order for the chapters and quizzes to be different on Leanpub, then set this to <code>make-book-txt: FALSE</code>, so as not to override the book.txt file that you would make manually.</p>
+<p>After you’ve made your desired changes to the <code>config_automation.yml</code> file, file a pull request with these changes and merge these to main. When you file a pull request, the quiz formatting will be checked automatically and reported on in a link on a comment in your pull request.</p>
 <p>If you encounter issues with the <code>ottrpal</code> package, please file an issue on its <a href="https://github.com/jhudsl/ottrpal/issues">Github repository</a>.</p>
 </div>
 </div>

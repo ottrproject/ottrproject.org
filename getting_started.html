@@ -645,9 +645,9 @@ div.tocify {
 <ul>
 <li>Click <code>New repository secret</code>/<code>New organization secret</code> button.</li>
 <li>Under <code>Name</code> you must use <code>GH_PAT</code>.</li>
-<li>For <code>Secret</code>: Create a personal access token <a href="https://docs.github.com/en/github/authenticating-to-github/creating-a-personal-access-token#creating-a-token">following these instructions</a>.</li>
+<li>For <code>Secret</code>: Create a personal access token <a href="https://docs.github.com/en/github/authenticating-to-github/creating-a-personal-access-token#creating-a-token">following these instructions</a> to create a “Classic” token (and not a “Fine-grained token”).</li>
 <li>Underneath <code>Select scopes</code>, check both <code>repo</code> and <code>workflow</code>.</li>
-<li>Then copy the PAT and save as the secret.</li>
+<li>Then copy the personal access token and save as a secret in the repository that you made from our template.</li>
 </ul>
 <p>Your GitHub actions should all be able to run smoothly now.</p>
 </div>
@@ -700,7 +700,7 @@ Then check the box that says <code>Require pull requests before merging</code>.<
 </div>
 <div id="enroll-your-repository-for-ottr-updates" class="section level3">
 <h3>10. Enroll your repository for OTTR updates</h3>
-<p>This original course template: <a href="https://github.com/jhudsl/OTTR_Template" class="uri">https://github.com/jhudsl/OTTR_Template</a> is always a work in progress. We are working on adding more features and smoothing out bugs as we go (this is also why <a href="https://github.com/jhudsl/OTTR_Template/issues/new/choose">your feedback is greatly appreciated</a>).</p>
+<p>This original course template: <a href="https://github.com/jhudsl/OTTR_Template" class="uri">https://github.com/jhudsl/OTTR_Template</a> is always a work in progress. We are working on adding more features and smoothing out bugs as we go. This is also why <a href="https://github.com/jhudsl/OTTR_Template/issues/new/choose">your feedback is greatly appreciated</a>.</p>
 <p>When updates are made to files that aren’t specific to the course content but instead run checks and other processes in the original repository, pull requests are filed automatically to any downstream repositories made from this template.</p>
 <p><strong>To enroll in these automatic update pull requests, the new course’s repository name will need to be added to <a href="https://github.com/jhudsl/OTTR_Template/edit/main/.github/sync.yml">this file in the original template</a></strong></p>
 <ul>
