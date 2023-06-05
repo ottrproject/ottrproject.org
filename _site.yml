@@ -91,6 +91,9 @@ navbar:
         - text: "Compatibility with Google Docs"
           href: more_features.html#compatibility-with-google-docs
           icon: fa-file
+        - text: "Google Analytics"
+          href: more_features.html#google-analytics
+          icon: fa-chart-line
         - text: OTTR-fying an existing repository
           href: ottr-fy.html
           icon: glyphicon-sunglasses
