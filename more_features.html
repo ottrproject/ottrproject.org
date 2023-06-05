@@ -524,6 +524,13 @@ div.tocify {
       </a>
     </li>
     <li>
+      <a href="more_features.html#google-analytics">
+        <span class="fa fa-chart-line"></span>
+         
+        Google Analytics
+      </a>
+    </li>
+    <li>
       <a href="ottr-fy.html">
         <span class="glyphicon glyphicon-sunglasses"></span>
          
@@ -727,6 +734,23 @@ div.tocify {
 <li>So you are able to keep track of the changes to the docx version of the course, its advisable to set to “suggestions” when you share the document.</li>
 <li>Then as comments and suggestions trickle in, a lead author who is comfortable with the OTTR process can incorporate those comments into an existing or new pull request which can checked for its rendering and eventually added to the <code>main</code> content branch.</li>
 </ul>
+</div>
+<div id="google-analytics" class="section level2">
+<h2>Google Analytics</h2>
+<p>If you would like to add Google Analytics to track traffic to your course, you can do the following:</p>
+<ol style="list-style-type: decimal">
+<li><p>Get a <strong>Google Analytics account</strong> (if you do not already have one): <a href="https://analytics.google.com/analytics">https://analytics.google.com/analytics</a> <img src="resources/images/GA_account.png" alt="Google Analytics account setup" /> Note that in creating an account you will need to agree to some terms. Currently it is free to get Google analytics data as long as your course does not exceed a very high user rate. Check to make sure that the terms work for you <img src="resources/images/GA_terms.png" alt="Google Analytics terms" /></p></li>
+<li><p>If you already have an account or navigated away from where you started - Go to the <strong>Admin tab</strong> (lower left button that looks like a gear)</p></li>
+<li><p>Set up a new <strong>property</strong> (fill out name and details, select options about tracking traffic for how you intend to use Google Analytics) <img src="resources/images/GA_Create_Property.png" alt="Google Analytics Property creation" /> <img src="resources/images/GA_Property_setup.png" alt="Google Analytics Property" /> <img src="resources/images/GA_property.png" alt="Google Analytics Property choices" /></p></li>
+<li><p>Add a <strong>stream</strong> to your property, choose the <strong>Web</strong> option. <img src="resources/images/GA_web.png" alt="Google Analytics stream options" /></p></li>
+<li><p>Fill in your stream information with the <strong>link</strong> for your course (note you may need to remove https as this is part of a pull down menu to the left of where you paste your link) <img src="resources/images/GA_stream_link.png" alt="Google Analytics stream" /> <img src="resources/images/GA_stream_link_correct.png" alt="Google Analytics stream" /></p></li>
+<li><p>On the resulting page you will see a <strong>Measurement ID</strong>. Copy this ID and paste it in the GA_Script.html file in the template replacing the fields that say {MeasurementID} including the curly brackets. For example, if your ID was <code>G-ABC123</code>, then the line <code>gtag('config', '{MeasurementID}');</code> would become <code>gtag('config', 'G-ABC123');</code>. <img src="resources/images/GA_ID.png" /> <img src="resources/images/GA_Script_ID.png" /></p></li>
+<li><p>Add a line to the _output.yml file above the line that starts with <code>before body:</code> (i.e. nested under <code>includes</code>). This line should be <code>in_header: GA_Script.html</code>. Make sure this line is indented to the same level as the <code>before body:</code> line. <img src="resources/images/output_file_with_GA.png" /></p></li>
+<li><p><strong>Rerender</strong> your course by making a change to one of your chapter RMD files in a pull request and pushing and merging the pull request. This will cause new html files to be made for each chapter in the <code>docs</code> folder. The Google Analytics code should now be in each of the html files - you can check by searching for <code>Google Analytics</code>.</p></li>
+<li><p>Go back to <a href="https://analytics.google.com/analytics">Google Analytics</a> and log in if you need to.</p></li>
+<li><p>Check on the <strong>Reports</strong> button on the top of the far left icon menu. The icon looks like a bar chart. If you open up a browser window to your hosted course online, then you should see yourself as 1 user in the last 30 minutes. <img src="resources/images/GA_reports.png" alt="Google Analytics Reports" /> <img src="resources/images/GA_check.png" alt="Check Google Analytics" /></p></li>
+<li><p>Enjoy the data about how people are using your course!</p></li>
+</ol>
 </div>
 
 <hr>
