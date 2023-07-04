@@ -8,7 +8,7 @@ output:
 
 ## OTTR course examples
 
-Here is a list of examples courses made with the [main OTTR Template](https://github.com/jhudsl/OTTR_Template) and has been published in three platforms: Bookdown, Leanpub and Coursera.
+Below are some examples of courses created using the [OTTR Template](https://github.com/jhudsl/OTTR_Template) and published on three platforms: Bookdown, Leanpub and Coursera.
 
 _Introduction to Reproducibility in Cancer Informatics:_  
 
@@ -25,11 +25,13 @@ _Computing for Cancer Informatics:_
   - [Coursera course](https://www.coursera.org/learn/computing-for-cancer-informatics)  
 
 
-# Choosing publishing platforms
+<br>
+
+# Choosing Publishing Platforms
 
 This template helps you prepare material to publish, but there are certain steps that cannot be automated. In those instances we've provided step-by-step guides to get you started on getting your material published on the platforms.
 
-Depending on your goals and intended audience you may want to publish just one or all three of the platforms supported:
+Depending on your goals and intended audience, you may want to publish your content on one or all three of the supported platforms:
 
 <img src="https://docs.google.com/presentation/d/18k_QN7l6zqZQXoiRfKWzcYFXNXJJEo6j4daYGoc3UcU/export/png?id=18k_QN7l6zqZQXoiRfKWzcYFXNXJJEo6j4daYGoc3UcU&pageid=gf4fcf6569c_2_0" width="500"/>
 
@@ -38,45 +40,52 @@ Depending on your goals and intended audience you may want to publish just one o
 - [Publishing with Leanpub](#Publishing-on-Leanpub)
 - [Publishing with Coursera](#Publishing-on-Coursera)
 
+<br>
+
 # OTTR spinoff babies
-We are working to create other versions of our original template for specific uses. This could be a technical variation to do something more simple, something tangential, or something more complex compared to the original OTTR template.
+
+We are actively working on developing additional versions of our original template to cater to specific needs. These variations can range from technical modifications that simplify the template, to tangential adaptations, or even more complex versions compared to the original OTTR template.
 
 We also noticed that if specific branding or variations of the original template need to be used many times, it's often easier to create a new template.
 
 We affectionately call these spinoff templates OTTR "babies".
 
-If you find yourself making a full set of courses and multiple repositories from OTTR, you may want to make a template from our template (If you need to go this route, we recommend talking directly to the OTTR maintainers by filing a GitHub issue and assigning `@cansavvy` and `@carriewright11`). Also please reach out if you have any other fun ideas!
+If you find yourself making a full set of courses and multiple repositories from OTTR, you may want to make a template from our template (If you need to go this route, we recommend reaching out to the OTTR maintainers by filing a GitHub issue and assigning `@cansavvy` and `@carriewright11`). Also please reach out if you have any other interesting ideas or suggestions!
+
+<br>
 
 ## OTTR website
 
 A simplified spinoff template of the original OTTR was created to make websites:
 
-- [OTTR_Template_Website](https://jhudatascience.org/OTTR_Template_Website/) - This is an example of how a website will look using this template, as well as guidance on how to make such a website.
+- [OTTR_Template_Website](https://jhudatascience.org/OTTR_Template_Website/) - This is an example of how a website will look using this template, as well as guidance on how to make such a website. To get started, go to the [OTTR_Template_Website](https://github.com/jhudsl/OTTR_Template_Website).
 
-- Go to the [OTTR_Template_Website](https://github.com/jhudsl/OTTR_Template_Website) to get started.
+<br>
 
 ## AnVIL template
 
-This is a template made from our main OTTR Template that is used for a set of courses being made for the [AnVIL set of cloud tools](https://anvilproject.org/)
+This is a template (made from our main OTTR Template) that is used for a set of courses being made for the [AnVIL set of cloud tools](https://anvilproject.org/)
 
 - [GitHub repository and source code](https://github.com/jhudsl/AnVIL_Template)  
 
 
 Courses will look similar to this [link](https://jhudatascience.org/AnVIL_Template/).
 
+<br>
+
 ## DataTrail template
 
-This is a template made from our main OTTR Template that will be used for a set of courses being made for the [DataTrail](https://www.datatrail.org/)
+This is a template (made from our main OTTR Template) that will be used for a set of courses being made for [DataTrail](https://www.datatrail.org/)
 
 - [GitHub repository and source code](https://github.com/datatrail-jhu/DataTrail_Template)
 
 Courses will look similar to this [link](https://datatrail-jhu.github.io/DataTrail_Template/introduction.html).
 
-
+<br>
 
 # Publishing with Bookdown
 
-Bookdown is published using Github pages which you can set up [following the set up repository instructions](https://github.com/jhudsl/OTTR_Template/wiki/Starting-a-new-course-with-this-template#set-up-github-pages). Using Bookdown is fundamental to the other publishing platforms, so if you want to use Coursera or Leanpub you will have to publish with Bookdown.
+To publish your content using Bookdown, you can utilize Github Pages by following the repository setup instructions provided [here](https://github.com/jhudsl/OTTR_Template/wiki/Starting-a-new-course-with-this-template#set-up-github-pages). It's important to note that Bookdown serves as a fundamental component for utilizing other publishing platforms such as Coursera or Leanpub. Therefore, if you intend to use Coursera or Leanpub, you will need to publish your content using Bookdown.
 
 As you modify the names of the chapters of your course and add more chapters (using the `.Rmd` files), you need to update the `_bookdown.yml` file accordingly.
 
