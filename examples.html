@@ -630,7 +630,7 @@ published on the platforms.</p>
 publish your content on one or all three of the supported platforms:</p>
 <p><img src="https://docs.google.com/presentation/d/18k_QN7l6zqZQXoiRfKWzcYFXNXJJEo6j4daYGoc3UcU/export/png?id=18k_QN7l6zqZQXoiRfKWzcYFXNXJJEo6j4daYGoc3UcU&pageid=gf4fcf6569c_2_0" width="500"/></p>
 <div id="links-to-the-guides-for-each-platform" class="section level2">
-<h2>Links to the guides for each platform:</h2>
+<h2>Links to the guides for each platform</h2>
 <ul>
 <li><a href="#publishing-with-bookdown">Publishing with
 Bookdown</a></li>
@@ -810,28 +810,30 @@ repository</a>.</p>
 </div>
 <div id="hosting-your-course-on-leanpub" class="section level2">
 <h2>Hosting your course on Leanpub</h2>
-<p>To host your course on Leanpub follow these steps:</p>
+<p>To host your course on Leanpub, follow these steps:</p>
 <ol style="list-style-type: decimal">
-<li><p>Make a Leanpub account here: <a href="https://leanpub.com/"
-class="uri">https://leanpub.com/</a> if you don’t already have
-one.</p></li>
-<li><p>Start a course<br />
-</p></li>
+<li><p>If you do not have an existing account, create a Leanpub account
+by visiting this link: <a href="https://leanpub.com/"
+class="uri">https://leanpub.com/</a>.</p></li>
+<li><p>Start a course:</p></li>
 </ol>
 <ul>
-<li>Click on the 3 line menu button<br />
-</li>
-<li>Click the author tab on the far left</li>
-<li>Click Courses</li>
+<li>Click on the three-line button positioned at the far right of the
+top bar.</li>
+<li>Click the “Author” tab on the far left</li>
+<li>Click “Courses” (if you haven’t already, verify your email
+address)</li>
 <li>Click the text that says <code>create a new course</code></li>
-<li>Fill out all the necessary information</li>
-<li>Select using Git and GitHub (if you work with us at JHU there is a
+<li>Click “A Course” and provide the “Title” of your course and your
+“Course URL” will be automatically filled for you.</li>
+<li>Select “Using Git and GitHub” (if you work with us at JHU there is a
 different protocol and additional settings you need to set which you
 should follow - <a
 href="https://docs.google.com/document/d/18UQicXwf8d25ayKGF2BrinvRgB_R2ToVn5EDOUcxyoc/edit?usp=sharing">see
 this document</a> )</li>
-<li>press the <code>add to plan</code> button</li>
+<li>Press the <code>add to plan</code> button</li>
 </ul>
+<p>TODO: Which plan?</p>
 <ol start="3" style="list-style-type: decimal">
 <li>Preview a new version</li>
 </ol>
@@ -845,7 +847,7 @@ this document</a> )</li>
 </ul>
 <p>If you have errors in your course (typically from a quiz formatting
 issue) the render will fail and you will need to fix your quizzes. Also
-note, that occasionally the preview might fail and you should just try
+note that occasionally the preview might fail and you should just try
 again, as it will work the second time. This might be due to a lag in
 GitHub and Leanpub communicating.</p>
 </div>
@@ -857,13 +859,14 @@ href="https://github.com/jhudsl/OTTR_Quizzes/blob/main/quizzes/quiz_ch1.md">temp
 quiz</a> to get started. All quizzes need to be written in the Markua
 format. Refer to their <a
 href="https://leanpub.com/markua/read#leanpub-auto-quizzes-and-exercises">documentation</a>
-(but note that it is sometimes vague or out of date). The example
-question types in the template are ones that are verified to work.</p>
+(note that it is sometimes vague or outdated). The example question
+types in the template are ones that are verified to work.</p>
 <p>After you add each new quiz to the <code>quizzes/</code> directory,
-it’s filename needs to be added in its respective spot in the
-<code>Book.txt</code> file (remember do not edit the one in
+its filename needs to be added in the corresponding spot in the
+<code>Book.txt</code> file (do not edit the one in
 <code>manuscript</code> but the one at the top of the repository); this
-ensures its incorporated by Leanpub in the correct order.</p>
+ensures Leanpub incorporates the quiz into the book in the correct
+order.</p>
 <p>If you wanted two quizzes (one called <code>quiz_1.md</code> and one
 called <code>quiz_2.md</code>) you could duplicate and modify
 <code>quiz_1.md</code> for your needs and then you could make the
@@ -886,21 +889,21 @@ href="https://github.com/jhudsl/OTTR_Quizzes/blob/main/quizzes/quiz_ch1.md">exam
 quiz here</a> Note that you cannot have two quizzes with the same
 <code>quiz_id</code>.</p>
 <div id="leanpub-quizzes" class="section level3">
-<h3>Leanpub quizzes</h3>
-<p>Leanpub is specific about how quizzes should be formatted and it
-won’t create a preview if any question or quiz doesn’t follow these
+<h3>Leanpub Quizzes</h3>
+<p>Leanpub has specific formatting requirements for quizzes, and it will
+not generate a preview if any question or quiz does not adhere to these
 rules. Our <a href="#setting-up-leanpub-related-github-actions">GitHub
-action for checking quizzes</a> (In file,
+Action for checking quizzes</a> (located in file
 <code>.github/workflows/pull-request.yml</code> underneath
-<code>check-quizzes</code> section) will print out a list of errors for
-you which you can retrieve from a pull request comment that is
-automatically printed. This check is only run when changes are made to
-the <code>quizzes/</code>. At this time, two types of questions are
+<code>check-quizzes</code> section) will print out a list of errors
+which you can retrieve from a pull request comment that is automatically
+printed. This check is only run when changes are made to the
+<code>quizzes/</code>. At this time, two types of questions are
 supported. (Short answers are not yet supported by our checks but will
 be added in the future).</p>
 <div id="standard-multiple-choice" class="section level5">
 <h5>Standard multiple choice:</h5>
-<p>The answer choices are not randomized. And it looks like this:</p>
+<p>The answer choices are not randomized and look like:</p>
 <pre><code>? A question is here
 a) A wrong answer
 B) A correct answer has a capital letter
@@ -926,15 +929,15 @@ m) A mandatory incorrect answer
 m) A mandatory incorrect answer
 o) An optional incorrect answer
 o) An optional incorrect answer</code></pre>
-<p>Upon merging to the <code>main</code> branch, a GitHub action will
-automatically run <code>check-quizzes.yml</code> that will use the
+<p>Upon merging to the <code>main</code> branch, a GitHub Action will
+automatically run <code>check-quizzes.yml</code>, which uses the
 <code>ottrpal</code> package to check that your quiz conforms to these
-rules. It will report the quiz formatting errors on your pull request
-should there be any problems.</p>
+rules. If there are any problems, it will report the quiz formatting
+errors on your pull request.</p>
 </div>
 </div>
-<div id="leanpub-quiz-formatting-rules" class="section level3">
-<h3>Leanpub quiz formatting ‘rules’</h3>
+<div id="leanpub-quiz-format-rules" class="section level3">
+<h3>Leanpub Quiz Format Rules</h3>
 <ul>
 <li>Quizzes start and end with the {quiz} and {} tags.</li>
 <li>Don’t have exclamation points or colons in answers.</li>
@@ -954,7 +957,7 @@ recognized by Leanpub.</li>
 </div>
 <div id="converting-quizzes-from-leanpub-to-coursera-format"
 class="section level2">
-<h2>Converting quizzes from Leanpub to Coursera format</h2>
+<h2>Converting Quizzes from Leanpub to Coursera format</h2>
 <p><a
 href="https://github.com/jhudsl/OTTR_Template/wiki/Publishing-on-Courseraa">See
 more instructions on how to port a course made from these templates to
@@ -1018,12 +1021,13 @@ date.</p></li>
 href="#leanpub-rendering"><code>ottrpal::bookdown_to_leanpub()</code>
 ran successfully</a>.</p></li>
 </ul>
+<p><br></p>
 </div>
 </div>
 <div id="publishing-with-coursera" class="section level1">
 <h1>Publishing with Coursera</h1>
-<p>Once your content has been largely developed you may want to add your
-course to Coursera.</p>
+<p>Once your content has been extensively developed, you might consider
+adding your course to Coursera.</p>
 <p>This guide was prepared specifically for those developing courses for
 the <a href="https://www.itcrtraining.org/">ITN project</a> at Johns
 Hopkins University or other Coursera partner institutions. It reflects
@@ -1032,28 +1036,28 @@ Resource Center is the authoritative source of documentation for using
 the Coursera platform.</p>
 <div id="setting-up-your-coursera-course" class="section level2">
 <h2>Setting up your Coursera course</h2>
-<p><em>If you are from Johns Hopkins:</em> You will need to <a
-href="https://docs.google.com/document/d/1aZeOSFLkK4hZne4Vb1iaP_0H4zyhIwvbnw9sbdCFq1Y/edit?usp=sharing">follow
-this document</a> and send information Ira Gooding who will create a
-course shell for you.</p>
+<p><em>If you are from Johns Hopkins:</em> You will need to follow <a
+href="https://docs.google.com/document/d/1aZeOSFLkK4hZne4Vb1iaP_0H4zyhIwvbnw9sbdCFq1Y/edit?usp=sharing">this
+document</a> and send information to Ira Gooding (<a
+href="mailto:iragooding@jhu.edu" class="email">iragooding@jhu.edu</a>)
+who will create a course shell for you.</p>
 <p><em>If you are not from Johns Hopkins:</em> You will need to set up
 your own educator profile and course shell through your institution.</p>
 </div>
-<div id="converting-your-files-for-upload-to-coursera"
-class="section level2">
-<h2>Converting your files for upload to Coursera</h2>
-<p>The Github actions set up in the render-all.yml render your course
-material in a format suitable for linking to Coursera. This Coursera
-version is identical except that the table of contents bar on the left
-side has been dropped so as to not confuse Coursera users about
+<div id="converting-your-files-for-coursera" class="section level2">
+<h2>Converting your files for Coursera</h2>
+<p>The Github Actions (set up in <code>render-all.yml</code>) renders
+your course material in a format suitable for linking to Coursera. This
+Coursera version is identical except that the table of contents bar on
+the left side has been dropped so as to not confuse Coursera users about
 navigating the course. These files can be previewed in the
 <code>docs/no_toc</code> folder and a link to the Coursera version is
 printed out in a GitHub comment in your pull request by
 <code>render-preview.yml</code>.</p>
-<p>If you have written your quizzes in Leanpub format first,
-<code>pull-request.yml</code> github action will convert those quizzes
-so they are ready for upload to Coursera.</p>
-<p>Or alternatively if you do not wish to have a Leanpub version of your
+<p>If you have written your quizzes in Leanpub format first, the
+<code>pull-request.yml</code> Github Action will convert those quizzes
+so they are ready to be uploaded to Coursera.</p>
+<p>Alternatively, if you do not wish to have a Leanpub version of your
 course, you can write your quizzes directly on Coursera’s website. You
 can download the quiz you write on their website as a yaml and store it
 on your repository as well.</p>
@@ -1065,21 +1069,26 @@ has been added to your account</a> you can navigate to it by going to
 <code>My Courses</code>:</p>
 <p><img
 src="https://raw.githubusercontent.com/jhudsl/OTTR_Template/main/resources/coursera_screenshots/profile.png" /></p>
+<p><br></p>
 <p>And you should see it listed:</p>
 <p><img
 src="https://raw.githubusercontent.com/jhudsl/OTTR_Template/main/resources/coursera_screenshots/my-courses.png" /></p>
-<p>You can click on <code>Go to Course</code>. And on your main course
-page click <code>Edit Course</code> in the right corner.</p>
+<p><br></p>
+<p>Click on <code>Go to Course</code> and on your main course page,
+click <code>Edit Course</code> in the right corner.</p>
 <p><img
 src="https://raw.githubusercontent.com/jhudsl/OTTR_Template/main/resources/coursera_screenshots/edit-course-nav.png" /></p>
+<p><br></p>
 <p>This will bring you to your version page (at this point you should
 only have a Version 1, so go to that one).</p>
 <p><img
 src="https://raw.githubusercontent.com/jhudsl/OTTR_Template/main/resources/coursera_screenshots/versions.png" /></p>
+<p><br></p>
 <p>Now you are on the Edit content page and ready to add lessons,
 modules and quizzes!</p>
 <p><img
 src="https://raw.githubusercontent.com/jhudsl/OTTR_Template/main/resources/coursera_screenshots/edit-content.png" /></p>
+<p><br></p>
 <p>In general, you will want each lesson to contain at least a chapter
 and a quiz.</p>
 <p>Each module is supposed to take a learner one week, so depending on
@@ -1091,51 +1100,58 @@ src="https://raw.githubusercontent.com/jhudsl/OTTR_Template/main/resources/cours
 <p>Now you are ready to add a chapter!</p>
 <div id="adding-new-chapters-to-coursera" class="section level3">
 <h3>Adding new chapters to Coursera</h3>
-<p>You’ll need to link out each chapters in Coursera by providing a url
-built from your Github pages for your course.</p>
+<p>You’ll need to link out each chapters in Coursera by providing a URL
+built from your Github Pages for your course.</p>
 <p>You can see a preview of these chapters you will link to in Coursera
 by going to the <a
-href="https://guides.github.com/features/pages/">Github pages</a> for
-your course, but adding <code>/no_toc</code> at the end of your url
+href="https://guides.github.com/features/pages/">Github Pages</a> for
+your course, but adding <code>/no_toc</code> at the end of your URL
 before the chapter file name.</p>
-<p>So the urls for each of your chapters which you will supply to
+<p>So the URLs for each of your chapters which you will supply to
 Coursera in the next steps will look like this:</p>
 <pre><code>&lt;main-github-pages-url&gt;/no_toc/&lt;html_filename&gt;</code></pre>
-<p>If you are unsure what the main url for your Github pages is, in your
+<p>If you are unsure what the main URL for your Github pages is, in your
 github repository, go to <code>Settings</code> &gt; <code>Pages</code>
 and you’ll see <code>Your site is published at:</code></p>
 <p>So for example, the introduction chapter of this template would be
-linked by using this url:</p>
+linked by using this URL:</p>
 <pre><code>https://jhudatascience.org/OTTR_Template/no_toc/introduction.html</code></pre>
 <p>To add this URL to Coursera, add a new lesson, click
 <code>+ More</code> and choose <code>Ungraded Plugin</code>.</p>
 <p><img
 src="https://raw.githubusercontent.com/jhudsl/OTTR_Template/main/resources/coursera_screenshots/add-chapter-1.png" /></p>
+<p><br></p>
 <p>This will add an unpublished ungraded plugin to your lesson: <img
 src="https://raw.githubusercontent.com/jhudsl/OTTR_Template/main/resources/coursera_screenshots/add-chapter-2.png" /></p>
+<p><br></p>
 <p>Now click the edit button on the new
 <code>Ungraded Plugin</code>.</p>
 <p><img
 src="https://raw.githubusercontent.com/jhudsl/OTTR_Template/main/resources/coursera_screenshots/add-chapter-3.png" /></p>
+<p><br></p>
 <p>This will bring you to the standard example plug in page. <img
 src="https://raw.githubusercontent.com/jhudsl/OTTR_Template/main/resources/coursera_screenshots/add-chapter-4.png" /></p>
+<p><br></p>
 <p>Scroll down and click <code>Edit Configuration</code>:</p>
 <p><img
 src="https://raw.githubusercontent.com/jhudsl/OTTR_Template/main/resources/coursera_screenshots/add-chapter-5.png" /></p>
-<p>Replace the example url with the url of your individual chapter we
+<p><br></p>
+<p>Replace the example URL with the URL of your individual chapter we
 discussed above.</p>
 <p><img
 src="https://raw.githubusercontent.com/jhudsl/OTTR_Template/main/resources/coursera_screenshots/add-chapter-6.png" /></p>
+<p><br></p>
 <p>Then click on <code>Save Configuration</code>:</p>
 <p><img
 src="https://raw.githubusercontent.com/jhudsl/OTTR_Template/main/resources/coursera_screenshots/new-add-chapter-7.png" /></p>
 <p>Also be sure to modify the time estimate to be something that you
 think is appropriate for your content - err on the side of giving
 students extra time.</p>
-<p>If the url you provided was correct, you should see a preview of your
+<p>If the URL you provided was correct, you should see a preview of your
 chapter:</p>
 <p><img
 src="https://raw.githubusercontent.com/jhudsl/OTTR_Template/main/resources/coursera_screenshots/add-chapter-8.png" /></p>
+<p><br></p>
 <p>You may want to edit the title at the top of this page to indicate
 the material being linked.</p>
 <p>Now click <code>Publish</code> in the left upper corner (don’t worry
@@ -1154,9 +1170,11 @@ on whatever lesson you would like to add the quiz to and click the
 <code>+ Quiz</code> button.</p>
 <p><img
 src="https://raw.githubusercontent.com/jhudsl/OTTR_Template/main/resources/coursera_screenshots/add-quiz-1.png" /></p>
+<p><br></p>
 <p>Now go to <code>Edit</code> on the new quiz.</p>
 <p><img
 src="https://raw.githubusercontent.com/jhudsl/OTTR_Template/main/resources/coursera_screenshots/add-quiz-2.png" /></p>
+<p><br></p>
 <p>If you are choosing to manually enter your quizzes, you can continue
 to add each question from this page.</p>
 <p>If you are importing a Leanpub converted quiz click the
@@ -1166,9 +1184,11 @@ href="#converting-quizzes-from-leanpub-format">refer to that
 section</a>.)</p>
 <p><img
 src="https://raw.githubusercontent.com/jhudsl/OTTR_Template/main/resources/coursera_screenshots/add-quiz-3.png" /></p>
+<p><br></p>
 <p>Upload your Coursera quiz yml file from your device:</p>
 <p><img
 src="https://raw.githubusercontent.com/jhudsl/OTTR_Template/main/resources/coursera_screenshots/add-quiz-4.png" /></p>
+<p><br></p>
 <p>After you’ve selected the file click <code>Upload</code>:</p>
 <p><img
 src="https://raw.githubusercontent.com/jhudsl/OTTR_Template/main/resources/coursera_screenshots/add-quiz-5.png" /></p>
@@ -1191,15 +1211,18 @@ estimated time it should take to complete the quiz (by default it is set
 to a certain number of minutes).</p>
 <p><img
 src="https://raw.githubusercontent.com/jhudsl/OTTR_Template/main/resources/coursera_screenshots/quiz-settings.png" /></p>
+<p><br></p>
 <p>You also will want to assign the learning objectives that apply to
 this quiz. You can do this by clicking on the plus sign underneath the
 title.</p>
 <p><img
 src="https://raw.githubusercontent.com/jhudsl/OTTR_Template/main/resources/coursera_screenshots/learning-obj-assigned.png" /></p>
+<p><br></p>
 <p>From here it will suggest the module’s learning objectives. Click all
 that apply and then <code>Save</code>.</p>
 <p><img
 src="https://raw.githubusercontent.com/jhudsl/OTTR_Template/main/resources/coursera_screenshots/assign-learning-obj.png" /></p>
+<p><br></p>
 <p>You can edit the title of your quiz and then click
 <code>Publish</code> (don’t worry it’s not actually publishing publicly,
 its just saving your changes). And it will ask you again to really scare
@@ -1215,13 +1238,16 @@ src="https://raw.githubusercontent.com/jhudsl/OTTR_Template/main/resources/cours
 page click <code>Edit Course</code> in the right corner.</p>
 <p><img
 src="https://raw.githubusercontent.com/jhudsl/OTTR_Template/main/resources/coursera_screenshots/edit-course-nav.png" /></p>
+<p><br></p>
 <p>This will bring you to your version page.</p>
 <p><img
 src="https://raw.githubusercontent.com/jhudsl/OTTR_Template/main/resources/coursera_screenshots/versions.png" /></p>
+<p><br></p>
 <p>Underneath <code>Content</code>, on the left side bar, at the bottom,
 there is the <code>Programmed Messages</code>.</p>
 <p><img
 src="https://raw.githubusercontent.com/jhudsl/OTTR_Template/main/resources/coursera_screenshots/versions.png" /></p>
+<p><br></p>
 <p>At the very least you should add a <code>Welcome to the course</code>
 and a <code>Completion</code> programmed message. Click on each of these
 to edit them. Click <code>Preview</code> and then <code>Publish</code>
@@ -1255,16 +1281,18 @@ edits.</p>
 </div>
 </div>
 <div id="grading-formula" class="section level2">
-<h2>Grading formula</h2>
+<h2>Grading Formula</h2>
 <p>For final grades in the course, you will need to set the Grading
 Formula. To get to this page, you can click on
 <code>Go to Course</code>. And on your main course page click
 <code>Edit Course</code> in the right corner.</p>
 <p><img
 src="https://raw.githubusercontent.com/jhudsl/OTTR_Template/main/resources/coursera_screenshots/edit-course-nav.png" /></p>
+<p><br></p>
 <p>This will bring you to your version page.</p>
 <p><img
 src="https://raw.githubusercontent.com/jhudsl/OTTR_Template/main/resources/coursera_screenshots/versions.png" /></p>
+<p><br></p>
 <p>Now you can set the percentage that each module’s assignments are
 worth in the course.</p>
 <p><img
