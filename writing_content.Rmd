@@ -116,7 +116,6 @@ just look at the left upper corner to make sure!
 
 Now let's try making some changes.
 
-<br>
 
 ## Committing changes
 
@@ -214,7 +213,6 @@ pasting is advisable because any little typo will inhibit cloning.
 Now you are ready to click `Clone the repository`! It will ask you if
 you'd like to `Open Now`, click that.
 
-<br>
 
 ## Create a new branch
 
@@ -253,7 +251,6 @@ that the cursor is blinking in. In our example, we are calling it
 Now we can add/edit/rename currently existing files in our new branch,
 knowing that the content and code in the `main` branch is safe.
 
-<br>
 
 ## Committing changes
 
@@ -277,7 +274,6 @@ If we want to add these file changes to our current branch, we need to
 
 Great! Now the changes you've made have been added to your local branch.
 
-<br>
 
 ## Pushing changes
 
@@ -420,7 +416,6 @@ To add a new file, follow the provided instructions, ensuring that the file is n
     using RStudio or a text editor of your choice and follow the steps to add, commit
     and push those to your new branch.
     
-<br>
 
 ### Step 2: Add the name of your new chapter to your \_bookdown.yml file
 
@@ -451,14 +446,14 @@ output_dir: "docs"
 
 **Important:** Pay attention to the slight difference in just one line, specifically the line that reads `03-chapter_of_course.Rmd`. Be cautious regarding the use of quotation marks ("") and commas (,) in the line!
 
-<br>
+
 
 ### Step 3 Commit the \_bookdown.yml file changes to the current branch
 
 Follow the steps for how to commit changes and commit the edits to your
 `_bookdown.yml` file to your current branch.
 
-<br>
+
 
 ### Step 4 Go to your Pull Request to see how the checks turn out
 
@@ -514,7 +509,6 @@ Next, import the appropriate theme (see [this
 video](https://youtu.be/pNbwF263yY8) for assistance)
 
 
-<br>
 
 ## Accessibility
 
@@ -533,7 +527,6 @@ There are two things to check for each slide:
     check this using [Color Oracle](https://colororacle.org/).
     
 
-<br>
 
 ## Adding images and graphics in text
 
@@ -571,7 +564,7 @@ See [Chapter
 2](https://github.com/jhudsl/OTTR_Template/blob/main/02-chapter_of_course.Rmd)
 of the template course for examples.
 
-<br>
+
 
 ## Adding videos in text
 
@@ -590,7 +583,7 @@ See [Chapter
 2](https://github.com/jhudsl/OTTR_Template/blob/main/02-chapter_of_course.Rmd)
 of the template course for examples.
 
-<br>
+
 
 ## Adding embedded files to text
 
