@@ -84,7 +84,7 @@ Should you find that your course needs additional packages beyond what's include
 There's a library of ottr-ready docker images that you can see [here](https://github.com/jhudsl/ottr_docker). If you would like to contribute your own customized docker image that works with OTTR, please file a pull request!
 
 1) Create a [Dockerhub account](https://hub.docker.com/signup) if you don't have one.
-2) Create a new Docker image on your Dockerhub account. Follow these [instructions](https://jhudatascience.org/Adv_Reproducibility_in_Cancer_Informatics/launching-a-docker-image.html) if you don't know how to do that].
+2) Create a new Docker image on your Dockerhub account. Follow these [instructions](https://jhudatascience.org/Adv_Reproducibility_in_Cancer_Informatics/launching-a-docker-image.html) if you don't know how to do that.
 3) [Set up Dockerhub secrets in your repository or organization](#set-dockerhub-related-secrets).   
 4) [Update the Github actions workflows accordingly](#updating-workflows-for-new-docker-image).
 5) [Edit the Dockerfile in your repository](#modifying-the-dockerfile-for-a-new-image).
