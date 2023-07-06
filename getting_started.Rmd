@@ -83,7 +83,6 @@ In the pop up window, search for and add `jhudsl-robot`.
 
 If shown the option, choose the `write` option then click `Add jhudsl-robot to this repository`. Otherwise, just click `add`. 
 
-TODO: I don't see the write option.
 
 
 ### 6. In personal repositories: check your settings
