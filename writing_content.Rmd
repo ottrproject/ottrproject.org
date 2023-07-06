@@ -546,7 +546,7 @@ bar:
 Additionally, include notes (similar to the fig.alt text) for each slide in the Google Slides presentation, describing the content and images of the slide. This will enable accessibility for individuals with visual impairments, as the notes can be converted into audio. Please note that line breaks are not allowed within the fig.alt text. If there are no line breaks, the text should appear in blue within the code chunk.
 
 The code chunk option `echo=FALSE` ensures that the R code is hidden from your course,
-while the code chunk optio `out.width = "100%"` is used to size the image. We generally
+while the code chunk option `out.width = "100%"` is used to size the image. We generally
 recommend going with larger images.
 
 *You must define `fig.alt` in the code chunk options/parameters to pass
