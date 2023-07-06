@@ -66,7 +66,7 @@ To obtain further information on utilizing Docker, you can refer to their compre
 
 #### Optionally run RStudio from the Docker container
 
-In a web browser navigate to the following to open an RStudio instace that is run from your Docker container.
+In a web browser navigate to the following to open an RStudio instance that is run from your Docker container.
 
 ```
 localhost:8787
