@@ -58,7 +58,7 @@ Enter a name for your repository in the "Repository name" field and provide a br
 
 ### 3. Ensure your course is set to `public` for all GitHub Actions to work
 
-TODO: Clarify
+When creating your repository, make sure to set it [to a public repository](https://docs.github.com/en/repositories/creating-and-managing-repositories/about-repositories#about-repository-visibility). 
 
 In particular, the rendered preview on pull requests won't work, but you can alternatively preview the content by re-rendering locally if you want to keep your course private. We will cover this later.
 
