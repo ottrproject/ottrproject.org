@@ -489,7 +489,7 @@ We encourage this strategy for several reasons:
     central location and may be helpful for you to re-use the media from
     your course in the future
 -   You can make videos of your slides that can be added to your course
-    using [`ari`](https://github.com/jhudsl/ari)
+    using [Loqui](https://loqui.fredhutch.org/), an interactive web app for generating automated courses. Loqui takes an input a Google Slides URL, then extracts the speaker notes from the slides, converting them to an audio element of the video. Then, it converts the slides to images to serve as the visual component of the video.
 
 **Important:** Your Google Slide document must be set to
 `Anyone with a link`. See [this article for more
