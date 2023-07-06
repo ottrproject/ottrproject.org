@@ -356,7 +356,7 @@ Congrats! You've just opened a pull request! For every set of changes
 you'll make to your course, you will want to follow this similar set of
 steps.
 
-**In summary, here are the steps invovled:**
+**In summary, here are the steps involved:**
 
 ![](resources/images/summary.png)
 
