@@ -81,7 +81,7 @@ In the pop up window, search for and add `jhudsl-robot`.
 
 <img src="https://github.com/jhudsl/OTTR_Template/raw/main/resources/screenshots/add-jhudsl-robot.png" width = 400>
 
-Choose the `write` option then click `Add jhudsl-robot to this repository`.
+If shown the option, choose the `write` option then click `Add jhudsl-robot to this repository`. Otherwise, just click `add`. 
 
 TODO: I don't see the write option.
 
