@@ -10,7 +10,7 @@ For courses that require running example code, it is strongly advisable to utili
 
 ## Using the base_ottr Docker image
 
-If your course doesn't require any additional packages to run, then you do not need to set up Docker locally but this Docker image  [jhudsl/base_ottr](https://hub.docker.com/repository/docker/jhudsl/base_ottr) will run and re-render all of your changes as you add them.
+If your course doesn't require any additional packages to run, then you do not need to set up Docker locally but this Docker image [jhudsl/base_ottr](https://hub.docker.com/repository/docker/jhudsl/base_ottr) will run and re-render all of your changes as you add them.
 
 We recommend using the `jhudsl/base_ottr:main` tagged image instead of the `latest` version. The `main` image is ready for use, while the `latest` may be under development. All GitHub Actions by default use the `jhudsl/base_ottr:main`.
 
