@@ -115,7 +115,7 @@ If you have organization admin privileges and plan on making multiple courses wi
 - Underneath `Select scopes`, check both `repo` and `workflow`.
 - Copy the personal access token and save as a secret in the repository that you made from our template.
 
-All of your GitHub Actions should now be capable of running without any issues.
+All of your GitHub Actions should now be capable of running without any issues. If you encounter any problems, please [report your issue to the main OTTR repository here](https://github.com/jhudsl/OTTR_Template/issues/new?assignees=&labels=bug&projects=&template=course-problem-report.md&title%5B%5D=Problem). 
 
 
 
