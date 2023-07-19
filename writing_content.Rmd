@@ -444,7 +444,7 @@ language:
 output_dir: "docs"  
 ```
 
-**Important:** Pay attention to the slight difference in just one line, specifically the line that reads `03-chapter_of_course.Rmd`. Be cautious regarding the use of quotation marks ("") and commas (,) in the line!
+**WARNING:** Pay attention to the slight difference in just one line, specifically the line that reads `03-chapter_of_course.Rmd`. Be cautious regarding the use of quotation marks ("") and commas (,) in the line!
 
 
 
