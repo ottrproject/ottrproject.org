@@ -412,7 +412,7 @@ To add a new file, follow the provided instructions, ensuring that the file is n
 
 -   For the `Entry Level`, [read
     this to add a new file](https://docs.github.com/en/repositories/working-with-files/managing-files/adding-a-file-to-a-repository).
--   For `Advanced Level`, you'll create this file locally
+-   For the `Advanced Level`, you'll create this file locally
     using RStudio or a text editor of your choice and follow the steps to add, commit
     and push those to your new branch.
     
