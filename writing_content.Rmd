@@ -410,7 +410,7 @@ addition to what we've discussed here.
 
 To add a new file, follow the provided instructions, ensuring that the file is named with a .Rmd extension. Additionally, make sure to add the file to your specific new branch:
 
--   For `Entry Level`, [read
+-   For the `Entry Level`, [read
     this to add a new file](https://docs.github.com/en/repositories/working-with-files/managing-files/adding-a-file-to-a-repository).
 -   For `Advanced Level`, you'll create this file locally
     using RStudio or a text editor of your choice and follow the steps to add, commit
