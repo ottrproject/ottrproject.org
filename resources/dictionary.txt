@@ -10,7 +10,9 @@ Markua
 HTTPS
 lightblue
 lightgreen
+Loqui
 OTTR
+OTTR's
 ottr
 Rmd
 subdir
@@ -76,6 +78,7 @@ RMarkdown
 rmd
 Rmd's
 RStudio
+RStudio's
 spinoff
 StackOverflow
 toc
