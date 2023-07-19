@@ -128,8 +128,10 @@ By default, Github Pages is sent to a URL that looks like `username.github.io` w
 
 For more information about GitHub Pages we recommend you refer to the GitHub documentation [here](https://docs.github.com/en/pages/quickstart).
 
-**Warning**: If you go to your URL right now (before you've pushed any file changes) you might see a 404 error because nothing has been triggered to be rendered. You can check the URL after you file your first pull request (which we will guide you through [in the next section](https://github.com/jhudsl/OTTR_Template/wiki/Start-editing-your-course).
 
+<p class="comment">
+**Warning**: If you go to your URL right now (before you've pushed any file changes) you might see a 404 error because nothing has been triggered to be rendered. You can check the URL after you file your first pull request (which we will guide you through [in the next section](https://github.com/jhudsl/OTTR_Template/wiki/Start-editing-your-course).
+</p>
 
 ### 9. Set up branch rules
 
@@ -184,8 +186,9 @@ When updates are made to files that aren't specific to the course content but in
 
 If your new course doesn't need some of the functionality of these files or you find the automatic updates bothersome, you can feel free to use [this guide](https://github.com/marketplace/actions/repo-file-sync-action#sync-the-same-files-to-multiple-repositories) to tailor which files you want updates for.
 
-
+<p class="comment">
 _If you have any questions about the implications of any of these updates or files, please tag `@cansavvy`._
+</p>
 
 <br>
 

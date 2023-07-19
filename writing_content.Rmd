@@ -10,6 +10,18 @@ editor_options:
 ---
 
 
+<style>
+p.comment {
+background-color: #DBDBDB;
+padding: 10px;
+border: 1px solid black;
+margin-left: 25px;
+border-radius: 5px;
+font-style: italic;
+}
+</style>
+
+
 Now you have a course repository on GitHub and you're ready to start writing content!
 
 The OTTR content development process revolves around the use of 
@@ -33,7 +45,9 @@ comfort and interest level in using Git and GitHub:
 
 OTTR's checks primarily focus on pull requests so you can avoid accidentally making your mistakes in your live courses.
 
+<p class="comment">
 **WARNING**: The live content is automatically created and stored in the `docs` folder. As our writing process guide will inform you, you **should NOT make direct changes to the `docs` folder**. The automation processes will handle the preparation of these files, and you should refrain from making direct changes to them. To learn how to edit your files and write your course, please review the corresponding section in the writing process guide.
+</p>
 
 When you submit a pull request, it triggers a sequence of automatic checks performed by GitHub Actions. These checks are designed to assist you as you add content to your course.
 
@@ -392,9 +406,9 @@ For more on [how to review a pull request, see this
 chapter](https://jhudatascience.org/Adv_Reproducibility_in_Cancer_Informatics/engaging-in-code-review---as-a-reviewer.html).
 
 
-<div class = "notice">
+<p class="comment">
 If you encounter situations where a spelling report or URL report doesn't look as expected, you may just need to **refresh the page** or **make another commit** to your pull request.
-</div>
+</p>
 
 
 ![](resources/images/summary_2.png)
@@ -444,8 +458,9 @@ language:
 output_dir: "docs"  
 ```
 
+<p class="comment">
 **WARNING:** Pay attention to the slight difference in just one line, specifically the line that reads `03-chapter_of_course.Rmd`. Be cautious regarding the use of quotation marks ("") and commas (,) in the line!
-
+</p>
 
 
 ### Step 3 Commit the \_bookdown.yml file changes to the current branch
@@ -491,10 +506,13 @@ We encourage this strategy for several reasons:
 -   You can make videos of your slides that can be added to your course
     using [Loqui](https://loqui.fredhutch.org/), an interactive web app for generating automated courses. Loqui takes an input a Google Slides URL, then extracts the speaker notes from the slides, converting them to an audio element of the video. Then, it converts the slides to images to serve as the visual component of the video.
 
+<p class="comment">
 **WARNING:** Your Google Slide document must be set to
 `Anyone with a link`. See [this article for more
 details.](https://support.wix.com/en/article/setting-permissions-for-google-drive-files-and-folders#:~:text=Settings%20Permissions%20for%20a%20Google,edit%20and%20comment%20as%20well.)
 The renders will fail if this is not set!
+</p>
+
 
 Each Rmd file with images that is a part of your Bookdown needs to have
 the following chunk at the beginning so that images are stored properly for
