@@ -277,7 +277,7 @@ Great! Now the changes you've made have been added to your local branch.
 
 ## Pushing changes
 
-Note that when you've committed your changes locally, those changes
+Note that when you've committed your changes locally (on your computer), those changes
 won't be on the online version of your repository. To get them to the
 remote GitHub copy, we will need to `push` your commits.
 
