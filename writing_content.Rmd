@@ -33,7 +33,7 @@ comfort and interest level in using Git and GitHub:
 
 OTTR's checks primarily focus on pull requests so you can avoid accidentally making your mistakes in your live courses.
 
-The live content is automatically created and stored in the `docs` folder. As our writing process guide will inform you, you should NOT make direct changes to the `docs` folder. The automation processes will handle the preparation of these files, and you should refrain from making direct changes to them. To learn how to edit your files and write your course, please review the corresponding section in the writing process guide.
+**WARNING**: The live content is automatically created and stored in the `docs` folder. As our writing process guide will inform you, you **should NOT make direct changes to the `docs` folder**. The automation processes will handle the preparation of these files, and you should refrain from making direct changes to them. To learn how to edit your files and write your course, please review the corresponding section in the writing process guide.
 
 When you submit a pull request, it triggers a sequence of automatic checks performed by GitHub Actions. These checks are designed to assist you as you add content to your course.
 
