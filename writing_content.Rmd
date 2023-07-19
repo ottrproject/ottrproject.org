@@ -568,7 +568,7 @@ of the template course for examples.
 
 ## Adding videos in text
 
-To add a YouTube video to your Rmd files, follow the following instructions:
+To add a YouTube video to your Rmd files, use the following instructions:
 
 To get the appropriate YouTube URL do the following: 1) Click on the
 **SHARE** button on the lower right corner of the video on YouTube 2)
