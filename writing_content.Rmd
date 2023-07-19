@@ -455,7 +455,7 @@ Follow the steps for how to commit changes and commit the edits to your
 
 
 
-### Step 4 Go to your Pull Request to see how the checks turn out
+### Step 4 Go to your pull request to see how the checks turn out
 
 Go to your repository and click on the `Pull Request` button in the
 navbar.
