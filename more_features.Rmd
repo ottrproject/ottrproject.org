@@ -248,7 +248,7 @@ Note that in creating an account you will need to agree to some terms. Currently
 ![](resources/images/GA_Script_ID.png)
 
 1. Add a line to the _output.yml file above the line that starts with `before body:` (i.e. nested under `includes`).  This line should be `in_header: GA_Script.html`.  Make sure this line is indented to the same level as the `before body:` line.
-![](resources/images/output_file_with_GA.png)
+![](resources/images/output_GA.png)
 
 1. **Rerender** your course by making a change to one of your chapter RMD files in a pull request and pushing and merging the pull request. This will cause new html files to be made for each chapter in the `docs` folder. The Google Analytics code should now be in each of the html files - you can check by searching for `Google Analytics`.
 
