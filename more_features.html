@@ -13,7 +13,7 @@
 
 <title>More Features</title>
 
-<script src="site_libs/header-attrs-2.22/header-attrs.js"></script>
+<script src="site_libs/header-attrs-2.23/header-attrs.js"></script>
 <script src="site_libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <link href="site_libs/bootstrap-3.3.5/css/bootstrap.min.css" rel="stylesheet" />
@@ -636,19 +636,13 @@ to your <code>_output.yml</code> file.</p>
 </div>
 <div id="giving-credits-to-contributors" class="section level2">
 <h2>Giving credits to contributors</h2>
-<p>Since so many individuals contribute to our courses in so many ways.
-Thus, we decided to make a table of credits to make it clear who did
-what.</p>
+<p>Since so many individuals contribute to our courses in so many ways,
+we decided to make a table of credits to make it clear who did what.</p>
 <p>Here is an example:</p>
-<div class="float">
-<img
-src="https://raw.githubusercontent.com/jhudsl/OTTR_Template/main/resources/screenshots/example_credits.png"
-alt="Credit section from a course that used this template" />
-<div class="figcaption">Credit section from a course that used this
-template</div>
-</div>
+<p><img
+src="https://raw.githubusercontent.com/jhudsl/OTTR_Template/main/resources/screenshots/example_credits.png" /></p>
 <p>Please see the <a
-href="https://jhudatascience.org/OTTR_Template/about-the-authors.html">about
+href="https://jhudatascience.org/OTTR_Template/about-the-authors.html">About
 section</a> of the template for descriptions of how credits should be
 attributed for the course.</p>
 <p>This is generated from the About.Rmd file. An About.Rmd file will
@@ -669,7 +663,7 @@ parentheses. If only one person is appropriate for a given role remove
 <p>The first row and additional rows based on <a
 href="https://bit.ly/course-credits-table">this table</a> should be
 added and filled in using <a
-href="https://www.markdownguide.org/extended-syntax/">markdown table
+href="https://www.markdownguide.org/extended-syntax/">Markdown table
 format</a>.</p>
 <pre><code>|Credits|Names|
 |-------|-----|
@@ -725,22 +719,23 @@ added at the beginning of your course, right after the introduction.</p>
 <p>In Leanpub, make sure that your About.md file in your manuscript
 folder is listed in your Book.txt file and this Credits table will
 automatically be incorporated into your Leanpub course.</p>
+<p><br></p>
 </div>
 </div>
 <div id="borrowing-chapters" class="section level2">
-<h2>Borrowing chapters</h2>
-<p>If you have two courses that the content and topics overlap, you may
+<h2>Borrowing Chapters</h2>
+<p>If you have two courses where the content and topics overlap, you may
 want to share written material between the two.</p>
-<p>But, if you copy and paste to share material this would create a
-maintenance problem because if you update one you will need to remember
-to copy over the other! 😱</p>
-<p>In OTTR, we try to minimize maintenance pains so to get around this,
-we use <code>cow::borrow_chapter()</code> from the <a
+<p>However, sharing material by copying and pasting can lead to
+maintenance issues, as updating one would require remembering to update
+the other as well! 😱</p>
+<p>In OTTR, we try to minimize maintenance pains. To get around this, we
+use <code>cow::borrow_chapter()</code> from the <a
 href="https://jhudatascience.org/cow/index.html">jhudsl/cow</a> package.
 The <code>cow</code> package is already on the
-<code>jhudsl/course_template</code> docker image so you do not need to
-install it if you are using the docker image or if you are have GitHub
-actions do all the rendering for you.</p>
+<code>jhudsl/course_template</code> Docker image so you do not need to
+install it if you are using the Docker image or if you are have GitHub
+Actions do all the rendering for you.</p>
 <p>To borrow a chapter from another course, create an <code>.Rmd</code>
 as you normally would, with a
 <code>ottrpal::set_knitr_image_path()</code> in a chunk at the beginning
@@ -761,8 +756,10 @@ and render your course as usual.</p>
 <div id="borrowing-from-a-local-file" class="section level3">
 <h3>Borrowing from a local file</h3>
 <p>If for some reason you would like a local file incorporated, just
-leave off the repo_name argument and <code>cow::borrow_chapter()</code>
-will look for the chapter locally: Have your chunk arguments include:
+leave off the <code>repo_name</code> argument and
+<code>cow::borrow_chapter()</code> will look for the chapter
+locally.</p>
+<p>Have your chunk arguments include
 <code>{r, echo = FALSE, results='asis'}</code>.</p>
 <pre><code>cow::borrow_chapter(
   doc_path = &quot;02-chapter_of_course.Rmd&quot;
@@ -771,10 +768,11 @@ will look for the chapter locally: Have your chunk arguments include:
 <div id="borrowing-from-a-private-repository" class="section level3">
 <h3>Borrowing from a private repository</h3>
 <p>If you are borrowing from a course in a private repository, you will
-need to supply <a
+need to supply a <a
 href="https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/creating-a-personal-access-token">GitHub
 personal access token</a> using a <code>git_pat</code> argument like
-this: Have your chunk arguments
+this:</p>
+<p>Have your chunk arguments
 include:<code>{r, echo = FALSE, results='asis'}</code></p>
 <pre><code>cow::borrow_chapter(
   doc_path = &quot;02-chapter_of_course.Rmd&quot;,
@@ -793,7 +791,7 @@ chapter.</p>
 <h3>Linking between chapters</h3>
 <p>If you don’t want the material from another chapter completely copied
 over, you might instead just want to put a link to the Bookdown chapter.
-You can just use the full url. A link would look something like
+You can just use the full URL. A link would look something like
 this:</p>
 <pre><code>![](https://jhudatascience.org/OTTR_Template/a-new-chapter.html)</code></pre>
 <p>You might want your course available for download as a docx. For
@@ -814,6 +812,7 @@ logos you want to use. To incorporate a template, make sure you add the
       toc: true</code></pre>
 <p>Learn more about templates <a
 href="https://bookdown.org/yihui/rmarkdown-cookbook/word-template.html">here</a>.</p>
+<p><br></p>
 </div>
 </div>
 <div id="compatibility-with-google-docs" class="section level2">
@@ -839,22 +838,24 @@ comfortable with the OTTR process can incorporate those comments into an
 existing or new pull request which can checked for its rendering and
 eventually added to the <code>main</code> content branch.</li>
 </ul>
+<p><br></p>
 </div>
 <div id="google-analytics" class="section level2">
 <h2>Google Analytics</h2>
 <p>If you would like to add Google Analytics to track traffic to your
 course, you can do the following:</p>
 <ol style="list-style-type: decimal">
-<li><p>Get a <strong>Google Analytics account</strong> (if you do not
+<li>Get a <strong>Google Analytics account</strong> (if you do not
 already have one): <a
 href="https://analytics.google.com/analytics">https://analytics.google.com/analytics</a>
-<img src="resources/images/GA_account.png"
-alt="Google Analytics account setup" /> Note that in creating an account
-you will need to agree to some terms. Currently it is free to get Google
-analytics data as long as your course does not exceed a very high user
-rate. Check to make sure that the terms work for you <img
-src="resources/images/GA_terms.png"
-alt="Google Analytics terms" /></p></li>
+<img src="resources/images/GA_account.png" /> Note that in creating an
+account you will need to agree to some terms. Currently it is free to
+get Google analytics data as long as your course does not exceed a very
+high user rate.</li>
+</ol>
+<p>Check to make sure that the terms work for you <img
+src="resources/images/GA_terms.png" /></p>
+<ol style="list-style-type: decimal">
 <li><p>If you already have an account or navigated away from where you
 started - Go to the <strong>Admin tab</strong> (lower left button that
 looks like a gear)</p></li>

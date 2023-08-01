@@ -503,8 +503,7 @@ We encourage this strategy for several reasons:
 -   Storing your images on Google slides allows them to be in one
     central location and may be helpful for you to re-use the media from
     your course in the future
--   You can make videos of your slides that can be added to your course
-    using [Loqui](https://loqui.fredhutch.org/), an interactive web app for generating automated courses. Loqui takes an input a Google Slides URL, then extracts the speaker notes from the slides, converting them to an audio element of the video. Then, it converts the slides to images to serve as the visual component of the video.
+-   You can make videos of your slides that can be added to your course using [Loqui](https://loqui.fredhutch.org/). Loqui is an interactive web application designed for automated course creation. Loqui takes as input a Google Slides URL, extracts the speaker notes from the slides, and converts them to a voicover of the video. Also, it converts the slides to images to serve as the visual component of the video.
 
 <p class="comment">
 **WARNING:** Your Google Slide document must be set to
