@@ -6,18 +6,18 @@ output:
     toc_float: true
 ---
 
-Particularly for courses that involve running example code, it's highly recommended that you use a Docker image for development to maintain software version consistency across course developers.
+For courses that require running example code, it is strongly advisable to utilize a Docker image during development. This ensures consistent software versions among course developers.
 
 ## Using the base_ottr Docker image
 
-If your course doesn't require any additional packages to run, then you do not need to set up Docker locally but [this Docker image: jhudsl/base_ottr](https://hub.docker.com/repository/docker/jhudsl/base_ottr) will run and re-render all of your changes as you add them.
+If your course doesn't require any additional packages to run, then you do not need to set up Docker locally but this Docker image [jhudsl/base_ottr](https://hub.docker.com/repository/docker/jhudsl/base_ottr) will run and re-render all of your changes as you add them.
 
-We advise you use the `jhudsl/base_ottr:main` tagged image as opposed to the `latest`. The `main` is what is ready for use, while the `latest` may be under development. All GitHub actions by default use the `jhudsl/base_ottr:main`.
+We recommend using the `jhudsl/base_ottr:main` tagged image instead of the `latest` version. The `main` image is ready for use, while the `latest` may be under development. All GitHub Actions by default use the `jhudsl/base_ottr:main`.
 
 If you are new to Docker, you may find it helpful to read this [introduction to Docker](https://jhudatascience.org/Adv_Reproducibility_in_Cancer_Informatics/launching-a-docker-image.html).
 
-- You will need to [sign up with a Docker account](https://hub.docker.com/) if you don't have one.  
-- If you haven't installed Docker desktop (or need to update it), you can do [so here](https://docs.docker.com/get-docker/).  
+- If you don't have one, you will need to [sign up with a Docker account](https://hub.docker.com/).  
+- If you haven't installed Docker desktop (or need to update it), you can do so [here](https://docs.docker.com/get-docker/).  
 
 If your Docker desktop is running, you should see a Docker whale in your tool bar.
 On Macs, this will be on the bar on the top of your screen; in Windows, on the bottom right.
@@ -26,20 +26,18 @@ A Docker image is similar to a virtual machine - it contains preinstalled softwa
 Docker images can be downloaded from DockerHub, or you can create your own.
 
 We have created the `base_ottr:main` image as a starting point; you can download it from `jhudsl/base_ottr:main` on DockerHub using the docker pull command we have below.
-To pull the docker image associated with this template, you can run this command below in your command line.
-This may take a while.
+To pull the docker image associated with this template, you can run this command below in your command line. This may take a while:
 
 ```
 docker pull jhudsl/base_ottr:main
 ```
 
-This pulls the base_ottr:main image from Docker Hub and copies it to your computer.
-It will be placed in your local collection of Docker images, managed by Docker (not in your pwd). If you get an error, it may be because you forgot to have your Docker desktop running... see above.
+This pulls the `base_ottr:main` image from Docker Hub and copies it to your computer. It will be placed in your local collection of Docker images, managed by Docker (not in your working directory). If you get an error, it may be because you forgot to have your Docker desktop running... see above.
 
 To use the Docker image associated with the course template, first navigate to the the top of this GitHub repository.
 Now you can start up the Docker container using the command below.
 
-This runs your local copy of the base_ottr:main image (which you downloaded from DockerHub).
+This runs your local copy of the `base_ottr:main` image (which you downloaded from DockerHub).
 The option `-v $PWD:/home/rstudio` mounts pwd (this repo) and makes it available at `/home/rstudio` within the container.
 Replace all of `<CHOOSE_PASSWORD>` (including the `<` and `>`) with a password of your choosing.
 
@@ -56,7 +54,7 @@ docker run -it -v %CD%:/home/rstudio -e PASSWORD=<CHOOSE_PASSWORD> -p 8787:8787 
 Do not close this window, but you can minimize it.
 Open up a new command line window and run the command: `docker ps`, you should see a container is up and running!
 
-_Couple other handy Docker commands:_
+_Couple of handy Docker commands:_
 
 - To stop your Docker container, run `docker ps` to obtain the docker container ID.
 Then you can use that ID to run `docker stop <CONTAINER_ID>`.  
@@ -64,11 +62,11 @@ Then you can use that ID to run `docker stop <CONTAINER_ID>`.
 Then you can run either `docker image rm <IMAGE_ID>`.  
 - If you really need to clear out space, you can follow this [StackOverflow post](https://stackoverflow.com/questions/44785585/docker-how-to-delete-all-local-docker-images) on how to remove all images and all containers.  
 
-For more info on how to use Docker, they have very [extensive documentation here](https://docs.docker.com/).
+To obtain further information on utilizing Docker, you can refer to their comprehensive documentation available [here](https://docs.docker.com/).
 
 #### Optionally run RStudio from the Docker container
 
-In a web browser navigate to the following to get to an RStudio that is run from your Docker container.
+In a web browser navigate to the following to open an RStudio instance that is run from your Docker container.
 
 ```
 localhost:8787
@@ -76,14 +74,17 @@ localhost:8787
 
 To log in, you'll need to use `rstudio` as the username and whatever password you put for `<CHOOSE_PASSWORD>` in the above command.
 
+
+<br>
+
 ## Starting a new Docker image
 
 Should you find that your course needs additional packages beyond what's included in the template, you should probably start a new Docker image and you'll need to do these steps to get this going:
 
-There's a library of other [ottr-ready docker images that you can see here](https://github.com/jhudsl/ottr_docker). If you would like to contribute your own customized docker image that works with OTTR, please file a pull request!
+There's a library of ottr-ready docker images that you can see [here](https://github.com/jhudsl/ottr_docker). If you would like to contribute your own customized docker image that works with OTTR, please file a pull request!
 
 1) Create a [Dockerhub account](https://hub.docker.com/signup) if you don't have one.
-2) Create a new Docker image on your Dockerhub account. [Follow these instructions if you don't know how to do that](https://jhudatascience.org/Adv_Reproducibility_in_Cancer_Informatics/launching-a-docker-image.html).
+2) Create a new Docker image on your Dockerhub account. Follow these [instructions](https://jhudatascience.org/Adv_Reproducibility_in_Cancer_Informatics/launching-a-docker-image.html) if you don't know how to do that.
 3) [Set up Dockerhub secrets in your repository or organization](#set-dockerhub-related-secrets).   
 4) [Update the Github actions workflows accordingly](#updating-workflows-for-new-docker-image).
 5) [Edit the Dockerfile in your repository](#modifying-the-dockerfile-for-a-new-image).
