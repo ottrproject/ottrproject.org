@@ -13,8 +13,8 @@
 
 <title>OTTR: Open-source Tools for Training Resources</title>
 
-<script src="site_libs/header-attrs-2.23/header-attrs.js"></script>
-<script src="site_libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<script src="site_libs/header-attrs-2.10/header-attrs.js"></script>
+<script src="site_libs/jquery-1.11.3/jquery.min.js"></script>
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <link href="site_libs/bootstrap-3.3.5/css/bootstrap.min.css" rel="stylesheet" />
 <script src="site_libs/bootstrap-3.3.5/js/bootstrap.min.js"></script>
@@ -29,14 +29,14 @@
        h6 {font-size: 12px;}
        code {color: inherit; background-color: rgba(0, 0, 0, 0.04);}
        pre:not([class]) { background-color: white }</style>
-<script src="site_libs/jqueryui-1.13.2/jquery-ui.min.js"></script>
+<script src="site_libs/jqueryui-1.11.4/jquery-ui.min.js"></script>
 <link href="site_libs/tocify-1.9.1/jquery.tocify.css" rel="stylesheet" />
 <script src="site_libs/tocify-1.9.1/jquery.tocify.js"></script>
 <script src="site_libs/navigation-1.1/tabsets.js"></script>
 <link href="site_libs/highlightjs-9.12.0/default.css" rel="stylesheet" />
 <script src="site_libs/highlightjs-9.12.0/highlight.js"></script>
-<link href="site_libs/font-awesome-6.4.0/css/all.min.css" rel="stylesheet" />
-<link href="site_libs/font-awesome-6.4.0/css/v4-shims.min.css" rel="stylesheet" />
+<link href="site_libs/font-awesome-5.1.0/css/all.css" rel="stylesheet" />
+<link href="site_libs/font-awesome-5.1.0/css/v4-shims.css" rel="stylesheet" />
   <html>
   
   <head>
@@ -82,7 +82,6 @@ if (window.hljs) {
 
 
 
-
 <link rel="stylesheet" href="style.css" type="text/css" />
 
 
@@ -107,9 +106,6 @@ button.code-folding-btn:focus {
 }
 summary {
   display: list-item;
-}
-details > summary > p:only-child {
-  display: inline;
 }
 pre code {
   padding: 0;
@@ -167,15 +163,11 @@ $(document).ready(function () {
     href = "index.html";
   var menuAnchor = $('a[href="' + href + '"]');
 
-  // mark the anchor link active (and if it's in a dropdown, also mark that active)
-  var dropdown = menuAnchor.closest('li.dropdown');
-  if (window.bootstrap) { // Bootstrap 4+
-    menuAnchor.addClass('active');
-    dropdown.find('> .dropdown-toggle').addClass('active');
-  } else { // Bootstrap 3
-    menuAnchor.parent().addClass('active');
-    dropdown.addClass('active');
-  }
+  // mark it active
+  menuAnchor.tab('show');
+
+  // if it's got a parent navbar menu mark it active as well
+  menuAnchor.closest('li.dropdown').addClass('active');
 
   // Navbar adjustments
   var navHeight = $(".navbar").first().height() + 15;
@@ -204,8 +196,8 @@ $(document).ready(function () {
   border-radius: 4px;
 }
 
-.tabset-dropdown > .nav-tabs > li.active:before, .tabset-dropdown > .nav-tabs.nav-tabs-open:before {
-  content: "\e259";
+.tabset-dropdown > .nav-tabs > li.active:before {
+  content: "";
   font-family: 'Glyphicons Halflings';
   display: inline-block;
   padding: 10px;
@@ -213,9 +205,16 @@ $(document).ready(function () {
 }
 
 .tabset-dropdown > .nav-tabs.nav-tabs-open > li.active:before {
-  content: "\e258";
-  font-family: 'Glyphicons Halflings';
+  content: "&#xe258;";
   border: none;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open:before {
+  content: "";
+  font-family: 'Glyphicons Halflings';
+  display: inline-block;
+  padding: 10px;
+  border-right: 1px solid #ddd;
 }
 
 .tabset-dropdown > .nav-tabs > li.active {
@@ -332,7 +331,7 @@ div.tocify {
 <div class="navbar navbar-default  navbar-fixed-top" role="navigation">
   <div class="container">
     <div class="navbar-header">
-      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-bs-toggle="collapse" data-target="#navbar" data-bs-target="#navbar">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar">
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
@@ -349,7 +348,7 @@ div.tocify {
   </a>
 </li>
 <li class="dropdown">
-  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
     <span class="fa fa-play"></span>
      
     Getting Started
@@ -372,7 +371,7 @@ div.tocify {
       </a>
     </li>
     <li class="dropdown-submenu">
-      <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+      <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
         <span class="fa fa-pen"></span>
          
         Start writing content
@@ -411,7 +410,7 @@ div.tocify {
   </ul>
 </li>
 <li class="dropdown">
-  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
     <span class="fa fa-lightbulb"></span>
      
     OTTR Course Creation
@@ -434,7 +433,7 @@ div.tocify {
       </a>
     </li>
     <li class="dropdown-submenu">
-      <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+      <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
         <span class="glyphicon glyphicon-baby-formula"></span>
          
         OTTR spinoff babies
@@ -455,7 +454,7 @@ div.tocify {
       </ul>
     </li>
     <li class="dropdown-submenu">
-      <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+      <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
         <span class="glyphicon glyphicon-share"></span>
          
         Publishing
@@ -475,7 +474,7 @@ div.tocify {
   </ul>
 </li>
 <li class="dropdown">
-  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
     <span class="fa fa-palette"></span>
      
     Customization
@@ -507,7 +506,7 @@ div.tocify {
   </ul>
 </li>
 <li class="dropdown">
-  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
     <span class="fa fa-plus"></span>
      
     More features
@@ -592,8 +591,7 @@ div.tocify {
 
 
 
-<h1 class="title toc-ignore">OTTR: Open-source Tools for Training
-Resources</h1>
+<h1 class="title toc-ignore">OTTR: Open-source Tools for Training Resources</h1>
 
 </div>
 
@@ -604,49 +602,37 @@ Resources</h1>
 <div id="why-ottr" class="section level2">
 <h2>Why OTTR?</h2>
 <div class="banner_color">
-<p>OTTR makes publishing and maintaining courses on multiple platforms
-<em>less painful</em>!</p>
+<p>OTTR makes publishing and maintaining courses on multiple platforms <em>less painful</em>!</p>
 </div>
 <p><br></p>
-<p><img src="https://github.com/jhudsl/OTTR_Template/raw/main/resources/screenshots/OTTR_Robot_Image.png" alt="OTTR provides tools for customized spell check, checks for broken urls, checks for formmating, and tools to convert and render files to be compatible across publishing platforms to allow you to publish on  bookdown, Leanpub, and coursera more easily" width="400" style="display: block; margin: auto;" /></p>
+<p><img src="https://github.com/jhudsl/OTTR_Template/raw/main/resources/screenshots/OTTR_Robot_Image.png" title="OTTR provides tools for customized spell check, checks for broken urls, checks for formmating, and tools to convert and render files to be compatible across publishing platforms to allow you to publish on  bookdown, Leanpub, and coursera more easily" alt="OTTR provides tools for customized spell check, checks for broken urls, checks for formmating, and tools to convert and render files to be compatible across publishing platforms to allow you to publish on  bookdown, Leanpub, and coursera more easily" width="400" style="display: block; margin: auto;" /></p>
 <div class="banner_color">
 <p>Write 1 time ➡️ publish 3 times!</p>
 </div>
 <ul>
-<li>Edit and write a course in <a
-href="https://rmarkdown.rstudio.com/">R Markdown files</a> and have it
-published to multiple different platforms:
+<li>Edit and write a course in <a href="https://rmarkdown.rstudio.com/">R Markdown files</a> and have it published to multiple different platforms:
 <ul>
 <li><a href="https://bookdown.org/">Bookdown</a></li>
-<li><a
-href="https://leanpub.com/bookstore?type=course">Leanpub</a><br />
+<li><a href="https://leanpub.com/bookstore?type=course">Leanpub</a><br />
 </li>
 <li><a href="https://www.coursera.org/">Coursera</a><br />
 </li>
 </ul></li>
-<li>Use automagic conversion to ease the lift of prepping the material
-for different platforms. <br></li>
+<li>Use automagic conversion to ease the lift of prepping the material for different platforms. <br></li>
 </ul>
 <div class="banner_color">
 <p>Simplify publishing steps:</p>
 </div>
 <ul>
-<li>Have <a href="./getting_started.html">Github action robots</a> do
-your repetitive tasks like spell check and re-rendering.</li>
-<li>If you plan to include code, use <a
-href="https://hub.docker.com/repository/docker/jhudsl/course_template">our
-Docker image</a> for consistency across authors as well as to help you
-<a href="https://en.wikipedia.org/wiki/Dependency_hell">avoid dependency
-hell</a>.</li>
+<li>Have <a href="./getting_started.html">Github action robots</a> do your repetitive tasks like spell check and re-rendering.</li>
+<li>If you plan to include code, use <a href="https://hub.docker.com/repository/docker/jhudsl/course_template">our Docker image</a> for consistency across authors as well as to help you <a href="https://en.wikipedia.org/wiki/Dependency_hell">avoid dependency hell</a>.</li>
 </ul>
 <div class="banner_color">
 <p>Customize for your own needs:</p>
 </div>
 <ul>
-<li>Follow our guides to <a href="./customize-style.html">customize the
-style of your course</a> to show your own branding.</li>
-<li><a href="./customize-docker.html">Customize your own Docker
-image</a> for your particular needs.</li>
+<li>Follow our guides to <a href="./customize-style.html">customize the style of your course</a> to show your own branding.</li>
+<li><a href="./customize-docker.html">Customize your own Docker image</a> for your particular needs.</li>
 </ul>
 </div>
 <div id="want-to-try-ottr" class="section level2">
@@ -655,12 +641,8 @@ image</a> for your particular needs.</li>
 </div>
 <div id="how-to-cite-ottr" class="section level2">
 <h2>How to Cite OTTR</h2>
-<p>OTTR was created by members of the <a
-href="https://jhudatascience.org/index.html">Johns Hopkins Data Science
-Lab</a> and <a href="https://carnegiescience.edu/">Carnegie
-Institution</a>.</p>
-<p><strong><a href="https://arxiv.org/abs/2203.07083">See the OTTR
-pre-print here!</a>📝👀</strong></p>
+<p>OTTR was created by members of the <a href="https://jhudatascience.org/index.html">Johns Hopkins Data Science Lab</a> and <a href="https://carnegiescience.edu/">Carnegie Institution</a>.</p>
+<p><strong><a href="https://arxiv.org/abs/2203.07083">See the OTTR pre-print here!</a>📝👀</strong></p>
 <p>Here’s the BibTeX formatted citation for the pre-print:</p>
 <pre><code>@misc{ottr,
   doi = {10.48550/ARXIV.2203.07083},
