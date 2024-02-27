@@ -146,7 +146,9 @@ When you file a pull request, the quiz formatting will be checked automatically 
 If you encounter issues with the `ottrpal` package, please file an issue in its [Github repository](https://github.com/jhudsl/ottrpal/issues).
 
 
-## Hosting your course on Leanpub  
+## Hosting your course on Leanpub
+
+_Finalizing your course on Leanpub can be tricky_. We have created a course, [Using Leanpub](https://hutchdatascience.org/Using_Leanpub/index.html), to help guide you. 
 
 To host your course on Leanpub, follow these steps:  
 
