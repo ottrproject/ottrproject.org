@@ -6,7 +6,7 @@ output:
     toc_float: true
 ---
 
-By default, all automation steps and checks will run. But depending on the needs of your course, you can turn these on and off by going to the `config_automation.yml` file and switching options to `yes` or `no`.
+By default, all automation steps and checks will run. Based on the requirements of your course, you have the flexibility to enable or disable specific features by modifying the settings in the `config_automation.yml` file. Simply adjust the options to "yes" or "no" accordingly.
 
 The `config_automation.yml` file looks like this:
 
@@ -20,21 +20,24 @@ style-and-sp-check: yes
 ```
 
 There are two main sets of automation steps and checks run:
-- `.github/workflows/pull-request.yml` : run upon opening a pull request
-- `.github/workflows/render-all.yml`: run upon changes being merged to the `main` branch
 
-## Pull request checks:
+- `.github/workflows/pull-request.yml` : Run upon opening a pull request
+- `.github/workflows/render-all.yml`: Run upon any changes merged to the `main` branch
 
-These actions are triggered upon a pull request being opened. It's set up is in the file: `.github/workflows/pull-request.yml`/.
+## Pull Request Checks:
 
-### Check quiz formatting
+These actions are triggered upon a pull request being opened. They are set up in the file: `.github/workflows/pull-request.yml`/.
+
+### Check Quiz Formatting
 
 In the `config_automation.yml` file it is set by:
+
 ```
 check-quizzes: no
 ```
+
 By default, it is set to `no`. But if you wish to [create quizzes on Leanpub](https://github.com/jhudsl/OTTR_Template/wiki/Publishing-on-Leanpub), you should set this to `yes`. This is not necessary if you only want quizzes for Coursera.
-Leanpub needs a particular format for it to upload correctly. This action will look for quizzes in a `quizzes` directory and check for these items. The outcome of these quiz checks will be printed to a GitHub comment on your pull request.
+Leanpub needs a particular format for it to upload correctly. This action will look for quizzes in the `quizzes` directory and check for these items. The outcome of these quiz checks will be printed to a GitHub comment on your pull request.
 
 ### Check for broken URLs
 
@@ -43,10 +46,10 @@ In the `config_automation.yml` file it is set by:
 url-checker: yes
 ```
 
-GitHub actions runs a check on all the URLs upon creating a pull request to the `main` branch.
-If it fails, you can click on the output comment on your pull request that says "Download errors here". This will give you a print out of the broken urls it found.
+GitHub Actions runs a check on all the URLs upon creating a pull request to the `main` branch.
+If it fails, you can click on the output comment on your pull request that says "Download errors here". This will give you a print out of the broken URLs it found.
 
-If the URL checker is failing on something that isn't really a URL or doesn't need to be checked, open the `resources/ignore-urls.txt` file and add that url exactly as it is specified in the error print out.
+If the URL checker is failing on something that isn't really a URL or doesn't need to be checked, open the `resources/ignore-urls.txt` file and add that URL exactly as it is specified in the error print out.
 
 ### Preview rendering
 
@@ -54,7 +57,7 @@ In the `config_automation.yml` file it is set by:
 ```
 render-preview: yes
 ```
-After you open a pull request, a preview of the renders will be linked in a automatic comment on the pull request. Upon each commit these previews will re-render and edit the comment with the latest render.
+After you open a pull request, a preview of the renders will be linked in an automatic comment on the pull request. Upon each commit these previews will re-render and edit the comment with the latest render.
 
 ![](https://raw.githubusercontent.com/jhudsl/OTTR_Template/main/resources/screenshots/preview_comment.png)
 
@@ -68,7 +71,7 @@ In the `config_automation.yml` file it is set by:
 ```
 spell-check: yes
 ```
-Github actions will automatically run a spell check on all Rmd's and md's whenever a pull request to the `main` branch is filed.
+Github Actions will automatically run a spell check on all Rmds and mds whenever a pull request to the `main` branch is filed.
 
 It will fail if there are more than 2 spelling errors and you'll need to resolve those before being able to merge your pull request. Errors will be printed out on a GitHub comment on your pull request.
 
@@ -78,18 +81,16 @@ To resolve those spelling errors, click on the link with the errors on the autog
 Some of these errors may be things that the spell check doesn't recognize for example: `ITCR` or `DaSL`.
 If it's a 'word' the spell check should recognize, you'll need to add this to the dictionary.
 
-Go to the `resources/dictionary.txt` file.
-Open the file and add the new 'word' to its appropriate place (the words are in alphabetical order).
-Then commit the changes to `resources/dictionary.txt` to your branch and this should make the spell check status check pass.
+Go to the `resources/dictionary.txt` file. Open the file and add the new 'word' to its appropriate place (the words are in alphabetical order).
+After committing the changes to `resources/dictionary.txt` on your branch, the spell check status check should be successfully passed.
 
 ### Style code
 
-In the config_automation.yml file it is set by:
+In the `config_automation.yml` file it is set by:
 ```
 style-code: yes
 ```
-The `styler` package to all style R in all Rmds.
-Style changes will automatically be committed back to your branch.
+The `styler` package will style R code in all Rmds. Style changes will automatically be committed back to your branch.
 
 ### Docker testing
 
@@ -98,7 +99,9 @@ In the config_automation.yml file it looks like:
 docker-test: no
 ```
 By default it is set to `no` which means it won't run automatically unless you change this to `yes`.
-This is only relevant if you have [your own Docker image you are managing for your course](https://github.com/jhudsl/OTTR_Template/wiki/Using-Docker#starting-a-new-docker-image). If changes are made to Docker-relevant files: `Dockerfile`, `install_github.R`, or `github_package_list.tsv`, this will test re-build the Docker image. If it is successfully built, then it makes sense to merge it to `main` but the docker image will not be pushed to `Dockerhub` automatically. [Follow these instructions to push your Docker image to Dockerhub](https://github.com/jhudsl/OTTR_Template/wiki/Using-Docker#pushing-the-docker-image).
+This is only relevant if you have [your own Docker image you are managing for your course](https://github.com/jhudsl/OTTR_Template/wiki/Using-Docker#starting-a-new-docker-image). If changes are made to Docker-relevant files: `Dockerfile`, `install_github.R`, or `github_package_list.tsv`, this will test re-build the Docker image. If it is successfully built, then it makes sense to merge it to `main` but the Docker Image will not be pushed to `Dockerhub` automatically. [Follow these instructions to push your Docker image to Dockerhub](https://github.com/jhudsl/OTTR_Template/wiki/Using-Docker#pushing-the-docker-image).
+
+<br>
 
 ## Rendering actions
 
@@ -110,13 +113,17 @@ render-bookdown: yes
 render-leanpub: yes
 render-coursera: yes
 ```
-For publishing to Leanpub, make sure that the render Leanpub option is set to yes: `render-leanpub: yes`.  [See more details about publishing to Leanpub, here](https://github.com/jhudsl/OTTR_Template/wiki/Publishing-on-Leanpub).
+For publishing to Leanpub, make sure that the render Leanpub option is set to yes: `render-leanpub: yes`.  See more details about publishing to Leanpub [here](https://github.com/jhudsl/OTTR_Template/wiki/Publishing-on-Leanpub).
 
-For publishing to Coursera, make sure render Coursera option is set to yes: `render-coursera: yes`. [See more details about publishing to Coursera, here](https://github.com/jhudsl/OTTR_Template/wiki/Publishing-on-Coursera).
+For publishing to Coursera, make sure render Coursera option is set to yes: `render-coursera: yes`. See more details about publishing to Coursera [here](https://github.com/jhudsl/OTTR_Template/wiki/Publishing-on-Coursera).
+
+<br>
 
 ## Manually running rendering or checks
 
-From time to time, it may be useful to manually re-trigger a particular GitHub action. Most of the GitHub Actions, particularly the rendering ones, can be re-run manually. See this article about [how to manually re-run a GitHub Action](https://docs.github.com/en/actions/managing-workflow-runs/manually-running-a-workflow#running-a-workflow).
+From time to time, it may be useful to manually re-trigger a particular GitHub Action. Most of the GitHub Actions, particularly the rendering ones, can be re-run manually. See this article about [how to manually re-run a GitHub Action](https://docs.github.com/en/actions/managing-workflow-runs/manually-running-a-workflow#running-a-workflow).
+
+<br>
 
 ## Fixing broken GitHub Actions
 

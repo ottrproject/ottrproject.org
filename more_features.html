@@ -580,7 +580,7 @@ div.tocify {
 <p>There are a lot of additional features and tools of OTTR that are discussed here!</p>
 <div id="citing-sources" class="section level2">
 <h2>Citing sources</h2>
-<p>You can generally follow the <a href="https://bookdown.org/yihui/rmarkdown-cookbook/bibliography.html">Bookdown instructions about citations</a>, but you don’t need to add the additional bibliography argument at the top of the Rmds.</p>
+<p>You can generally follow the <a href="https://bookdown.org/yihui/rmarkdown-cookbook/bibliography.html">Bookdown instructions about citations</a>, but you don’t need to add the additional bibliography argument at the top of the Rmd.</p>
 <p>To add a new reference source, add to the <code>book.bib</code> file, keeping your new entry in alphabetical order.</p>
 <p>For articles (or anything with a DOI), go to <a href="https://www.doi2bib.org/">doi2bib.org</a> or <a href="https://zbib.org/">ZoteroBib</a> to get a BibTex-formatted reference that you can copy and paste the reference to the <code>book.bib</code> file.</p>
 <p>You can also use programs like Zotero or Endnote to export a .bib file and either combine with the <code>book.bib</code> or manage your references from there.</p>
@@ -596,26 +596,18 @@ div.tocify {
 </blockquote>
 <p>See <a href="https://github.com/jhudsl/OTTR_Template/blob/main/02-chapter_of_course.Rmd">Chapter 2</a> of this template course for examples.</p>
 <p>This will automatically list references at the bottom of each chapter included in your course, as well as at the end of your course. Thus it is important to keep the <code>References.Rmd</code> file and to keep this as the last part of the <code>_bookdown.yml</code> file as it is in the template, so that this full list of references will be listed in a place that makes sense.</p>
-<div class="figure">
-<img src="resources/images/references_bookdown.png" alt="" />
-<p class="caption">_bookdown.yml file showing the references file as the last file</p>
-</div>
+<p><img src="resources/images/references_bookdown.png" /></p>
 <p>Alternatively, you can add a header for this list of references as the last header in any other Rmd file that is listed as the final file of the <code>_bookdown.yml</code> file.</p>
 <p>If you would like to suppress having references listed at the end of each chapter, you can add a line that says <code>split_bib: false</code> to your <code>_output.yml</code> file.</p>
-<div class="figure">
-<img src="resources/images/false_split_ref.png" alt="" />
-<p class="caption">_output.yml file showing the split.bibset to false</p>
-</div>
+<p><img src="resources/images/false_split_ref.png" /></p>
+<p><br></p>
 </div>
 <div id="giving-credits-to-contributors" class="section level2">
 <h2>Giving credits to contributors</h2>
-<p>Since so many individuals contribute to our courses in so many ways. Thus, we decided to make a table of credits to make it clear who did what.</p>
+<p>Since so many individuals contribute to our courses in so many ways, we decided to make a table of credits to make it clear who did what.</p>
 <p>Here is an example:</p>
-<div class="figure">
-<img src="https://raw.githubusercontent.com/jhudsl/OTTR_Template/main/resources/screenshots/example_credits.png" alt="" />
-<p class="caption">Credit section from a course that used this template</p>
-</div>
-<p>Please see the <a href="https://jhudatascience.org/OTTR_Template/about-the-authors.html">about section</a> of the template for descriptions of how credits should be attributed for the course.</p>
+<p><img src="https://raw.githubusercontent.com/jhudsl/OTTR_Template/main/resources/screenshots/example_credits.png" /></p>
+<p>Please see the <a href="https://jhudatascience.org/OTTR_Template/about-the-authors.html">About section</a> of the template for descriptions of how credits should be attributed for the course.</p>
 <p>This is generated from the About.Rmd file. An About.Rmd file will already be in your course from using our template. You will need to do the following steps to update it for your course:</p>
 <ol style="list-style-type: decimal">
 <li>Fill out author names for the various roles where applicable.<br />
@@ -626,7 +618,7 @@ div.tocify {
 <li>Ensure that each row has “|” around each cell value.</li>
 </ol>
 <p><em>Example Table</em>:</p>
-<p>The first row and additional rows based on <a href="https://bit.ly/course-credits-table">this table</a> should be added and filled in using <a href="https://www.markdownguide.org/extended-syntax/">markdown table format</a>.</p>
+<p>The first row and additional rows based on <a href="https://bit.ly/course-credits-table">this table</a> should be added and filled in using <a href="https://www.markdownguide.org/extended-syntax/">Markdown table format</a>.</p>
 <pre><code>|Credits|Names|
 |-------|-----|
 |Lead Content Instructor|FirstName LastName|</code></pre>
@@ -673,13 +665,14 @@ div.tocify {
 <div id="adding-the-credits-table-to-leanpub" class="section level3">
 <h3>Adding the Credits table to Leanpub</h3>
 <p>In Leanpub, make sure that your About.md file in your manuscript folder is listed in your Book.txt file and this Credits table will automatically be incorporated into your Leanpub course.</p>
+<p><br></p>
 </div>
 </div>
 <div id="borrowing-chapters" class="section level2">
-<h2>Borrowing chapters</h2>
-<p>If you have two courses that the content and topics overlap, you may want to share written material between the two.</p>
-<p>But, if you copy and paste to share material this would create a maintenance problem because if you update one you will need to remember to copy over the other! 😱</p>
-<p>In OTTR, we try to minimize maintenance pains so to get around this, we use <code>cow::borrow_chapter()</code> from the <a href="https://jhudatascience.org/cow/index.html">jhudsl/cow</a> package. The <code>cow</code> package is already on the <code>jhudsl/course_template</code> docker image so you do not need to install it if you are using the docker image or if you are have GitHub actions do all the rendering for you.</p>
+<h2>Borrowing Chapters</h2>
+<p>If you have two courses where the content and topics overlap, you may want to share written material between the two.</p>
+<p>However, sharing material by copying and pasting can lead to maintenance issues, as updating one would require remembering to update the other as well! 😱</p>
+<p>In OTTR, we try to minimize maintenance pains. To get around this, we use <code>cow::borrow_chapter()</code> from the <a href="https://jhudatascience.org/cow/index.html">jhudsl/cow</a> package. The <code>cow</code> package is already on the <code>jhudsl/course_template</code> Docker image so you do not need to install it if you are using the Docker image or if you are have GitHub Actions do all the rendering for you.</p>
 <p>To borrow a chapter from another course, create an <code>.Rmd</code> as you normally would, with a <code>ottrpal::set_knitr_image_path()</code> in a chunk at the beginning of the file and a <a href="https://www.markdownguide.org/basic-syntax/"><code>H1</code> title</a>.</p>
 <p>Then, wherever you would like the borrowed chapter to appear, put an R chunk with this; where <code>{r, echo = FALSE, results='asis'}</code> is included in your chunk arguments.</p>
 <pre><code>cow::borrow_chapter(
@@ -689,14 +682,16 @@ div.tocify {
 <p>The magic of this function is that whenever the course is re-rendered it will knit the latest version of the chapter you are borrowing. Note that this chunk cannot be run interactively, just include it in your Rmd and render your course as usual.</p>
 <div id="borrowing-from-a-local-file" class="section level3">
 <h3>Borrowing from a local file</h3>
-<p>If for some reason you would like a local file incorporated, just leave off the repo_name argument and <code>cow::borrow_chapter()</code> will look for the chapter locally: Have your chunk arguments include: <code>{r, echo = FALSE, results='asis'}</code>.</p>
+<p>If for some reason you would like a local file incorporated, just leave off the <code>repo_name</code> argument and <code>cow::borrow_chapter()</code> will look for the chapter locally.</p>
+<p>Have your chunk arguments include <code>{r, echo = FALSE, results='asis'}</code>.</p>
 <pre><code>cow::borrow_chapter(
   doc_path = &quot;02-chapter_of_course.Rmd&quot;
 )</code></pre>
 </div>
 <div id="borrowing-from-a-private-repository" class="section level3">
 <h3>Borrowing from a private repository</h3>
-<p>If you are borrowing from a course in a private repository, you will need to supply <a href="https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/creating-a-personal-access-token">GitHub personal access token</a> using a <code>git_pat</code> argument like this: Have your chunk arguments include:<code>{r, echo = FALSE, results='asis'}</code></p>
+<p>If you are borrowing from a course in a private repository, you will need to supply a <a href="https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/creating-a-personal-access-token">GitHub personal access token</a> using a <code>git_pat</code> argument like this:</p>
+<p>Have your chunk arguments include:<code>{r, echo = FALSE, results='asis'}</code></p>
 <pre><code>cow::borrow_chapter(
   doc_path = &quot;02-chapter_of_course.Rmd&quot;,
   repo_name = &quot;jhudsl/Private_Repo&quot;,
@@ -710,7 +705,7 @@ div.tocify {
 </div>
 <div id="linking-between-chapters" class="section level3">
 <h3>Linking between chapters</h3>
-<p>If you don’t want the material from another chapter completely copied over, you might instead just want to put a link to the Bookdown chapter. You can just use the full url. A link would look something like this:</p>
+<p>If you don’t want the material from another chapter completely copied over, you might instead just want to put a link to the Bookdown chapter. You can just use the full URL. A link would look something like this:</p>
 <pre><code>![](https://jhudatascience.org/OTTR_Template/a-new-chapter.html)</code></pre>
 <p>You might want your course available for download as a docx. For example, you might be running a “train-the-trainer” workshop where trainees don’t feel comfortable using Github to edit the lessons for their own use.</p>
 <p>The following yml in <code>index.Rmd</code> allows you to render the docx with a table of contents:</p>
@@ -723,6 +718,7 @@ div.tocify {
       reference_docx: &lt;path/to/template&gt;.docx
       toc: true</code></pre>
 <p>Learn more about templates <a href="https://bookdown.org/yihui/rmarkdown-cookbook/word-template.html">here</a>.</p>
+<p><br></p>
 </div>
 </div>
 <div id="compatibility-with-google-docs" class="section level2">
@@ -734,12 +730,16 @@ div.tocify {
 <li>So you are able to keep track of the changes to the docx version of the course, its advisable to set to “suggestions” when you share the document.</li>
 <li>Then as comments and suggestions trickle in, a lead author who is comfortable with the OTTR process can incorporate those comments into an existing or new pull request which can checked for its rendering and eventually added to the <code>main</code> content branch.</li>
 </ul>
+<p><br></p>
 </div>
 <div id="google-analytics" class="section level2">
 <h2>Google Analytics</h2>
 <p>If you would like to add Google Analytics to track traffic to your course, you can do the following:</p>
 <ol style="list-style-type: decimal">
-<li><p>Get a <strong>Google Analytics account</strong> (if you do not already have one): <a href="https://analytics.google.com/analytics">https://analytics.google.com/analytics</a> <img src="resources/images/GA_account.png" alt="Google Analytics account setup" /> Note that in creating an account you will need to agree to some terms. Currently it is free to get Google analytics data as long as your course does not exceed a very high user rate. Check to make sure that the terms work for you <img src="resources/images/GA_terms.png" alt="Google Analytics terms" /></p></li>
+<li>Get a <strong>Google Analytics account</strong> (if you do not already have one): <a href="https://analytics.google.com/analytics">https://analytics.google.com/analytics</a> <img src="resources/images/GA_account.png" /> Note that in creating an account you will need to agree to some terms. Currently it is free to get Google analytics data as long as your course does not exceed a very high user rate.</li>
+</ol>
+<p>Check to make sure that the terms work for you <img src="resources/images/GA_terms.png" /></p>
+<ol style="list-style-type: decimal">
 <li><p>If you already have an account or navigated away from where you started - Go to the <strong>Admin tab</strong> (lower left button that looks like a gear)</p></li>
 <li><p>Set up a new <strong>property</strong> (fill out name and details, select options about tracking traffic for how you intend to use Google Analytics) <img src="resources/images/GA_Create_Property.png" alt="Google Analytics Property creation" /> <img src="resources/images/GA_Property_setup.png" alt="Google Analytics Property" /> <img src="resources/images/GA_property.png" alt="Google Analytics Property choices" /></p></li>
 <li><p>Add a <strong>stream</strong> to your property, choose the <strong>Web</strong> option. <img src="resources/images/GA_web.png" alt="Google Analytics stream options" /></p></li>
