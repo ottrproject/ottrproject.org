@@ -10,7 +10,7 @@ There are a lot of additional features and tools of OTTR that are discussed here
 
 ## Citing sources
 
-You can generally follow the [Bookdown instructions about citations](https://bookdown.org/yihui/rmarkdown-cookbook/bibliography.html), but you don't need to add the additional bibliography argument at the top of the Rmds.
+You can generally follow the [Bookdown instructions about citations](https://bookdown.org/yihui/rmarkdown-cookbook/bibliography.html), but you don't need to add the additional bibliography argument at the top of the Rmd.
 
 To add a new reference source, add to the `book.bib` file, keeping your new entry in alphabetical order.
 
@@ -36,23 +36,26 @@ See [Chapter 2](https://github.com/jhudsl/OTTR_Template/blob/main/02-chapter_of_
 
 This will automatically list references at the bottom of each chapter included in your course, as well as at the end of your course. Thus it is important to keep the `References.Rmd` file and to keep this as the last part of the `_bookdown.yml` file as it is in the template, so that this full list of references will be listed in a place that makes sense. 
 
-![_bookdown.yml file showing the references file as the last file](resources/images/references_bookdown.png)
+![](resources/images/references_bookdown.png)
 
 Alternatively, you can add a header for this list of references as the last header in any other Rmd file that is listed as the final file of the `_bookdown.yml` file. 
 
 If you would like to suppress having references listed at the end of each chapter, you can add a line that says `split_bib: false`  to your `_output.yml` file.
 
-![_output.yml file showing the split.bibset to false](resources/images/false_split_ref.png)
+![](resources/images/false_split_ref.png)
+
+
+<br>
 
 ## Giving credits to contributors
 
-Since so many individuals contribute to our courses in so many ways.  Thus, we decided to make a table of credits to make it clear who did what.
+Since so many individuals contribute to our courses in so many ways, we decided to make a table of credits to make it clear who did what.
 
 Here is an example:  
 
-![Credit section from a course that used this template](https://raw.githubusercontent.com/jhudsl/OTTR_Template/main/resources/screenshots/example_credits.png)
+![](https://raw.githubusercontent.com/jhudsl/OTTR_Template/main/resources/screenshots/example_credits.png)
 
-Please see the [about section](https://jhudatascience.org/OTTR_Template/about-the-authors.html) of the template for descriptions of how credits should be attributed for the course.
+Please see the [About section](https://jhudatascience.org/OTTR_Template/about-the-authors.html) of the template for descriptions of how credits should be attributed for the course.
 
 This is generated from the About.Rmd file. An About.Rmd file will already be in your course from using our template. You will need to do the following steps to update it for your course:
 
@@ -63,7 +66,7 @@ This is generated from the About.Rmd file. An About.Rmd file will already be in 
 
 *Example Table*:
 
-The first row and additional rows based on [this table](https://bit.ly/course-credits-table) should be added and filled in using [markdown table format](https://www.markdownguide.org/extended-syntax/).
+The first row and additional rows based on [this table](https://bit.ly/course-credits-table) should be added and filled in using [Markdown table format](https://www.markdownguide.org/extended-syntax/).
 ```
 |Credits|Names|
 |-------|-----|
@@ -127,14 +130,16 @@ In Coursera, you can add the credits table URL as an ungraded plugin ([the same 
 
 In Leanpub, make sure that your About.md file in your manuscript folder is listed in your Book.txt file and this Credits table will automatically be incorporated into your Leanpub course.
 
-## Borrowing chapters
+<br>
 
-If you have two courses that the content and topics overlap, you may want to share written material between the two.
+## Borrowing Chapters
 
-But, if you copy and paste to share material this would create a maintenance problem because if you update one you will need to remember to copy over the other! 😱
+If you have two courses where the content and topics overlap, you may want to share written material between the two.
 
-In OTTR, we try to minimize maintenance pains so to get around this, we use `cow::borrow_chapter()` from the [jhudsl/cow](https://jhudatascience.org/cow/index.html) package.
-The `cow` package is already on the `jhudsl/course_template` docker image  so you do not need to install it if you are using the docker image or if you are have GitHub actions do all the rendering for you.
+However, sharing material by copying and pasting can lead to maintenance issues, as updating one would require remembering to update the other as well! 😱
+
+In OTTR, we try to minimize maintenance pains. To get around this, we use `cow::borrow_chapter()` from the [jhudsl/cow](https://jhudatascience.org/cow/index.html) package.
+The `cow` package is already on the `jhudsl/course_template` Docker image  so you do not need to install it if you are using the Docker image or if you are have GitHub Actions do all the rendering for you.
 
 To borrow a chapter from another course, create an `.Rmd` as you normally would, with a `ottrpal::set_knitr_image_path()` in a chunk at the beginning of the file and a [`H1` title](https://www.markdownguide.org/basic-syntax/).
 
@@ -152,9 +157,9 @@ Note that this chunk cannot be run interactively, just include it in your Rmd an
 
 ### Borrowing from a local file
 
-If for some reason you would like a local file incorporated, just leave off the repo_name argument and `cow::borrow_chapter()` will look for the chapter locally:
-Have your chunk arguments include: `{r, echo = FALSE, results='asis'}`.
+If for some reason you would like a local file incorporated, just leave off the `repo_name` argument and `cow::borrow_chapter()` will look for the chapter locally. 
 
+Have your chunk arguments include `{r, echo = FALSE, results='asis'}`.
 ```
 cow::borrow_chapter(
   doc_path = "02-chapter_of_course.Rmd"
@@ -163,7 +168,8 @@ cow::borrow_chapter(
 
 ### Borrowing from a private repository
 
-If you are borrowing from a course in a private repository, you will need to supply [GitHub personal access token](https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/creating-a-personal-access-token) using a `git_pat` argument like this:
+If you are borrowing from a course in a private repository, you will need to supply a [GitHub personal access token](https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/creating-a-personal-access-token) using a `git_pat` argument like this:
+
 Have your chunk arguments include:`{r, echo = FALSE, results='asis'}`
 
 ```
@@ -182,7 +188,7 @@ If you want to change the title you can use an option `remove_h1` to remove the 
 
 ### Linking between chapters
 
-If you don't want the material from another chapter completely copied over, you might instead just want to put a link to the Bookdown chapter. You can just use the full url. A link would look something like this:
+If you don't want the material from another chapter completely copied over, you might instead just want to put a link to the Bookdown chapter. You can just use the full URL. A link would look something like this:
 ```
 ![](https://jhudatascience.org/OTTR_Template/a-new-chapter.html)
 ```
@@ -209,6 +215,10 @@ output:
 
 Learn more about templates [here](https://bookdown.org/yihui/rmarkdown-cookbook/word-template.html).
 
+
+<br>
+
+
 ## Compatibility with Google Docs
 
 Google Docs can be a great way to get feedback from collaborators who aren't comfortable developing in the GitHub environment. docx versions of the course are automatically rendered in pull requests and can be downloaded from the autogenerated comment.
@@ -218,14 +228,18 @@ Google Docs can be a great way to get feedback from collaborators who aren't com
 - So you are able to keep track of the changes to the docx version of the course, its advisable to set to "suggestions" when you share the document.
 - Then as comments and suggestions trickle in, a lead author who is comfortable with the OTTR process can incorporate those comments into an existing or new pull request which can checked for its rendering and eventually added to the `main` content branch.
 
+<br>
+
 ## Google Analytics
 
 If you would like to add Google Analytics to track traffic to your course, you can do the following:
 
 1. Get a **Google Analytics account** (if you do not already have one): [https://analytics.google.com/analytics](https://analytics.google.com/analytics)
-![Google Analytics account setup](resources/images/GA_account.png)
-Note that in creating an account you will need to agree to some terms. Currently it is free to get Google analytics data as long as your course does not exceed a very high user rate. Check to make sure that the terms work for you
-![Google Analytics terms](resources/images/GA_terms.png)
+![](resources/images/GA_account.png)
+Note that in creating an account you will need to agree to some terms. Currently it is free to get Google analytics data as long as your course does not exceed a very high user rate. 
+
+Check to make sure that the terms work for you
+![](resources/images/GA_terms.png)
 
 1. If you already have an account or navigated away from where you started - Go to the **Admin tab** (lower left button that looks like a gear)
 
@@ -248,7 +262,7 @@ Note that in creating an account you will need to agree to some terms. Currently
 ![](resources/images/GA_Script_ID.png)
 
 1. Add a line to the _output.yml file above the line that starts with `before body:` (i.e. nested under `includes`).  This line should be `in_header: GA_Script.html`.  Make sure this line is indented to the same level as the `before body:` line.
-![](resources/images/output_file_with_GA.png)
+![](resources/images/output_GA.png)
 
 1. **Rerender** your course by making a change to one of your chapter RMD files in a pull request and pushing and merging the pull request. This will cause new html files to be made for each chapter in the `docs` folder. The Google Analytics code should now be in each of the html files - you can check by searching for `Google Analytics`.
 

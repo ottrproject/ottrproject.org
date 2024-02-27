@@ -5,7 +5,7 @@ output:
     toc_float: true
 ---
 
-## Most common errors
+## Most Common Errors
 
 This guide will describe the most common OTTR errors and pitfalls and how to address them.
 When you open a pull request, you should see a report like this:
@@ -16,7 +16,7 @@ When you see an ❌ , click on the `Details` button to see the error message. We
 
 ***
 
-### `file is not in PNG format`: Google slides permissions fail
+### `file is not in PNG format`: Google Slides permissions fail
 
 _Error example:_
 ```

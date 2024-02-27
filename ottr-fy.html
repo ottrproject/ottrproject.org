@@ -577,19 +577,18 @@ div.tocify {
 </div>
 
 
-<p><strong>warning</strong> This is in the very early stages of testing. You may feel free to try it, but <a href="https://github.com/jhudsl/OTTR_Template/issues/new/choose">file an issue with OTTR</a> right away if it does not appear to be working as intended (or if you have other suggestions).</p>
-<p>In some cases, if you have R Markdown files, markdown files, or even better, a bookdown set of files in an existing repository that you would like OTTR-fy you can do that following these steps. This method is a bit trickier and riskier than creating a repository from scratch and is still under some testing. So we recommend generally avoiding this strategy unless its unavoidable.</p>
+<p><strong>WARNING</strong> This is in the very early stages of testing. You may feel free to try it, but <a href="https://github.com/jhudsl/OTTR_Template/issues/new/choose">file an issue with OTTR</a> right away if it does not appear to be working as intended (or if you have other suggestions).</p>
+<p>In some cases, if you have R Markdown files, Markdown files, or even better, Bookdown set of files in an existing repository that you would like to OTTR-fy you can do that following these steps. This method is a bit trickier and riskier than creating a repository from scratch and is still under some testing. So we recommend generally avoiding this strategy unless its unavoidable.</p>
 <p>This set of steps also assumes you are more familiar with GitHub.</p>
 <div id="requirements-for-ottr-fying-a-repository" class="section level2">
 <h2>Requirements for OTTR-fying a repository:</h2>
 <ul>
-<li>Need to have either markdown or R Markdown documents in the top of your repository that you are seeking to publish.</li>
-<li>Needs to be a GitHub Public repository.</li>
+<li>Need to have either Markdown or R Markdown documents in the top of your repository that you are seeking to publish.</li>
+<li>Needs to be a public GitHub repository.</li>
 </ul>
-<div id="add-ottr-files-to-your-current-repository" class="section level3">
-<h3>1. Add OTTR files to your current repository</h3>
-<p>Navigate to the top of your repository.</p>
-<p><a href="https://raw.githubusercontent.com/jhudsl/OTTR_Template/main/scripts/ottr-fy.R">Download this file</a>.</p>
+<div id="step-1-add-ottr-files-to-your-current-repository" class="section level3">
+<h3>Step 1: Add OTTR files to your current repository</h3>
+<p>Navigate to the top of your repository and <a href="https://raw.githubusercontent.com/jhudsl/OTTR_Template/main/scripts/ottr-fy.R">download this file</a>.</p>
 <p>You can do this by using wget, or by just using the link above and saving it as <code>ottr-fy.R</code> in the top of your repository.</p>
 <pre><code>wget &#39;https://raw.githubusercontent.com/jhudsl/OTTR_Template/main/scripts/ottr-fy.R&#39;</code></pre>
 <p>You’ve downloaded a script that will download the necessary files to run OTTR in your repository. Take a look at the filenames of what will be downloaded to make sure that you won’t accidentally overwrite any of your repository’s existing files.</p>
@@ -599,41 +598,46 @@ div.tocify {
 <div id="files-you-wont-need-to-edit" class="section level4">
 <h4>Files you won’t need to edit</h4>
 <ul>
-<li>.github/workflows/pull_request.yml</li>
-<li>.github/workflows/render-all.yml</li>
-<li>.github/workflows/delete-preview.yml</li>
-<li>.github/workflows/docker-build.yml</li>
-<li>scripts/git_repo_check.R</li>
-<li>scripts/make_screenshots.R</li>
-<li>scripts/quiz-check.R</li>
-<li>scripts/spell-check.R</li>
-<li>scripts/url-check.R</li>
-<li>assets/toc_close.css</li>
+<li><code>.github/workflows/pull_request.yml</code></li>
+<li><code>.github/workflows/render-all.yml</code></li>
+<li><code>.github/workflows/delete-preview.yml</code></li>
+<li><code>.github/workflows/docker-build.yml</code></li>
+<li><code>scripts/git_repo_check.R</code></li>
+<li><code>scripts/make_screenshots.R</code></li>
+<li><code>scripts/quiz-check.R</code></li>
+<li><code>scripts/spell-check.R</code></li>
+<li><code>scripts/url-check.R</code></li>
+<li><code>assets/toc_close.css</code></li>
 </ul>
 </div>
 <div id="files-youll-need-to-edit-to-customize" class="section level4">
 <h4>Files you’ll need to edit to customize</h4>
 <p>* These files also will not be downloaded if you already have set up your repository as a bookdown website and specify this in the upcoming command.</p>
 <ul>
-<li>_bookdown.yml</li>
-<li>_output.yml</li>
-<li>book.bib</li>
-<li>assets/big-image.html</li>
-<li>assets/footer.html</li>
+<li><code>_bookdown.yml</code></li>
+<li><code>_output.yml</code></li>
+<li><code>book.bib</code></li>
+<li><code>assets/big-image.html</code></li>
+<li><code>assets/footer.html</code></li>
 </ul>
 </div>
 <div id="file-you-will-likely-want-to-edit-but-dont-have-to" class="section level4">
 <h4>File you will likely want to edit but don’t have to</h4>
 <ul>
-<li>config_automation.yml</li>
-<li>assets/style.css</li>
+<li><code>config_automation.yml</code></li>
+<li><code>assets/style.css</code></li>
 </ul>
 <p>Run this this script from your command line if your repository is not already a bookdown website.</p>
 <pre><code>Rscript ottr-fy.R</code></pre>
 <p>If your repository is already configured as a bookdown website, then run this command (aka use the <code>--bookdown</code> flag):</p>
 <pre><code>Rscript ottr-fy.R --bookdown</code></pre>
 <p>Note if your GitHub repository is not configured, this script will not work.</p>
-<p>This script will automatically: 1) Open a new branch called <code>robot/ottrfy</code>. 2) Add the OTTR files listed above. 3) Add, commit, and push this branch to an <code>origin</code></p>
+<p>This script will automatically:</p>
+<ol style="list-style-type: decimal">
+<li>Open a new branch called <code>robot/ottrfy</code>.</li>
+<li>Add the OTTR files listed above.</li>
+<li>Add, commit, and push this branch to an <code>origin</code></li>
+</ol>
 <p>After that, you should go to your repository and open up a pull request. The OTTR automation checks should happen on this pull request automatically. <code>Render preview</code> check will almost certainly fail until you complete the next step.</p>
 <p>If they do not automatically start running, you may also want to check in your <code>Settings</code> &gt; <code>Actions</code> that <code>Allow all actions and reusable workflows</code> is chosen.</p>
 <p>Check your files on this pull request your files and that nothing horrible has happened to your original files (like being overwritten or deleted).</p>

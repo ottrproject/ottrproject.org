@@ -24,7 +24,7 @@ There are styles/brandings that are available in our library of style sets. Howe
 
 ### Using a style set
 
-By default this course template will use the jhudsl data science lab style. However, you can switch this to another style set by moving some files. Take a look at the `style-sets` for the other styles available.
+By default this course template will use the JHU Data Science Lab style. However, you can switch this to another style set by moving some files. Take a look at the `style-sets` for the other styles available.
 
 For example, if you are creating an ITCR course, you will need the files in `style-sets/itcr` or if you are making a DataTrail course, the files in `style-sets/data-trail`. For these instructions,let's refer to `data-trail` or `itcr` as the `<set-name>`.
 
@@ -33,6 +33,8 @@ For example, if you are creating an ITCR course, you will need the files in `sty
 1. [Create a pull request](https://github.com/jhudsl/OTTR_Template/wiki/About-pull-request-review) with these changes, and double check the rendered preview to make sure that the style is what you are looking for.
 
 [Read here](https://bookdown.org/yihui/bookdown/output-formats.html) for more about how to customize your `_output.yml` file -- which is ultimately a part of how bookdown works. 
+
+<br>
 
 ## Creating your own style
 
@@ -75,6 +77,8 @@ If you are creating a DaSL course for a project other than [ITN](https://www.itc
 - You can replace the logo with the appropriate project logo by replacing `https://www.itcrtraining.org/` with the project website link and ` "https://raw.githubusercontent.com/jhudsl/OTTR_Template/main/resources/images/logo.png"` for the project logo image link in line 11.
 
 
+<br>
+
 ## Adding sections that aren't numbered
 You may notice that currently the References page and about pages are not numbered like the other chapters. If you want additional sections like this add an Rmd file and type the name of the page after a single hashtag `#` followed by this: `{-}`. This will exclude this page from being numbered.
 
@@ -84,6 +88,8 @@ Thus as example the reference page looks like this:
 # References {-}
 ```
 
+<br>
+
 ## Changing course text colors
 
 To modify the colors used for the text, take a look at the `assets/style.css` code.
@@ -91,6 +97,8 @@ To modify the colors used for the text, take a look at the `assets/style.css` co
 If you would like to change the current dark blue color to be a different color, search and replace for `#012d72`. You can find hex color codes at this [website](https://htmlcolorcodes.com/color-picker/) to use as a replacement.
 
 If you would like to change the current light blue color to be a different color, do the same but search for `#68ace5`.
+
+<br>
 
 ## Modifying the image at the top of the course
 
