@@ -1,12 +1,11 @@
 ---
-title: "OTTR - GitHub based websites for busy people"
+title: <img src="./resources/images/basic_otter_water.PNG" width = 100px> OTTR - GitHub sites for busy people
 output:
   html_document:
     includes:
       in_header: GA_Script.Rhtml
-    toc: true
-    toc_float: true
 ---
+
 <div class = "banner_color">
   <br>           
 </div>
@@ -27,9 +26,11 @@ knitr::include_graphics("https://github.com/jhudsl/ottrproject.org/raw/main/reso
 ```
 <br>
 
+<center>
 <a href="https://ottrproject.org/getting_started.html">
-  <img src="resources/images/getstarted.png" width = 50%>
+  <img src="resources/images/getstarted.png" width = 30%>
 </a>
+</center>
 
 <br>
 

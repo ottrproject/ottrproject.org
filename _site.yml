@@ -1,6 +1,7 @@
 name: Open-source Tools for Training Resources
 output_dir: 'docs'
 navbar:
+  title: OTTR <img src="./resources/images/basic_otter_water.PNG" width = 10px>
   left:
   - text: ""
     href: index.html
