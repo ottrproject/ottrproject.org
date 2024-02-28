@@ -1,0 +1,487 @@
+---
+title: "Start writing content"
+output:
+  html_document:
+    toc: true
+    toc_float: true
+editor_options:
+  markdown:
+    wrap: 72
+---
+
+
+<style>
+p.comment {
+background-color: #DBDBDB;
+padding: 10px;
+border: 1px solid black;
+margin-left: 25px;
+border-radius: 5px;
+font-style: italic;
+}
+</style>
+
+
+Now you have an OTTR website and are ready to start putting in your content!
+
+The OTTR website development process revolves around the use of
+**pull requests**! Pull requests are a way to set up
+**proposed changes** (instead of direct changes) before you publish
+them. They enable OTTR to test your proposed changes for
+potential issues such as broken URLs or spelling errors. Importantly, pull requests
+facilitate discussions with others regarding proposed changes.
+
+![](resources/images/pull_request_model.jpg)
+
+## Method of writing content
+
+We have two recommended ways of writing content that is based on your
+comfort and interest level in using Git and GitHub:
+
+- [OTTR Entry Level](https://www.ottrproject.org/writing_content.html#ottr-entry-level): If you are not interested in delving into GitHub, you can use this version, which is entirely conducted through the GitHub web browser.
+- [OTTR Advanced](https://www.ottrproject.org/writing_content.html#ottr-advanced):  If you are already familiar with Git and GitHub or have an interest in starting to use them, we suggest this method. It will involve some additional learning, but acquiring skills in Git and GitHub will be highly beneficial not only for OTTR but also for version control in various other contexts.
+
+![](resources/images/methods_of_writing.jpg)
+
+OTTR's checks primarily focus on pull requests so you can avoid accidentally making your mistakes in your live websites.
+
+When you submit a pull request, it triggers a sequence of automatic checks performed by GitHub Actions. These checks are designed to assist you as you add content to your website.
+
+These checks will:  
+
+* Check that the all the URLs actually take learners somewhere
+* Check that the code is styled using the `styler` package
+* Check that the spelling is correct using the `spelling` package
+* Create previews of the rendered versions of the course
+
+OTTR is compatible with Quarto and regular markdown files, even though our template has RMarkdown files.
+
+You can adjust what checks are run by editing the
+`config_automation.yml` file. This is further discussed in this section
+about [customizing GitHub Actions](./customize-robots.html).
+
+-   [Jump to OTTR Entry Level instructions](#ottr-entry-level)
+-   [Jump to OTTR Advanced instructions](#ottr-advanced)
+
+<br>
+
+# OTTR Entry Level {#ottr-entry-level}
+
+You can edit and add content directly in the GitHub website if you
+prefer not to learn Git and GitHub (though we highly recommend it, as
+knowing how to use Git/GitHub is a useful skill to integrate into your
+workflow -- not just for OTTR).
+
+## Create a new branch
+
+With GitHub in order to keep your OTTR website preserved content and code
+is managed through the use of branches. To explain branches we'll mainly
+refer to two branches: your `main` branch:
+
+![](resources/images/main_branch.png)
+
+The `main` branch is what your content will be published from and it
+will be live to any visitors to your website. You will want to
+keep this `main` branch as preserved and well curated as possible!
+
+So when you are ready to add more content you will want to have an
+isolated copy of your files to work from that keeps your main branch
+safe as you work. You can name the branch you work from whatever you
+like -- its recommended you name it something related to the changes you
+are working on
+
+![](resources/images/working_branch.png)
+
+To create a new branch through the GitHub website, you will go to your
+main repository page, click on the branch changing button that
+says `main`.
+
+![](resources/images/branch-button.png)
+
+Type in a name for your new branch; something that relates to the
+changes you are making. For the purposes of this example, we'll call
+this new branch, `a-new-branch`.
+
+![](resources/images/new-branch.png)
+
+Then click `Create branch: new-changes from main`.
+
+![](resources/images/new-branch-create.png)
+
+Congrats! You've made a new branch. GitHub will automatically show you
+your new branch's files (which have been copied from the `main`).
+
+You can tell that you are on the new branch as the left corner branch
+tab now says the name of our new branch (`a-new-branch`).
+
+![](resources/images/new-branch-result.png)
+
+Now that we have a copy of all the files from the `main` branch, we can
+safely work on them in the `a-new-branch` branch.
+
+![](resources/images/main_branch_safe.png)
+
+Whenever you are making changes, you'll want to check that you are on
+your new branch in order to add any new changes to your pull request,
+just look at the left upper corner to make sure!
+
+Now let's try making some changes.
+
+
+## Committing changes
+
+In your OTTR repository, on your new branch, you can now add/edit/rename
+currently existing files while protecting your `main` branch. Adding
+changes to a branch is called making `commits`.
+
+We will describe how to edit existing files below, however, GitHub has
+great information about how to create and remove files. Additionally
+GitHub is always making changes, so if our instructions seem out of date,
+definitely checkout GitHub's current documentation:
+
+-   [Follow GitHub's instructions about managing files through their
+    website
+    here](https://docs.github.com/en/repositories/working-with-files/managing-files).
+
+After every edit you make, scroll down and make sure that you choose
+`Commit directly to the new-changes branch.`. This will add your changes
+to the pull request and thus allowing for these changes to be run
+through the OTTR checks.
+
+Then click `Commit changes`. You will need to do this after every change
+to add them to your branch.
+
+As an example, we will show a simple change to the file called
+`index.Rmd`. Scroll down to the this file and click on this file
+name.
+
+![](resources/images/index_file.png)
+
+Now click on the edit button to make a change. Notice that it shows what branch we are working on.
+
+![](resources/images/edit-button.png)
+
+Make an edit, to this file. Maybe by putting in your own website title!
+
+You can preview how it looks by pressing the `Preview changes` button.
+Red will indicate new deletions and green will indicate new additions.
+
+![](resources/images/index_preview.png)
+
+Then write a message about what changes you made and press the
+`commit changes` button.
+
+![](resources/images/first_edit_commit.png)
+
+Now you are ready to open your pull request.
+
+-   [Jump to section titled 'Open a Pull Request'](#open-a-pull-request)
+
+<br>
+
+# OTTR Advanced {#ottr-advanced}
+
+If you have an interest in utilizing GitHub (or already possess knowledge in this area), we suggest engaging with GitHub and Git beyond the GitHub website for creating your pull requests.
+
+If you are new to Git and GitHub, it is recommended you use a Git client
+to help you manage your branches more easily. Install
+[GitKraken](https://www.gitkraken.com/) for a handy way to manage your
+website locally. These steps shown here will show you the GitKraken way
+of handling files.
+
+If you are not new to GitHub, then we recommend skipping this section
+and jumping to the [`Setting Up Images` section](#set-up-images).
+
+## Cloning with Git
+
+In the GitHub workflow (excluding the Entry-Level writing method), files exist online (remote) and on your computer (local).
+
+![](resources/images/remote.png)
+
+You will need to `clone` the website repository to your own
+computer. Having a local copy of the files you are working from makes it
+easier to work from. Cloning is just making a local copy on your
+computer of the remote version of the project on GitHub.
+
+![](resources/images/cloning.png)
+
+To get started, you will need to clone your website's repository that you
+created, as you will be using it for the duration of writing your
+website.
+
+To clone a GitHub repository, using GitKraken, first, click
+`Clone a repo`. Then, choose where you'd like the repository to be on
+your computer using the `Browse` button. You will need to `Copy + Paste`
+your new repository's url to where it says `URL`.
+
+![](resources/images/cloning_2.png)
+
+Navigate to your repository on GitHub to copy the URL. Copying and
+pasting is advisable because any little typo will inhibit cloning.
+
+Now you are ready to click `Clone the repository`! It will ask you if
+you'd like to `Open Now`, click that.
+
+
+## Create a new branch
+
+Handling branches is where you unleash the real benefit of GitHub, but
+it can be confusing at first.
+
+In GitHub, preserving the content and code of your OTTR website is accomplished through the utilization of branches.
+
+To explain branches we'll mainly refer to two branches: your `main`
+branch:
+
+![](resources/images/main_branch.png)
+
+The `main` branch is what your content will be published from and it
+will be live to any visitors to your website. You will want to
+keep this `main` branch as preserved and well curated as possible!
+
+So when you are ready to add more content you will want to have an
+isolated copy of your files to work from that keeps your main branch
+safe as you work. You can name the branch you work from whatever you
+like -- its recommended you name it something related to the changes you
+are working on
+
+The best way to get a grasp of what the branches represent is to create
+one and start using it.
+
+![](resources/images/a_new_branch_gitkraken.png)
+
+In GitKraken we can create a new branch; this will be your working copy.
+First, click the `Branch` button. Next, type in a branch name in the box
+that the cursor is blinking in. In our example, we are calling it
+`a-new-branch`. Now click `Enter`! Now you have a new branch!
+
+![](resources/images/main_branch_safe.png)
+
+Now we can add/edit/rename currently existing files in our new branch,
+knowing that the content and code in the `main` branch is safe.
+
+
+## Committing changes
+
+Adding changes to a branch is called making `commits`. To modify any
+files in a branch we have to first 1) Make our changes as we normally
+would and then 2) Commit those changes.
+
+To commit changes, begin by editing a file using your preferred text editor. You can simply double-click a file locally to open it. For this example, the specific change you make doesn't matter much; it can be a small modification that you will easily notice later.
+
+![](resources/images/edit_a_file.png)
+
+If you've made a change to any file in your repository, it will appear
+in GitKraken and you can click on it to see the differences.
+
+![](resources/images/add_file.png)
+
+If we want to add these file changes to our current branch, we need to
+`commit` them.
+
+![](resources/images/commit_a_file.png)
+
+Great! Now the changes you've made have been added to your local branch.
+
+
+## Pushing changes
+
+Note that when you've committed your changes locally (on your computer), those changes
+won't be on the online version of your repository. To get them to the
+remote GitHub copy (the one on [GitHub](https://github.com/)), we will need to `push` your commits.
+
+Now that we have changes committed to our branch we are ready to also
+add them to the remote GitHub copy!
+
+![](resources/images/push_changes.png)
+
+To **push** means to add changes that are on your new branch to the
+remote branch (internet version on GitHub). The word **origin** just
+refers to where your branch is stored on the internet. Choose your
+origin in the dropdown menu and click `Submit`.
+
+![](resources/images/push_changes_gitkraken.png)
+
+<br>
+
+# Open a pull request {#open-a-pull-request}
+
+After a variable number of commits, your branch, perhaps called
+`a-new-branch` or any other new branch you might have made, is a
+different version of the original code base that may have a nifty
+improvement to it. But our main goal is to add that nifty improvement to
+the `main` branch. To start this process of bringing in new changes to
+the main curated repository, we will create a **pull request**.
+
+From GitHub:
+
+> Pull requests let you tell others about changes you've pushed to a
+> GitHub repository. Once a pull request is sent, interested parties can
+> review the set of changes, discuss potential modifications, and even
+> push follow-up commits if necessary.
+
+Pull requests are the meat of how code changes and improvements get
+reviewed and incorporated! A vast majority of the benefits of
+incorporating GitHub into your workflow centers around fully utilizing
+the power of pull requests!
+
+![](resources/images/pull_request.png)
+
+Now we can open up a pull request if we go to our GitHub repository on
+GitHub. You might need to migrate back to the main page for your
+repository and can do so by simply clicking on the blue name of your
+repository at the top. Then you will see something like this yellow
+banner message, where there is a button that says
+`Compare & pull request`.
+
+![](resources/images/open_pr.png)
+
+<details>
+
+<summary>Click here if you don't see the pull request message!!!</summary>
+
+Note that sometimes if you have used the same branch multiple times you
+may need some extra steps to create a pull request. This will involve
+first clicking on the branch tab (which may have a different number).
+
+![](resources/images/branch_tab.png)
+
+Then click on the `New Pull Request` button for the branch you want to
+work on. Be careful that is the branch you intend.
+
+![](resources/images/new_PR_2.png)
+
+</details>
+
+<br>
+
+After you click on `Compare & pull request` you'll be taken to a screen
+where you can add information about your changes. After you are done
+writing your description, click `Create Pull Request`! (If you don't
+have your pull request description *perfect* don't worry about it, you
+can always edit it later).
+
+Congrats! You've just opened a pull request! For every set of changes
+you'll make to your website, you will want to follow this similar set of
+steps.
+
+**In summary, here are the steps involved:**
+
+![](resources/images/summary.png)
+
+<br>
+
+
+# Checks on the pull requests
+
+Once your pull request is open, the OTTR GitHub Actions checks will begin. These checks will generate reports as comments on your pull request.
+
+![](https://raw.githubusercontent.com/jhudsl/OTTR_Template/main/resources/screenshots/gha-checks.png)
+
+Read these comments to begin addressing the problems with more commits
+to your branch.
+
+You can adjust what checks are run by editing the
+`config_automation.yml` file. This is further discussed in this section
+about [the GitHub
+Actions](https://github.com/jhudsl/OTTR_Template/wiki/How-to-set-up-and-customize-GitHub-actions-robots).
+
+If you need more information on failed GitHub actions you can scroll to
+the bottom of your pull request where the status of the checks are shown
+and click on `Details` for more information. If you are unsure what the
+error message means and have trouble addressing it, please [file an
+issue on the OTTR_Template repository to get
+help](https://github.com/jhudsl/OTTR_Template/issues/new?assignees=cansavvy&labels=bug&template=course-template-problem-report.md).
+
+For more on [what to put in a pull request's description, you can read
+this
+chapter](https://jhudatascience.org/Adv_Reproducibility_in_Cancer_Informatics/engaging-in-code-review---as-an-author.html).
+
+For more on [how to review a pull request, see this
+chapter](https://jhudatascience.org/Adv_Reproducibility_in_Cancer_Informatics/engaging-in-code-review---as-a-reviewer.html).
+
+
+<p class="comment">
+If you encounter situations where a spelling report or URL report doesn't look as expected, you may just need to **refresh the page** or **make another commit** to your pull request.
+</p>
+
+
+![](resources/images/summary_2.png)
+
+<br>
+
+# Adding new pages
+
+Adding new chapters to your OTTR websites requires some specific steps in
+addition to what we've discussed here.
+
+### Step 1: Add a Rmd/md/quarto file
+
+To add a new file, follow the provided instructions, ensuring that the file is named with a .Rmd extension. Additionally, make sure to add the file to your specific new branch:
+
+-   For the `Entry Level`, [read
+    this to add a new file](https://docs.github.com/en/repositories/working-with-files/managing-files/adding-a-file-to-a-repository).
+-   For the `Advanced Level`, you'll create this file locally
+    using RStudio or a text editor of your choice and follow the steps to add, commit
+    and push those to your new branch.
+
+
+### Step 2: Add the name of your new chapter to your \_site.yml file
+
+As you modify the existing pages in the template website to make them your own, you'll need to adjust your \_site.yml accordingly!
+
+For example, at first your \site.yml file will look like something like this but with more pages.
+
+When you add a new Rmd file for a new page, you will add it in the same format you see here with a `- text:`,`href`, and optionally a `icon`.
+
+The icons you can find at https://fontawesome.com/
+Additionally you can learn more about this \_site.yml file from https://rmarkdown.rstudio.com/lesson-13.html
+
+``` yaml
+name: My cool ottr website
+output_dir: '.'
+navbar:
+  title: OTTR Web
+  left:
+  - text: Home
+    href: index.html
+    icon: fa-home
+```
+
+Also in this \_site.yml file you'll find options for customizing the style of your website.
+```yaml
+output:
+  html_document:
+    theme: cosmo
+    lib_dir: site_libs
+    self_contained: no
+    highlight: textmate
+    css: styles.css
+    includes:
+       in_header: resources/header.html
+```
+
+You can pick easy themes that will change the appearance of your website. You can go https://rpubs.com/ranydc/rmarkdown_themes to see the options.
+
+### Step 3 Commit the \_site.yml file changes to the current branch
+
+Follow the steps for how to commit changes and commit the edits to your
+`_site.yml` file to your current branch.
+
+
+### Step 4 Go to your pull request to see how the checks turn out
+
+Go to your repository and click on the `Pull Request` button in the
+navbar.
+
+<br>
+
+## More resources for learning GitHub
+
+- [Using version control with GitHub](https://jhudatascience.org/Adv_Reproducibility_in_Cancer_Informatics/using-version-control-with-github.html)
+- [Happy Git and GitHub for the useR](https://happygitwithr.com/)
+- [Using Version Control with GitHub](https://jhudatascience.org/Adv_Reproducibility_in_Cancer_Informatics/using-version-control-with-github.html)
+- [Using GitHub in a workflow in RStudio](https://hutchdatascience.org/Tools_for_Reproducible_Workflows_in_R/using-github-in-a-workflow.html)
+- [GitHub for Data Scientists](https://towardsdatascience.com/introduction-to-github-for-data-scientists-2cf8b9b25fba)
+- [GitHub docs about creating a Pull Request](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/creating-a-pull-request)
+- [Making a Pull Request](https://www.atlassian.com/git/tutorials/making-a-pull-request)

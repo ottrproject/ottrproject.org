@@ -1,31 +1,46 @@
 ---
-title: "OTTR: Open-source Tools for Training Resources"
+title: <img src="./resources/images/basic_otter_water.PNG" width = 100px> OTTR - GitHub sites for busy people
 output:
   html_document:
     includes:
       in_header: GA_Script.Rhtml
-    toc: true
-    toc_float: true
 ---
+
 <div class = "banner_color">
   <br>           
 </div>
 
-## Why OTTR?
+```{r, fig.align='center', fig.alt= "OTTR helps build github based websites with less hassle. Catch potential mistakes before they go live", echo = FALSE, out.width= "50%"}
+knitr::include_graphics("./resources/images/why-ottr.png")
+```
 
-<div class = "banner_color">
-OTTR makes publishing and maintaining courses on multiple platforms _less painful_!  
-</div>
+- **No installing software needed** - OTTR completely runs through GitHub so you don't have to render things locally or install anything on your computer.
+- **Previews before you publish** Before you publish your changes to your Github-based websites, take a look at the preview that OTTR automatically provides.
+- **Automatic spell and url checks** Have [Github action robots](./getting_started.html) do your repetitive tasks like spell check and re-rendering.
+- **Customizable branding** Follow our guides to [customize the style of your website or course](./customize-style.html) to show your own branding.
+- **Avoid dependency hell** If you plan to include code examples in your website or course use [our Docker image](https://hub.docker.com/repository/docker/jhudsl/base_ottr) for consistency across authors as well as to help you struggling with installing various packages.  
+- **Customize your own Docker image** Follow our guides to [customize the docker image for course or website you're making](./customize-docker.html).
+
+```{r, fig.align='center', fig.alt= "OTTR runs url, spell checks and renders a preview upon each pull request so you can check it before you publish it", echo = FALSE, out.width= "100%"}
+knitr::include_graphics("https://github.com/jhudsl/ottrproject.org/raw/main/resources/images/checks.png")
+```
+<br>
+
+<center>
+<a href="https://ottrproject.org/getting_started.html">
+  <img src="resources/images/getstarted.png" width = 30%>
+</a>
+</center>
 
 <br>
+
+## OTTR for courses
+
+OTTR originally started as a way to publish full online courses. If this is your interest, OTTR can help you write one course but publish it in three places.
 
 ```{r, fig.align='center', fig.alt= "OTTR provides tools for customized spell check, checks for broken urls, checks for formmating, and tools to convert and render files to be compatible across publishing platforms to allow you to publish on  bookdown, Leanpub, and coursera more easily", echo = FALSE, out.width= "400"}
 knitr::include_graphics("https://github.com/jhudsl/OTTR_Template/raw/main/resources/screenshots/OTTR_Robot_Image.png")
 ```
-
-<div class = "banner_color">
-Write 1 time ➡️ publish 3 times!  
-</div>
 
 - Edit and write a course in [R Markdown files](https://rmarkdown.rstudio.com/) and have it published to multiple different platforms:  
   - [Bookdown](https://bookdown.org/)
@@ -34,26 +49,7 @@ Write 1 time ➡️ publish 3 times!
 - Use automagic conversion to ease the lift of prepping the material for different platforms.
 <br>
 
-<div class = "banner_color">
-Simplify publishing steps:  
-</div>
-
-- Have [Github action robots](./getting_started.html) do your repetitive tasks like spell check and re-rendering.
-- If you plan to include code, use [our Docker image](https://hub.docker.com/repository/docker/jhudsl/course_template) for consistency across authors as well as to help you [avoid dependency hell](https://en.wikipedia.org/wiki/Dependency_hell).  
-
-<div class = "banner_color">
-Customize for your own needs:  
-</div>
-- Follow our guides to [customize the style of your course](./customize-style.html) to show your own branding.
-- [Customize your own Docker image](./customize-docker.html) for your particular needs.
-
-## Want to try OTTR?
-
-Click [Getting Started](./getting_started.html)!
-
 ## How to Cite OTTR
-
-OTTR was created by members of the [Johns Hopkins Data Science Lab](https://jhudatascience.org/index.html) and [Carnegie Institution](https://carnegiescience.edu/).
 
 **[See the OTTR pre-print here!](https://arxiv.org/abs/2203.07083)📝👀**
 
