@@ -39,7 +39,7 @@ If you do not have a method of working with Git already, we recommend using a Gi
 
 ### 1. Create a repository from this template
 
-On the [landing page of this repository](https://github.com/jhudsl/OTTR_Template_Website/tree/1.8), locate the green "Use this template" in the upper right corner. Click on it and then "Create a new repository" to follow the provided instructions to configure your course's GitHub repository.
+On the [landing page of this repository](https://github.com/jhudsl/OTTR_Template_Website), locate the green "Use this template" in the upper right corner. Click on it and then "Create a new repository" to follow the provided instructions to configure your course's GitHub repository.
 
 \*If you want to use OTTR Course or a different spin off go to that respective repository:  
 
