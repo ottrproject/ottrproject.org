@@ -37,63 +37,47 @@ navbar:
         href: course_publishing.html#publishing-with-leanpub
       - text: "Publishing with Coursera"
         href: course_publishinghtml#publishing-with-coursera
-  - text: "OTTR spinoffs"
-    href: examples.html#ottr-spinoff-babies
-    icon: glyphicon-baby-formula
+  - text: "About"
+    icon:
     menu:
-      - text: "What is an OTTR baby"
-        href: examples.html#ottr-spinoff-babies
-      - text: "OTTR for AnVIL"
-        href: examples.html#anvil-template
-      - text: "OTTR for metric collection"
-        href: examples.html#metric-collection
-      - text: "OTTR for DataTrail"
-        href: examples.html#datatrail-template
-  - text: "Customizing OTTR"
-    href: faqs.html
-    icon: fa-plus
-    menu:
-        - text: "Customizing Checks"
-          href: customize-robots.html
-          icon: fa-robot
-        - text: "Customizing style"
-          href: customize-style.html
-          icon: fa-palette
-        - text: "Customizing Docker"
-          href: customize-docker.html
-          icon: fa-gears
-        - text: "Citing sources"
-          href: more_features.html#citing-sources
-          icon: fa-quote-left
-        - text: "Giving credits"
-          href: more_features.html#giving-credits-to-contributors
-          icon: fa-award
-        - text: "Borrowing chapters"
-          href: more_features.html#borrowing-chapters
-          icon: fa-bookmark
-        - text: "Compatibility with Google Docs"
-          href: more_features.html#compatibility-with-google-docs
-          icon: fa-file
-        - text: "Google Analytics"
-          href: more_features.html#google-analytics
-          icon: fa-chart-line
-        - text: OTTR-fying an existing repository
-          href: ottr-fy.html
-          icon: glyphicon-sunglasses
-          #icon: fa-otter # when bookdown gets updated hopefuly will have this
+      - text: "Customizing Checks"
+        href: customize-robots.html
+        icon: fa-robot
+      - text: "Customizing style"
+        href: customize-style.html
+        icon: fa-palette
+      - text: "Customizing Docker"
+        href: customize-docker.html
+        icon: fa-gears
+      - text: "Citing sources"
+        href: more_features.html#citing-sources
+        icon: fa-quote-left
+      - text: "Giving credits"
+        href: more_features.html#giving-credits-to-contributors
+        icon: fa-award
+      - text: "Borrowing chapters"
+        href: more_features.html#borrowing-chapters
+        icon: fa-bookmark
+      - text: "Compatibility with Google Docs"
+        href: more_features.html#compatibility-with-google-docs
+        icon: fa-file
+      - text: "Google Analytics"
+        href: more_features.html#google-analytics
+        icon: fa-chart-line
+      - text: OTTR-fying an existing repository
+        href: ottr-fy.html
+        icon: glyphicon-sunglasses
+      - text: "About OTTR babies"
+        href: examples.html
   - text: "Help"
     href: faqs.html
     icon: fa-handshake
   - text: ""
     href: https://github.com/jhudsl/OTTR_Template
     icon: fa-github
-  - text: "Feedback"
-    icon: fa-comment
-    href: https://forms.gle/jvFjnhqt5V1E9LbQ9
 
 output:
   html_document:
     css: style.css
     includes:
-      in_header: resources/header.html
       after_body: resources/footer.html
