@@ -22,43 +22,33 @@ navbar:
     href: examples.html
     icon: fa-lightbulb
     menu:
-      - text: "Choosing a writing method"
+      - text: "Start writing!"
         href: writing_content.html
         icon: fa-pen
-      - text: "Entry Level"
-        href: writing_content_courses.html#ottr-entry-level
-        icon: fa-circle
-      - text: "Advanced"
-        href: writing_content_courses.html#ottr-advanced
-        icon: fa-square
       - text: "Set up images"
         href: writing_content_courses.html#set-up-images
         icon: fa-images
-      - text: "OTTR course examples"
-        href: examples.html#ottr-course-examples
-        icon: fa-book
-      - text: "Choosing between platforms"
-        href: examples.html#choosing-publishing-platforms
+      - text: "Choosing course publishing platforms"
+        href: course_publishing.html#choosing-publishing-platforms
         icon: fa-tasks
-      - text: "OTTR spinoff babies"
+      - text: "Publishing with Bookdown"
+        href: course_publishing.html#publishing-with-bookdown
+      - text: "Publishing with Leanpub"
+        href: course_publishing.html#publishing-with-leanpub
+      - text: "Publishing with Coursera"
+        href: course_publishinghtml#publishing-with-coursera
+  - text: "OTTR spinoff babies"
+    href: examples.html#ottr-spinoff-babies
+    icon: glyphicon-baby-formula
+    menu:
+      - text: "What is an OTTR baby"
         href: examples.html#ottr-spinoff-babies
-        icon: glyphicon-baby-formula
-        menu:
-          - text: "What is an OTTR baby"
-            href: examples.html#ottr-spinoff-babies
-          - text: "OTTR for AnVIL"
-            href: examples.html#anvil-template
-          - text: "OTTR for DataTrail"
-            href: examples.html#datatrail-template
-      - text: "Publishing"
-        icon: glyphicon-share
-        menu:
-            - text: "Publishing with Bookdown"
-              href: examples.html#publishing-with-bookdown
-            - text: "Publishing with Leanpub"
-              href: examples.html#publishing-with-leanpub
-            - text: "Publishing with Coursera"
-              href: examples.html#publishing-with-coursera
+      - text: "OTTR for AnVIL"
+        href: examples.html#anvil-template
+      - text: "OTTR for metric collection"
+        href: examples.html#metric-collection
+      - text: "OTTR for DataTrail"
+        href: examples.html#datatrail-template
   - text: "Customization"
     href: customizing.html
     icon: fa-palette
