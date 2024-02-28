@@ -15,9 +15,9 @@ navbar:
       - text: "Starting a new OTTR course/website"
         href: getting_started.html#starting-a-new-ottr-course
         icon: fa-flag-checkered
-      - text: "Creating your website"
-        href: editing_website.html
-        icon: fa-pen
+  - text: "OTTR Website"
+    href: editing_website.html
+    icon: fa-pen
   - text: "OTTR Courses"
     href: examples.html
     icon: fa-lightbulb

@@ -6,9 +6,15 @@ output:
     toc_float: true
 ---
 
-## Prerequisites for using OTTR
+There are two main types of OTTR websites:
 
-If you wish to contribute to OTTR, please take a look at our [Code of Conduct](https://github.com/jhudsl/OTTR_Template/blob/main/code_of_conduct.md).
+[OTTR Website classic](](https://github.com/jhudsl/OTTR_Template_Website) - this is your typical website like the one you are looking at right now, with a nav bar on the top. Keep in mind you can customize everything without too much effort -- our guide will hopefully help!
+
+[OTTR Course Website](https://github.com/jhudsl/OTTR_Template) - this is for books/courses and has a table of contents on the side.
+<img src="resources/images/ottr-course-example.png" width = 400>
+
+
+## Prerequisites for using OTTR
 
 OTTR relies on R Markdown and GitHub Actions. You do not need to be an expert in either R Markdown or GitHub to get started as we will guide you through the process! However, we recommend spending a few minutes familiarizing yourself with both to gain a general understanding of their functionality before delving into our guide.
 
@@ -35,18 +41,13 @@ If you do not have a method of working with Git already, we recommend using a Gi
 
 ***
 
-## Starting a new OTTR website
+## Starting a new OTTR website/course
 
 ### 1. Create a repository from this template
 
-On the [landing page of this repository](https://github.com/jhudsl/OTTR_Template_Website), locate the green "Use this template" in the upper right corner. Click on it and then "Create a new repository" to follow the provided instructions to configure your course's GitHub repository.
-
-\*If you want to use OTTR Course or a different spin off go to that respective repository:  
-
-- [OTTR Course](https://github.com/jhudsl/OTTR_Template)
+On the [landing page of the OTTR Website repository](https://github.com/jhudsl/OTTR_Template_Website) or the [OTTR Course repository](https://github.com/jhudsl/OTTR_Template) locate the green "Use this template" in the upper right corner. Click on it and then "Create a new repository" to follow the provided instructions to configure your course's GitHub repository.
 
 ![](https://raw.githubusercontent.com/jhudsl/OTTR_Template/main/resources/screenshots/template_button.png)
-
 
 ### 2. Name your repository and fill in a short description
 
@@ -201,3 +202,5 @@ Again we have two recommended ways of writing content based on your comfort and 
 - [Jump to OTTR Advanced instructions here](./writing_content.html#ottr-advanced)
 
 Now you are ready to start writing content!
+
+If you wish to contribute to OTTR, please take a look at our [Code of Conduct](https://github.com/jhudsl/OTTR_Template/blob/main/code_of_conduct.md).

@@ -11,8 +11,8 @@ output:
   <br>           
 </div>
 
-```{r, fig.align='center', fig.alt= "OTTR helps build github based websites with less hassle. Catch potential mistakes before they go live", echo = FALSE, out.width= "400"}
-knitr::include_graphics("https://github.com/jhudsl/ottrproject.org/raw/main/resources/images/why-ottr.png")
+```{r, fig.align='center', fig.alt= "OTTR helps build github based websites with less hassle. Catch potential mistakes before they go live", echo = FALSE, out.width= "50%"}
+knitr::include_graphics("./resources/images/why-ottr.png")
 ```
 
 - **No installing software needed** - OTTR completely runs through GitHub so you don't have to render things locally or install anything on your computer.
@@ -26,8 +26,12 @@ knitr::include_graphics("https://github.com/jhudsl/ottrproject.org/raw/main/reso
 ```{r, fig.align='center', fig.alt= "OTTR runs url, spell checks and renders a preview upon each pull request so you can check it before you publish it", echo = FALSE, out.width= "100%"}
 knitr::include_graphics("https://github.com/jhudsl/ottrproject.org/raw/main/resources/images/checks.png")
 ```
+<br>
 
-**Click [Getting Started](./getting_started.html)!** To start making your own website.
+
+[![Get Started with OTTR](resources/images/getstarted.png)](./getting_started.html)
+
+<br>
 
 ## OTTR for courses
 
