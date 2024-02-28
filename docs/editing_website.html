@@ -548,16 +548,6 @@ in various other contexts.</li>
 <p><img src="resources/images/methods_of_writing.jpg" /></p>
 <p>OTTR’s checks primarily focus on pull requests so you can avoid
 accidentally making your mistakes in your live websites.</p>
-<p class="comment">
-<strong>WARNING</strong>: The live content is automatically created and
-stored in the <code>docs</code> folder. As our writing process guide
-will inform you, you <strong>should NOT make direct changes to the
-<code>docs</code> folder</strong>. The automation processes will handle
-the preparation of these files, and you should refrain from making
-direct changes to them. To learn how to edit your files and edit your
-website, please review the corresponding section in the writing process
-guide.
-</p>
 <p>When you submit a pull request, it triggers a sequence of automatic
 checks performed by GitHub Actions. These checks are designed to assist
 you as you add content to your website.</p>
@@ -569,9 +559,8 @@ package</li>
 <li>Check that the spelling is correct using the <code>spelling</code>
 package</li>
 <li>Create previews of the rendered versions of the course</li>
-<li>Check the formatting of any quizzes (if applicable)</li>
 </ul>
-<p>OTTR is compatible with quarto and regular markdown files, even
+<p>OTTR is compatible with Quarto and regular markdown files, even
 though our template has RMarkdown files.</p>
 <p>You can adjust what checks are run by editing the
 <code>config_automation.yml</code> file. This is further discussed in
@@ -579,8 +568,7 @@ this section about <a href="./customize-robots.html">customizing GitHub
 Actions</a>.</p>
 <ul>
 <li><a href="#ottr-entry-level">Jump to OTTR Entry Level
-instructions</a><br />
-</li>
+instructions</a></li>
 <li><a href="#ottr-advanced">Jump to OTTR Advanced instructions</a></li>
 </ul>
 <p><br></p>
@@ -657,16 +645,16 @@ after every change to add them to your branch.</p>
 <p>As an example, we will show a simple change to the file called
 <code>index.Rmd</code>. Scroll down to the this file and click on this
 file name.</p>
-<p><img src="resources/images/intro_file.png" /></p>
+<p><img src="resources/images/index_file.png" /></p>
 <p>Now click on the edit button to make a change. Notice that it shows
 what branch we are working on.</p>
 <p><img src="resources/images/edit-button.png" /></p>
-<p>Make an edit, such as adding to the introduction like so.</p>
-<p><img src="resources/images/first_edit.png" /></p>
+<p>Make an edit, to this file. Maybe by putting in your own website
+title!</p>
 <p>You can preview how it looks by pressing the
 <code>Preview changes</code> button. Red will indicate new deletions and
 green will indicate new additions.</p>
-<p><img src="resources/images/first_edit_preview.png" /></p>
+<p><img src="resources/images/index_preview.png" /></p>
 <p>Then write a message about what changes you made and press the
 <code>commit changes</code> button.</p>
 <p><img src="resources/images/first_edit_commit.png" /></p>

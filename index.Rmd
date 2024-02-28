@@ -16,20 +16,20 @@ knitr::include_graphics("./resources/images/why-ottr.png")
 ```
 
 - **No installing software needed** - OTTR completely runs through GitHub so you don't have to render things locally or install anything on your computer.
-- **Previews before you publish** Before you publish your changes to your github based websites, take a look at the preview that OTTR automatically provides.
+- **Previews before you publish** Before you publish your changes to your Github-based websites, take a look at the preview that OTTR automatically provides.
 - **Automatic spell and url checks** Have [Github action robots](./getting_started.html) do your repetitive tasks like spell check and re-rendering.
 - **Customizable branding** Follow our guides to [customize the style of your website or course](./customize-style.html) to show your own branding.
-- **[Customize your own Docker image](./customize-docker.html)** for your particular needs.
-- **Code display friendly** If you plan to include code examples in your website or course use [our Docker image](https://hub.docker.com/repository/docker/jhudsl/course_template) for consistency across authors as well as to help you [avoid dependency hell](https://en.wikipedia.org/wiki/Dependency_hell).  
-
+- **Avoid dependency hell** If you plan to include code examples in your website or course use [our Docker image](https://hub.docker.com/repository/docker/jhudsl/course_template) for consistency across authors as well as to help you [avoid dependency hell](https://en.wikipedia.org/wiki/Dependency_hell).  
+- **Customize your own Docker image** Follow our guides to [customize the docker image for course or website you're making](./customize-docker.html).
 
 ```{r, fig.align='center', fig.alt= "OTTR runs url, spell checks and renders a preview upon each pull request so you can check it before you publish it", echo = FALSE, out.width= "100%"}
 knitr::include_graphics("https://github.com/jhudsl/ottrproject.org/raw/main/resources/images/checks.png")
 ```
 <br>
 
-
-[![Get Started with OTTR](resources/images/getstarted.png)](./getting_started.html)
+<a href="https://ottrproject.org/getting_started.html">
+  <img src="resources/images/getstarted.png">
+</a>
 
 <br>
 

@@ -117,7 +117,7 @@ All of your GitHub Actions should now be capable of running without any issues. 
 In your repository, go to `Settings` > `Pages`.
 
 - Under `Source`, pick `Deploy fom a branch`
-- Under `Branch`, pick `main`. If you are creating an OTTR course you'll choose `/docs`.  Otherwise for an OTTR website keep this option as `root`.
+- Under `Branch`, pick `main` and choose `/docs`. 
 - Then click `Save`.  
 - Lastly, check the box that says `Enforce HTTPS` at the bottom of this page.   
 
