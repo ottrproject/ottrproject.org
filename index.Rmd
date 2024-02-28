@@ -28,7 +28,7 @@ knitr::include_graphics("https://github.com/jhudsl/ottrproject.org/raw/main/reso
 <br>
 
 <a href="https://ottrproject.org/getting_started.html">
-  <img src="resources/images/getstarted.png">
+  <img src="resources/images/getstarted.png" width = 50%>
 </a>
 
 <br>
