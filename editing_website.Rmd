@@ -492,5 +492,3 @@ navbar.
 - [GitHub for Data Scientists](https://towardsdatascience.com/introduction-to-github-for-data-scientists-2cf8b9b25fba)
 - [GitHub docs about creating a Pull Request](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/creating-a-pull-request)
 - [Making a Pull Request](https://www.atlassian.com/git/tutorials/making-a-pull-request)
-
-------------------------------------------------------------------------
