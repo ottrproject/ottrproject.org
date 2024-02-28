@@ -19,7 +19,7 @@ knitr::include_graphics("https://github.com/jhudsl/ottrproject.org/raw/main/reso
 - **No installing software needed!** - OTTR completely runs through GitHub so you don't have to render things locally or install anything on your computer!
 - **Previews before you publish!** Before you publish your changes to your github based websites, take a look at the preview that OTTR automatically provides!
 - **Automatic spell and url checks!** Have [Github action robots](./getting_started.html) do your repetitive tasks like spell check and re-rendering.
-- **Customizeable branding** Follow our guides to [customize the style of your website or course](./customize-style.html) to show your own branding.
+- **Customizable branding** Follow our guides to [customize the style of your website or course](./customize-style.html) to show your own branding.
 - **[Customize your own Docker image](./customize-docker.html)** for your particular needs.
 - **Displaying code friendly** If you plan to include code, use [our Docker image](https://hub.docker.com/repository/docker/jhudsl/course_template) for consistency across authors as well as to help you [avoid dependency hell](https://en.wikipedia.org/wiki/Dependency_hell).  
 

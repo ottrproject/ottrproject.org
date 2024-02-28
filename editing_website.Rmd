@@ -442,7 +442,7 @@ For example, at first your \site.yml file will look like something like this but
 When you add a new Rmd file for a new page, you will add it in the same format you see here with a `- text:`,`href`, and optionally a `icon`.
 
 The icons you can find at https://fontawesome.com/
-Additionally you can lear more about this \_site.yml file from https://rmarkdown.rstudio.com/lesson-13.html
+Additionally you can learn more about this \_site.yml file from https://rmarkdown.rstudio.com/lesson-13.html
 
 ``` yaml
 name: My cool ottr website
