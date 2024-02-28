@@ -22,9 +22,9 @@ font-style: italic;
 </style>
 
 
-Now you have a course repository on GitHub and you're ready to start writing content!
+Now you have an OTTR website and are ready to start putting in your content!
 
-The OTTR content development process revolves around the use of 
+The OTTR website development process revolves around the use of
 **pull requests**! Pull requests are a way to set up
 **proposed changes** (instead of direct changes) before you publish
 them. They enable OTTR to test your proposed changes for
@@ -43,21 +43,23 @@ comfort and interest level in using Git and GitHub:
 
 ![](resources/images/methods_of_writing.jpg)
 
-OTTR's checks primarily focus on pull requests so you can avoid accidentally making your mistakes in your live courses.
+OTTR's checks primarily focus on pull requests so you can avoid accidentally making your mistakes in your live websites.
 
 <p class="comment">
-**WARNING**: The live content is automatically created and stored in the `docs` folder. As our writing process guide will inform you, you **should NOT make direct changes to the `docs` folder**. The automation processes will handle the preparation of these files, and you should refrain from making direct changes to them. To learn how to edit your files and write your course, please review the corresponding section in the writing process guide.
+**WARNING**: The live content is automatically created and stored in the `docs` folder. As our writing process guide will inform you, you **should NOT make direct changes to the `docs` folder**. The automation processes will handle the preparation of these files, and you should refrain from making direct changes to them. To learn how to edit your files and edit your website, please review the corresponding section in the writing process guide.
 </p>
 
-When you submit a pull request, it triggers a sequence of automatic checks performed by GitHub Actions. These checks are designed to assist you as you add content to your course.
+When you submit a pull request, it triggers a sequence of automatic checks performed by GitHub Actions. These checks are designed to assist you as you add content to your website.
 
 These checks will:  
 
-* Check that the all the URLs actually take learners somewhere (`check-urls`)
-* Check that the code is styled using the `styler` package (`style-and-sp-check`)
-* Check that the spelling is correct using the `spelling` package (`style-and-sp-check`)
-* Create previews of the rendered versions of the course (`render-preview`)
-* Check the formatting of any quizzes (`check-quizzes`)
+* Check that the all the URLs actually take learners somewhere
+* Check that the code is styled using the `styler` package
+* Check that the spelling is correct using the `spelling` package
+* Create previews of the rendered versions of the course
+* Check the formatting of any quizzes (if applicable)
+
+OTTR is compatible with quarto and regular markdown files, even though our template has RMarkdown files.
 
 You can adjust what checks are run by editing the
 `config_automation.yml` file. This is further discussed in this section
@@ -77,14 +79,14 @@ workflow -- not just for OTTR).
 
 ## Create a new branch
 
-With GitHub in order to keep your OTTR course preserved content and code
+With GitHub in order to keep your OTTR website preserved content and code
 is managed through the use of branches. To explain branches we'll mainly
 refer to two branches: your `main` branch:
 
 ![](resources/images/main_branch.png)
 
 The `main` branch is what your content will be published from and it
-will be live to any learners looking at your course. You will want to
+will be live to any visitors to your website. You will want to
 keep this `main` branch as preserved and well curated as possible!
 
 So when you are ready to add more content you will want to have an
@@ -96,7 +98,7 @@ are working on
 ![](resources/images/working_branch.png)
 
 To create a new branch through the GitHub website, you will go to your
-main course repository page, click on the branch changing button that
+main repository page, click on the branch changing button that
 says `main`.
 
 ![](resources/images/branch-button.png)
@@ -191,7 +193,7 @@ If you have an interest in utilizing GitHub (or already possess knowledge in thi
 If you are new to Git and GitHub, it is recommended you use a Git client
 to help you manage your branches more easily. Install
 [GitKraken](https://www.gitkraken.com/) for a handy way to manage your
-course locally. These steps shown here will show you the GitKraken way
+website locally. These steps shown here will show you the GitKraken way
 of handling files.
 
 If you are not new to GitHub, then we recommend skipping this section
@@ -203,16 +205,16 @@ In the GitHub workflow (excluding the Entry-Level writing method), files exist o
 
 ![](resources/images/remote.png)
 
-You will need to `clone` the course repository to your own
+You will need to `clone` the website repository to your own
 computer. Having a local copy of the files you are working from makes it
 easier to work from. Cloning is just making a local copy on your
 computer of the remote version of the project on GitHub.
 
 ![](resources/images/cloning.png)
 
-To get started, you will need to clone your course's repository that you
+To get started, you will need to clone your website's repository that you
 created, as you will be using it for the duration of writing your
-course.
+website.
 
 To clone a GitHub repository, using GitKraken, first, click
 `Clone a repo`. Then, choose where you'd like the repository to be on
@@ -233,7 +235,7 @@ you'd like to `Open Now`, click that.
 Handling branches is where you unleash the real benefit of GitHub, but
 it can be confusing at first.
 
-In GitHub, preserving the content and code of your OTTR course is accomplished through the utilization of branches.
+In GitHub, preserving the content and code of your OTTR website is accomplished through the utilization of branches.
 
 To explain branches we'll mainly refer to two branches: your `main`
 branch:
@@ -241,7 +243,7 @@ branch:
 ![](resources/images/main_branch.png)
 
 The `main` branch is what your content will be published from and it
-will be live to any learners looking at your course. You will want to
+will be live to any visitors to your website. You will want to
 keep this `main` branch as preserved and well curated as possible!
 
 So when you are ready to add more content you will want to have an
@@ -367,7 +369,7 @@ have your pull request description *perfect* don't worry about it, you
 can always edit it later).
 
 Congrats! You've just opened a pull request! For every set of changes
-you'll make to your course, you will want to follow this similar set of
+you'll make to your website, you will want to follow this similar set of
 steps.
 
 **In summary, here are the steps involved:**
@@ -415,12 +417,12 @@ If you encounter situations where a spelling report or URL report doesn't look a
 
 <br>
 
-# Adding new chapters
+# Adding new pages
 
-Adding new chapters to your OTTR course requires some specific steps in
+Adding new chapters to your OTTR websites requires some specific steps in
 addition to what we've discussed here.
 
-### Step 1: Add a new chapter Rmd file
+### Step 1: Add a Rmd/md/quarto file
 
 To add a new file, follow the provided instructions, ensuring that the file is named with a .Rmd extension. Additionally, make sure to add the file to your specific new branch:
 
@@ -429,45 +431,49 @@ To add a new file, follow the provided instructions, ensuring that the file is n
 -   For the `Advanced Level`, you'll create this file locally
     using RStudio or a text editor of your choice and follow the steps to add, commit
     and push those to your new branch.
-    
 
-### Step 2: Add the name of your new chapter to your \_bookdown.yml file
 
-As you modify the names of the chapters of your course and add more
-chapters (using the `.Rmd` files), you need to update the
-`_bookdown.yml` file accordingly.
+### Step 2: Add the name of your new chapter to your \_site.yml file
 
-For example let's say that we added another chapter and named the file
-`03-new_chapter_of_course.Rmd`. We would update our `_bookdown.yml` to
-look like this:
+As you modify the existing pages in the template website to make them your own, you'll need to adjust your \_site.yml accordingly!
+
+For example, at first your \site.yml file will look like something like this but with more pages.
+
+When you add a new Rmd file for a new page, you will add it in the same format you see here with a `- text:`,`href`, and optionally a `icon`.
+
+The icons you can find at https://fontawesome.com/
+Additionally you can lear more about this \_site.yml file from https://rmarkdown.rstudio.com/lesson-13.html
 
 ``` yaml
-book_filename: "Course_Name"  
-chapter_name: "Chapter "  
-repo: https://github.com/jhudsl/OTTR_Template/ ##Make sure you update this for your GitHub Repo!!  
-rmd_files: ["index.Rmd",  
-            "01-intro.Rmd",   
-            "02-chapter_of_course.Rmd",   
-            "03-new_chapter_of_course.Rmd",  ##Only this is new!
-            "about.Rmd"]  
-new_session: yes  
-delete_merged_file: true  
-language:  
-  ui:  
-    chapter_name: "Chapter "  
-output_dir: "docs"  
+name: My cool ottr website
+output_dir: '.'
+navbar:
+  title: OTTR Web
+  left:
+  - text: Home
+    href: index.html
+    icon: fa-home
 ```
 
-<p class="comment">
-**WARNING:** Pay attention to the slight difference in just one line, specifically the line that reads `03-chapter_of_course.Rmd`. Be cautious regarding the use of quotation marks ("") and commas (,) in the line!
-</p>
+Also in this \_site.yml file you'll find options for customizing the style of your website.
+```yaml
+output:
+  html_document:
+    theme: cosmo
+    lib_dir: site_libs
+    self_contained: no
+    highlight: textmate
+    css: styles.css
+    includes:
+       in_header: resources/header.html
+```
 
+You can pick easy themes that will change the appearance of your website. You can go https://rpubs.com/ranydc/rmarkdown_themes to see the options.
 
-### Step 3 Commit the \_bookdown.yml file changes to the current branch
+### Step 3 Commit the \_site.yml file changes to the current branch
 
 Follow the steps for how to commit changes and commit the edits to your
-`_bookdown.yml` file to your current branch.
-
+`_site.yml` file to your current branch.
 
 
 ### Step 4 Go to your pull request to see how the checks turn out
@@ -542,7 +548,7 @@ There are two things to check for each slide:
 -   [ ] The color palette choices of the slide are contrasted in a way
     that is friendly to those with color vision deficiencies. You can
     check this using [Color Oracle](https://colororacle.org/).
-    
+
 
 
 ## Adding images and graphics in text

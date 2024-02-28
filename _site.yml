@@ -12,29 +12,28 @@ navbar:
       - text: "Prerequisites"
         href: getting_started.html#prerequisites-for-using-ottr
         icon: fa-asterisk
-      - text: "Starting a new OTTR course"
+      - text: "Starting a new OTTR course/website"
         href: getting_started.html#starting-a-new-ottr-course
         icon: fa-flag-checkered
-      - text: "Start writing content"
-        href: writing_content.html
+      - text: "Creating your website"
+        href: editing_website.html
         icon: fa-pen
-        menu:
-        - text: "Choosing a writing method"
-          href: writing_content.html
-          icon: fa-pen
-        - text: "Entry Level"
-          href: writing_content.html#ottr-entry-level
-          icon: fa-circle
-        - text: "Advanced"
-          href: writing_content.html#ottr-advanced
-          icon: fa-square
-        - text: "Set up images"
-          href: writing_content.html#set-up-images
-          icon: fa-images
   - text: "OTTR Course Creation"
     href: examples.html
     icon: fa-lightbulb
     menu:
+      - text: "Choosing a writing method"
+        href: writing_content.html
+        icon: fa-pen
+      - text: "Entry Level"
+        href: writing_content_courses.html#ottr-entry-level
+        icon: fa-circle
+      - text: "Advanced"
+        href: writing_content_courses.html#ottr-advanced
+        icon: fa-square
+      - text: "Set up images"
+        href: writing_content_courses.html#set-up-images
+        icon: fa-images
       - text: "OTTR course examples"
         href: examples.html#ottr-course-examples
         icon: fa-book
@@ -47,8 +46,6 @@ navbar:
         menu:
           - text: "What is an OTTR baby"
             href: examples.html#ottr-spinoff-babies
-          - text: "OTTR for websites"
-            href: examples.html#ottr-website
           - text: "OTTR for AnVIL"
             href: examples.html#anvil-template
           - text: "OTTR for DataTrail"

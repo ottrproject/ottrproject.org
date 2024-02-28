@@ -12,7 +12,7 @@ If you wish to contribute to OTTR, please take a look at our [Code of Conduct](h
 
 OTTR relies on R Markdown and GitHub Actions. You do not need to be an expert in either R Markdown or GitHub to get started as we will guide you through the process! However, we recommend spending a few minutes familiarizing yourself with both to gain a general understanding of their functionality before delving into our guide.
 
-Please check out these resources if you are not familiar with R Markdown:
+Please check out these resources if you are not familiar with R Markdown. Note that OTTR is also compatible with Quarto and regular markdown websites.
 
 - If you aren't familiar with **Markdown**, this [site](https://www.markdownguide.org/getting-started/) is a nice introduction.  
 
@@ -31,19 +31,19 @@ We offer two suggested approaches for creating content, based on your comfort an
 
 If you choose to use our OTTR Advanced guidance, you will need a method for working with Git.
 
-If you do not have a method of working with Git already, we recommend using a Git client to facilitate easier branch management. Install [GitKraken](https://www.gitkraken.com/) for a convenient way to handle your course locally. 
+If you do not have a method of working with Git already, we recommend using a Git client to facilitate easier branch management. Install [GitKraken](https://www.gitkraken.com/) for a convenient way to handle your course locally.
 
 ***
 
-## Starting a new OTTR course
+## Starting a new OTTR website
 
 ### 1. Create a repository from this template
 
-On the [landing page of this repository](https://github.com/jhudsl/OTTR_Template/tree/1.8), locate the green "Use this template" in the upper right corner. Click on it and then "Create a new repository" to follow the provided instructions to configure your course's GitHub repository.
+On the [landing page of this repository](https://github.com/jhudsl/OTTR_Template_Website/tree/1.8), locate the green "Use this template" in the upper right corner. Click on it and then "Create a new repository" to follow the provided instructions to configure your course's GitHub repository.
 
-\*If you want to use OTTR Website or a different spin off go to that respective repository:  
+\*If you want to use OTTR Course or a different spin off go to that respective repository:  
 
-- [OTTR Website](https://github.com/jhudsl/OTTR_Template_Website)
+- [OTTR Course](https://github.com/jhudsl/OTTR_Template)
 
 ![](https://raw.githubusercontent.com/jhudsl/OTTR_Template/main/resources/screenshots/template_button.png)
 
@@ -58,7 +58,7 @@ Enter a name for your repository in the "Repository name" field and provide a br
 
 ### 3. Ensure your course is set to `public` for all GitHub Actions to work
 
-When creating your repository, make sure to set it [to a public repository](https://docs.github.com/en/repositories/creating-and-managing-repositories/about-repositories#about-repository-visibility). 
+When creating your repository, make sure to set it [to a public repository](https://docs.github.com/en/repositories/creating-and-managing-repositories/about-repositories#about-repository-visibility).
 
 In particular, the rendered preview on pull requests won't work, but you can alternatively preview the content by re-rendering locally if you want to keep your course private. We will cover this later.
 
@@ -79,7 +79,7 @@ In the pop up window, search for and add `jhudsl-robot`.
 
 <img src="https://github.com/jhudsl/OTTR_Template/raw/main/resources/screenshots/add-jhudsl-robot.png" width = 400>
 
-If shown the option, choose the `write` option then click `Add jhudsl-robot to this repository`. Otherwise, just click `add`. 
+If shown the option, choose the `write` option then click `Add jhudsl-robot to this repository`. Otherwise, just click `add`.
 
 
 
@@ -88,7 +88,7 @@ If shown the option, choose the `write` option then click `Add jhudsl-robot to t
 In case you have a personal repository or an organization that hasn't utilized GitHub Actions previously, it is important to verify if workflow actions have been enabled.
 
 Go to `Settings` and then `Actions`. Make sure that you have:
-1. Given `Read and write permissions` 
+1. Given `Read and write permissions`
 2. Checked `Allow GitHub Actions to create and approve pull requests`.
 
 Then click `Save`.
@@ -108,15 +108,15 @@ If you have organization admin privileges and plan on making multiple courses wi
 - Under `Name`, you must use `GH_PAT`.
 - For `Secret`: Create a personal access token following these [instructions](https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/managing-your-personal-access-tokens#creating-a-personal-access-token-classic) to create a "Classic" token (not a "Fine-grained token"). Underneath `Select scopes`, check both `repo` and `workflow`. Copy the Personal Access Token and save as a Secret in the repository that you made from our template.
 
-All of your GitHub Actions should now be capable of running without any issues. If you encounter any problems, please report your issue to the main OTTR repository [here](https://github.com/jhudsl/OTTR_Template/issues/new?assignees=&labels=bug&projects=&template=course-problem-report.md&title%5B%5D=Problem). 
+All of your GitHub Actions should now be capable of running without any issues. If you encounter any problems, please report your issue to the main OTTR repository [here](https://github.com/jhudsl/OTTR_Template/issues/new?assignees=&labels=bug&projects=&template=course-problem-report.md&title%5B%5D=Problem).
 
 
 ### 8. Set up GitHub Pages
 
 In your repository, go to `Settings` > `Pages`.
 
-- Under `Source`, pick `Deploy fom a branch` 
-- Under `Branch`, pick `main` and `/docs`.  
+- Under `Source`, pick `Deploy fom a branch`
+- Under `Branch`, pick `main`. If you are creating an OTTR course you'll choose `/docs`.  Otherwise for an OTTR website keep this option as `root`.
 - Then click `Save`.  
 - Lastly, check the box that says `Enforce HTTPS` at the bottom of this page.   
 
@@ -148,7 +148,7 @@ For `Branch name pattern`, put `main`.
 _Protect the main branch_:  
 Then check the box that says `Require a pull request before merging`.
 
-\* Note that if the user whose personal access token does not have admin privileges for step `6. Set up your GitHub personal access token`, then you will need to skip this setting. 
+\* Note that if the user whose personal access token does not have admin privileges for step `6. Set up your GitHub personal access token`, then you will need to skip this setting.
 
 _Make sure branches are updated_:  
 - Check the box that says `Require status checks to pass before merging`.
@@ -161,17 +161,18 @@ After setting up these new branch items, click `Create` and `Save changes`.
 
 ### 10. Enroll your repository for OTTR updates
 
-This original course template (https://github.com/jhudsl/OTTR_Template) is always a work in progress.
+This OTTR templates (https://github.com/jhudsl/OTTR_Template_Website) are always a work in progress.
 We are working on adding more features and smoothing out bugs as we go. This is also why [your feedback is greatly appreciated](https://github.com/jhudsl/OTTR_Template/issues/new/choose).
 
 When updates are made to files that aren't specific to the course content but instead run checks and other processes in the original repository, pull requests are filed automatically to any downstream repositories made from this template.
 
-**To enroll in these automatic update pull requests, the new course's repository name will need to be added to [this file in the original template](https://github.com/jhudsl/OTTR_Template/edit/main/.github/sync.yml)**
+**To enroll in these automatic update pull requests, the new course's repository name will need to be added to [this file in the OTTR website template](https://github.com/jhudsl/OTTR_Template_Website/edit/main/.github/sync.yml)**
 
 - Go to the respective file: `.github/sync.yml` of the OTTR template repository you created your repository from:
-    - [File for the main OTTR_Template updates](https://github.com/jhudsl/OTTR_Template/blob/main/.github/sync.yml)
+    - [File for the main course OTTR_Template_Website updates](https://github.com/jhudsl/OTTR_Template_Website/blob/main/.github/sync.yml)
+    - [File for the main course OTTR_Template updates](https://github.com/jhudsl/OTTR_Template/blob/main/.github/sync.yml)
     - [File for the OTTR_Quizzes updates](https://github.com/jhudsl/OTTR_Quizzes/blob/main/.github/sync.yml)
-    
+
 - Add your repository's name where it says `#NEW REPO HERE#`. Be careful to indent the same amount as the other repositories listed.
 ![](https://raw.githubusercontent.com/jhudsl/OTTR_Template/main/resources/screenshots/edit-sync.yml.png)
 - Click on `Commit changes...`
