@@ -13,8 +13,8 @@
 
 <title>Customizing Docker</title>
 
-<script src="site_libs/header-attrs-2.10/header-attrs.js"></script>
-<script src="site_libs/jquery-1.11.3/jquery.min.js"></script>
+<script src="site_libs/header-attrs-2.25/header-attrs.js"></script>
+<script src="site_libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <link href="site_libs/bootstrap-3.3.5/css/bootstrap.min.css" rel="stylesheet" />
 <script src="site_libs/bootstrap-3.3.5/js/bootstrap.min.js"></script>
@@ -29,14 +29,14 @@
        h6 {font-size: 12px;}
        code {color: inherit; background-color: rgba(0, 0, 0, 0.04);}
        pre:not([class]) { background-color: white }</style>
-<script src="site_libs/jqueryui-1.11.4/jquery-ui.min.js"></script>
+<script src="site_libs/jqueryui-1.13.2/jquery-ui.min.js"></script>
 <link href="site_libs/tocify-1.9.1/jquery.tocify.css" rel="stylesheet" />
 <script src="site_libs/tocify-1.9.1/jquery.tocify.js"></script>
 <script src="site_libs/navigation-1.1/tabsets.js"></script>
 <link href="site_libs/highlightjs-9.12.0/default.css" rel="stylesheet" />
 <script src="site_libs/highlightjs-9.12.0/highlight.js"></script>
-<link href="site_libs/font-awesome-5.1.0/css/all.css" rel="stylesheet" />
-<link href="site_libs/font-awesome-5.1.0/css/v4-shims.css" rel="stylesheet" />
+<link href="site_libs/font-awesome-6.4.2/css/all.min.css" rel="stylesheet" />
+<link href="site_libs/font-awesome-6.4.2/css/v4-shims.min.css" rel="stylesheet" />
 <link rel="shortcut icon" href="resources/images/basic_otter_water.ico" />
 
 <style type="text/css">
@@ -58,6 +58,7 @@ if (window.hljs) {
   }
 }
 </script>
+
 
 
 
@@ -87,6 +88,9 @@ button.code-folding-btn:focus {
 }
 summary {
   display: list-item;
+}
+details > summary > p:only-child {
+  display: inline;
 }
 pre code {
   padding: 0;
@@ -144,11 +148,15 @@ $(document).ready(function () {
     href = "index.html";
   var menuAnchor = $('a[href="' + href + '"]');
 
-  // mark it active
-  menuAnchor.tab('show');
-
-  // if it's got a parent navbar menu mark it active as well
-  menuAnchor.closest('li.dropdown').addClass('active');
+  // mark the anchor link active (and if it's in a dropdown, also mark that active)
+  var dropdown = menuAnchor.closest('li.dropdown');
+  if (window.bootstrap) { // Bootstrap 4+
+    menuAnchor.addClass('active');
+    dropdown.find('> .dropdown-toggle').addClass('active');
+  } else { // Bootstrap 3
+    menuAnchor.parent().addClass('active');
+    dropdown.addClass('active');
+  }
 
   // Navbar adjustments
   var navHeight = $(".navbar").first().height() + 15;
@@ -177,8 +185,8 @@ $(document).ready(function () {
   border-radius: 4px;
 }
 
-.tabset-dropdown > .nav-tabs > li.active:before {
-  content: "";
+.tabset-dropdown > .nav-tabs > li.active:before, .tabset-dropdown > .nav-tabs.nav-tabs-open:before {
+  content: "\e259";
   font-family: 'Glyphicons Halflings';
   display: inline-block;
   padding: 10px;
@@ -186,16 +194,9 @@ $(document).ready(function () {
 }
 
 .tabset-dropdown > .nav-tabs.nav-tabs-open > li.active:before {
-  content: "&#xe258;";
-  border: none;
-}
-
-.tabset-dropdown > .nav-tabs.nav-tabs-open:before {
-  content: "";
+  content: "\e258";
   font-family: 'Glyphicons Halflings';
-  display: inline-block;
-  padding: 10px;
-  border-right: 1px solid #ddd;
+  border: none;
 }
 
 .tabset-dropdown > .nav-tabs > li.active {
@@ -312,7 +313,7 @@ div.tocify {
 <div class="navbar navbar-default  navbar-fixed-top" role="navigation">
   <div class="container">
     <div class="navbar-header">
-      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-bs-toggle="collapse" data-target="#navbar" data-bs-target="#navbar">
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
@@ -325,11 +326,11 @@ div.tocify {
   <a href="index.html">
     <span class="fa fa-home"></span>
      
-    About OTTR
+    
   </a>
 </li>
 <li class="dropdown">
-  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
     <span class="fa fa-play"></span>
      
     Getting Started
@@ -348,117 +349,87 @@ div.tocify {
       <a href="getting_started.html#starting-a-new-ottr-course">
         <span class="fa fa-flag-checkered"></span>
          
-        Starting a new OTTR course
+        Starting a new OTTR course/website
       </a>
     </li>
-    <li class="dropdown-submenu">
-      <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+    <li>
+      <a href="editing_website.html">
         <span class="fa fa-pen"></span>
          
-        Start writing content
+        Creating your website
       </a>
-      <ul class="dropdown-menu" role="menu">
-        <li>
-          <a href="writing_content.html">
-            <span class="fa fa-pen"></span>
-             
-            Choosing a writing method
-          </a>
-        </li>
-        <li>
-          <a href="writing_content.html#ottr-entry-level">
-            <span class="fa fa-circle"></span>
-             
-            Entry Level
-          </a>
-        </li>
-        <li>
-          <a href="writing_content.html#ottr-advanced">
-            <span class="fa fa-square"></span>
-             
-            Advanced
-          </a>
-        </li>
-        <li>
-          <a href="writing_content.html#set-up-images">
-            <span class="fa fa-images"></span>
-             
-            Set up images
-          </a>
-        </li>
-      </ul>
     </li>
   </ul>
 </li>
 <li class="dropdown">
-  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
     <span class="fa fa-lightbulb"></span>
      
-    OTTR Course Creation
+    OTTR Courses
      
     <span class="caret"></span>
   </a>
   <ul class="dropdown-menu" role="menu">
     <li>
-      <a href="examples.html#ottr-course-examples">
-        <span class="fa fa-book"></span>
+      <a href="writing_content.html">
+        <span class="fa fa-pen"></span>
          
-        OTTR course examples
+        Start writing!
       </a>
     </li>
     <li>
-      <a href="examples.html#choosing-publishing-platforms">
+      <a href="writing_content_courses.html#set-up-images">
+        <span class="fa fa-images"></span>
+         
+        Set up images
+      </a>
+    </li>
+    <li>
+      <a href="course_publishing.html#choosing-publishing-platforms">
         <span class="fa fa-tasks"></span>
          
-        Choosing between platforms
+        Choosing course publishing platforms
       </a>
     </li>
-    <li class="dropdown-submenu">
-      <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
-        <span class="glyphicon glyphicon-baby-formula"></span>
-         
-        OTTR spinoff babies
-      </a>
-      <ul class="dropdown-menu" role="menu">
-        <li>
-          <a href="examples.html#ottr-spinoff-babies">What is an OTTR baby</a>
-        </li>
-        <li>
-          <a href="examples.html#ottr-website">OTTR for websites</a>
-        </li>
-        <li>
-          <a href="examples.html#anvil-template">OTTR for AnVIL</a>
-        </li>
-        <li>
-          <a href="examples.html#datatrail-template">OTTR for DataTrail</a>
-        </li>
-      </ul>
+    <li>
+      <a href="course_publishing.html#publishing-with-bookdown">Publishing with Bookdown</a>
     </li>
-    <li class="dropdown-submenu">
-      <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
-        <span class="glyphicon glyphicon-share"></span>
-         
-        Publishing
-      </a>
-      <ul class="dropdown-menu" role="menu">
-        <li>
-          <a href="examples.html#publishing-with-bookdown">Publishing with Bookdown</a>
-        </li>
-        <li>
-          <a href="examples.html#publishing-with-leanpub">Publishing with Leanpub</a>
-        </li>
-        <li>
-          <a href="examples.html#publishing-with-coursera">Publishing with Coursera</a>
-        </li>
-      </ul>
+    <li>
+      <a href="course_publishing.html#publishing-with-leanpub">Publishing with Leanpub</a>
+    </li>
+    <li>
+      <a href="course_publishinghtml#publishing-with-coursera">Publishing with Coursera</a>
     </li>
   </ul>
 </li>
 <li class="dropdown">
-  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
-    <span class="fa fa-palette"></span>
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+    <span class="glyphicon glyphicon-baby-formula"></span>
      
-    Customization
+    OTTR spinoffs
+     
+    <span class="caret"></span>
+  </a>
+  <ul class="dropdown-menu" role="menu">
+    <li>
+      <a href="examples.html#ottr-spinoff-babies">What is an OTTR baby</a>
+    </li>
+    <li>
+      <a href="examples.html#anvil-template">OTTR for AnVIL</a>
+    </li>
+    <li>
+      <a href="examples.html#metric-collection">OTTR for metric collection</a>
+    </li>
+    <li>
+      <a href="examples.html#datatrail-template">OTTR for DataTrail</a>
+    </li>
+  </ul>
+</li>
+<li class="dropdown">
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+    <span class="fa fa-plus"></span>
+     
+    Customizing OTTR
      
     <span class="caret"></span>
   </a>
@@ -484,17 +455,6 @@ div.tocify {
         Customizing Docker
       </a>
     </li>
-  </ul>
-</li>
-<li class="dropdown">
-  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
-    <span class="fa fa-plus"></span>
-     
-    More features
-     
-    <span class="caret"></span>
-  </a>
-  <ul class="dropdown-menu" role="menu">
     <li>
       <a href="more_features.html#citing-sources">
         <span class="fa fa-quote-left"></span>
@@ -550,7 +510,7 @@ div.tocify {
   <a href="https://github.com/jhudsl/OTTR_Template">
     <span class="fa fa-github"></span>
      
-    GitHub
+    
   </a>
 </li>
 <li>
@@ -577,93 +537,188 @@ div.tocify {
 </div>
 
 
-<p>For courses that require running example code, it is strongly advisable to utilize a Docker image during development. This ensures consistent software versions among course developers.</p>
+<p>For courses that require running example code, it is strongly
+advisable to utilize a Docker image during development. This ensures
+consistent software versions among course developers.</p>
 <div id="using-the-base_ottr-docker-image" class="section level2">
 <h2>Using the base_ottr Docker image</h2>
-<p>If your course doesn’t require any additional packages to run, then you do not need to set up Docker locally but this Docker image <a href="https://hub.docker.com/repository/docker/jhudsl/base_ottr">jhudsl/base_ottr</a> will run and re-render all of your changes as you add them.</p>
-<p>We recommend using the <code>jhudsl/base_ottr:main</code> tagged image instead of the <code>latest</code> version. The <code>main</code> image is ready for use, while the <code>latest</code> may be under development. All GitHub Actions by default use the <code>jhudsl/base_ottr:main</code>.</p>
-<p>If you are new to Docker, you may find it helpful to read this <a href="https://jhudatascience.org/Adv_Reproducibility_in_Cancer_Informatics/launching-a-docker-image.html">introduction to Docker</a>.</p>
+<p>If your course doesn’t require any additional packages to run, then
+you do not need to set up Docker locally but this Docker image <a
+href="https://hub.docker.com/repository/docker/jhudsl/base_ottr">jhudsl/base_ottr</a>
+will run and re-render all of your changes as you add them.</p>
+<p>We recommend using the <code>jhudsl/base_ottr:main</code> tagged
+image instead of the <code>latest</code> version. The <code>main</code>
+image is ready for use, while the <code>latest</code> may be under
+development. All GitHub Actions by default use the
+<code>jhudsl/base_ottr:main</code>.</p>
+<p>If you are new to Docker, you may find it helpful to read this <a
+href="https://jhudatascience.org/Adv_Reproducibility_in_Cancer_Informatics/launching-a-docker-image.html">introduction
+to Docker</a>.</p>
 <ul>
-<li>If you don’t have one, you will need to <a href="https://hub.docker.com/">sign up with a Docker account</a>.<br />
+<li>If you don’t have one, you will need to <a
+href="https://hub.docker.com/">sign up with a Docker account</a>.<br />
 </li>
-<li>If you haven’t installed Docker desktop (or need to update it), you can do so <a href="https://docs.docker.com/get-docker/">here</a>.</li>
+<li>If you haven’t installed Docker desktop (or need to update it), you
+can do so <a href="https://docs.docker.com/get-docker/">here</a>.</li>
 </ul>
-<p>If your Docker desktop is running, you should see a Docker whale in your tool bar. On Macs, this will be on the bar on the top of your screen; in Windows, on the bottom right.</p>
-<p>A Docker image is similar to a virtual machine - it contains preinstalled software in a preconfigured environment. Docker images can be downloaded from DockerHub, or you can create your own.</p>
-<p>We have created the <code>base_ottr:main</code> image as a starting point; you can download it from <code>jhudsl/base_ottr:main</code> on DockerHub using the docker pull command we have below. To pull the docker image associated with this template, you can run this command below in your command line. This may take a while:</p>
+<p>If your Docker desktop is running, you should see a Docker whale in
+your tool bar. On Macs, this will be on the bar on the top of your
+screen; in Windows, on the bottom right.</p>
+<p>A Docker image is similar to a virtual machine - it contains
+preinstalled software in a preconfigured environment. Docker images can
+be downloaded from DockerHub, or you can create your own.</p>
+<p>We have created the <code>base_ottr:main</code> image as a starting
+point; you can download it from <code>jhudsl/base_ottr:main</code> on
+DockerHub using the docker pull command we have below. To pull the
+docker image associated with this template, you can run this command
+below in your command line. This may take a while:</p>
 <pre><code>docker pull jhudsl/base_ottr:main</code></pre>
-<p>This pulls the <code>base_ottr:main</code> image from Docker Hub and copies it to your computer. It will be placed in your local collection of Docker images, managed by Docker (not in your working directory). If you get an error, it may be because you forgot to have your Docker desktop running… see above.</p>
-<p>To use the Docker image associated with the course template, first navigate to the the top of this GitHub repository. Now you can start up the Docker container using the command below.</p>
-<p>This runs your local copy of the <code>base_ottr:main</code> image (which you downloaded from DockerHub). The option <code>-v $PWD:/home/rstudio</code> mounts pwd (this repo) and makes it available at <code>/home/rstudio</code> within the container. Replace all of <code>&lt;CHOOSE_PASSWORD&gt;</code> (including the <code>&lt;</code> and <code>&gt;</code>) with a password of your choosing.</p>
+<p>This pulls the <code>base_ottr:main</code> image from Docker Hub and
+copies it to your computer. It will be placed in your local collection
+of Docker images, managed by Docker (not in your working directory). If
+you get an error, it may be because you forgot to have your Docker
+desktop running… see above.</p>
+<p>To use the Docker image associated with the course template, first
+navigate to the the top of this GitHub repository. Now you can start up
+the Docker container using the command below.</p>
+<p>This runs your local copy of the <code>base_ottr:main</code> image
+(which you downloaded from DockerHub). The option
+<code>-v $PWD:/home/rstudio</code> mounts pwd (this repo) and makes it
+available at <code>/home/rstudio</code> within the container. Replace
+all of <code>&lt;CHOOSE_PASSWORD&gt;</code> (including the
+<code>&lt;</code> and <code>&gt;</code>) with a password of your
+choosing.</p>
 <p><em>On a Mac</em>:</p>
 <pre><code>docker run -it -v $PWD:/home/rstudio -e PASSWORD=&lt;CHOOSE_PASSWORD&gt; -p 8787:8787 jhudsl/base_ottr:main</code></pre>
 <p><em>On a Windows</em>:</p>
 <pre><code>docker run -it -v %CD%:/home/rstudio -e PASSWORD=&lt;CHOOSE_PASSWORD&gt; -p 8787:8787 jhudsl/base_ottr:main</code></pre>
-<p>Do not close this window, but you can minimize it. Open up a new command line window and run the command: <code>docker ps</code>, you should see a container is up and running!</p>
+<p>Do not close this window, but you can minimize it. Open up a new
+command line window and run the command: <code>docker ps</code>, you
+should see a container is up and running!</p>
 <p><em>Couple of handy Docker commands:</em></p>
 <ul>
-<li>To stop your Docker container, run <code>docker ps</code> to obtain the docker container ID. Then you can use that ID to run <code>docker stop &lt;CONTAINER_ID&gt;</code>.<br />
+<li>To stop your Docker container, run <code>docker ps</code> to obtain
+the docker container ID. Then you can use that ID to run
+<code>docker stop &lt;CONTAINER_ID&gt;</code>.<br />
 </li>
-<li>To remove a docker image (which you may need to do from time to time to clear out space), you can run <code>docker image ls</code> to see all your current images. Then you can run either <code>docker image rm &lt;IMAGE_ID&gt;</code>.<br />
+<li>To remove a docker image (which you may need to do from time to time
+to clear out space), you can run <code>docker image ls</code> to see all
+your current images. Then you can run either
+<code>docker image rm &lt;IMAGE_ID&gt;</code>.<br />
 </li>
-<li>If you really need to clear out space, you can follow this <a href="https://stackoverflow.com/questions/44785585/docker-how-to-delete-all-local-docker-images">StackOverflow post</a> on how to remove all images and all containers.</li>
+<li>If you really need to clear out space, you can follow this <a
+href="https://stackoverflow.com/questions/44785585/docker-how-to-delete-all-local-docker-images">StackOverflow
+post</a> on how to remove all images and all containers.</li>
 </ul>
-<p>To obtain further information on utilizing Docker, you can refer to their comprehensive documentation available <a href="https://docs.docker.com/">here</a>.</p>
-<div id="optionally-run-rstudio-from-the-docker-container" class="section level4">
+<p>To obtain further information on utilizing Docker, you can refer to
+their comprehensive documentation available <a
+href="https://docs.docker.com/">here</a>.</p>
+<div id="optionally-run-rstudio-from-the-docker-container"
+class="section level4">
 <h4>Optionally run RStudio from the Docker container</h4>
-<p>In a web browser navigate to the following to open an RStudio instance that is run from your Docker container.</p>
+<p>In a web browser navigate to the following to open an RStudio
+instance that is run from your Docker container.</p>
 <pre><code>localhost:8787</code></pre>
-<p>To log in, you’ll need to use <code>rstudio</code> as the username and whatever password you put for <code>&lt;CHOOSE_PASSWORD&gt;</code> in the above command.</p>
+<p>To log in, you’ll need to use <code>rstudio</code> as the username
+and whatever password you put for <code>&lt;CHOOSE_PASSWORD&gt;</code>
+in the above command.</p>
 <p><br></p>
 </div>
 </div>
 <div id="starting-a-new-docker-image" class="section level2">
 <h2>Starting a new Docker image</h2>
-<p>Should you find that your course needs additional packages beyond what’s included in the template, you should probably start a new Docker image and you’ll need to do these steps to get this going:</p>
-<p>There’s a library of ottr-ready docker images that you can see <a href="https://github.com/jhudsl/ottr_docker">here</a>. If you would like to contribute your own customized docker image that works with OTTR, please file a pull request!</p>
+<p>Should you find that your course needs additional packages beyond
+what’s included in the template, you should probably start a new Docker
+image and you’ll need to do these steps to get this going:</p>
+<p>There’s a library of ottr-ready docker images that you can see <a
+href="https://github.com/jhudsl/ottr_docker">here</a>. If you would like
+to contribute your own customized docker image that works with OTTR,
+please file a pull request!</p>
 <ol style="list-style-type: decimal">
-<li>Create a <a href="https://hub.docker.com/signup">Dockerhub account</a> if you don’t have one.</li>
-<li>Create a new Docker image on your Dockerhub account. Follow these <a href="https://jhudatascience.org/Adv_Reproducibility_in_Cancer_Informatics/launching-a-docker-image.html">instructions</a> if you don’t know how to do that.</li>
-<li><a href="#set-dockerhub-related-secrets">Set up Dockerhub secrets in your repository or organization</a>.<br />
+<li>Create a <a href="https://hub.docker.com/signup">Dockerhub
+account</a> if you don’t have one.</li>
+<li>Create a new Docker image on your Dockerhub account. Follow these <a
+href="https://jhudatascience.org/Adv_Reproducibility_in_Cancer_Informatics/launching-a-docker-image.html">instructions</a>
+if you don’t know how to do that.</li>
+<li><a href="#set-dockerhub-related-secrets">Set up Dockerhub secrets in
+your repository or organization</a>.<br />
 </li>
-<li><a href="#updating-workflows-for-new-docker-image">Update the Github actions workflows accordingly</a>.</li>
-<li><a href="#modifying-the-dockerfile-for-a-new-image">Edit the Dockerfile in your repository</a>.</li>
+<li><a href="#updating-workflows-for-new-docker-image">Update the Github
+actions workflows accordingly</a>.</li>
+<li><a href="#modifying-the-dockerfile-for-a-new-image">Edit the
+Dockerfile in your repository</a>.</li>
 </ol>
 <div id="set-dockerhub-related-secrets" class="section level3">
 <h3>Set Dockerhub related secrets</h3>
-<p>You only need to do this once as an organization (if this course is under <code>jhudsl</code> you don’t need to do this step).</p>
-<p>To give them permission for all these Docker actions, you need to set a GitHub secret. Go to <code>Settings</code> &gt; <code>Secrets</code> and scroll down to <code>organization secrets</code> or you can set this for each repository by creating a repository secret.</p>
+<p>You only need to do this once as an organization (if this course is
+under <code>jhudsl</code> you don’t need to do this step).</p>
+<p>To give them permission for all these Docker actions, you need to set
+a GitHub secret. Go to <code>Settings</code> &gt; <code>Secrets</code>
+and scroll down to <code>organization secrets</code> or you can set this
+for each repository by creating a repository secret.</p>
 <ul>
-<li>Click <code>New repository secret</code> button for each of these secrets</li>
-<li>The login information in these GitHub secrets must be from an account that has write permissions to the Docker image you wish to manage).</li>
+<li>Click <code>New repository secret</code> button for each of these
+secrets</li>
+<li>The login information in these GitHub secrets must be from an
+account that has write permissions to the Docker image you wish to
+manage).</li>
 </ul>
 <p><em>Name: <code>DOCKERHUB_USERNAME</code></em>:<br />
-For <code>Secret</code>: put your login username for <a href="https://hub.docker.com/" class="uri">https://hub.docker.com/</a></p>
+For <code>Secret</code>: put your login username for <a
+href="https://hub.docker.com/"
+class="uri">https://hub.docker.com/</a></p>
 <p><em>Name: <code>DOCKERHUB_TOKEN</code></em>:<br />
-For <code>Secret</code>: put an access token for Dockerhub. You can create this by following <a href="https://docs.docker.com/docker-hub/access-tokens/#create-an-access-token">these instructions</a>. Choose the <code>read,write,delete</code> option.</p>
+For <code>Secret</code>: put an access token for Dockerhub. You can
+create this by following <a
+href="https://docs.docker.com/docker-hub/access-tokens/#create-an-access-token">these
+instructions</a>. Choose the <code>read,write,delete</code> option.</p>
 </div>
-<div id="updating-workflows-for-new-docker-image" class="section level3">
+<div id="updating-workflows-for-new-docker-image"
+class="section level3">
 <h3>Updating workflows for new Docker image</h3>
-<p>To make sure that your new Docker image is being used for rendering in the GitHub actions, you need to change the <code>rendering-docker-image:</code> from the default of <code>jhudsl/base_ottr:main</code> and replace it with your docker image tag.</p>
-<p>Then start a new branch so that you can submit a new pull request with your changes.</p>
-<p>Now, when you file a pull request, the Dockerfile build for your docker image will be tested automatically by the <a href="https://github.com/jhudsl/OTTR_Template/wiki/How-to-set-up-and-customize-GitHub-actions-robots">GitHub actions</a> if <code>docker-test</code> is set to <code>yes</code>. The default is <code>docker-test: no</code></p>
+<p>To make sure that your new Docker image is being used for rendering
+in the GitHub actions, you need to change the
+<code>rendering-docker-image:</code> from the default of
+<code>jhudsl/base_ottr:main</code> and replace it with your docker image
+tag.</p>
+<p>Then start a new branch so that you can submit a new pull request
+with your changes.</p>
+<p>Now, when you file a pull request, the Dockerfile build for your
+docker image will be tested automatically by the <a
+href="https://github.com/jhudsl/OTTR_Template/wiki/How-to-set-up-and-customize-GitHub-actions-robots">GitHub
+actions</a> if <code>docker-test</code> is set to <code>yes</code>. The
+default is <code>docker-test: no</code></p>
 </div>
-<div id="modifying-the-dockerfile-for-a-new-image" class="section level3">
+<div id="modifying-the-dockerfile-for-a-new-image"
+class="section level3">
 <h3>Modifying the Dockerfile for a new image</h3>
-<p><a href="https://jhudatascience.org/Adv_Reproducibility_in_Cancer_Informatics/modifying-a-docker-image.html">Read this chapter for instructions on how to modify Docker images</a></p>
-<p>You will probably want to create your Docker image by using the <code>jhudsl/base_ottr:main</code> as your base – this means that all the packages that are in our <code>jhudsl/base_ottr:main</code> image will be included in the Docker image you build.</p>
+<p><a
+href="https://jhudatascience.org/Adv_Reproducibility_in_Cancer_Informatics/modifying-a-docker-image.html">Read
+this chapter for instructions on how to modify Docker images</a></p>
+<p>You will probably want to create your Docker image by using the
+<code>jhudsl/base_ottr:main</code> as your base – this means that all
+the packages that are in our <code>jhudsl/base_ottr:main</code> image
+will be included in the Docker image you build.</p>
 <pre><code>FROM jhudsl/base_ottr:main</code></pre>
-<p>You can take a look at this <a href="https://github.com/jhudsl/OTTR_Template/blob/main/resources/TEMPLATE_Dockerfile">Dockerfile template we’ve set up here</a> (note that the commands would need to be uncommented and real package names put in place of <code>package_name</code>’s).</p>
-<div id="template-commands-for-adding-packages-to-the-dockerfile" class="section level4">
+<p>You can take a look at this <a
+href="https://github.com/jhudsl/OTTR_Template/blob/main/resources/TEMPLATE_Dockerfile">Dockerfile
+template we’ve set up here</a> (note that the commands would need to be
+uncommented and real package names put in place of
+<code>package_name</code>’s).</p>
+<div id="template-commands-for-adding-packages-to-the-dockerfile"
+class="section level4">
 <h4>Template commands for adding packages to the Dockerfile</h4>
-<p>This section gives you the basics on what it looks like to add new packages to your new Docker image.</p>
+<p>This section gives you the basics on what it looks like to add new
+packages to your new Docker image.</p>
 <div id="cran-packages" class="section level5">
 <h5>CRAN Packages:</h5>
-<p>For R packages installed from CRAN, you can add to the running vector list of R packages.</p>
+<p>For R packages installed from CRAN, you can add to the running vector
+list of R packages.</p>
 </div>
 <div id="bioconductor-packages" class="section level5">
 <h5>Bioconductor Packages:</h5>
-<p>To add an R package from Bioconductor, you can follow this kind of format:</p>
+<p>To add an R package from Bioconductor, you can follow this kind of
+format:</p>
 <pre><code>RUN Rscript -e &quot;options(warn = 2); BiocManager::install( \
   c(&#39;limma&#39;, \
     &#39;newpackagename&#39;)
@@ -671,7 +726,8 @@ For <code>Secret</code>: put an access token for Dockerhub. You can create this 
 </div>
 <div id="python-packages" class="section level5">
 <h5>Python Packages:</h5>
-<p>To add a Python package, you will need to add pip3 to install Python packages using this format:</p>
+<p>To add a Python package, you will need to add pip3 to install Python
+packages using this format:</p>
 <pre><code>RUN pip3 install \
     &quot;somepackage==0.1.0&quot;</code></pre>
 </div>
@@ -679,59 +735,117 @@ For <code>Secret</code>: put an access token for Dockerhub. You can create this 
 </div>
 <div id="testing-a-modified-docker-image" class="section level3">
 <h3>Testing a modified Docker image</h3>
-<p><a href="https://jhudatascience.org/Adv_Reproducibility_in_Cancer_Informatics/modifying-a-docker-image.html">Read this chapter for instructions on how to modify Docker images</a></p>
-<p>When you’ve added a package to the Dockerfile, you may want to check that it builds successfully before it’s added to your repository. You can include changes to your Dockerfile in a pull request which will trigger an automatic testing of building it.</p>
-<p><a href="https://jhudatascience.org/Adv_Reproducibility_in_Cancer_Informatics/modifying-a-docker-image.html">Read this chapter for more tips on how to modify Docker images</a></p>
+<p><a
+href="https://jhudatascience.org/Adv_Reproducibility_in_Cancer_Informatics/modifying-a-docker-image.html">Read
+this chapter for instructions on how to modify Docker images</a></p>
+<p>When you’ve added a package to the Dockerfile, you may want to check
+that it builds successfully before it’s added to your repository. You
+can include changes to your Dockerfile in a pull request which will
+trigger an automatic testing of building it.</p>
+<p><a
+href="https://jhudatascience.org/Adv_Reproducibility_in_Cancer_Informatics/modifying-a-docker-image.html">Read
+this chapter for more tips on how to modify Docker images</a></p>
 <p>OR</p>
-<p>If you prefer to test it locally, then you can follow these steps.</p>
-<p>First create a GITHUB token file by making a token and copying a pasting it into a plain text file named <code>docker/git_token.txt</code>. (<em><strong>Make sure you do not push this to github and possibly delete it after testing your docker image build!</strong></em>)</p>
-<p>Then you’ll need to rebuild the Docker image using this command after you move into the <code>docker</code> directory) (But replace the <code>&lt;TAG_FOR_COURSE&gt;</code> with the tag for your new image including dropping the <code>&lt;</code> and <code>&gt;</code>:</p>
+<p>If you prefer to test it locally, then you can follow these
+steps.</p>
+<p>First create a GITHUB token file by making a token and copying a
+pasting it into a plain text file named
+<code>docker/git_token.txt</code>. (<em><strong>Make sure you do not
+push this to github and possibly delete it after testing your docker
+image build!</strong></em>)</p>
+<p>Then you’ll need to rebuild the Docker image using this command after
+you move into the <code>docker</code> directory) (But replace the
+<code>&lt;TAG_FOR_COURSE&gt;</code> with the tag for your new image
+including dropping the <code>&lt;</code> and <code>&gt;</code>:</p>
 <pre><code>docker build -f Dockerfile . -t &lt;TAG_FOR_COURSE&gt;</code></pre>
-<p>If it fails, often the issue is a missing dependency. Take a look at the error messages and see if you can determine the issue with some Googling. Also be sure that all your directories and files are named correctly.</p>
-<p>Once it builds successfully, run the above command with the new name for your docker image make sure that the tag does not have upper case characters):</p>
+<p>If it fails, often the issue is a missing dependency. Take a look at
+the error messages and see if you can determine the issue with some
+Googling. Also be sure that all your directories and files are named
+correctly.</p>
+<p>Once it builds successfully, run the above command with the new name
+for your docker image make sure that the tag does not have upper case
+characters):</p>
 <pre><code>docker build -f Dockerfile . -t jhudsl/&lt;TAG_FOR_COURSE&gt;</code></pre>
 <div id="pushing-the-docker-image" class="section level4">
 <h4>Pushing the Docker image</h4>
-<p>For any changes you make to your Docker image to take effect in your repository’s github actions and workflows, you must push your updated docker image to Dockerhub. There are two different ways you can push your Docker image.</p>
-<p>Locally, you can push your updated image to Dockerhub using (make sure that the tag does not have upper case characters):</p>
+<p>For any changes you make to your Docker image to take effect in your
+repository’s github actions and workflows, you must push your updated
+docker image to Dockerhub. There are two different ways you can push
+your Docker image.</p>
+<p>Locally, you can push your updated image to Dockerhub using (make
+sure that the tag does not have upper case characters):</p>
 <pre><code>docker push jhudsl/&lt;TAG_FOR_COURSE&gt;</code></pre>
 <p>OR</p>
-<p>You can use GitHub actions to do this by going to your course’s GitHub repository, go to <code>Actions</code> and then to <code>Test build of Dockerfile</code>.</p>
-<p>Click on <code>run workflow</code> type in <code>true</code> underneath <code>Push to Dockerhub?</code>.</p>
-<p>Then click <code>Run</code>. If your Dockerfile builds an image successfully it will automatically be pushed to Dockerhub.</p>
+<p>You can use GitHub actions to do this by going to your course’s
+GitHub repository, go to <code>Actions</code> and then to
+<code>Test build of Dockerfile</code>.</p>
+<p>Click on <code>run workflow</code> type in <code>true</code>
+underneath <code>Push to Dockerhub?</code>.</p>
+<p>Then click <code>Run</code>. If your Dockerfile builds an image
+successfully it will automatically be pushed to Dockerhub.</p>
 </div>
-<div id="github-actions-for-handling-your-docker-image" class="section level4">
+<div id="github-actions-for-handling-your-docker-image"
+class="section level4">
 <h4>Github actions for handling your Docker image</h4>
-<p>For your personalized docker image, you can store the Dockerfile anywhere. In order for OTTR/GitHub actions to use it, it must be pushed to Dockerhub.</p>
-<p>It may be easiest to store it in the OTTR-made repository you are working from.</p>
-<p>In whichever repository you choose to store your Dockerfile, its recommended you use a GitHub action to automatically test it when you make changes. You can use our Docker handling <a href="https://github.com/jhudsl/OTTR_Template/blob/main/.github/workflows/docker-test.yml">GitHub action here as a starting point</a>.</p>
+<p>For your personalized docker image, you can store the Dockerfile
+anywhere. In order for OTTR/GitHub actions to use it, it must be pushed
+to Dockerhub.</p>
+<p>It may be easiest to store it in the OTTR-made repository you are
+working from.</p>
+<p>In whichever repository you choose to store your Dockerfile, its
+recommended you use a GitHub action to automatically test it when you
+make changes. You can use our Docker handling <a
+href="https://github.com/jhudsl/OTTR_Template/blob/main/.github/workflows/docker-test.yml">GitHub
+action here as a starting point</a>.</p>
 <p>You will need to modify this GHA for your own purposes:</p>
 <ul>
-<li>The action linked above, as is, will only run on manual trigger and manually specifying the directory the Dockerfile is in. For having the trigger run automatically, we recommend setting up a <a href="https://docs.github.com/en/actions/using-workflows/events-that-trigger-workflows">GitHub action trigger</a>.</li>
-<li>You will definitely need to set up the Dockerhub credentials as described above.</li>
-<li>For other information about how to modify this GitHub action, we recommend looking at the GitHub actions documentation to become more familiar with how to customize it: <a href="https://docs.github.com/en/actions" class="uri">https://docs.github.com/en/actions</a>.</li>
+<li>The action linked above, as is, will only run on manual trigger and
+manually specifying the directory the Dockerfile is in. For having the
+trigger run automatically, we recommend setting up a <a
+href="https://docs.github.com/en/actions/using-workflows/events-that-trigger-workflows">GitHub
+action trigger</a>.</li>
+<li>You will definitely need to set up the Dockerhub credentials as
+described above.</li>
+<li>For other information about how to modify this GitHub action, we
+recommend looking at the GitHub actions documentation to become more
+familiar with how to customize it: <a
+href="https://docs.github.com/en/actions"
+class="uri">https://docs.github.com/en/actions</a>.</li>
 </ul>
-<p>If you do choose to use the action manually, then you can use this by going to <code>Actions</code>, clicking on <code>Build Docker Image</code> &gt; <code>run workflow</code> and write in:</p>
+<p>If you do choose to use the action manually, then you can use this by
+going to <code>Actions</code>, clicking on
+<code>Build Docker Image</code> &gt; <code>run workflow</code> and write
+in:</p>
 <ul>
-<li><code>directory</code> - Which your Dockerfile is located in this repository</li>
-<li><code>tag</code> - Optionally, what tag you wish the built docker image to have</li>
-<li><code>Push to Dockerhub?</code> TRUE or FALSE whether you wish this docker image to be pushed to Dockerhub.</li>
+<li><code>directory</code> - Which your Dockerfile is located in this
+repository</li>
+<li><code>tag</code> - Optionally, what tag you wish the built docker
+image to have</li>
+<li><code>Push to Dockerhub?</code> TRUE or FALSE whether you wish this
+docker image to be pushed to Dockerhub.</li>
 </ul>
 <p><img src="resources/images/docker-gha.png" /></p>
-<p>For more guidance on how to personalize Docker images, we recommend <a href="https://www.ottrproject.org/faqs.html#Ask_a_question_on_the_Google_Group">joining the Google Group and asking questions on there</a>. Or file a GitHub issue on the relevant repository.</p>
+<p>For more guidance on how to personalize Docker images, we recommend
+<a
+href="https://www.ottrproject.org/faqs.html#Ask_a_question_on_the_Google_Group">joining
+the Google Group and asking questions on there</a>. Or file a GitHub
+issue on the relevant repository.</p>
 </div>
 </div>
 </div>
 
 <hr>
+<hr>
+<center>
+<div class="container">
+  <iframe class="responsive-iframe" src="https://c-savonen.shinyapps.io/widget-survey/?course=ottr" style="width: 400px; height: 220px; overflow: auto;"></iframe>
+</div>
+  </div>
+</center>
+
 <center>
   <div class="footer">
-    <img src="resources/images/basic_otter_circle.PNG" width=120>    
-    <br>
-    Your feedback is greatly appreciated! You can fill out <a href="https://forms.gle/jvFjnhqt5V1E9LbQ9">this form </a>
-    <br>
-    or <a href="https://github.com/jhudsl/OTTR_Template/issues/new/choose">file a GitHub issue</a>.
-      <br>
+    <img src="resources/images/basic_otter_circle.PNG" width=120>
     <br><font size="1">Otter images by <a href = https://www.linkedin.com/in/jimin-hwang-549835142/>Jimin Hwang</a>.</font>
     <br>
   </div>

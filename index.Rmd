@@ -1,5 +1,5 @@
 ---
-title: "OTTR: Open-source Tools for Training Resources"
+title: "OTTR - GitHub based websites for busy people"
 output:
   html_document:
     includes:
@@ -10,8 +10,6 @@ output:
 <div class = "banner_color">
   <br>           
 </div>
-
-## Why OTTR?
 
 ```{r, fig.align='center', fig.alt= "OTTR helps build github based websites with less hassle. Catch potential mistakes before they go live", echo = FALSE, out.width= "400"}
 knitr::include_graphics("https://github.com/jhudsl/ottrproject.org/raw/main/resources/images/why-ottr.png")

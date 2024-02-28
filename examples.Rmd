@@ -20,20 +20,21 @@ If you find yourself making a full set of courses and multiple repositories from
 
 This is a template powered by the `metricminer` R package to allow you to display metrics in a dashboard.
 This template shows basics for how you can display metrics collected from:
+[Github template repo](https://github.com/fhdsl/metricminer-dashboard/tree/main)
 
 - Google Analytics
 - Google Forms
 - GitHub
 - CRAN
 - Calendly
-And more websites soon!
+
+And more websites being added. [See metricminer.org for more details!](https://www.metricminer.org/)
 
 ## AnVIL template
 
 This is a template (made from our main OTTR Template) that is used for a set of courses being made for the [AnVIL set of cloud tools](https://anvilproject.org/)
 
 - [GitHub repository and source code](https://github.com/jhudsl/AnVIL_Template)  
-
 
 Courses will look similar to this [link](https://jhudatascience.org/AnVIL_Template/).
 

@@ -11,10 +11,10 @@
 
 
 
-<title>Examples of OTTR courses</title>
+<title>Examples of OTTR websites</title>
 
-<script src="site_libs/header-attrs-2.10/header-attrs.js"></script>
-<script src="site_libs/jquery-1.11.3/jquery.min.js"></script>
+<script src="site_libs/header-attrs-2.25/header-attrs.js"></script>
+<script src="site_libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <link href="site_libs/bootstrap-3.3.5/css/bootstrap.min.css" rel="stylesheet" />
 <script src="site_libs/bootstrap-3.3.5/js/bootstrap.min.js"></script>
@@ -29,14 +29,14 @@
        h6 {font-size: 12px;}
        code {color: inherit; background-color: rgba(0, 0, 0, 0.04);}
        pre:not([class]) { background-color: white }</style>
-<script src="site_libs/jqueryui-1.11.4/jquery-ui.min.js"></script>
+<script src="site_libs/jqueryui-1.13.2/jquery-ui.min.js"></script>
 <link href="site_libs/tocify-1.9.1/jquery.tocify.css" rel="stylesheet" />
 <script src="site_libs/tocify-1.9.1/jquery.tocify.js"></script>
 <script src="site_libs/navigation-1.1/tabsets.js"></script>
 <link href="site_libs/highlightjs-9.12.0/default.css" rel="stylesheet" />
 <script src="site_libs/highlightjs-9.12.0/highlight.js"></script>
-<link href="site_libs/font-awesome-5.1.0/css/all.css" rel="stylesheet" />
-<link href="site_libs/font-awesome-5.1.0/css/v4-shims.css" rel="stylesheet" />
+<link href="site_libs/font-awesome-6.4.2/css/all.min.css" rel="stylesheet" />
+<link href="site_libs/font-awesome-6.4.2/css/v4-shims.min.css" rel="stylesheet" />
 <link rel="shortcut icon" href="resources/images/basic_otter_water.ico" />
 
 <style type="text/css">
@@ -58,6 +58,7 @@ if (window.hljs) {
   }
 }
 </script>
+
 
 
 
@@ -87,6 +88,9 @@ button.code-folding-btn:focus {
 }
 summary {
   display: list-item;
+}
+details > summary > p:only-child {
+  display: inline;
 }
 pre code {
   padding: 0;
@@ -144,11 +148,15 @@ $(document).ready(function () {
     href = "index.html";
   var menuAnchor = $('a[href="' + href + '"]');
 
-  // mark it active
-  menuAnchor.tab('show');
-
-  // if it's got a parent navbar menu mark it active as well
-  menuAnchor.closest('li.dropdown').addClass('active');
+  // mark the anchor link active (and if it's in a dropdown, also mark that active)
+  var dropdown = menuAnchor.closest('li.dropdown');
+  if (window.bootstrap) { // Bootstrap 4+
+    menuAnchor.addClass('active');
+    dropdown.find('> .dropdown-toggle').addClass('active');
+  } else { // Bootstrap 3
+    menuAnchor.parent().addClass('active');
+    dropdown.addClass('active');
+  }
 
   // Navbar adjustments
   var navHeight = $(".navbar").first().height() + 15;
@@ -177,8 +185,8 @@ $(document).ready(function () {
   border-radius: 4px;
 }
 
-.tabset-dropdown > .nav-tabs > li.active:before {
-  content: "";
+.tabset-dropdown > .nav-tabs > li.active:before, .tabset-dropdown > .nav-tabs.nav-tabs-open:before {
+  content: "\e259";
   font-family: 'Glyphicons Halflings';
   display: inline-block;
   padding: 10px;
@@ -186,16 +194,9 @@ $(document).ready(function () {
 }
 
 .tabset-dropdown > .nav-tabs.nav-tabs-open > li.active:before {
-  content: "&#xe258;";
-  border: none;
-}
-
-.tabset-dropdown > .nav-tabs.nav-tabs-open:before {
-  content: "";
+  content: "\e258";
   font-family: 'Glyphicons Halflings';
-  display: inline-block;
-  padding: 10px;
-  border-right: 1px solid #ddd;
+  border: none;
 }
 
 .tabset-dropdown > .nav-tabs > li.active {
@@ -312,7 +313,7 @@ div.tocify {
 <div class="navbar navbar-default  navbar-fixed-top" role="navigation">
   <div class="container">
     <div class="navbar-header">
-      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-bs-toggle="collapse" data-target="#navbar" data-bs-target="#navbar">
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
@@ -325,11 +326,11 @@ div.tocify {
   <a href="index.html">
     <span class="fa fa-home"></span>
      
-    About OTTR
+    
   </a>
 </li>
 <li class="dropdown">
-  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
     <span class="fa fa-play"></span>
      
     Getting Started
@@ -348,117 +349,87 @@ div.tocify {
       <a href="getting_started.html#starting-a-new-ottr-course">
         <span class="fa fa-flag-checkered"></span>
          
-        Starting a new OTTR course
+        Starting a new OTTR course/website
       </a>
     </li>
-    <li class="dropdown-submenu">
-      <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+    <li>
+      <a href="editing_website.html">
         <span class="fa fa-pen"></span>
          
-        Start writing content
+        Creating your website
       </a>
-      <ul class="dropdown-menu" role="menu">
-        <li>
-          <a href="writing_content.html">
-            <span class="fa fa-pen"></span>
-             
-            Choosing a writing method
-          </a>
-        </li>
-        <li>
-          <a href="writing_content.html#ottr-entry-level">
-            <span class="fa fa-circle"></span>
-             
-            Entry Level
-          </a>
-        </li>
-        <li>
-          <a href="writing_content.html#ottr-advanced">
-            <span class="fa fa-square"></span>
-             
-            Advanced
-          </a>
-        </li>
-        <li>
-          <a href="writing_content.html#set-up-images">
-            <span class="fa fa-images"></span>
-             
-            Set up images
-          </a>
-        </li>
-      </ul>
     </li>
   </ul>
 </li>
 <li class="dropdown">
-  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
     <span class="fa fa-lightbulb"></span>
      
-    OTTR Course Creation
+    OTTR Courses
      
     <span class="caret"></span>
   </a>
   <ul class="dropdown-menu" role="menu">
     <li>
-      <a href="examples.html#ottr-course-examples">
-        <span class="fa fa-book"></span>
+      <a href="writing_content.html">
+        <span class="fa fa-pen"></span>
          
-        OTTR course examples
+        Start writing!
       </a>
     </li>
     <li>
-      <a href="examples.html#choosing-publishing-platforms">
+      <a href="writing_content_courses.html#set-up-images">
+        <span class="fa fa-images"></span>
+         
+        Set up images
+      </a>
+    </li>
+    <li>
+      <a href="course_publishing.html#choosing-publishing-platforms">
         <span class="fa fa-tasks"></span>
          
-        Choosing between platforms
+        Choosing course publishing platforms
       </a>
     </li>
-    <li class="dropdown-submenu">
-      <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
-        <span class="glyphicon glyphicon-baby-formula"></span>
-         
-        OTTR spinoff babies
-      </a>
-      <ul class="dropdown-menu" role="menu">
-        <li>
-          <a href="examples.html#ottr-spinoff-babies">What is an OTTR baby</a>
-        </li>
-        <li>
-          <a href="examples.html#ottr-website">OTTR for websites</a>
-        </li>
-        <li>
-          <a href="examples.html#anvil-template">OTTR for AnVIL</a>
-        </li>
-        <li>
-          <a href="examples.html#datatrail-template">OTTR for DataTrail</a>
-        </li>
-      </ul>
+    <li>
+      <a href="course_publishing.html#publishing-with-bookdown">Publishing with Bookdown</a>
     </li>
-    <li class="dropdown-submenu">
-      <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
-        <span class="glyphicon glyphicon-share"></span>
-         
-        Publishing
-      </a>
-      <ul class="dropdown-menu" role="menu">
-        <li>
-          <a href="examples.html#publishing-with-bookdown">Publishing with Bookdown</a>
-        </li>
-        <li>
-          <a href="examples.html#publishing-with-leanpub">Publishing with Leanpub</a>
-        </li>
-        <li>
-          <a href="examples.html#publishing-with-coursera">Publishing with Coursera</a>
-        </li>
-      </ul>
+    <li>
+      <a href="course_publishing.html#publishing-with-leanpub">Publishing with Leanpub</a>
+    </li>
+    <li>
+      <a href="course_publishinghtml#publishing-with-coursera">Publishing with Coursera</a>
     </li>
   </ul>
 </li>
 <li class="dropdown">
-  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
-    <span class="fa fa-palette"></span>
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+    <span class="glyphicon glyphicon-baby-formula"></span>
      
-    Customization
+    OTTR spinoffs
+     
+    <span class="caret"></span>
+  </a>
+  <ul class="dropdown-menu" role="menu">
+    <li>
+      <a href="examples.html#ottr-spinoff-babies">What is an OTTR baby</a>
+    </li>
+    <li>
+      <a href="examples.html#anvil-template">OTTR for AnVIL</a>
+    </li>
+    <li>
+      <a href="examples.html#metric-collection">OTTR for metric collection</a>
+    </li>
+    <li>
+      <a href="examples.html#datatrail-template">OTTR for DataTrail</a>
+    </li>
+  </ul>
+</li>
+<li class="dropdown">
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+    <span class="fa fa-plus"></span>
+     
+    Customizing OTTR
      
     <span class="caret"></span>
   </a>
@@ -484,17 +455,6 @@ div.tocify {
         Customizing Docker
       </a>
     </li>
-  </ul>
-</li>
-<li class="dropdown">
-  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
-    <span class="fa fa-plus"></span>
-     
-    More features
-     
-    <span class="caret"></span>
-  </a>
-  <ul class="dropdown-menu" role="menu">
     <li>
       <a href="more_features.html#citing-sources">
         <span class="fa fa-quote-left"></span>
@@ -550,7 +510,7 @@ div.tocify {
   <a href="https://github.com/jhudsl/OTTR_Template">
     <span class="fa fa-github"></span>
      
-    GitHub
+    
   </a>
 </li>
 <li>
@@ -572,443 +532,80 @@ div.tocify {
 
 
 
-<h1 class="title toc-ignore">Examples of OTTR courses</h1>
+<h1 class="title toc-ignore">Examples of OTTR websites</h1>
 
 </div>
 
 
-<p>Below are some examples of courses created using the <a href="https://github.com/jhudsl/OTTR_Template">OTTR Template</a> and published on three platforms: Bookdown, Leanpub and Coursera.</p>
-<p><em>Introduction to Reproducibility in Cancer Informatics:</em></p>
-<ul>
-<li><a href="https://github.com/jhudsl/Reproducibility_in_Cancer_Informatics">GitHub repository and source code</a>
-<ul>
-<li><a href="https://jhudatascience.org/Reproducibility_in_Cancer_Informatics/introduction.html">Bookdown website</a><br />
-</li>
-<li><a href="https://leanpub.com/universities/courses/jhu/cancer-informatics-for-research-leaders">Leanpub course</a><br />
-</li>
-<li><a href="https://www.coursera.org/learn/intro-reproducibility-cancer-informatics">Coursera course</a></li>
-</ul></li>
-</ul>
-<p><em>Computing for Cancer Informatics:</em></p>
-<ul>
-<li><a href="https://github.com/jhudsl/Computing_for_Cancer_Informatics">GitHub repository and source code</a>
-<ul>
-<li><a href="https://jhudatascience.org/Computing_for_Cancer_Informatics/">Bookdown website</a><br />
-</li>
-<li><a href="https://leanpub.com/universities/courses/jhu/cancer-informatics-computing">Leanpub course</a><br />
-</li>
-<li><a href="https://www.coursera.org/learn/computing-for-cancer-informatics">Coursera course</a></li>
-</ul></li>
-</ul>
-<p><br></p>
-<div id="choosing-publishing-platforms" class="section level1">
-<h1>Choosing Publishing Platforms</h1>
-<p>This template helps you prepare material to publish, but there are certain steps that cannot be automated. In those instances we’ve provided step-by-step guides to get you started on getting your material published on the platforms.</p>
-<p>Depending on your goals and intended audience, you may want to publish your content on one or all three of the supported platforms:</p>
-<p><img src="https://docs.google.com/presentation/d/18k_QN7l6zqZQXoiRfKWzcYFXNXJJEo6j4daYGoc3UcU/export/png?id=18k_QN7l6zqZQXoiRfKWzcYFXNXJJEo6j4daYGoc3UcU&pageid=gf4fcf6569c_2_0" width="500"/></p>
-<div id="links-to-the-guides-for-each-platform" class="section level2">
-<h2>Links to the guides for each platform</h2>
-<ul>
-<li><a href="#publishing-with-bookdown">Publishing with Bookdown</a></li>
-<li><a href="#Publishing-on-Leanpub">Publishing with Leanpub</a></li>
-<li><a href="#Publishing-on-Coursera">Publishing with Coursera</a></li>
-</ul>
-<p><br></p>
-</div>
-</div>
 <div id="ottr-spinoff-babies" class="section level1">
 <h1>OTTR spinoff babies</h1>
-<p>We are actively working on developing additional versions of our original template to cater to specific needs. These variations can range from technical modifications that simplify the template, to tangential adaptations, or even more complex versions compared to the original OTTR template.</p>
-<p>We also noticed that if specific branding or variations of the original template need to be used many times, it’s often easier to create a new template.</p>
+<p>We are actively working on developing additional versions of our
+original template to cater to specific needs. These variations can range
+from technical modifications that simplify the template, to tangential
+adaptations, or even more complex versions compared to the original OTTR
+template.</p>
+<p>We also noticed that if specific branding or variations of the
+original template need to be used many times, it’s often easier to
+create a new template.</p>
 <p>We affectionately call these spinoff templates OTTR “babies”.</p>
-<p>If you find yourself making a full set of courses and multiple repositories from OTTR, you may want to make a template from our template (If you need to go this route, we recommend reaching out to the OTTR maintainers by filing a GitHub issue and assigning <code>@cansavvy</code> and <code>@carriewright11</code>). Also please reach out if you have any other interesting ideas or suggestions!</p>
-<div id="ottr-website" class="section level2">
-<h2>OTTR website</h2>
-<p>A simplified spinoff template of the original OTTR was created to make websites:</p>
+<p>If you find yourself making a full set of courses and multiple
+repositories from OTTR, you may want to make a template from our
+template (If you need to go this route, we recommend reaching out to the
+OTTR maintainers by filing a GitHub issue and assigning
+<code>@cansavvy</code> and <code>@carriewright11</code>). Also please
+reach out if you have any other interesting ideas or suggestions!</p>
+<div id="metric-collection" class="section level2">
+<h2>metric collection</h2>
+<p>This is a template powered by the <code>metricminer</code> R package
+to allow you to display metrics in a dashboard. This template shows
+basics for how you can display metrics collected from:</p>
 <ul>
-<li><a href="https://jhudatascience.org/OTTR_Template_Website/">OTTR_Template_Website</a> - This is an example of how a website will look using this template, as well as guidance on how to make such a website. To get started, go to the <a href="https://github.com/jhudsl/OTTR_Template_Website">OTTR_Template_Website</a>.</li>
+<li>Google Analytics</li>
+<li>Google Forms</li>
+<li>GitHub</li>
+<li>CRAN</li>
+<li>Calendly And more websites soon!</li>
 </ul>
 </div>
 <div id="anvil-template" class="section level2">
 <h2>AnVIL template</h2>
-<p>This is a template (made from our main OTTR Template) that is used for a set of courses being made for the <a href="https://anvilproject.org/">AnVIL set of cloud tools</a></p>
+<p>This is a template (made from our main OTTR Template) that is used
+for a set of courses being made for the <a
+href="https://anvilproject.org/">AnVIL set of cloud tools</a></p>
 <ul>
-<li><a href="https://github.com/jhudsl/AnVIL_Template">GitHub repository and source code</a></li>
+<li><a href="https://github.com/jhudsl/AnVIL_Template">GitHub repository
+and source code</a></li>
 </ul>
-<p>Courses will look similar to this <a href="https://jhudatascience.org/AnVIL_Template/">link</a>.</p>
+<p>Courses will look similar to this <a
+href="https://jhudatascience.org/AnVIL_Template/">link</a>.</p>
 </div>
 <div id="datatrail-template" class="section level2">
 <h2>DataTrail template</h2>
-<p>This is a template (made from our main OTTR Template) that will be used for a set of courses being made for <a href="https://www.datatrail.org/">DataTrail</a></p>
+<p>This is a template (made from our main OTTR Template) that will be
+used for a set of courses being made for <a
+href="https://www.datatrail.org/">DataTrail</a></p>
 <ul>
-<li><a href="https://github.com/datatrail-jhu/DataTrail_Template">GitHub repository and source code</a></li>
+<li><a href="https://github.com/datatrail-jhu/DataTrail_Template">GitHub
+repository and source code</a></li>
 </ul>
-<p>Courses will look similar to this <a href="https://datatrail-jhu.github.io/DataTrail_Template/introduction.html">link</a>.</p>
+<p>Courses will look similar to this <a
+href="https://datatrail-jhu.github.io/DataTrail_Template/introduction.html">link</a>.</p>
 <p><br></p>
-</div>
-</div>
-<div id="publishing-with-bookdown" class="section level1">
-<h1>Publishing with Bookdown</h1>
-<p>To publish your content using Bookdown, you can utilize Github Pages by following the repository setup instructions provided <a href="https://github.com/jhudsl/OTTR_Template/wiki/Starting-a-new-course-with-this-template#set-up-github-pages">here</a>. It’s important to note that Bookdown serves as a fundamental component for utilizing other publishing platforms such as Coursera or Leanpub. Therefore, if you intend to use Coursera or Leanpub, you will need to publish your content using Bookdown.</p>
-<p>As you modify the names of the chapters of your course and add more chapters (using the <code>.Rmd</code> files), you need to update the <code>_bookdown.yml</code> file accordingly.</p>
-<p>For example let’s say that we added another chapter and named the file <code>03-new_chapter_of_course.Rmd</code>. We would update our <code>_bookdown.yml</code> to look like this:</p>
-<pre class="yaml"><code>book_filename: &quot;Course_Name&quot;  
-chapter_name: &quot;Chapter &quot;  
-repo: https://github.com/jhudsl/OTTR_Template/ ##Make sure you update this to your GitHub Repo!!  
-rmd_files: [&quot;index.Rmd&quot;,  
-            &quot;01-intro.Rmd&quot;,   
-            &quot;02-chapter_of_course.Rmd&quot;,   
-            &quot;03-new_chapter_of_course.Rmd&quot;,  ## This is the only new line!
-            &quot;about.Rmd&quot;]  
-new_session: yes  
-delete_merged_file: true  
-language:  
-  ui:  
-    chapter_name: &quot;Chapter &quot;  
-output_dir: &quot;docs&quot;  </code></pre>
-<p>Notice how only a single line is different - the line mentioning <code>03-chapter_of_course.Rmd",</code> Be careful with quotation marks (<code>""</code>) and commas (<code>,</code>)!</p>
-<p>Once this change is made, we can preview the book by typing <code>bookdown::serve_book()</code> in the RStudio Console. Note that when you run <code>bookdown</code> it will generate an <code>.rds</code> file; you can generally ignore this file. You will then see a live version of your book in your RStudio Viewer.</p>
-<p>Keep in mind that when a pull request is merged to main, <a href="#github-actions">GitHub Actions</a> will re-run <code>bookdown::render_book()</code> and the results will be added to <code>main</code>.</p>
-<p><br></p>
-</div>
-<div id="publishing-with-leanpub" class="section level1">
-<h1>Publishing with Leanpub</h1>
-<p>OTTR contains all the files you need to publish your course to <a href="https://leanpub.com/">Leanpub</a>. The <a href="https://github.com/jhudsl/ottrpal"><code>ottrpal</code> package</a> takes care of handling and automatically converting the content into a rendered version that is prepared for Leanpub.</p>
-<p>These converted files are stored in the <code>manuscript</code> folder. As a general rule, don’t edit files in the <code>manuscript</code> folder. This folder should be auto generated by the <code>ottrpal</code> package and should not be edited.</p>
-<p>Note that if you wish to keep your quizzes and their answers hidden, there is some additional setup involved with this process and you will need to create a separate private OTTR_Quizzes repository to store these quizzes. Start with <a href="https://github.com/jhudsl/OTTR_Template/wiki/Making-quizzes-private">these instructions</a> first if you want your quizzes and answers to be hidden.</p>
-<div id="leanpub-rendering" class="section level2">
-<h2>Leanpub Rendering</h2>
-<p>The <code>ottrpal</code> package can handle most of the formatting tasks for links and other elements for you, as long as you have followed the formatting instructions provided in the <code>Setting up images</code> section of <a href="https://github.com/jhudsl/OTTR_Template/wiki/Setting-up-images-and-graphics">this Wiki</a>.</p>
-<p>Github Actions in this repository will attempt to convert Bookdown to Leanpub for you by running <code>ottrpal::bookdown_to_leanpub()</code> function at the top of the repository.</p>
-<div id="setting-up-leanpub-related-github-actions" class="section level3">
-<h3>Setting up Leanpub-related GitHub Actions</h3>
-<p>When you are ready to begin publishing to Leanpub, you will want to turn on a few Github Actions that are included in the template but by default, turned off.</p>
-<p>In your <a href="https://github.com/jhudsl/OTTR_Template/wiki/How-to-set-up-and-customize-GitHub-actions-robots">config_automation.yml file</a>, you will need to turn on two Actions in particular:</p>
-<ul>
-<li><code>render-leanpub: yes</code></li>
-<li><code>check-quizzes:yes</code></li>
-</ul>
-<p>A third option you may consider for Leanpub publishing while you are making edits to the config_automation.yml file is whether you’d like to manually specify the order of your chapters and quizzes by creating the <a href="https://leanpub.com/lfm/read#leanpub-auto-the-booktxt-file">Book.txt file</a> by hand or whether you’d like this to be <a href="https://jhudatascience.org/ottrpal/#about-the-booktxt-file">automatically generated based on file and quiz numbering.</a>. Read more about this <a href="https://www.ottrproject.org/examples.html#Setting_up_quizzes">in the upcoming section</a>.</p>
-<p>By default, <code>make-book-txt: TRUE</code> will use the numbering in the names of the documents for chapters and quizzes to order them, but if you’d like to specify the order for the chapters and quizzes to be different on Leanpub, then set this to <code>make-book-txt: FALSE</code>, so as not to override the book.txt file that you would make manually.</p>
-<p>After you’ve made your desired changes to the <code>config_automation.yml</code> file, file a pull request with these changes and merge these to main. When you file a pull request, the quiz formatting will be checked automatically and reported in a link on a comment in your pull request.</p>
-<p>If you encounter issues with the <code>ottrpal</code> package, please file an issue in its <a href="https://github.com/jhudsl/ottrpal/issues">Github repository</a>.</p>
-</div>
-</div>
-<div id="hosting-your-course-on-leanpub" class="section level2">
-<h2>Hosting your course on Leanpub</h2>
-<p><em>Finalizing your course on Leanpub can be tricky</em>. We have created a course, <a href="https://hutchdatascience.org/Using_Leanpub/index.html">Using Leanpub</a>, to help guide you.</p>
-<p>To host your course on Leanpub, follow these steps:</p>
-<ol style="list-style-type: decimal">
-<li><p>If you do not have an existing account, create a Leanpub account by visiting this link: <a href="https://leanpub.com/" class="uri">https://leanpub.com/</a>.</p></li>
-<li><p>Start a course:</p></li>
-</ol>
-<ul>
-<li>Click on the three-line button positioned at the far right of the top bar.</li>
-<li>Click the “Author” tab on the far left</li>
-<li>Click “Courses” (if you haven’t already, verify your email address)</li>
-<li>Click the text that says <code>create a new course</code></li>
-<li>Click “A Course” and provide the “Title” of your course and your “Course URL” will be automatically filled for you.</li>
-<li>Select “Using Git and GitHub” (if you work with us at JHU there is a different protocol and additional settings you need to set which you should follow - <a href="https://docs.google.com/document/d/18UQicXwf8d25ayKGF2BrinvRgB_R2ToVn5EDOUcxyoc/edit?usp=sharing">see this document</a> )</li>
-<li>Press the <code>add to plan</code> button</li>
-</ul>
-<p>TODO: Which plan?</p>
-<ol start="3" style="list-style-type: decimal">
-<li>Preview a new version</li>
-</ol>
-<ul>
-<li>Click on the 3 line menu button</li>
-<li>Click the author tab on the far left</li>
-<li>Click Courses</li>
-<li>Click on your course name/icon</li>
-<li>Click “Preview New Version”</li>
-<li>Click <code>Create Preview</code> button</li>
-</ul>
-<p>If you have errors in your course (typically from a quiz formatting issue) the render will fail and you will need to fix your quizzes. Also note that occasionally the preview might fail and you should just try again, as it will work the second time. This might be due to a lag in GitHub and Leanpub communicating.</p>
-</div>
-<div id="setting-up-quizzes" class="section level2">
-<h2>Setting up quizzes</h2>
-<p>Quizzes need to be stored in the <code>quizzes/</code> directory. Edit and add quizzes to this directory. See and copy this <a href="https://github.com/jhudsl/OTTR_Quizzes/blob/main/quizzes/quiz_ch1.md">template quiz</a> to get started. All quizzes need to be written in the Markua format. Refer to their <a href="https://leanpub.com/markua/read#leanpub-auto-quizzes-and-exercises">documentation</a> (note that it is sometimes vague or outdated). The example question types in the template are ones that are verified to work.</p>
-<p>After you add each new quiz to the <code>quizzes/</code> directory, its filename needs to be added in the corresponding spot in the <code>Book.txt</code> file (do not edit the one in <code>manuscript</code> but the one at the top of the repository); this ensures Leanpub incorporates the quiz into the book in the correct order.</p>
-<p>If you wanted two quizzes (one called <code>quiz_1.md</code> and one called <code>quiz_2.md</code>) you could duplicate and modify <code>quiz_1.md</code> for your needs and then you could make the <code>Book.txt</code> file look like this (assuming you created a chapter called <code>"03-chapter_of_course.Rmd"</code> and you wanted quiz_1 to be after <code>02-chapter-of_course</code> and quiz_2 to be after <code>03_chapter_of_course</code>:</p>
-<pre><code>01-intro.md  
-02-chapter_of_course.md  
-quiz_1.md  
-03-chapter_of_course.md  
-quiz_2.md  
-about.md  </code></pre>
-<p>Note that any <code>.md</code> files with an <code>#</code> in front of the name in the <code>Book.txt</code> file will be ignored by Leanpub. We have included an example of this in the <code>Book.txt</code> file.</p>
-<p>See an <a href="https://github.com/jhudsl/OTTR_Quizzes/blob/main/quizzes/quiz_ch1.md">example quiz here</a> Note that you cannot have two quizzes with the same <code>quiz_id</code>.</p>
-<div id="leanpub-quizzes" class="section level3">
-<h3>Leanpub Quizzes</h3>
-<p>Leanpub has specific formatting requirements for quizzes, and it will not generate a preview if any question or quiz does not adhere to these rules. Our <a href="#setting-up-leanpub-related-github-actions">GitHub Action for checking quizzes</a> (located in file <code>.github/workflows/pull-request.yml</code> underneath <code>check-quizzes</code> section) will print out a list of errors which you can retrieve from a pull request comment that is automatically printed. This check is only run when changes are made to the <code>quizzes/</code>. At this time, two types of questions are supported. (Short answers are not yet supported by our checks but will be added in the future).</p>
-<div id="standard-multiple-choice" class="section level5">
-<h5>Standard multiple choice:</h5>
-<p>The answer choices are not randomized and look like:</p>
-<pre><code>? A question is here
-a) A wrong answer
-B) A correct answer has a capital letter
-c) A wrong answer
-d) A wrong answer</code></pre>
-</div>
-<div id="choose-answers" class="section level5">
-<h5>Choose answers</h5>
-<p>You can use <code>choose-answers</code> option which will randomize the multiple choices or you can use a standard quiz question that doesn’t randomize. The notation for the answer choices are: <code>C)</code> for correct answers <code>m)</code> for mandatory incorrect answers and <code>o)</code> for optional incorrect answers.</p>
-<p>Note that the number given for the number of answers has to be at least equal to the number of correct and mandatory incorrect answers listed.</p>
-<p>Here’s an example:</p>
-<pre><code>{choose-answers: 4}
-? A question is here
-C) The correct answer is signified with a capital C
-m) A mandatory incorrect answer
-m) A mandatory incorrect answer
-o) An optional incorrect answer
-o) An optional incorrect answer</code></pre>
-<p>Upon merging to the <code>main</code> branch, a GitHub Action will automatically run <code>check-quizzes.yml</code>, which uses the <code>ottrpal</code> package to check that your quiz conforms to these rules. If there are any problems, it will report the quiz formatting errors on your pull request.</p>
-</div>
-</div>
-<div id="leanpub-quiz-format-rules" class="section level3">
-<h3>Leanpub Quiz Format Rules</h3>
-<ul>
-<li>Quizzes start and end with the {quiz} and {} tags.</li>
-<li>Don’t have exclamation points or colons in answers.</li>
-<li>Make sure there’s at least one right answer.</li>
-<li>Check that the question and quiz attributes used are attributes recognized by Leanpub. -</li>
-<li>Make sure all quizzes are listed in Book.txt</li>
-<li>The number of choose answers is at least as big as the number of mandatory and correct answers listed.</li>
-<li>For choose-answers questions, use <code>C)</code> for correct answers <code>m)</code> for mandatory incorrect answers and <code>o)</code> for optional incorrect answers.</li>
-<li>Check that the question and quiz attributes used are attributes recognized by Leanpub.</li>
-</ul>
-</div>
-</div>
-<div id="converting-quizzes-from-leanpub-to-coursera-format" class="section level2">
-<h2>Converting Quizzes from Leanpub to Coursera format</h2>
-<p><a href="https://github.com/jhudsl/OTTR_Template/wiki/Publishing-on-Courseraa">See more instructions on how to port a course made from these templates to Coursera</a>.</p>
-<p>You can convert your quizzes to a nicely upload-able yaml file in this repository by running this command in the docker image</p>
-<pre><code>ottrpal::convert_quizzes()</code></pre>
-<p>Note that currently images and links are not supported and if your quizzes contain those, you will have to manually add them at this time.</p>
-<p>You can run this same command locally if you wish to test something. This render the chapters without the table of Contents. If you do not wish to publish to Coursera and prefer this do not run, you may delete this section (but it shouldn’t hurt anything to keep as is – unless for some reason it causes you some troubles).</p>
-<p>Additionally, the <a href="https://github.com/jhudsl/ottrpal"><code>ottrpal</code></a> package has a <code>ottrpal::convert_quizzes()</code> function if you choose to create quizzes and publish on both Leanpub and Coursera.</p>
-</div>
-<div id="setting-up-the-_quizzes-repository-checklist" class="section level2">
-<h2>Setting up the _Quizzes repository checklist:</h2>
-<ul class="task-list">
-<li><p><input type="checkbox" disabled="" />
-A <a href="https://github.com/jhudsl/OTTR_Template/wiki/Setting-up-GitHub-secrets"><code>GH_PAT</code> has been set in the main Template and the <code>_Quizzes</code> repository if you are using a separate <code>_Quizzes</code> repository</a>.</p></li>
-<li><p><input type="checkbox" disabled="" />
-<a href="#hosting-your-course-on-leanpub">Your Leanpub course as been created on Leanpub</a></p><ul class="task-list">
-<li><input type="checkbox" disabled="" />
-Writing mode in this course is set to <code>GitHub</code> and your main OTTR_Template repository is linked.</li>
-</ul></li>
-<li><p><input type="checkbox" disabled="" />
-Repository is created and set to <code>private</code>.</p></li>
-<li><p><input type="checkbox" disabled="" />
-<code>main</code> branch has been set up:</p><ul class="task-list">
-<li><input type="checkbox" disabled="" />
-<code>Require pull request reviews before merging</code> box is checked.</li>
-<li><input type="checkbox" disabled="" />
-<code>Require status checks to pass before merging</code> box is checked.<ul class="task-list">
-<li><input type="checkbox" disabled="" />
-Underneath that <code>Require branches to be up to date before merging</code> box is checked.</li>
-</ul></li>
-</ul></li>
-<li><p><input type="checkbox" disabled="" />
-This repo has been enrolled in <a href="https://github.com/jhudsl/OTTR_Template/wiki/Receiving-template-updates">automatic updates from the original template</a>.</p></li>
-<li><p><input type="checkbox" disabled="" />
-Your Book.txt file is up to date.</p></li>
-<li><p><input type="checkbox" disabled="" />
-The <a href="#leanpub-rendering"><code>ottrpal::bookdown_to_leanpub()</code> ran successfully</a>.</p></li>
-</ul>
-<p><br></p>
-</div>
-</div>
-<div id="publishing-with-coursera" class="section level1">
-<h1>Publishing with Coursera</h1>
-<p>Once your content has been extensively developed, you might consider adding your course to Coursera.</p>
-<p>This guide was prepared specifically for those developing courses for the <a href="https://www.itcrtraining.org/">ITN project</a> at Johns Hopkins University or other Coursera partner institutions. It reflects the needs and goals of ITN course developers. Coursera’s Educator Resource Center is the authoritative source of documentation for using the Coursera platform.</p>
-<div id="setting-up-your-coursera-course" class="section level2">
-<h2>Setting up your Coursera course</h2>
-<p><em>If you are from Johns Hopkins:</em> You will need to follow <a href="https://docs.google.com/document/d/1aZeOSFLkK4hZne4Vb1iaP_0H4zyhIwvbnw9sbdCFq1Y/edit?usp=sharing">this document</a> and send information to Ira Gooding (<a href="mailto:iragooding@jhu.edu" class="email">iragooding@jhu.edu</a>) who will create a course shell for you.</p>
-<p><em>If you are not from Johns Hopkins:</em> You will need to set up your own educator profile and course shell through your institution.</p>
-</div>
-<div id="converting-your-files-for-coursera" class="section level2">
-<h2>Converting your files for Coursera</h2>
-<p>The Github Actions (set up in <code>render-all.yml</code>) renders your course material in a format suitable for linking to Coursera. This Coursera version is identical except that the table of contents bar on the left side has been dropped so as to not confuse Coursera users about navigating the course. These files can be previewed in the <code>docs/no_toc</code> folder and a link to the Coursera version is printed out in a GitHub comment in your pull request by <code>render-preview.yml</code>.</p>
-<p>If you have written your quizzes in Leanpub format first, the <code>pull-request.yml</code> Github Action will convert those quizzes so they are ready to be uploaded to Coursera.</p>
-<p>Alternatively, if you do not wish to have a Leanpub version of your course, you can write your quizzes directly on Coursera’s website. You can download the quiz you write on their website as a yaml and store it on your repository as well.</p>
-</div>
-<div id="navigating-to-your-course-on-coursera" class="section level2">
-<h2>Navigating to your course on Coursera</h2>
-<p>After your <a href="#setting-up-your-coursera-course">course shell has been added to your account</a> you can navigate to it by going to <code>My Courses</code>:</p>
-<p><img src="https://raw.githubusercontent.com/jhudsl/OTTR_Template/main/resources/coursera_screenshots/profile.png" /></p>
-<p><br></p>
-<p>And you should see it listed:</p>
-<p><img src="https://raw.githubusercontent.com/jhudsl/OTTR_Template/main/resources/coursera_screenshots/my-courses.png" /></p>
-<p><br></p>
-<p>Click on <code>Go to Course</code> and on your main course page, click <code>Edit Course</code> in the right corner.</p>
-<p><img src="https://raw.githubusercontent.com/jhudsl/OTTR_Template/main/resources/coursera_screenshots/edit-course-nav.png" /></p>
-<p><br></p>
-<p>This will bring you to your version page (at this point you should only have a Version 1, so go to that one).</p>
-<p><img src="https://raw.githubusercontent.com/jhudsl/OTTR_Template/main/resources/coursera_screenshots/versions.png" /></p>
-<p><br></p>
-<p>Now you are on the Edit content page and ready to add lessons, modules and quizzes!</p>
-<p><img src="https://raw.githubusercontent.com/jhudsl/OTTR_Template/main/resources/coursera_screenshots/edit-content.png" /></p>
-<p><br></p>
-<p>In general, you will want each lesson to contain at least a chapter and a quiz.</p>
-<p>Each module is supposed to take a learner one week, so depending on the length of your chapters and quizzes you may want one or two lessons/chapters/quizzes a module.</p>
-<p>To add a new lesson, click the <code>+ Add Lesson</code> button:</p>
-<p><img src="https://raw.githubusercontent.com/jhudsl/OTTR_Template/main/resources/coursera_screenshots/add-lesson.png" /></p>
-<p>Now you are ready to add a chapter!</p>
-<div id="adding-new-chapters-to-coursera" class="section level3">
-<h3>Adding new chapters to Coursera</h3>
-<p>You’ll need to link out each chapters in Coursera by providing a URL built from your Github Pages for your course.</p>
-<p>You can see a preview of these chapters you will link to in Coursera by going to the <a href="https://guides.github.com/features/pages/">Github Pages</a> for your course, but adding <code>/no_toc</code> at the end of your URL before the chapter file name.</p>
-<p>So the URLs for each of your chapters which you will supply to Coursera in the next steps will look like this:</p>
-<pre><code>&lt;main-github-pages-url&gt;/no_toc/&lt;html_filename&gt;</code></pre>
-<p>If you are unsure what the main URL for your Github pages is, in your github repository, go to <code>Settings</code> &gt; <code>Pages</code> and you’ll see <code>Your site is published at:</code></p>
-<p>So for example, the introduction chapter of this template would be linked by using this URL:</p>
-<pre><code>https://jhudatascience.org/OTTR_Template/no_toc/introduction.html</code></pre>
-<p>To add this URL to Coursera, add a new lesson, click <code>+ More</code> and choose <code>Ungraded Plugin</code>.</p>
-<p><img src="https://raw.githubusercontent.com/jhudsl/OTTR_Template/main/resources/coursera_screenshots/add-chapter-1.png" /></p>
-<p><br></p>
-<p>This will add an unpublished ungraded plugin to your lesson: <img src="https://raw.githubusercontent.com/jhudsl/OTTR_Template/main/resources/coursera_screenshots/add-chapter-2.png" /></p>
-<p><br></p>
-<p>Now click the edit button on the new <code>Ungraded Plugin</code>.</p>
-<p><img src="https://raw.githubusercontent.com/jhudsl/OTTR_Template/main/resources/coursera_screenshots/add-chapter-3.png" /></p>
-<p><br></p>
-<p>This will bring you to the standard example plug in page. <img src="https://raw.githubusercontent.com/jhudsl/OTTR_Template/main/resources/coursera_screenshots/add-chapter-4.png" /></p>
-<p><br></p>
-<p>Scroll down and click <code>Edit Configuration</code>:</p>
-<p><img src="https://raw.githubusercontent.com/jhudsl/OTTR_Template/main/resources/coursera_screenshots/add-chapter-5.png" /></p>
-<p><br></p>
-<p>Replace the example URL with the URL of your individual chapter we discussed above.</p>
-<p><img src="https://raw.githubusercontent.com/jhudsl/OTTR_Template/main/resources/coursera_screenshots/add-chapter-6.png" /></p>
-<p><br></p>
-<p>Then click on <code>Save Configuration</code>:</p>
-<p><img src="https://raw.githubusercontent.com/jhudsl/OTTR_Template/main/resources/coursera_screenshots/new-add-chapter-7.png" /></p>
-<p>Also be sure to modify the time estimate to be something that you think is appropriate for your content - err on the side of giving students extra time.</p>
-<p>If the URL you provided was correct, you should see a preview of your chapter:</p>
-<p><img src="https://raw.githubusercontent.com/jhudsl/OTTR_Template/main/resources/coursera_screenshots/add-chapter-8.png" /></p>
-<p><br></p>
-<p>You may want to edit the title at the top of this page to indicate the material being linked.</p>
-<p>Now click <code>Publish</code> in the left upper corner (don’t worry it’s not actually publishing publicly, it is just saving your changes). And it will ask you again to really scare you, but yes, click <code>Publish</code>.</p>
-<p><img src="https://raw.githubusercontent.com/jhudsl/OTTR_Template/main/resources/coursera_screenshots/add-chapter-9.png" /></p>
-<p>Congrats you added a chapter to your course! Now do the same thing for all your chapters!</p>
-</div>
-<div id="adding-new-quizzes-to-coursera" class="section level3">
-<h3>Adding new quizzes to Coursera</h3>
-<p>To add a new quiz start from your <code>Edit content</code> page and on whatever lesson you would like to add the quiz to and click the <code>+ Quiz</code> button.</p>
-<p><img src="https://raw.githubusercontent.com/jhudsl/OTTR_Template/main/resources/coursera_screenshots/add-quiz-1.png" /></p>
-<p><br></p>
-<p>Now go to <code>Edit</code> on the new quiz.</p>
-<p><img src="https://raw.githubusercontent.com/jhudsl/OTTR_Template/main/resources/coursera_screenshots/add-quiz-2.png" /></p>
-<p><br></p>
-<p>If you are choosing to manually enter your quizzes, you can continue to add each question from this page.</p>
-<p>If you are importing a Leanpub converted quiz click the <code>Import Questions</code> button and choose your converted yml files. (If you’ve not yet converted your leanpub quizzes, then <a href="#converting-quizzes-from-leanpub-format">refer to that section</a>.)</p>
-<p><img src="https://raw.githubusercontent.com/jhudsl/OTTR_Template/main/resources/coursera_screenshots/add-quiz-3.png" /></p>
-<p><br></p>
-<p>Upload your Coursera quiz yml file from your device:</p>
-<p><img src="https://raw.githubusercontent.com/jhudsl/OTTR_Template/main/resources/coursera_screenshots/add-quiz-4.png" /></p>
-<p><br></p>
-<p>After you’ve selected the file click <code>Upload</code>:</p>
-<p><img src="https://raw.githubusercontent.com/jhudsl/OTTR_Template/main/resources/coursera_screenshots/add-quiz-5.png" /></p>
-<p>It will let you know if there are any problems uploading the quiz. If the <code>coursera_quiz_conversion.R</code> script failed to render something properly, please <a href="https://github.com/jhudsl/OTTR_Quizzes/issues">file an issue here</a> describing how it failed and including a file that shows the instance it failed to convert.</p>
-<p>Note that images and links are not currently supported in that conversion script. You also cannot have <code>:</code> in your prompts or answers.</p>
-<p>But if the quiz uploads without issue, then click <code>Continue</code>.</p>
-<p>By default quizzes are set to <code>Practice Quiz</code> but you will need at least some of your quizzes to be used for Grading. On the left side of quiz editing page, there’s a drop down menu to select <code>Graded Quiz</code>. Also in this location you can edit the estimated time it should take to complete the quiz (by default it is set to a certain number of minutes).</p>
-<p><img src="https://raw.githubusercontent.com/jhudsl/OTTR_Template/main/resources/coursera_screenshots/quiz-settings.png" /></p>
-<p><br></p>
-<p>You also will want to assign the learning objectives that apply to this quiz. You can do this by clicking on the plus sign underneath the title.</p>
-<p><img src="https://raw.githubusercontent.com/jhudsl/OTTR_Template/main/resources/coursera_screenshots/learning-obj-assigned.png" /></p>
-<p><br></p>
-<p>From here it will suggest the module’s learning objectives. Click all that apply and then <code>Save</code>.</p>
-<p><img src="https://raw.githubusercontent.com/jhudsl/OTTR_Template/main/resources/coursera_screenshots/assign-learning-obj.png" /></p>
-<p><br></p>
-<p>You can edit the title of your quiz and then click <code>Publish</code> (don’t worry it’s not actually publishing publicly, its just saving your changes). And it will ask you again to really scare you, but yes, click <code>Publish</code>.</p>
-<p><img src="https://raw.githubusercontent.com/jhudsl/OTTR_Template/main/resources/coursera_screenshots/add-chapter-9.png" /></p>
-<p>Congrats you added a quiz to your course!</p>
-</div>
-</div>
-<div id="add-programmed-messages" class="section level2">
-<h2>Add programmed messages</h2>
-<p>You can click on <code>Go to Course</code>. And on your main course page click <code>Edit Course</code> in the right corner.</p>
-<p><img src="https://raw.githubusercontent.com/jhudsl/OTTR_Template/main/resources/coursera_screenshots/edit-course-nav.png" /></p>
-<p><br></p>
-<p>This will bring you to your version page.</p>
-<p><img src="https://raw.githubusercontent.com/jhudsl/OTTR_Template/main/resources/coursera_screenshots/versions.png" /></p>
-<p><br></p>
-<p>Underneath <code>Content</code>, on the left side bar, at the bottom, there is the <code>Programmed Messages</code>.</p>
-<p><img src="https://raw.githubusercontent.com/jhudsl/OTTR_Template/main/resources/coursera_screenshots/versions.png" /></p>
-<p><br></p>
-<p>At the very least you should add a <code>Welcome to the course</code> and a <code>Completion</code> programmed message. Click on each of these to edit them. Click <code>Preview</code> and then <code>Publish</code> to save your edits.</p>
-<p><img src="https://raw.githubusercontent.com/jhudsl/OTTR_Template/main/resources/coursera_screenshots/programmed-messages.png" /></p>
-<p>Here are some templated messages to get you started:</p>
-<div id="welcome-template-message" class="section level4">
-<h4>Welcome template message:</h4>
-<pre><code>Welcome to {Course Name}
-
-We hope this course will {What will they learn?}
-
-To get the most out of the course {What do you advise?}
-
-If you ever encounter any problems with the course, have questions or ideas, please let us know using this feedback form.</code></pre>
-<p>Add a link to your feedback form by clicking the link icon. Click <code>Preview</code> and then <code>Publish</code> to save your edits.</p>
-</div>
-<div id="completion-template-message" class="section level4">
-<h4>Completion template message:</h4>
-<pre><code>Congratulations and thank you for completing {name of course}!
-
-We hope this course has {What do you hope they learned}.
-
-If you have feedback about our course we&#39;d greatly appreciate you filling out this form.</code></pre>
-<p>Add a link to your feedback form by clicking the link icon. Click <code>Preview</code> and then <code>Publish</code> to save your edits.</p>
-</div>
-</div>
-<div id="grading-formula" class="section level2">
-<h2>Grading Formula</h2>
-<p>For final grades in the course, you will need to set the Grading Formula. To get to this page, you can click on <code>Go to Course</code>. And on your main course page click <code>Edit Course</code> in the right corner.</p>
-<p><img src="https://raw.githubusercontent.com/jhudsl/OTTR_Template/main/resources/coursera_screenshots/edit-course-nav.png" /></p>
-<p><br></p>
-<p>This will bring you to your version page.</p>
-<p><img src="https://raw.githubusercontent.com/jhudsl/OTTR_Template/main/resources/coursera_screenshots/versions.png" /></p>
-<p><br></p>
-<p>Now you can set the percentage that each module’s assignments are worth in the course.</p>
-<p><img src="https://raw.githubusercontent.com/jhudsl/OTTR_Template/main/resources/coursera_screenshots/grading-formula.png" /></p>
-</div>
-<div id="content-schedule" class="section level2">
-<h2>Content Schedule</h2>
-<p>You can find the settings for this under the <code>Content</code> tab. Here you can modify how each of your modules should be assigned to each week of your course.</p>
-</div>
-<div id="module-descriptions" class="section level2">
-<h2>Module Descriptions</h2>
-<p>Module descriptions can be found right before learning objectives when you are editing content. Adding these helps learners know a bit more about what to expect.</p>
-</div>
-<div id="landing-page" class="section level2">
-<h2>Landing Page</h2>
-<p>Add an image for your course and consider adding the following to polish your course: * Estimated workload * Skills * Recommended background * Items students will learn</p>
-</div>
-<div id="reading-about-multiple-reading-formats" class="section level2">
-<h2>Reading about multiple reading formats</h2>
-<p>Since we are publishing on Coursera using plug-ins and because there are concerns about accessibility with plug-ins, we encourage you to point out that the course material is available elsewhere in a reading at the very beginning of your course so that students can find it right away. To create a reading, you can click the add reading button which is located to the add quiz button. If you need to, you can rearrange elements of the first module and move this reading to the top of the course by clicking and dragging the three horizontal line icon on the far left of the reading section.</p>
-<p>Title the reading as:</p>
-<pre><code>Multiple Lesson Formats</code></pre>
-<p>Modify the following based on your course and publishing plans and paste into the reading:</p>
-<pre><code>Like many of our other courses, the content of this course is available in multiple formats.
-You can also find the lessons for this course at [insert Bookdown link here]. This format might be most appropriate for you if you rely on screen-reader technology.
-Our courses are open source, so you can also find all the source material on GitHub  by visiting [insert GitHub link here].
-These resources are used throughout this Coursera course in the form of ungraded plug-ins. You are welcome to use those plug-ins here on Coursera or connect to the content in other formats through the links above. Please select the format that most suits your needs.
-Note about links in the plug-ins: The plug-ins used throughout the course feature links to other resources. To follow these links, right-click on them and open in a new tab or window.
-Regardless of the format you choose for the instructional content, you must take and pass the quizzes here on Coursera if you want to earn a Coursera certificate.</code></pre>
 </div>
 </div>
 
 <hr>
+<hr>
+<center>
+<div class="container">
+  <iframe class="responsive-iframe" src="https://c-savonen.shinyapps.io/widget-survey/?course=ottr" style="width: 400px; height: 220px; overflow: auto;"></iframe>
+</div>
+  </div>
+</center>
+
 <center>
   <div class="footer">
-    <img src="resources/images/basic_otter_circle.PNG" width=120>    
-    <br>
-    Your feedback is greatly appreciated! You can fill out <a href="https://forms.gle/jvFjnhqt5V1E9LbQ9">this form </a>
-    <br>
-    or <a href="https://github.com/jhudsl/OTTR_Template/issues/new/choose">file a GitHub issue</a>.
-      <br>
+    <img src="resources/images/basic_otter_circle.PNG" width=120>
     <br><font size="1">Otter images by <a href = https://www.linkedin.com/in/jimin-hwang-549835142/>Jimin Hwang</a>.</font>
     <br>
   </div>

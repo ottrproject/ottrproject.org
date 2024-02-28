@@ -2,7 +2,7 @@ name: Open-source Tools for Training Resources
 output_dir: '.'
 navbar:
   left:
-  - text: "About OTTR"
+  - text: ""
     href: index.html
     icon: fa-home
   - text: "Getting Started"
@@ -18,7 +18,7 @@ navbar:
       - text: "Creating your website"
         href: editing_website.html
         icon: fa-pen
-  - text: "OTTR Course Creation"
+  - text: "OTTR Courses"
     href: examples.html
     icon: fa-lightbulb
     menu:
@@ -37,7 +37,7 @@ navbar:
         href: course_publishing.html#publishing-with-leanpub
       - text: "Publishing with Coursera"
         href: course_publishinghtml#publishing-with-coursera
-  - text: "OTTR spinoff babies"
+  - text: "OTTR spinoffs"
     href: examples.html#ottr-spinoff-babies
     icon: glyphicon-baby-formula
     menu:
@@ -49,23 +49,19 @@ navbar:
         href: examples.html#metric-collection
       - text: "OTTR for DataTrail"
         href: examples.html#datatrail-template
-  - text: "Customization"
-    href: customizing.html
-    icon: fa-palette
-    menu:
-      - text: "Customizing Checks"
-        href: customize-robots.html
-        icon: fa-robot
-      - text: "Customizing style"
-        href: customize-style.html
-        icon: fa-palette
-      - text: "Customizing Docker"
-        href: customize-docker.html
-        icon: fa-gears
-  - text: "More features"
+  - text: "Customizing OTTR"
     href: faqs.html
     icon: fa-plus
     menu:
+        - text: "Customizing Checks"
+          href: customize-robots.html
+          icon: fa-robot
+        - text: "Customizing style"
+          href: customize-style.html
+          icon: fa-palette
+        - text: "Customizing Docker"
+          href: customize-docker.html
+          icon: fa-gears
         - text: "Citing sources"
           href: more_features.html#citing-sources
           icon: fa-quote-left
@@ -88,7 +84,7 @@ navbar:
   - text: "Help"
     href: faqs.html
     icon: fa-handshake
-  - text: "GitHub"
+  - text: ""
     href: https://github.com/jhudsl/OTTR_Template
     icon: fa-github
   - text: "Feedback"
