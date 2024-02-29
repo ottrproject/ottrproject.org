@@ -132,33 +132,7 @@ For more information about GitHub Pages we recommend you refer to the GitHub doc
 **Warning**: If you go to your URL right now (before you've pushed any file changes) you might see a 404 error because nothing has been triggered to be rendered. You can check the URL after you file your first pull request (which we will guide you through [in the next section](https://github.com/jhudsl/OTTR_Template/wiki/Start-editing-your-course).
 </p>
 
-### 9. Set up branch rules
-
-\* Don't set these settings right away! Wait a few minutes after starting your repository.
-
-Go to `Settings` > `Branches` and click `Add branch protection rule`. This is only possible if you have GitHub Pro, Team, or Enterprise access. We recommend seeing if your organization can give you access if you do not already have access. To get this access through your organization, you will need to transfer ownership of your repo to your organization. See [here](https://docs.github.com/en/repositories/creating-and-managing-repositories/transferring-a-repository) about how to do this.
-
-![](https://raw.githubusercontent.com/jhudsl/OTTR_Template/main/resources/screenshots/branches.png)
-
-For `Branch name pattern`, put `main`.
-
-![](https://raw.githubusercontent.com/jhudsl/OTTR_Template/main/resources/screenshots/main.png)
-
-_Protect the main branch_:  
-Then check the box that says `Require a pull request before merging`.
-
-\* Note that if the user whose personal access token does not have admin privileges for step `6. Set up your GitHub personal access token`, then you will need to skip this setting.
-
-_Make sure branches are updated_:  
-- Check the box that says `Require status checks to pass before merging`.
-- Underneath this also check the box that says `Require branches to be up to date before merging`.
-
-![](https://raw.githubusercontent.com/jhudsl/OTTR_Template/main/resources/screenshots/branch_settings.png)
-
-After setting up these new branch items, click `Create` and `Save changes`.
-
-
-### 10. Enroll your repository for OTTR updates
+### 9. Enroll your repository for OTTR updates
 
 This OTTR templates (https://github.com/jhudsl/OTTR_Template_Website) are always a work in progress.
 We are working on adding more features and smoothing out bugs as we go. This is also why [your feedback is greatly appreciated](https://github.com/jhudsl/OTTR_Template/issues/new/choose).
