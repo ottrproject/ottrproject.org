@@ -8,9 +8,8 @@ output:
 
 There are two main types of OTTR websites:
 
-[OTTR Website classic](](https://github.com/jhudsl/OTTR_Template_Website) - this is your typical website like the one you are looking at right now, with a nav bar on the top. Keep in mind you can customize everything without too much effort -- our guide will hopefully help!
-
-[OTTR Course Website](https://github.com/jhudsl/OTTR_Template) - this is for books/courses and has a table of contents on the side.
+- [OTTR Website classic](https://github.com/jhudsl/OTTR_Template_Website) - this is your typical website like the one you are looking at right now, with a nav bar on the top. Keep in mind you can customize everything without too much effort -- our guide will hopefully help!
+- [OTTR Course Website](https://github.com/jhudsl/OTTR_Template) - this is for books/courses and has a table of contents on the side.
 <img src="resources/images/ottr-course-example.png" width = 400>
 
 
@@ -21,7 +20,6 @@ OTTR relies on R Markdown and GitHub Actions. You do not need to be an expert in
 Please check out these resources if you are not familiar with R Markdown. Note that OTTR is also compatible with Quarto and regular markdown websites.
 
 - If you aren't familiar with **Markdown**, this [site](https://www.markdownguide.org/getting-started/) is a nice introduction.  
-
 - If you aren't familiar with **R Markdown** (a variation of Markdown used here), you can find RStudio's lessons [here](https://rmarkdown.rstudio.com/lesson-1.html).
 
 If you are not familiar with **Git and GitHub**, we recommend going through these chapters from our Reproducibility courses:
