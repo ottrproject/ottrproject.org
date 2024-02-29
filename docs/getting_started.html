@@ -600,23 +600,8 @@ div.tocify {
 <strong>Warning</strong>: If you go to your URL right now (before you’ve pushed any file changes) you might see a 404 error because nothing has been triggered to be rendered. You can check the URL after you file your first pull request (which we will guide you through <a href="https://github.com/jhudsl/OTTR_Template/wiki/Start-editing-your-course">in the next section</a>.
 </p>
 </div>
-<div id="set-up-branch-rules" class="section level3">
-<h3>9. Set up branch rules</h3>
-<p>* Don’t set these settings right away! Wait a few minutes after starting your repository.</p>
-<p>Go to <code>Settings</code> &gt; <code>Branches</code> and click <code>Add branch protection rule</code>. This is only possible if you have GitHub Pro, Team, or Enterprise access. We recommend seeing if your organization can give you access if you do not already have access. To get this access through your organization, you will need to transfer ownership of your repo to your organization. See <a href="https://docs.github.com/en/repositories/creating-and-managing-repositories/transferring-a-repository">here</a> about how to do this.</p>
-<p><img src="https://raw.githubusercontent.com/jhudsl/OTTR_Template/main/resources/screenshots/branches.png" /></p>
-<p>For <code>Branch name pattern</code>, put <code>main</code>.</p>
-<p><img src="https://raw.githubusercontent.com/jhudsl/OTTR_Template/main/resources/screenshots/main.png" /></p>
-<p><em>Protect the main branch</em>:<br />
-Then check the box that says <code>Require a pull request before merging</code>.</p>
-<p>* Note that if the user whose personal access token does not have admin privileges for step <code>6. Set up your GitHub personal access token</code>, then you will need to skip this setting.</p>
-<p><em>Make sure branches are updated</em>:<br />
-- Check the box that says <code>Require status checks to pass before merging</code>. - Underneath this also check the box that says <code>Require branches to be up to date before merging</code>.</p>
-<p><img src="https://raw.githubusercontent.com/jhudsl/OTTR_Template/main/resources/screenshots/branch_settings.png" /></p>
-<p>After setting up these new branch items, click <code>Create</code> and <code>Save changes</code>.</p>
-</div>
 <div id="enroll-your-repository-for-ottr-updates" class="section level3">
-<h3>10. Enroll your repository for OTTR updates</h3>
+<h3>9. Enroll your repository for OTTR updates</h3>
 <p>This OTTR templates (<a href="https://github.com/jhudsl/OTTR_Template_Website" class="uri">https://github.com/jhudsl/OTTR_Template_Website</a>) are always a work in progress. We are working on adding more features and smoothing out bugs as we go. This is also why <a href="https://github.com/jhudsl/OTTR_Template/issues/new/choose">your feedback is greatly appreciated</a>.</p>
 <p>When updates are made to files that aren’t specific to the course content but instead run checks and other processes in the original repository, pull requests are filed automatically to any downstream repositories made from this template.</p>
 <p><strong>To enroll in these automatic update pull requests, the new course’s repository name will need to be added to <a href="https://github.com/jhudsl/OTTR_Template_Website/edit/main/.github/sync.yml">this file in the OTTR website template</a></strong></p>
