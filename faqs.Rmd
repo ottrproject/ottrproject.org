@@ -16,6 +16,13 @@ When you see an ❌ , click on the `Details` button to see the error message. We
 
 ***
 
+### Files are being checked that I don't want to be checked!
+
+You can exclude files from being checked for URLs and spelling by adding them to the `resources/exclude_files.txt` file.
+
+This file is read in by the spell checker and URL checker and files and directories listed are excluded.
+This uses regex so for example `docs/*` will make sure the whole docs folder is ignored.
+
 ### `file is not in PNG format`: Google Slides permissions fail
 
 _Error example:_

@@ -16,6 +16,7 @@ check-quizzes: yes
 url-checker: yes
 render-preview: yes
 style-and-sp-check: yes
+url-check-periodically: yes
 ...
 ```
 
@@ -23,6 +24,9 @@ There are two main sets of automation steps and checks run:
 
 - `.github/workflows/pull-request.yml` : Run upon opening a pull request
 - `.github/workflows/render-all.yml`: Run upon any changes merged to the `main` branch
+
+
+You can exclude files from being checked for URLs and spelling by adding them to the `resources/exclude_files.txt` file. This file is read in by the spell checker and URL checker and files and directories listed are excluded. This is regex compatible so for example `docs/*` will make sure the whole docs folder is ignored.
 
 ## Pull Request Checks:
 
@@ -116,6 +120,12 @@ render-coursera: yes
 For publishing to Leanpub, make sure that the render Leanpub option is set to yes: `render-leanpub: yes`.  See more details about publishing to Leanpub [here](https://github.com/jhudsl/OTTR_Template/wiki/Publishing-on-Leanpub).
 
 For publishing to Coursera, make sure render Coursera option is set to yes: `render-coursera: yes`. See more details about publishing to Coursera [here](https://github.com/jhudsl/OTTR_Template/wiki/Publishing-on-Coursera).
+
+## Periodic URL checker
+
+Sometimes you might not have mad any changes to your course, but a URL referenced changes making it so the URL you have in your course is now obsolete! To alert you of this kind of URL break, there is `url-check-periodically: yes`.
+
+By default this check runs once a month and if a broken URL is found, an issue will be filed to your repository. You can adjust the frequency that this runs by adjusting the cron setting in the `.github/workflows/url-checker.yml` file. Use https://crontab.guru/#*_*_*_* to help you figure out the cron you want. 
 
 <br>
 
