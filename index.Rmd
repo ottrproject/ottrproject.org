@@ -53,16 +53,19 @@ knitr::include_graphics("https://github.com/jhudsl/OTTR_Template/raw/main/resour
 
 **[See the OTTR pre-print here!](https://arxiv.org/abs/2203.07083)📝👀**
 
-Here's the BibTeX formatted citation for the pre-print:
+Here's the BibTeX formatted citation for the [JSDSE manuscript](https://www.tandfonline.com/doi/full/10.1080/26939169.2022.2118646).
 ```
-@misc{ottr,
-  doi = {10.48550/ARXIV.2203.07083},
-  url = {https://arxiv.org/abs/2203.07083},
-  author = {Savonen, Candace and Wright, Carrie and Hoffman, Ava M. and Muschelli, John and Cox, Katherine and Tan, Frederick J. and Leek, Jeffrey T.},
-  keywords = {Computers and Society (cs.CY), FOS: Computer and information sciences, FOS: Computer and information sciences},
-  title = {Open-source Tools for Training Resources -- OTTR},
-  publisher = {arXiv},
-  year = {2022},
-  copyright = {Creative Commons Attribution 4.0 International}
+@article{ottr,
+  author = {Candace Savonen, Carrie Wright, Ava M. Hoffman, John Muschelli,    Katherine Cox, Frederick J. Tan and Jeffrey T. Leek},
+  title = {Open-source Tools for Training Resources – OTTR},
+  journal = {Journal of Statistics and Data Science Education},
+  volume = {31},
+  number = {1},
+  pages = {57-65},
+  year = {2023},
+  publisher = {Taylor & Francis},
+  doi = {10.1080/26939169.2022.2118646},
+  URL = {https://doi.org/10.1080/26939169.2022.2118646},
+  eprint = {https://doi.org/10.1080/26939169.2022.2118646}
 }
 ```
