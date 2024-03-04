@@ -13,8 +13,8 @@
 
 <title>faqs.knit</title>
 
-<script src="site_libs/header-attrs-2.25/header-attrs.js"></script>
-<script src="site_libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<script src="site_libs/header-attrs-2.10/header-attrs.js"></script>
+<script src="site_libs/jquery-1.11.3/jquery.min.js"></script>
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <link href="site_libs/bootstrap-3.3.5/css/bootstrap.min.css" rel="stylesheet" />
 <script src="site_libs/bootstrap-3.3.5/js/bootstrap.min.js"></script>
@@ -29,14 +29,14 @@
        h6 {font-size: 12px;}
        code {color: inherit; background-color: rgba(0, 0, 0, 0.04);}
        pre:not([class]) { background-color: white }</style>
-<script src="site_libs/jqueryui-1.13.2/jquery-ui.min.js"></script>
+<script src="site_libs/jqueryui-1.11.4/jquery-ui.min.js"></script>
 <link href="site_libs/tocify-1.9.1/jquery.tocify.css" rel="stylesheet" />
 <script src="site_libs/tocify-1.9.1/jquery.tocify.js"></script>
 <script src="site_libs/navigation-1.1/tabsets.js"></script>
 <link href="site_libs/highlightjs-9.12.0/default.css" rel="stylesheet" />
 <script src="site_libs/highlightjs-9.12.0/highlight.js"></script>
-<link href="site_libs/font-awesome-6.4.2/css/all.min.css" rel="stylesheet" />
-<link href="site_libs/font-awesome-6.4.2/css/v4-shims.min.css" rel="stylesheet" />
+<link href="site_libs/font-awesome-5.1.0/css/all.css" rel="stylesheet" />
+<link href="site_libs/font-awesome-5.1.0/css/v4-shims.css" rel="stylesheet" />
 
 <style type="text/css">
   code{white-space: pre-wrap;}
@@ -57,7 +57,6 @@ if (window.hljs) {
   }
 }
 </script>
-
 
 
 
@@ -87,9 +86,6 @@ button.code-folding-btn:focus {
 }
 summary {
   display: list-item;
-}
-details > summary > p:only-child {
-  display: inline;
 }
 pre code {
   padding: 0;
@@ -147,15 +143,11 @@ $(document).ready(function () {
     href = "index.html";
   var menuAnchor = $('a[href="' + href + '"]');
 
-  // mark the anchor link active (and if it's in a dropdown, also mark that active)
-  var dropdown = menuAnchor.closest('li.dropdown');
-  if (window.bootstrap) { // Bootstrap 4+
-    menuAnchor.addClass('active');
-    dropdown.find('> .dropdown-toggle').addClass('active');
-  } else { // Bootstrap 3
-    menuAnchor.parent().addClass('active');
-    dropdown.addClass('active');
-  }
+  // mark it active
+  menuAnchor.tab('show');
+
+  // if it's got a parent navbar menu mark it active as well
+  menuAnchor.closest('li.dropdown').addClass('active');
 
   // Navbar adjustments
   var navHeight = $(".navbar").first().height() + 15;
@@ -184,8 +176,8 @@ $(document).ready(function () {
   border-radius: 4px;
 }
 
-.tabset-dropdown > .nav-tabs > li.active:before, .tabset-dropdown > .nav-tabs.nav-tabs-open:before {
-  content: "\e259";
+.tabset-dropdown > .nav-tabs > li.active:before {
+  content: "";
   font-family: 'Glyphicons Halflings';
   display: inline-block;
   padding: 10px;
@@ -193,9 +185,16 @@ $(document).ready(function () {
 }
 
 .tabset-dropdown > .nav-tabs.nav-tabs-open > li.active:before {
-  content: "\e258";
-  font-family: 'Glyphicons Halflings';
+  content: "&#xe258;";
   border: none;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open:before {
+  content: "";
+  font-family: 'Glyphicons Halflings';
+  display: inline-block;
+  padding: 10px;
+  border-right: 1px solid #ddd;
 }
 
 .tabset-dropdown > .nav-tabs > li.active {
@@ -312,7 +311,7 @@ div.tocify {
 <div class="navbar navbar-default  navbar-fixed-top" role="navigation">
   <div class="container">
     <div class="navbar-header">
-      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-bs-toggle="collapse" data-target="#navbar" data-bs-target="#navbar">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar">
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
@@ -329,7 +328,7 @@ div.tocify {
   </a>
 </li>
 <li class="dropdown">
-  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
     <span class="fa fa-play"></span>
      
     Getting Started
@@ -361,7 +360,7 @@ div.tocify {
   </a>
 </li>
 <li class="dropdown">
-  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
     <span class="fa fa-lightbulb"></span>
      
     OTTR Courses
@@ -402,7 +401,7 @@ div.tocify {
   </ul>
 </li>
 <li class="dropdown">
-  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
     About
      
     <span class="caret"></span>
@@ -517,19 +516,12 @@ div.tocify {
 </div>
 <div id="most-common-errors" class="section level2">
 <h2>Most Common Errors</h2>
-<p>This guide will describe the most common OTTR errors and pitfalls and
-how to address them. When you open a pull request, you should see a
-report like this:</p>
-<p><img
-src="https://github.com/jhudsl/OTTR_Template/raw/main/resources/screenshots/gha-actions-error.png" /></p>
-<p>When you see an ❌ , click on the <code>Details</code> button to see
-the error message. We’ll discuss the most common error messages
-here.</p>
+<p>This guide will describe the most common OTTR errors and pitfalls and how to address them. When you open a pull request, you should see a report like this:</p>
+<p><img src="https://github.com/jhudsl/OTTR_Template/raw/main/resources/screenshots/gha-actions-error.png" /></p>
+<p>When you see an ❌ , click on the <code>Details</code> button to see the error message. We’ll discuss the most common error messages here.</p>
 <hr />
-<div id="file-is-not-in-png-format-google-slides-permissions-fail"
-class="section level3">
-<h3><code>file is not in PNG format</code>: Google Slides permissions
-fail</h3>
+<div id="file-is-not-in-png-format-google-slides-permissions-fail" class="section level3">
+<h3><code>file is not in PNG format</code>: Google Slides permissions fail</h3>
 <p><em>Error example:</em></p>
 <pre><code>Error in png::readPNG(path, native = TRUE, info = TRUE) :
   file is not in PNG format
@@ -542,70 +534,38 @@ Execution halted
 Error: bookdown::render_book() failed to render the output format &#39;bookdown::gitbook&#39;.
 Execution halted</code></pre>
 <p><em>What does this mean?:</em></p>
-<p>Your Google Slides presentation you have tried to retrieve a slide
-from with <code>ottrpal::include_slide()</code> is not public. Your
-Google Slide document must be set to <code>Anyone with a link</code>.
-See <a
-href="https://support.wix.com/en/article/setting-permissions-for-google-drive-files-and-folders#:~:text=Settings%20Permissions%20for%20a%20Google,edit%20and%20comment%20as%20well.">this
-article for more details.</a> The renders will fail if this is not set!
-See the <a
-href="https://github.com/jhudsl/OTTR_Template/wiki/Setting-up-images-and-graphics">setting
-up images and graphics section</a> for more details.</p>
+<p>Your Google Slides presentation you have tried to retrieve a slide from with <code>ottrpal::include_slide()</code> is not public. Your Google Slide document must be set to <code>Anyone with a link</code>. See <a href="https://support.wix.com/en/article/setting-permissions-for-google-drive-files-and-folders#:~:text=Settings%20Permissions%20for%20a%20Google,edit%20and%20comment%20as%20well.">this article for more details.</a> The renders will fail if this is not set! See the <a href="https://github.com/jhudsl/OTTR_Template/wiki/Setting-up-images-and-graphics">setting up images and graphics section</a> for more details.</p>
 <hr />
 </div>
-<div
-id="process-completed-with-exit-code-1.-spell-checkurl-checkquiz-format-fail"
-class="section level3">
-<h3><code>Process completed with exit code 1.</code>: Spell check/url
-check/quiz format fail:</h3>
-<p>Underneath a section that says something like:
-<code>**Check spelling/url/quiz errors - fail if too many of them**</code>
-you may see something like:</p>
+<div id="process-completed-with-exit-code-1.-spell-checkurl-checkquiz-format-fail" class="section level3">
+<h3><code>Process completed with exit code 1.</code>: Spell check/url check/quiz format fail:</h3>
+<p>Underneath a section that says something like: <code>**Check spelling/url/quiz errors - fail if too many of them**</code> you may see something like:</p>
 <pre><code>Run exit 1
   exit 1
   shell: sh -e {0}
 Error: Process completed with exit code 1.</code></pre>
-<p>This is failing on purpose – it means that checker has found errors.
-Return to your pull request page and look for a comment that says
-something like:</p>
+<p>This is failing on purpose – it means that checker has found errors. Return to your pull request page and look for a comment that says something like:</p>
 <pre><code>⚠️ There are &lt;spelling/quiz/url&gt; errors that need to be addressed. Read this guide for more info.
 Download the errors here.
 Comment updated at &lt;some_date&gt; with changes from &lt;commit&gt;</code></pre>
-<p>Click on the <code>Download the errors here</code> to see the list of
-errors and which files they were found in. For help in addressing these
-errors, click on the <code>Read this guide for more info</code>
-button.</p>
+<p>Click on the <code>Download the errors here</code> to see the list of errors and which files they were found in. For help in addressing these errors, click on the <code>Read this guide for more info</code> button.</p>
 <hr />
 </div>
-<div id="conflict-modifydelete-merge-conflict-fail"
-class="section level3">
+<div id="conflict-modifydelete-merge-conflict-fail" class="section level3">
 <h3><code>CONFLICT (modify/delete)</code>: Merge conflict fail:</h3>
 <p><em>Error example:</em></p>
 <pre><code>CONFLICT (modify/delete): &lt;file_name&gt; deleted in &lt;branch_name&gt; and modified in HEAD. Version HEAD of &lt;file_name&gt; left in tree.</code></pre>
-<p>This will often happen when render-preview’s git handling doesn’t
-know which changes you are looking to preview. The easiest way to fix
-this problem is to create a separate pull request that completely
-deletes the files lists. To do this, follow these steps:</p>
+<p>This will often happen when render-preview’s git handling doesn’t know which changes you are looking to preview. The easiest way to fix this problem is to create a separate pull request that completely deletes the files lists. To do this, follow these steps:</p>
 <ol style="list-style-type: decimal">
-<li>Take note of your pull request’s number. Go to the pull request page
-and see what <code>#number</code> is posted there.</li>
-<li>On your GitHub repository, go to <code>Code</code> and click on
-<code>Branches</code>.</li>
-<li>Your pull request’s preview is made on a branch named
-<code>preview-&lt;number of your pull request&gt;</code>. Find this
-branch and click the trash can icon. This will delete the preview branch
-and hopefully get rid of this error. <a
-href="https://www.git-tower.com/learn/git/faq/github-delete-branch">Read
-this</a> for more info on how to delete a branch.</li>
+<li>Take note of your pull request’s number. Go to the pull request page and see what <code>#number</code> is posted there.</li>
+<li>On your GitHub repository, go to <code>Code</code> and click on <code>Branches</code>.</li>
+<li>Your pull request’s preview is made on a branch named <code>preview-&lt;number of your pull request&gt;</code>. Find this branch and click the trash can icon. This will delete the preview branch and hopefully get rid of this error. <a href="https://www.git-tower.com/learn/git/faq/github-delete-branch">Read this</a> for more info on how to delete a branch.</li>
 <li>Re-trigger your GitHub actions run and it should pass.</li>
 </ol>
 <hr />
 </div>
-<div
-id="parser-error-while-parsing-a-flow-sequence-_bookdown.yml-parse-error"
-class="section level3">
-<h3><code>Parser error: while parsing a flow sequence</code>:
-_bookdown.yml parse error</h3>
+<div id="parser-error-while-parsing-a-flow-sequence-_bookdown.yml-parse-error" class="section level3">
+<h3><code>Parser error: while parsing a flow sequence</code>: _bookdown.yml parse error</h3>
 <p>If you see an error like this:</p>
 <pre><code>Run Rscript -e &quot;bookdown::render_book(&#39;index.Rmd&#39;, output_format = &#39;all&#39;)&quot;
 Error in yaml::yaml.load(..., eval.expr = TRUE) :
@@ -613,50 +573,33 @@ Error in yaml::yaml.load(..., eval.expr = TRUE) :
 Calls: &lt;Anonymous&gt; ... &lt;Anonymous&gt; -&gt; resolve -&gt; &lt;Anonymous&gt; -&gt; yaml_load -&gt; &lt;Anonymous&gt;
 Execution halted
 Error: Process completed with exit code 1.</code></pre>
-<p>It means that the formatting in your <code>_bookdown.yml</code> is
-off. If you forget a comma, or quote, or a <code>]</code> this message
-will appear in the github actions preview run.</p>
-<p>Take a careful look at the <code>_bookdown.yml</code>. Keep in mind
-that _bookdown.yml rmd_files spec should look like this (indents,
-quotes, and commas included in this pattern):</p>
+<p>It means that the formatting in your <code>_bookdown.yml</code> is off. If you forget a comma, or quote, or a <code>]</code> this message will appear in the github actions preview run.</p>
+<p>Take a careful look at the <code>_bookdown.yml</code>. Keep in mind that _bookdown.yml rmd_files spec should look like this (indents, quotes, and commas included in this pattern):</p>
 <pre><code>rmd_files: [&quot;index.Rmd&quot;,
             &quot;01-intro.Rmd&quot;,
             &quot;02-chapter_of_course.Rmd&quot;,
             &quot;new_file.Rmd&quot;,
             &quot;About.Rmd&quot;,
             &quot;References.Rmd&quot;]</code></pre>
-<p>Commit the changes to your <code>_bookdown.yml</code> and see if the
-preview GitHub action runs appropriately.</p>
+<p>Commit the changes to your <code>_bookdown.yml</code> and see if the preview GitHub action runs appropriately.</p>
 </div>
 </div>
 <div id="ask-a-question-on-the-google-group" class="section level2">
 <h2>Ask a question on the Google Group</h2>
-<p>You can always start a discussion on the <a
-href="https://github.com/jhudsl/OTTR_Template/discussions">Discussions</a>
-tab above. You can also join our <a
-href="https://groups.google.com/g/jhudsl">Google Group</a> to ask
-questions and keep in touch with the OTTR community.</p>
+<p>You can always start a discussion on the <a href="https://github.com/jhudsl/OTTR_Template/discussions">Discussions</a> tab above. You can also join our <a href="https://groups.google.com/g/jhudsl">Google Group</a> to ask questions and keep in touch with the OTTR community.</p>
 <p><strong>To join the Google Group:</strong></p>
 <ul>
-<li>Go to <a
-href="https://groups.google.com/g/jhudsl">https://groups.google.com/g/jhudsl</a>.</li>
-<li>Click “Ask to join group”. You need to be signed in to a Google
-account.</li>
-<li>You will be prompted for some information, such as your display name
-and your subscription preference. We recommend subscribing to “Combined
-updates” to avoid flooding your inbox, but you can always change this
-later.</li>
+<li>Go to <a href="https://groups.google.com/g/jhudsl">https://groups.google.com/g/jhudsl</a>.</li>
+<li>Click “Ask to join group”. You need to be signed in to a Google account.</li>
+<li>You will be prompted for some information, such as your display name and your subscription preference. We recommend subscribing to “Combined updates” to avoid flooding your inbox, but you can always change this later.</li>
 </ul>
 <p>To start a discussion:</p>
 <ul>
 <li>Click on “New conversation”.</li>
-<li>Provide a relevant subject and as much detail as you can about your
-problem/concern/idea.</li>
+<li>Provide a relevant subject and as much detail as you can about your problem/concern/idea.</li>
 <li>Click “Post message”.</li>
 </ul>
-<p>Remember that everyone can see your post. This is a good thing
-because if you need help, chances are someone down the line will too.
-This public forum ensures the next person can figure things out!</p>
+<p>Remember that everyone can see your post. This is a good thing because if you need help, chances are someone down the line will too. This public forum ensures the next person can figure things out!</p>
 </div>
 
 <hr>
