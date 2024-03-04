@@ -20,11 +20,10 @@ navbar:
     href: editing_website.html
     icon: fa-pen
   - text: "OTTR Courses"
-    href: examples.html
     icon: fa-lightbulb
     menu:
       - text: "Start writing!"
-        href: writing_content.html
+        href: writing_content_courses.html
         icon: fa-pen
       - text: "Set up images"
         href: writing_content_courses.html#set-up-images
