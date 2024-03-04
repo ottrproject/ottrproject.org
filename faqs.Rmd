@@ -5,6 +5,15 @@ output:
     toc_float: true
 ---
 
+## Search on OTTR docs
+
+Search on the OTTR docs for what you are looking for. Note that first few entries are sponsored, the actually helpful stuff will be below that. 
+
+<script async src="https://cse.google.com/cse.js?cx=22c03a049bf7a472a">
+</script>
+<div class="gcse-searchbox-only"></div>
+
+
 ## Most Common Errors
 
 This guide will describe the most common OTTR errors and pitfalls and how to address them.
