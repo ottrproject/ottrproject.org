@@ -51,9 +51,9 @@ knitr::include_graphics("https://github.com/jhudsl/OTTR_Template/raw/main/resour
 
 ## How to Cite OTTR
 
-**[See the OTTR pre-print here!](https://arxiv.org/abs/2203.07083)📝👀**
+**[See the OTTR manuscript here!](https://www.tandfonline.com/doi/full/10.1080/26939169.2022.2118646)📝👀**
 
-Here's the BibTeX formatted citation for the [JSDSE manuscript](https://www.tandfonline.com/doi/full/10.1080/26939169.2022.2118646).
+Here's the BibTeX formatted citation for that [JSDSE manuscript](https://www.tandfonline.com/doi/full/10.1080/26939169.2022.2118646).
 ```
 @article{ottr,
   author = {Candace Savonen, Carrie Wright, Ava M. Hoffman, John Muschelli,    Katherine Cox, Frederick J. Tan and Jeffrey T. Leek},
