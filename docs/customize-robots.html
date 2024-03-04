@@ -13,8 +13,8 @@
 
 <title>Customizing Automatic Checks</title>
 
-<script src="site_libs/header-attrs-2.10/header-attrs.js"></script>
-<script src="site_libs/jquery-1.11.3/jquery.min.js"></script>
+<script src="site_libs/header-attrs-2.25/header-attrs.js"></script>
+<script src="site_libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <link href="site_libs/bootstrap-3.3.5/css/bootstrap.min.css" rel="stylesheet" />
 <script src="site_libs/bootstrap-3.3.5/js/bootstrap.min.js"></script>
@@ -29,14 +29,14 @@
        h6 {font-size: 12px;}
        code {color: inherit; background-color: rgba(0, 0, 0, 0.04);}
        pre:not([class]) { background-color: white }</style>
-<script src="site_libs/jqueryui-1.11.4/jquery-ui.min.js"></script>
+<script src="site_libs/jqueryui-1.13.2/jquery-ui.min.js"></script>
 <link href="site_libs/tocify-1.9.1/jquery.tocify.css" rel="stylesheet" />
 <script src="site_libs/tocify-1.9.1/jquery.tocify.js"></script>
 <script src="site_libs/navigation-1.1/tabsets.js"></script>
 <link href="site_libs/highlightjs-9.12.0/default.css" rel="stylesheet" />
 <script src="site_libs/highlightjs-9.12.0/highlight.js"></script>
-<link href="site_libs/font-awesome-5.1.0/css/all.css" rel="stylesheet" />
-<link href="site_libs/font-awesome-5.1.0/css/v4-shims.css" rel="stylesheet" />
+<link href="site_libs/font-awesome-6.4.2/css/all.min.css" rel="stylesheet" />
+<link href="site_libs/font-awesome-6.4.2/css/v4-shims.min.css" rel="stylesheet" />
 
 <style type="text/css">
   code{white-space: pre-wrap;}
@@ -57,6 +57,7 @@ if (window.hljs) {
   }
 }
 </script>
+
 
 
 
@@ -86,6 +87,9 @@ button.code-folding-btn:focus {
 }
 summary {
   display: list-item;
+}
+details > summary > p:only-child {
+  display: inline;
 }
 pre code {
   padding: 0;
@@ -143,11 +147,15 @@ $(document).ready(function () {
     href = "index.html";
   var menuAnchor = $('a[href="' + href + '"]');
 
-  // mark it active
-  menuAnchor.tab('show');
-
-  // if it's got a parent navbar menu mark it active as well
-  menuAnchor.closest('li.dropdown').addClass('active');
+  // mark the anchor link active (and if it's in a dropdown, also mark that active)
+  var dropdown = menuAnchor.closest('li.dropdown');
+  if (window.bootstrap) { // Bootstrap 4+
+    menuAnchor.addClass('active');
+    dropdown.find('> .dropdown-toggle').addClass('active');
+  } else { // Bootstrap 3
+    menuAnchor.parent().addClass('active');
+    dropdown.addClass('active');
+  }
 
   // Navbar adjustments
   var navHeight = $(".navbar").first().height() + 15;
@@ -176,8 +184,8 @@ $(document).ready(function () {
   border-radius: 4px;
 }
 
-.tabset-dropdown > .nav-tabs > li.active:before {
-  content: "";
+.tabset-dropdown > .nav-tabs > li.active:before, .tabset-dropdown > .nav-tabs.nav-tabs-open:before {
+  content: "\e259";
   font-family: 'Glyphicons Halflings';
   display: inline-block;
   padding: 10px;
@@ -185,16 +193,9 @@ $(document).ready(function () {
 }
 
 .tabset-dropdown > .nav-tabs.nav-tabs-open > li.active:before {
-  content: "&#xe258;";
-  border: none;
-}
-
-.tabset-dropdown > .nav-tabs.nav-tabs-open:before {
-  content: "";
+  content: "\e258";
   font-family: 'Glyphicons Halflings';
-  display: inline-block;
-  padding: 10px;
-  border-right: 1px solid #ddd;
+  border: none;
 }
 
 .tabset-dropdown > .nav-tabs > li.active {
@@ -311,7 +312,7 @@ div.tocify {
 <div class="navbar navbar-default  navbar-fixed-top" role="navigation">
   <div class="container">
     <div class="navbar-header">
-      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-bs-toggle="collapse" data-target="#navbar" data-bs-target="#navbar">
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
@@ -328,7 +329,7 @@ div.tocify {
   </a>
 </li>
 <li class="dropdown">
-  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
     <span class="fa fa-play"></span>
      
     Getting Started
@@ -360,7 +361,7 @@ div.tocify {
   </a>
 </li>
 <li class="dropdown">
-  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
     <span class="fa fa-lightbulb"></span>
      
     OTTR Courses
@@ -401,7 +402,7 @@ div.tocify {
   </ul>
 </li>
 <li class="dropdown">
-  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
     About
      
     <span class="caret"></span>
@@ -506,7 +507,11 @@ div.tocify {
 </div>
 
 
-<p>By default, all automation steps and checks will run. Based on the requirements of your course, you have the flexibility to enable or disable specific features by modifying the settings in the <code>config_automation.yml</code> file. Simply adjust the options to “yes” or “no” accordingly.</p>
+<p>By default, all automation steps and checks will run. Based on the
+requirements of your course, you have the flexibility to enable or
+disable specific features by modifying the settings in the
+<code>config_automation.yml</code> file. Simply adjust the options to
+“yes” or “no” accordingly.</p>
 <p>The <code>config_automation.yml</code> file looks like this:</p>
 <pre><code># Formatting Checks (run at pull request)
 check-quizzes: yes
@@ -516,77 +521,150 @@ style-and-sp-check: yes
 ...</code></pre>
 <p>There are two main sets of automation steps and checks run:</p>
 <ul>
-<li><code>.github/workflows/pull-request.yml</code> : Run upon opening a pull request</li>
-<li><code>.github/workflows/render-all.yml</code>: Run upon any changes merged to the <code>main</code> branch</li>
+<li><code>.github/workflows/pull-request.yml</code> : Run upon opening a
+pull request</li>
+<li><code>.github/workflows/render-all.yml</code>: Run upon any changes
+merged to the <code>main</code> branch</li>
 </ul>
 <div id="pull-request-checks" class="section level2">
 <h2>Pull Request Checks:</h2>
-<p>These actions are triggered upon a pull request being opened. They are set up in the file: <code>.github/workflows/pull-request.yml</code>/.</p>
+<p>These actions are triggered upon a pull request being opened. They
+are set up in the file:
+<code>.github/workflows/pull-request.yml</code>/.</p>
 <div id="check-quiz-formatting" class="section level3">
 <h3>Check Quiz Formatting</h3>
 <p>In the <code>config_automation.yml</code> file it is set by:</p>
 <pre><code>check-quizzes: no</code></pre>
-<p>By default, it is set to <code>no</code>. But if you wish to <a href="https://github.com/jhudsl/OTTR_Template/wiki/Publishing-on-Leanpub">create quizzes on Leanpub</a>, you should set this to <code>yes</code>. This is not necessary if you only want quizzes for Coursera. Leanpub needs a particular format for it to upload correctly. This action will look for quizzes in the <code>quizzes</code> directory and check for these items. The outcome of these quiz checks will be printed to a GitHub comment on your pull request.</p>
+<p>By default, it is set to <code>no</code>. But if you wish to <a
+href="https://github.com/jhudsl/OTTR_Template/wiki/Publishing-on-Leanpub">create
+quizzes on Leanpub</a>, you should set this to <code>yes</code>. This is
+not necessary if you only want quizzes for Coursera. Leanpub needs a
+particular format for it to upload correctly. This action will look for
+quizzes in the <code>quizzes</code> directory and check for these items.
+The outcome of these quiz checks will be printed to a GitHub comment on
+your pull request.</p>
 </div>
 <div id="check-for-broken-urls" class="section level3">
 <h3>Check for broken URLs</h3>
 <p>In the <code>config_automation.yml</code> file it is set by:</p>
 <pre><code>url-checker: yes</code></pre>
-<p>GitHub Actions runs a check on all the URLs upon creating a pull request to the <code>main</code> branch. If it fails, you can click on the output comment on your pull request that says “Download errors here”. This will give you a print out of the broken URLs it found.</p>
-<p>If the URL checker is failing on something that isn’t really a URL or doesn’t need to be checked, open the <code>resources/ignore-urls.txt</code> file and add that URL exactly as it is specified in the error print out.</p>
+<p>GitHub Actions runs a check on all the URLs upon creating a pull
+request to the <code>main</code> branch. If it fails, you can click on
+the output comment on your pull request that says “Download errors
+here”. This will give you a print out of the broken URLs it found.</p>
+<p>If the URL checker is failing on something that isn’t really a URL or
+doesn’t need to be checked, open the
+<code>resources/ignore-urls.txt</code> file and add that URL exactly as
+it is specified in the error print out.</p>
 </div>
 <div id="preview-rendering" class="section level3">
 <h3>Preview rendering</h3>
 <p>In the <code>config_automation.yml</code> file it is set by:</p>
 <pre><code>render-preview: yes</code></pre>
-<p>After you open a pull request, a preview of the renders will be linked in an automatic comment on the pull request. Upon each commit these previews will re-render and edit the comment with the latest render.</p>
-<p><img src="https://raw.githubusercontent.com/jhudsl/OTTR_Template/main/resources/screenshots/preview_comment.png" /></p>
-<p>These Github Actions are located in <code>render-preview</code> section of the <code>pull-request.yml</code>. These previews do NOT incorporate any changes influenced by any changes to the Docker image if the Dockerfile is also updated in the same pull request.</p>
+<p>After you open a pull request, a preview of the renders will be
+linked in an automatic comment on the pull request. Upon each commit
+these previews will re-render and edit the comment with the latest
+render.</p>
+<p><img
+src="https://raw.githubusercontent.com/jhudsl/OTTR_Template/main/resources/screenshots/preview_comment.png" /></p>
+<p>These Github Actions are located in <code>render-preview</code>
+section of the <code>pull-request.yml</code>. These previews do NOT
+incorporate any changes influenced by any changes to the Docker image if
+the Dockerfile is also updated in the same pull request.</p>
 </div>
 <div id="spell-checking" class="section level3">
 <h3>Spell checking</h3>
 <p>In the <code>config_automation.yml</code> file it is set by:</p>
 <pre><code>spell-check: yes</code></pre>
-<p>Github Actions will automatically run a spell check on all Rmds and mds whenever a pull request to the <code>main</code> branch is filed.</p>
-<p>It will fail if there are more than 2 spelling errors and you’ll need to resolve those before being able to merge your pull request. Errors will be printed out on a GitHub comment on your pull request.</p>
-<p><img src="https://raw.githubusercontent.com/jhudsl/OTTR_Template/main/resources/screenshots/spell_check_comment.png" /></p>
-<p>To resolve those spelling errors, click on the link with the errors on the autogenerated comment. Some of these errors may be things that the spell check doesn’t recognize for example: <code>ITCR</code> or <code>DaSL</code>. If it’s a ‘word’ the spell check should recognize, you’ll need to add this to the dictionary.</p>
-<p>Go to the <code>resources/dictionary.txt</code> file. Open the file and add the new ‘word’ to its appropriate place (the words are in alphabetical order). After committing the changes to <code>resources/dictionary.txt</code> on your branch, the spell check status check should be successfully passed.</p>
+<p>Github Actions will automatically run a spell check on all Rmds and
+mds whenever a pull request to the <code>main</code> branch is
+filed.</p>
+<p>It will fail if there are more than 2 spelling errors and you’ll need
+to resolve those before being able to merge your pull request. Errors
+will be printed out on a GitHub comment on your pull request.</p>
+<p><img
+src="https://raw.githubusercontent.com/jhudsl/OTTR_Template/main/resources/screenshots/spell_check_comment.png" /></p>
+<p>To resolve those spelling errors, click on the link with the errors
+on the autogenerated comment. Some of these errors may be things that
+the spell check doesn’t recognize for example: <code>ITCR</code> or
+<code>DaSL</code>. If it’s a ‘word’ the spell check should recognize,
+you’ll need to add this to the dictionary.</p>
+<p>Go to the <code>resources/dictionary.txt</code> file. Open the file
+and add the new ‘word’ to its appropriate place (the words are in
+alphabetical order). After committing the changes to
+<code>resources/dictionary.txt</code> on your branch, the spell check
+status check should be successfully passed.</p>
 </div>
 <div id="style-code" class="section level3">
 <h3>Style code</h3>
 <p>In the <code>config_automation.yml</code> file it is set by:</p>
 <pre><code>style-code: yes</code></pre>
-<p>The <code>styler</code> package will style R code in all Rmds. Style changes will automatically be committed back to your branch.</p>
+<p>The <code>styler</code> package will style R code in all Rmds. Style
+changes will automatically be committed back to your branch.</p>
 </div>
 <div id="docker-testing" class="section level3">
 <h3>Docker testing</h3>
 <p>In the config_automation.yml file it looks like:</p>
 <pre><code>docker-test: no</code></pre>
-<p>By default it is set to <code>no</code> which means it won’t run automatically unless you change this to <code>yes</code>. This is only relevant if you have <a href="https://github.com/jhudsl/OTTR_Template/wiki/Using-Docker#starting-a-new-docker-image">your own Docker image you are managing for your course</a>. If changes are made to Docker-relevant files: <code>Dockerfile</code>, <code>install_github.R</code>, or <code>github_package_list.tsv</code>, this will test re-build the Docker image. If it is successfully built, then it makes sense to merge it to <code>main</code> but the Docker Image will not be pushed to <code>Dockerhub</code> automatically. <a href="https://github.com/jhudsl/OTTR_Template/wiki/Using-Docker#pushing-the-docker-image">Follow these instructions to push your Docker image to Dockerhub</a>.</p>
+<p>By default it is set to <code>no</code> which means it won’t run
+automatically unless you change this to <code>yes</code>. This is only
+relevant if you have <a
+href="https://github.com/jhudsl/OTTR_Template/wiki/Using-Docker#starting-a-new-docker-image">your
+own Docker image you are managing for your course</a>. If changes are
+made to Docker-relevant files: <code>Dockerfile</code>,
+<code>install_github.R</code>, or <code>github_package_list.tsv</code>,
+this will test re-build the Docker image. If it is successfully built,
+then it makes sense to merge it to <code>main</code> but the Docker
+Image will not be pushed to <code>Dockerhub</code> automatically. <a
+href="https://github.com/jhudsl/OTTR_Template/wiki/Using-Docker#pushing-the-docker-image">Follow
+these instructions to push your Docker image to Dockerhub</a>.</p>
 <p><br></p>
 </div>
 </div>
 <div id="rendering-actions" class="section level2">
 <h2>Rendering actions</h2>
-<p>Upon merging changes to any <code>Rmd</code> or <code>assets/</code> folder to <code>main</code>, the course material will be automatically re-rendered. By default, all rendering steps will be run. But depending on the needs of your course, you can turn these on and off by going to the <code>config_automation.yml</code> file and switching options to <code>yes</code> or <code>no</code>.</p>
+<p>Upon merging changes to any <code>Rmd</code> or <code>assets/</code>
+folder to <code>main</code>, the course material will be automatically
+re-rendered. By default, all rendering steps will be run. But depending
+on the needs of your course, you can turn these on and off by going to
+the <code>config_automation.yml</code> file and switching options to
+<code>yes</code> or <code>no</code>.</p>
 <pre><code>render-bookdown: yes
 render-leanpub: yes
 render-coursera: yes</code></pre>
-<p>For publishing to Leanpub, make sure that the render Leanpub option is set to yes: <code>render-leanpub: yes</code>. See more details about publishing to Leanpub <a href="https://github.com/jhudsl/OTTR_Template/wiki/Publishing-on-Leanpub">here</a>.</p>
-<p>For publishing to Coursera, make sure render Coursera option is set to yes: <code>render-coursera: yes</code>. See more details about publishing to Coursera <a href="https://github.com/jhudsl/OTTR_Template/wiki/Publishing-on-Coursera">here</a>.</p>
+<p>For publishing to Leanpub, make sure that the render Leanpub option
+is set to yes: <code>render-leanpub: yes</code>. See more details about
+publishing to Leanpub <a
+href="https://github.com/jhudsl/OTTR_Template/wiki/Publishing-on-Leanpub">here</a>.</p>
+<p>For publishing to Coursera, make sure render Coursera option is set
+to yes: <code>render-coursera: yes</code>. See more details about
+publishing to Coursera <a
+href="https://github.com/jhudsl/OTTR_Template/wiki/Publishing-on-Coursera">here</a>.</p>
 <p><br></p>
 </div>
 <div id="manually-running-rendering-or-checks" class="section level2">
 <h2>Manually running rendering or checks</h2>
-<p>From time to time, it may be useful to manually re-trigger a particular GitHub Action. Most of the GitHub Actions, particularly the rendering ones, can be re-run manually. See this article about <a href="https://docs.github.com/en/actions/managing-workflow-runs/manually-running-a-workflow#running-a-workflow">how to manually re-run a GitHub Action</a>.</p>
+<p>From time to time, it may be useful to manually re-trigger a
+particular GitHub Action. Most of the GitHub Actions, particularly the
+rendering ones, can be re-run manually. See this article about <a
+href="https://docs.github.com/en/actions/managing-workflow-runs/manually-running-a-workflow#running-a-workflow">how
+to manually re-run a GitHub Action</a>.</p>
 <p><br></p>
 </div>
 <div id="fixing-broken-github-actions" class="section level2">
 <h2>Fixing broken GitHub Actions</h2>
-<p>GitHub action rendering or other GitHub actions may fail sometimes if the input is unexpected or for a number of other reasons. To investigate why a GitHub action has failed, go to <code>Actions</code> and click on the failed action. <a href="https://docs.github.com/en/actions/learn-github-actions/understanding-github-actions#viewing-the-workflows-activity">See this article for how to find this information</a>.</p>
-<p>See our <a href="./faqs.html">FAQ’s section</a> for the most commonly encountered errors and how to address them.</p>
-<p>If you are unsure what the error message means and have trouble addressing it, please <a href="https://github.com/jhudsl/OTTR_Template/issues/new?assignees=cansavvy&amp;labels=bug&amp;template=course-template-problem-report.md">file an issue on the OTTR_Template repository to get help</a>.</p>
+<p>GitHub action rendering or other GitHub actions may fail sometimes if
+the input is unexpected or for a number of other reasons. To investigate
+why a GitHub action has failed, go to <code>Actions</code> and click on
+the failed action. <a
+href="https://docs.github.com/en/actions/learn-github-actions/understanding-github-actions#viewing-the-workflows-activity">See
+this article for how to find this information</a>.</p>
+<p>See our <a href="./faqs.html">FAQ’s section</a> for the most commonly
+encountered errors and how to address them.</p>
+<p>If you are unsure what the error message means and have trouble
+addressing it, please <a
+href="https://github.com/jhudsl/OTTR_Template/issues/new?assignees=cansavvy&amp;labels=bug&amp;template=course-template-problem-report.md">file
+an issue on the OTTR_Template repository to get help</a>.</p>
 </div>
 
 <hr>

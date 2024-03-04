@@ -34,11 +34,11 @@ To reference the citations in your writing follow the [bookdown instructions](ht
 
 See [Chapter 2](https://github.com/jhudsl/OTTR_Template/blob/main/02-chapter_of_course.Rmd) of this template course for examples.
 
-This will automatically list references at the bottom of each chapter included in your course, as well as at the end of your course. Thus it is important to keep the `References.Rmd` file and to keep this as the last part of the `_bookdown.yml` file as it is in the template, so that this full list of references will be listed in a place that makes sense. 
+This will automatically list references at the bottom of each chapter included in your course, as well as at the end of your course. Thus it is important to keep the `References.Rmd` file and to keep this as the last part of the `_bookdown.yml` file as it is in the template, so that this full list of references will be listed in a place that makes sense.
 
 ![](resources/images/references_bookdown.png)
 
-Alternatively, you can add a header for this list of references as the last header in any other Rmd file that is listed as the final file of the `_bookdown.yml` file. 
+Alternatively, you can add a header for this list of references as the last header in any other Rmd file that is listed as the final file of the `_bookdown.yml` file.
 
 If you would like to suppress having references listed at the end of each chapter, you can add a line that says `split_bib: false`  to your `_output.yml` file.
 
@@ -157,7 +157,7 @@ Note that this chunk cannot be run interactively, just include it in your Rmd an
 
 ### Borrowing from a local file
 
-If for some reason you would like a local file incorporated, just leave off the `repo_name` argument and `cow::borrow_chapter()` will look for the chapter locally. 
+If for some reason you would like a local file incorporated, just leave off the `repo_name` argument and `cow::borrow_chapter()` will look for the chapter locally.
 
 Have your chunk arguments include `{r, echo = FALSE, results='asis'}`.
 ```
@@ -236,7 +236,7 @@ If you would like to add Google Analytics to track traffic to your course, you c
 
 1. Get a **Google Analytics account** (if you do not already have one): [https://analytics.google.com/analytics](https://analytics.google.com/analytics)
 ![](resources/images/GA_account.png)
-Note that in creating an account you will need to agree to some terms. Currently it is free to get Google analytics data as long as your course does not exceed a very high user rate. 
+Note that in creating an account you will need to agree to some terms. Currently it is free to get Google analytics data as long as your course does not exceed a very high user rate.
 
 Check to make sure that the terms work for you
 ![](resources/images/GA_terms.png)
@@ -273,4 +273,3 @@ Check to make sure that the terms work for you
 ![Check Google Analytics](resources/images/GA_check.png)
 
 1. Enjoy the data about how people are using your course!
-
