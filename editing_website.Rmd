@@ -190,7 +190,7 @@ website locally. These steps shown here will show you the GitKraken way
 of handling files.
 
 If you are not new to GitHub, then we recommend skipping this section
-and jumping to the [`Setting Up Images` section](#set-up-images).
+and jumping to the [`Checks on the Pull Request` section](#checks-on-the-pull-requests).
 
 ## Cloning with Git
 
