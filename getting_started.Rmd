@@ -168,11 +168,9 @@ _If you have any questions about the implications of any of these updates or fil
 
 ### Methods of writing content
 
-Again we have two recommended ways of writing content based on your comfort and interest level in using Git and GitHub:
+Now you need to decide wheyher you want to build a course or a website and follow those instructions!
 
-- [Jump to OTTR Entry Level instructions here](./writing_content.html#ottr-entry-level)
-- [Jump to OTTR Advanced instructions here](./writing_content.html#ottr-advanced)
-
-Now you are ready to start writing content!
+- [Make an OTTR Website](https://www.ottrproject.org/editing_website.html)
+- [Make an OTTR Course](https://www.ottrproject.org/writing_content_courses.html)
 
 If you wish to contribute to OTTR, please take a look at our [Code of Conduct](https://github.com/jhudsl/OTTR_Template/blob/main/code_of_conduct.md).
