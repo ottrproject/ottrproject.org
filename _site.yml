@@ -18,16 +18,32 @@ navbar:
         icon: fa-flag-checkered
   - text: "OTTR Website"
     href: editing_website.html
-    icon: fa-pen
+    icon: fa-arrow-pointer
+    menu:
+      - text: "Start writing!"
+        href: editing_website.html
+        icon: fa-pen
+      - text: "Website Checks"
+        href: editing_website.html#ottr-checks-on-pull-requests
+        icon: fa-check
+      - text: "Adding new pages"
+        href: editing_website.html#adding-new-pages
+        icon: fa-plus
   - text: "OTTR Courses"
     icon: fa-lightbulb
     menu:
       - text: "Start writing!"
         href: writing_content_courses.html
         icon: fa-pen
+      - text: "Course Checks"
+        href: writing_content_courses.html#ottr-checks-on-pull-requests
+        icon: fa-check
       - text: "Set up images"
         href: writing_content_courses.html#set-up-images
         icon: fa-images
+      - text: "Adding new pages"
+        href: writing_content_courses.html#adding-new-pages
+        icon: fa-plus
       - text: "Choosing course publishing platforms"
         href: course_publishing.html#choosing-publishing-platforms
         icon: fa-tasks
