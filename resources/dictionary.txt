@@ -13,6 +13,12 @@ custimization
 cwrigh
 Coursera
 Coursera's
+img 
+src
+jpg
+px
+nav 
+JSDSE
 Endnote
 Markua
 HTTPS
