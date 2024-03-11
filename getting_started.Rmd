@@ -115,7 +115,7 @@ All of your GitHub Actions should now be capable of running without any issues. 
 In your repository, go to `Settings` > `Pages`.
 
 - Under `Source`, pick `Deploy fom a branch`
-- Under `Branch`, pick `main` and choose `/docs`. 
+- Under `Branch`, pick `main` and choose `/docs`.
 - Then click `Save`.  
 - Lastly, check the box that says `Enforce HTTPS` at the bottom of this page.   
 
@@ -168,7 +168,7 @@ _If you have any questions about the implications of any of these updates or fil
 
 ### Methods of writing content
 
-Now you need to decide wheyher you want to build a course or a website and follow those instructions!
+Now you need to decide whether you want to build a course or a website and follow those instructions!
 
 - [Make an OTTR Website](https://www.ottrproject.org/editing_website.html)
 - [Make an OTTR Course](https://www.ottrproject.org/writing_content_courses.html)
