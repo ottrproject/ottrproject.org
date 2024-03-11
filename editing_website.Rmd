@@ -21,7 +21,7 @@ font-style: italic;
 </style>
 
 
-Now you have a course repository on GitHub and you're ready to start writing content!
+Now you have a repository on GitHub and you're ready to start crafting your website!
 
 The OTTR content development process revolves around the use of
 **pull requests**! Pull requests are a way to set up
@@ -33,21 +33,21 @@ facilitate discussions with others regarding proposed changes.
 <img src="resources/images/pull_request_model.jpg" width=600px">
 
 <p class="comment">
-**WARNING**: The live content is automatically created and stored in the `docs` folder. As our writing process guide will inform you, you **should NOT make direct changes to the `docs` folder**. The automation processes will handle the preparation of these files, and you should refrain from making direct changes to them. To learn how to edit your files and write your course, please review the corresponding section in the writing process guide.
+**WARNING**: The live content is automatically created and stored in the `docs` folder. As our writing process guide will inform you, you **should NOT make direct changes to the `docs` folder**. The automation processes will handle the preparation of these files, and you should refrain from making direct changes to them. To learn how to edit your files and personalize your website, please review the corresponding section in the writing process guide.
 </p>
 
 ## About OTTR and Pull Requests
 
-OTTR will not completely break if you don't use pull requests, but you will be missing out on a lot of the main perks of OTTR. OTTR's checks primarily focus on pull requests so you can avoid accidentally making your mistakes in your live courses.
+OTTR will not completely break if you don't use pull requests, but you will be missing out on a lot of the main perks of OTTR. OTTR's checks primarily focus on pull requests so you can avoid accidentally making your mistakes in your live website.
 
-When you submit a pull request on OTTR it triggers a sequence of automatic checks performed by GitHub Actions. These checks are designed to assist you as you add content to your course.
+When you submit a pull request on OTTR it triggers a sequence of automatic checks performed by GitHub Actions. These checks are designed to assist you as you add content to your website.
 
 These checks will:  
 
 * Check that the all the URLs actually take learners somewhere
 * Check that the code is styled using the `styler` package
 * Check that the spelling is correct using the `spelling` package
-* Create previews of the rendered versions of the course
+* Create previews of the rendered versions of the website
 * Check the formatting of any quizzes (if applicable)
 
 You can adjust what checks are run by editing the
@@ -55,7 +55,7 @@ You can adjust what checks are run by editing the
 about [customizing GitHub Actions](./customize-robots.html).
 
 We have two recommended ways of writing content that is based on your
-comfort and interest level in using Git and GitHub. If you are already comfortable with GitHub you can skip these parts. 
+comfort and interest level in using Git and GitHub. If you are already comfortable with GitHub you can skip these parts.
 
 <img src="resources/images/methods_of_writing.jpg" width=400px">
 
@@ -344,7 +344,7 @@ have your pull request description *perfect* don't worry about it, you
 can always edit it later).
 
 Congrats! You've just opened a pull request! For every set of changes
-you'll make to your course, you will want to follow this similar set of
+you'll make to your website, you will want to follow this similar set of
 steps.
 
 **In summary, here are the steps involved:**
