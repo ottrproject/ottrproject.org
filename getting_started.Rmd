@@ -30,8 +30,8 @@ If you are not familiar with **Git and GitHub**, we recommend going through thes
 
 We offer two suggested approaches for creating content, based on your comfort and interest level in using Git and GitHub:
 
-- [OTTR Entry Level](https://www.ottrproject.org/writing_content.html#ottr-entry-level): If you are not interested in delving into GitHub, you can use this version, which is entirely conducted through the GitHub web browser.
-- [OTTR Advanced](https://www.ottrproject.org/writing_content.html#ottr-advanced):  If you are already familiar with Git and GitHub or have an interest in starting to use them, we suggest this method. It will involve some additional learning, but acquiring skills in Git and GitHub will be highly beneficial not only for OTTR but also for version control in various other contexts.
+- **OTTR Entry Level**: If you are not interested in delving into GitHub, you can use this version, which is entirely conducted through the GitHub web browser.
+- **OTTR Advanced**:  If you are already familiar with Git and GitHub or have an interest in starting to use them, we suggest this method. It will involve some additional learning, but acquiring skills in Git and GitHub will be highly beneficial not only for OTTR but also for version control in various other contexts.
 
 If you choose to use our OTTR Advanced guidance, you will need a method for working with Git.
 
