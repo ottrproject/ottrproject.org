@@ -23,7 +23,7 @@ navbar:
       - text: "Start writing!"
         href: editing_website.html
         icon: fa-pen
-      - text: "Website Checks"
+      - text: "Website checks"
         href: editing_website.html#ottr-checks-on-pull-requests
         icon: fa-check
       - text: "Adding new pages"
@@ -35,7 +35,7 @@ navbar:
       - text: "Start writing!"
         href: writing_content_courses.html
         icon: fa-pen
-      - text: "Course Checks"
+      - text: "Course checks"
         href: writing_content_courses.html#ottr-checks-on-pull-requests
         icon: fa-check
       - text: "Set up images"
@@ -56,7 +56,7 @@ navbar:
   - text: "About"
     icon:
     menu:
-      - text: "Customizing Checks"
+      - text: "Customizing checks"
         href: customize-robots.html
         icon: fa-robot
       - text: "Customizing style"
