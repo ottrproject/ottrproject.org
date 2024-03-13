@@ -352,12 +352,37 @@ div.tocify {
     </li>
   </ul>
 </li>
-<li>
-  <a href="editing_website.html">
-    <span class="fa fa-pen"></span>
+<li class="dropdown">
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+    <span class="fa fa-arrow-pointer"></span>
      
     OTTR Website
+     
+    <span class="caret"></span>
   </a>
+  <ul class="dropdown-menu" role="menu">
+    <li>
+      <a href="editing_website.html">
+        <span class="fa fa-pen"></span>
+         
+        Start writing!
+      </a>
+    </li>
+    <li>
+      <a href="editing_website.html#ottr-checks-on-pull-requests">
+        <span class="fa fa-check"></span>
+         
+        Website checks
+      </a>
+    </li>
+    <li>
+      <a href="editing_website.html#adding-new-pages">
+        <span class="fa fa-plus"></span>
+         
+        Adding new pages
+      </a>
+    </li>
+  </ul>
 </li>
 <li class="dropdown">
   <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
@@ -376,10 +401,24 @@ div.tocify {
       </a>
     </li>
     <li>
+      <a href="writing_content_courses.html#ottr-checks-on-pull-requests">
+        <span class="fa fa-check"></span>
+         
+        Course checks
+      </a>
+    </li>
+    <li>
       <a href="writing_content_courses.html#set-up-images">
         <span class="fa fa-images"></span>
          
         Set up images
+      </a>
+    </li>
+    <li>
+      <a href="writing_content_courses.html#adding-new-pages">
+        <span class="fa fa-plus"></span>
+         
+        Adding new pages
       </a>
     </li>
     <li>
@@ -411,7 +450,7 @@ div.tocify {
       <a href="customize-robots.html">
         <span class="fa fa-robot"></span>
          
-        Customizing Checks
+        Customizing checks
       </a>
     </li>
     <li>
@@ -517,9 +556,9 @@ div.tocify {
 </ul>
 <div id="step-1-add-ottr-files-to-your-current-repository" class="section level3">
 <h3>Step 1: Add OTTR files to your current repository</h3>
-<p>Navigate to the top of your repository and <a href="https://raw.githubusercontent.com/jhudsl/OTTR_Template/main/scripts/ottr-fy.R">download this file</a>.</p>
+<p>Navigate to the top of your repository and <a href="https://github.com/jhudsl/ottr-reports/blob/main/scripts/ottr-fy.R">download this file</a>.</p>
 <p>You can do this by using wget, or by just using the link above and saving it as <code>ottr-fy.R</code> in the top of your repository.</p>
-<pre><code>wget &#39;https://raw.githubusercontent.com/jhudsl/OTTR_Template/main/scripts/ottr-fy.R&#39;</code></pre>
+<pre><code>wget &#39;https://github.com/jhudsl/ottr-reports/blob/main/scripts/ottr-fy.R&#39;</code></pre>
 <p>You’ve downloaded a script that will download the necessary files to run OTTR in your repository. Take a look at the filenames of what will be downloaded to make sure that you won’t accidentally overwrite any of your repository’s existing files.</p>
 </div>
 <div id="ottr-fying-files" class="section level3">
@@ -531,19 +570,13 @@ div.tocify {
 <li><code>.github/workflows/render-all.yml</code></li>
 <li><code>.github/workflows/delete-preview.yml</code></li>
 <li><code>.github/workflows/docker-build.yml</code></li>
-<li><code>scripts/git_repo_check.R</code></li>
-<li><code>scripts/make_screenshots.R</code></li>
-<li><code>scripts/quiz-check.R</code></li>
-<li><code>scripts/spell-check.R</code></li>
-<li><code>scripts/url-check.R</code></li>
-<li><code>assets/toc_close.css</code></li>
 </ul>
 </div>
 <div id="files-youll-need-to-edit-to-customize" class="section level4">
 <h4>Files you’ll need to edit to customize</h4>
 <p>* These files also will not be downloaded if you already have set up your repository as a bookdown website and specify this in the upcoming command.</p>
 <ul>
-<li><code>_bookdown.yml</code></li>
+<li><code>_bookdown.yml</code> or <code>_site.yml</code> for a website/course respectively</li>
 <li><code>_output.yml</code></li>
 <li><code>book.bib</code></li>
 <li><code>assets/big-image.html</code></li>
@@ -572,17 +605,15 @@ div.tocify {
 <p>Check your files on this pull request your files and that nothing horrible has happened to your original files (like being overwritten or deleted).</p>
 </div>
 </div>
-<div id="add-your-rmd-or-md-files-to-the-_bookdown.yml-file" class="section level3">
-<h3>2. Add your Rmd or md files to the <code>_bookdown.yml</code> file</h3>
+<div id="add-your-rmd-or-md-files-to-the-_bookdown.yml-or-_site.yml-file" class="section level3">
+<h3>2. Add your Rmd or md files to the <code>_bookdown.yml</code> or <code>_site.yml</code> file</h3>
 <p>You will almost certainly find that the <code>Render preview</code> check will fail (and possibly the spelling and URL checks).</p>
-<p>One reason that this will fail is that you will need to edit <code>_bookdown.yml</code> to list your Rmds (or mds) in the order they should appear in the course. (<a href="https://www.ottrproject.org/customize-robots.html#Pull_request_checks:">See this section</a> for more information about these checks and what they are)</p>
-<p><a href="https://www.ottrproject.org/writing_content.html#Step_2_Add_the_name_of_your_new_chapter_to_your__bookdownyml_file">Follow these instructions</a> to add your Rmds and mds to the _bookdown.yml file.</p>
-<p>Make sure to commit this to your branch. You will also likely want to update your <code>_output.yml</code> file. <a href="https://bookdown.org/yihui/bookdown/output-formats.html">Read here</a> for more about how to customize this <code>_output.yml</code> file.</p>
-<p>* Note! Don’t merge this pull request before you finish adding a few settings as described in this next step.</p>
+<p>One reason that this will fail is that you will need to edit <code>_bookdown.yml</code> <code>_site.yml</code> to list your Rmds (or mds) in the order they should appear in the course. (<a href="https://www.ottrproject.org/customize-robots.html#Pull_request_checks:">See this section</a> for more information about these checks and what they are)</p>
+<p>Make sure to commit this to your branch. * Note! Don’t merge this pull request before you finish adding a few settings as described in this next step.</p>
 </div>
 <div id="set-up-your-repository-with-the-proper-settings" class="section level3">
 <h3>3. Set up your repository with the proper settings</h3>
-<p>From here, you can follow the rest of the steps described in the <a href="https://www.ottrproject.org/getting_started.html#5_Add_jhudsl-robot_as_a_collaborator">Getting Started section</a>.</p>
+<p>From here, you can follow the rest of the steps described in the <a href="https://www.ottrproject.org/getting_started.html#Starting_a_new_OTTR_websitecourse">Getting Started section</a>.</p>
 </div>
 </div>
 

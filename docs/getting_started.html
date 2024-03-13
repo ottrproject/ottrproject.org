@@ -352,12 +352,37 @@ div.tocify {
     </li>
   </ul>
 </li>
-<li>
-  <a href="editing_website.html">
-    <span class="fa fa-pen"></span>
+<li class="dropdown">
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+    <span class="fa fa-arrow-pointer"></span>
      
     OTTR Website
+     
+    <span class="caret"></span>
   </a>
+  <ul class="dropdown-menu" role="menu">
+    <li>
+      <a href="editing_website.html">
+        <span class="fa fa-pen"></span>
+         
+        Start writing!
+      </a>
+    </li>
+    <li>
+      <a href="editing_website.html#ottr-checks-on-pull-requests">
+        <span class="fa fa-check"></span>
+         
+        Website checks
+      </a>
+    </li>
+    <li>
+      <a href="editing_website.html#adding-new-pages">
+        <span class="fa fa-plus"></span>
+         
+        Adding new pages
+      </a>
+    </li>
+  </ul>
 </li>
 <li class="dropdown">
   <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
@@ -376,10 +401,24 @@ div.tocify {
       </a>
     </li>
     <li>
+      <a href="writing_content_courses.html#ottr-checks-on-pull-requests">
+        <span class="fa fa-check"></span>
+         
+        Course checks
+      </a>
+    </li>
+    <li>
       <a href="writing_content_courses.html#set-up-images">
         <span class="fa fa-images"></span>
          
         Set up images
+      </a>
+    </li>
+    <li>
+      <a href="writing_content_courses.html#adding-new-pages">
+        <span class="fa fa-plus"></span>
+         
+        Adding new pages
       </a>
     </li>
     <li>
@@ -411,7 +450,7 @@ div.tocify {
       <a href="customize-robots.html">
         <span class="fa fa-robot"></span>
          
-        Customizing Checks
+        Customizing checks
       </a>
     </li>
     <li>
@@ -527,8 +566,8 @@ div.tocify {
 </ul>
 <p>We offer two suggested approaches for creating content, based on your comfort and interest level in using Git and GitHub:</p>
 <ul>
-<li><a href="https://www.ottrproject.org/writing_content.html#ottr-entry-level">OTTR Entry Level</a>: If you are not interested in delving into GitHub, you can use this version, which is entirely conducted through the GitHub web browser.</li>
-<li><a href="https://www.ottrproject.org/writing_content.html#ottr-advanced">OTTR Advanced</a>: If you are already familiar with Git and GitHub or have an interest in starting to use them, we suggest this method. It will involve some additional learning, but acquiring skills in Git and GitHub will be highly beneficial not only for OTTR but also for version control in various other contexts.</li>
+<li><strong>OTTR Entry Level</strong>: If you are not interested in delving into GitHub, you can use this version, which is entirely conducted through the GitHub web browser.</li>
+<li><strong>OTTR Advanced</strong>: If you are already familiar with Git and GitHub or have an interest in starting to use them, we suggest this method. It will involve some additional learning, but acquiring skills in Git and GitHub will be highly beneficial not only for OTTR but also for version control in various other contexts.</li>
 </ul>
 <p>If you choose to use our OTTR Advanced guidance, you will need a method for working with Git.</p>
 <p>If you do not have a method of working with Git already, we recommend using a Git client to facilitate easier branch management. Install <a href="https://www.gitkraken.com/">GitKraken</a> for a convenient way to handle your course locally.</p>
@@ -555,23 +594,15 @@ div.tocify {
 <h3>4. Select the <code>Create repository from template</code> button to proceed</h3>
 <p>After creating your repository, you will find that issues related to starting your course have been automatically generated and filed in your repository. To begin the setup process, navigate to the Issues tab and follow the instructions provided in those issues.</p>
 </div>
-<div id="add-jhudsl-robot-as-a-collaborator" class="section level3">
-<h3>5. Add jhudsl-robot as a collaborator</h3>
-<p>*You can skip this step if your course is in the <code>jhudsl</code> organization.</p>
-<p>To enable the full functionality of <a href="https://github.com/jhudsl/OTTR_Template/wiki/How-to-set-up-and-customize-GitHub-actions-robots">GitHub Actions</a> in this repository, it is necessary to grant appropriate permissions. To achieve this, you should add <code>jhudsl-robot</code> as a collaborator to your repository with write permissions.</p>
-<p>In your repository, go to your <code>Settings</code> &gt; <code>Collaborators &amp; Teams</code> and click on <code>Add people</code>. In the pop up window, search for and add <code>jhudsl-robot</code>.</p>
-<p><img src="https://github.com/jhudsl/OTTR_Template/raw/main/resources/screenshots/add-jhudsl-robot.png" width = 400></p>
-<p>If shown the option, choose the <code>write</code> option then click <code>Add jhudsl-robot to this repository</code>. Otherwise, just click <code>add</code>.</p>
-</div>
-<div id="in-personal-repositories-check-your-settings" class="section level3">
-<h3>6. In personal repositories: check your settings</h3>
+<div id="check-your-repository-github-action-settings" class="section level3">
+<h3>5. Check your repository GitHub Action settings</h3>
 <p>In case you have a personal repository or an organization that hasn’t utilized GitHub Actions previously, it is important to verify if workflow actions have been enabled.</p>
 <p>Go to <code>Settings</code> and then <code>Actions</code>. Make sure that you have: 1. Given <code>Read and write permissions</code> 2. Checked <code>Allow GitHub Actions to create and approve pull requests</code>.</p>
 <p>Then click <code>Save</code>.</p>
 <p><img src="https://github.com/jhudsl/ottr-website/raw/main/resources/images/workflow-permissions.png" width = 500></p>
 </div>
 <div id="set-up-your-github-personal-access-token" class="section level3">
-<h3>7. Set up your GitHub personal access token</h3>
+<h3>6. Set up your GitHub personal access token</h3>
 <p>The OTTR robots require certain permissions to execute certain actions.</p>
 <p>To give them permission for all the Actions, you need to set a GitHub Secret we will call <code>GH_PAT</code>. Go to <code>Settings</code> &gt; <code>Secrets and variables</code> on the left side menu &gt; <code>Actions</code>. On this page, scroll down to <code>Repository secrets</code>. <a href="https://docs.github.com/en/actions/security-guides/encrypted-secrets">Read more about GitHub Secrets here</a> if you have general questions.</p>
 <p>If you have organization admin privileges and plan on making multiple courses with OTTR, you can set <code>GH_PAT</code> as an organization secret so you don’t have to do this again. You only need to do this once as an organization (if this course is under <code>jhudsl</code> you don’t need to do this step).</p>
@@ -583,7 +614,8 @@ div.tocify {
 <p>All of your GitHub Actions should now be capable of running without any issues. If you encounter any problems, please report your issue to the main OTTR repository <a href="https://github.com/jhudsl/OTTR_Template/issues/new?assignees=&amp;labels=bug&amp;projects=&amp;template=course-problem-report.md&amp;title%5B%5D=Problem">here</a>.</p>
 </div>
 <div id="set-up-github-pages" class="section level3">
-<h3>8. Set up GitHub Pages</h3>
+<h3>7. Set up GitHub Pages</h3>
+<p>You’ll need to set this up so that your website or course will be published to a URL!</p>
 <p>In your repository, go to <code>Settings</code> &gt; <code>Pages</code>.</p>
 <ul>
 <li>Under <code>Source</code>, pick <code>Deploy fom a branch</code></li>
@@ -600,8 +632,8 @@ div.tocify {
 <strong>Warning</strong>: If you go to your URL right now (before you’ve pushed any file changes) you might see a 404 error because nothing has been triggered to be rendered. You can check the URL after you file your first pull request (which we will guide you through <a href="https://github.com/jhudsl/OTTR_Template/wiki/Start-editing-your-course">in the next section</a>.
 </p>
 </div>
-<div id="enroll-your-repository-for-ottr-updates" class="section level3">
-<h3>9. Enroll your repository for OTTR updates</h3>
+<div id="enroll-your-repository-for-ottr-updates-not-required-but-highly-encouraged" class="section level3">
+<h3>8. Enroll your repository for OTTR updates (Not required but highly encouraged)</h3>
 <p>This OTTR templates (<a href="https://github.com/jhudsl/OTTR_Template_Website" class="uri">https://github.com/jhudsl/OTTR_Template_Website</a>) are always a work in progress. We are working on adding more features and smoothing out bugs as we go. This is also why <a href="https://github.com/jhudsl/OTTR_Template/issues/new/choose">your feedback is greatly appreciated</a>.</p>
 <p>When updates are made to files that aren’t specific to the course content but instead run checks and other processes in the original repository, pull requests are filed automatically to any downstream repositories made from this template.</p>
 <p><strong>To enroll in these automatic update pull requests, the new course’s repository name will need to be added to <a href="https://github.com/jhudsl/OTTR_Template_Website/edit/main/.github/sync.yml">this file in the OTTR website template</a></strong></p>
@@ -628,9 +660,9 @@ div.tocify {
 </p>
 <p><br></p>
 </div>
-<div id="methods-of-writing-content" class="section level3">
-<h3>Methods of writing content</h3>
-<p>Now you need to decide wheyher you want to build a course or a website and follow those instructions!</p>
+<div id="create-your-website-or-course" class="section level3">
+<h3>Create your website or course</h3>
+<p>Now you need to decide whether you want to build a course or a website and follow those instructions!</p>
 <ul>
 <li><a href="https://www.ottrproject.org/editing_website.html">Make an OTTR Website</a></li>
 <li><a href="https://www.ottrproject.org/writing_content_courses.html">Make an OTTR Course</a></li>
