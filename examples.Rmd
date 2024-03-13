@@ -16,6 +16,14 @@ We affectionately call these spinoff templates OTTR "babies".
 
 If you find yourself making a full set of courses and multiple repositories from OTTR, you may want to make a template from our template (If you need to go this route, we recommend reaching out to the OTTR maintainers by filing a GitHub issue and assigning `@cansavvy` and `@carriewright11`). Also please reach out if you have any other interesting ideas or suggestions!
 
+## Quarto spinoff 
+
+Maybe you prefer a Quarto website! We have that: https://github.com/fhdsl/OTTR_Quarto
+
+## Jekyll spinoff 
+
+TBD: Coming soon
+
 ## metric collection
 
 This is a template powered by the `metricminer` R package to allow you to display metrics in a dashboard.
