@@ -30,8 +30,8 @@ If you are not familiar with **Git and GitHub**, we recommend going through thes
 
 We offer two suggested approaches for creating content, based on your comfort and interest level in using Git and GitHub:
 
-- [OTTR Entry Level](https://www.ottrproject.org/writing_content.html#ottr-entry-level): If you are not interested in delving into GitHub, you can use this version, which is entirely conducted through the GitHub web browser.
-- [OTTR Advanced](https://www.ottrproject.org/writing_content.html#ottr-advanced):  If you are already familiar with Git and GitHub or have an interest in starting to use them, we suggest this method. It will involve some additional learning, but acquiring skills in Git and GitHub will be highly beneficial not only for OTTR but also for version control in various other contexts.
+- **OTTR Entry Level**: If you are not interested in delving into GitHub, you can use this version, which is entirely conducted through the GitHub web browser.
+- **OTTR Advanced**:  If you are already familiar with Git and GitHub or have an interest in starting to use them, we suggest this method. It will involve some additional learning, but acquiring skills in Git and GitHub will be highly beneficial not only for OTTR but also for version control in various other contexts.
 
 If you choose to use our OTTR Advanced guidance, you will need a method for working with Git.
 
@@ -66,23 +66,7 @@ In particular, the rendered preview on pull requests won't work, but you can alt
 
 After creating your repository, you will find that issues related to starting your course have been automatically generated and filed in your repository. To begin the setup process, navigate to the Issues tab and follow the instructions provided in those issues.
 
-
-### 5. Add jhudsl-robot as a collaborator
-
-\*You can skip this step if your course is in the `jhudsl` organization.
-
-To enable the full functionality of [GitHub Actions](https://github.com/jhudsl/OTTR_Template/wiki/How-to-set-up-and-customize-GitHub-actions-robots) in this repository, it is necessary to grant appropriate permissions. To achieve this, you should add `jhudsl-robot` as a collaborator to your repository with write permissions.
-
-In your repository, go to your `Settings` > `Collaborators & Teams` and click on `Add people`.
-In the pop up window, search for and add `jhudsl-robot`.
-
-<img src="https://github.com/jhudsl/OTTR_Template/raw/main/resources/screenshots/add-jhudsl-robot.png" width = 400>
-
-If shown the option, choose the `write` option then click `Add jhudsl-robot to this repository`. Otherwise, just click `add`.
-
-
-
-### 6. In personal repositories: check your settings
+### 5. Check your repository GitHub Action settings
 
 In case you have a personal repository or an organization that hasn't utilized GitHub Actions previously, it is important to verify if workflow actions have been enabled.
 
@@ -95,7 +79,7 @@ Then click `Save`.
 <img src="https://github.com/jhudsl/ottr-website/raw/main/resources/images/workflow-permissions.png" width = 500>
 
 
-### 7. Set up your GitHub personal access token
+### 6. Set up your GitHub personal access token
 
 The OTTR robots require certain permissions to execute certain actions.
 
@@ -110,12 +94,14 @@ If you have organization admin privileges and plan on making multiple courses wi
 All of your GitHub Actions should now be capable of running without any issues. If you encounter any problems, please report your issue to the main OTTR repository [here](https://github.com/jhudsl/OTTR_Template/issues/new?assignees=&labels=bug&projects=&template=course-problem-report.md&title%5B%5D=Problem).
 
 
-### 8. Set up GitHub Pages
+### 7. Set up GitHub Pages
+
+You'll need to set this up so that your website or course will be published to a URL!
 
 In your repository, go to `Settings` > `Pages`.
 
 - Under `Source`, pick `Deploy fom a branch`
-- Under `Branch`, pick `main` and choose `/docs`. 
+- Under `Branch`, pick `main` and choose `/docs`.
 - Then click `Save`.  
 - Lastly, check the box that says `Enforce HTTPS` at the bottom of this page.   
 
@@ -132,7 +118,7 @@ For more information about GitHub Pages we recommend you refer to the GitHub doc
 **Warning**: If you go to your URL right now (before you've pushed any file changes) you might see a 404 error because nothing has been triggered to be rendered. You can check the URL after you file your first pull request (which we will guide you through [in the next section](https://github.com/jhudsl/OTTR_Template/wiki/Start-editing-your-course).
 </p>
 
-### 9. Enroll your repository for OTTR updates
+### 8. Enroll your repository for OTTR updates (Not required but highly encouraged)
 
 This OTTR templates (https://github.com/jhudsl/OTTR_Template_Website) are always a work in progress.
 We are working on adding more features and smoothing out bugs as we go. This is also why [your feedback is greatly appreciated](https://github.com/jhudsl/OTTR_Template/issues/new/choose).
@@ -166,9 +152,9 @@ _If you have any questions about the implications of any of these updates or fil
 
 <br>
 
-### Methods of writing content
+### Create your website or course
 
-Now you need to decide wheyher you want to build a course or a website and follow those instructions!
+Now you need to decide whether you want to build a course or a website and follow those instructions!
 
 - [Make an OTTR Website](https://www.ottrproject.org/editing_website.html)
 - [Make an OTTR Course](https://www.ottrproject.org/writing_content_courses.html)

@@ -1,9 +1,8 @@
 ---
-title: "Start writing content"
+title: "Start creating website"
 output:
   html_document:
     toc: true
-    toc_float: true
 editor_options:
   markdown:
     wrap: 72
@@ -22,57 +21,52 @@ font-style: italic;
 </style>
 
 
-Now you have an OTTR website and are ready to start putting in your content!
+Now you have a repository on GitHub and you're ready to start crafting your website!
 
-The OTTR website development process revolves around the use of
+The OTTR content development process revolves around the use of
 **pull requests**! Pull requests are a way to set up
 **proposed changes** (instead of direct changes) before you publish
 them. They enable OTTR to test your proposed changes for
 potential issues such as broken URLs or spelling errors. Importantly, pull requests
 facilitate discussions with others regarding proposed changes.
 
-![](resources/images/pull_request_model.jpg)
+<img src="resources/images/pull_request_model.jpg" width=600px">
 
-## Method of writing content
+<p class="comment">
+**WARNING**: The live content is automatically created and stored in the `docs` folder. As our writing process guide will inform you, you **should NOT make direct changes to the `docs` folder**. The automation processes will handle the preparation of these files, and you should refrain from making direct changes to them. To learn how to edit your files and personalize your website, please review the corresponding section in the writing process guide.
+</p>
 
-We have two recommended ways of writing content that is based on your
-comfort and interest level in using Git and GitHub:
+## About OTTR and Pull Requests
 
-- [OTTR Entry Level](#ottr-entry-level): If you are not interested in delving into GitHub, you can use this version, which is entirely conducted through the GitHub web browser.
-- [OTTR Advanced](#ottr-advanced):  If you are already familiar with Git and GitHub or have an interest in starting to use them, we suggest this method. It will involve some additional learning, but acquiring skills in Git and GitHub will be highly beneficial not only for OTTR but also for version control in various other contexts.
+OTTR will not completely break if you don't use pull requests, but you will be missing out on a lot of the main perks of OTTR. OTTR's checks primarily focus on pull requests so you can avoid accidentally making your mistakes in your live website.
 
-![](resources/images/methods_of_writing.jpg)
-
-OTTR's checks primarily focus on pull requests so you can avoid accidentally making your mistakes in your live websites.
-
-When you submit a pull request, it triggers a sequence of automatic checks performed by GitHub Actions. These checks are designed to assist you as you add content to your website.
+When you submit a pull request on OTTR it triggers a sequence of automatic checks performed by GitHub Actions. These checks are designed to assist you as you add content to your website.
 
 These checks will:  
 
 * Check that the all the URLs actually take learners somewhere
 * Check that the code is styled using the `styler` package
 * Check that the spelling is correct using the `spelling` package
-* Create previews of the rendered versions of the course
-
-OTTR is compatible with Quarto and regular markdown files, even though our template has RMarkdown files.
+* Create previews of the rendered versions of the website
+* Check the formatting of any quizzes (if applicable)
 
 You can adjust what checks are run by editing the
 `config_automation.yml` file. This is further discussed in this section
 about [customizing GitHub Actions](./customize-robots.html).
 
--   [Jump to OTTR Entry Level instructions](#ottr-entry-level)
--   [Jump to OTTR Advanced instructions](#ottr-advanced)
+We have two recommended ways of writing content that is based on your
+comfort and interest level in using Git and GitHub. If you are already comfortable with GitHub you can skip these parts.
 
-<br>
+<img src="resources/images/methods_of_writing.jpg" width=400px">
 
-# OTTR Entry Level {#ottr-entry-level}
+<details><summary>**Get started with OTTR entry level -- editing from the browser**: If you are not interested in delving into GitHub, you can use this version, which is entirely conducted through the GitHub web browser.</summary>
 
 You can edit and add content directly in the GitHub website if you
 prefer not to learn Git and GitHub (though we highly recommend it, as
 knowing how to use Git/GitHub is a useful skill to integrate into your
 workflow -- not just for OTTR).
 
-## Create a new branch
+**1. Create a new branch**
 
 With GitHub in order to keep your OTTR website preserved content and code
 is managed through the use of branches. To explain branches we'll mainly
@@ -127,8 +121,7 @@ just look at the left upper corner to make sure!
 
 Now let's try making some changes.
 
-
-## Committing changes
+**2. Committing changes**
 
 In your OTTR repository, on your new branch, you can now add/edit/rename
 currently existing files while protecting your `main` branch. Adding
@@ -173,13 +166,11 @@ Then write a message about what changes you made and press the
 
 ![](resources/images/first_edit_commit.png)
 
-Now you are ready to open your pull request.
+Now you are ready to open your pull request.[Jump to section titled 'Open a Pull Request'](#open-a-pull-request)
 
--   [Jump to section titled 'Open a Pull Request'](#open-a-pull-request)
+</details>
 
-<br>
-
-# OTTR Advanced {#ottr-advanced}
+<details><summary>**Get started with OTTR Advanced -- filing a PR from your computer**: If you are already familiar with Git and GitHub or have an interest in starting to use them, we suggest this method. It will involve some additional learning, but acquiring skills in Git and GitHub will be highly beneficial not only for OTTR but also for version control in various other contexts. </summary>
 
 If you have an interest in utilizing GitHub (or already possess knowledge in this area), we suggest engaging with GitHub and Git beyond the GitHub website for creating your pull requests.
 
@@ -192,7 +183,7 @@ of handling files.
 If you are not new to GitHub, then we recommend skipping this section
 and jumping to the [`Checks on the Pull Request` section](#checks-on-the-pull-requests).
 
-## Cloning with Git
+**1. Cloning with Git**
 
 In the GitHub workflow (excluding the Entry-Level writing method), files exist online (remote) and on your computer (local).
 
@@ -222,8 +213,7 @@ pasting is advisable because any little typo will inhibit cloning.
 Now you are ready to click `Clone the repository`! It will ask you if
 you'd like to `Open Now`, click that.
 
-
-## Create a new branch
+**2. Create a new branch**
 
 Handling branches is where you unleash the real benefit of GitHub, but
 it can be confusing at first.
@@ -260,8 +250,7 @@ that the cursor is blinking in. In our example, we are calling it
 Now we can add/edit/rename currently existing files in our new branch,
 knowing that the content and code in the `main` branch is safe.
 
-
-## Committing changes
+**3. Committing changes**
 
 Adding changes to a branch is called making `commits`. To modify any
 files in a branch we have to first 1) Make our changes as we normally
@@ -283,8 +272,7 @@ If we want to add these file changes to our current branch, we need to
 
 Great! Now the changes you've made have been added to your local branch.
 
-
-## Pushing changes
+**4. Pushing changes**
 
 Note that when you've committed your changes locally (on your computer), those changes
 won't be on the online version of your repository. To get them to the
@@ -302,9 +290,7 @@ origin in the dropdown menu and click `Submit`.
 
 ![](resources/images/push_changes_gitkraken.png)
 
-<br>
-
-# Open a pull request {#open-a-pull-request}
+<details><summary>**Open a pull request**</summary>
 
 After a variable number of commits, your branch, perhaps called
 `a-new-branch` or any other new branch you might have made, is a
@@ -336,9 +322,7 @@ banner message, where there is a button that says
 
 ![](resources/images/open_pr.png)
 
-<details>
-
-<summary>Click here if you don't see the pull request message!!!</summary>
+<details><summary>Click here if you don't see the pull request message!!!</summary>
 
 Note that sometimes if you have used the same branch multiple times you
 may need some extra steps to create a pull request. This will involve
@@ -352,8 +336,6 @@ work on. Be careful that is the branch you intend.
 ![](resources/images/new_PR_2.png)
 
 </details>
-
-<br>
 
 After you click on `Compare & pull request` you'll be taken to a screen
 where you can add information about your changes. After you are done
@@ -369,14 +351,15 @@ steps.
 
 ![](resources/images/summary.png)
 
+</details>
+
 <br>
 
-
-# Checks on the pull requests
+## OTTR Checks on pull requests
 
 Once your pull request is open, the OTTR GitHub Actions checks will begin. These checks will generate reports as comments on your pull request.
 
-![](https://raw.githubusercontent.com/jhudsl/OTTR_Template/main/resources/screenshots/gha-checks.png)
+<img src ="https://raw.githubusercontent.com/jhudsl/OTTR_Template/main/resources/screenshots/gha-checks.png" width=400px">
 
 Read these comments to begin addressing the problems with more commits
 to your branch.
@@ -406,11 +389,11 @@ If you encounter situations where a spelling report or URL report doesn't look a
 </p>
 
 
-![](resources/images/summary_2.png)
+<img src="resources/images/summary_2.png" width = 500px>
 
 <br>
 
-# Adding new pages
+## Adding new pages
 
 Adding new chapters to your OTTR websites requires some specific steps in
 addition to what we've discussed here.
