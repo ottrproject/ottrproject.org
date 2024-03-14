@@ -1,5 +1,5 @@
 ---
-title: <img src="./resources/images/basic_otter_water.PNG" width = 100px> OTTR - GitHub sites for busy people
+title: <img src="./resources/images/basic_otter_water.PNG" width = 100px> OTTR - GitHub sites and courses for busy people
 output:
   html_document:
     includes:
@@ -10,7 +10,7 @@ output:
   <br>           
 </div>
 
-```{r, fig.align='center', fig.alt= "OTTR helps build github based websites with less hassle. Catch potential mistakes before they go live", echo = FALSE, out.width= "50%"}
+```{r, fig.align='center', fig.alt= "OTTR helps build github based websites with less hassle. Catch potential mistakes before they go live", echo = FALSE, out.width= "40%"}
 knitr::include_graphics("./resources/images/why-ottr.png")
 ```
 
