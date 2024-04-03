@@ -6,20 +6,16 @@ navbar:
   - text: ""
     href: index.html
     icon: fa-home
-  - text: "Getting Started"
-    href: getting_started.html
-    icon: fa-play
+  - text: "Getting Started with OTTR Websites"
+    href: editing_website.html
+    icon: fa-star
     menu:
       - text: "Prerequisites"
         href: getting_started.html#prerequisites-for-using-ottr
         icon: fa-asterisk
-      - text: "Starting a new OTTR course/website"
-        href: getting_started.html#starting-a-new-ottr-course
-        icon: fa-flag-checkered
-  - text: "OTTR Website"
-    href: editing_website.html
-    icon: fa-arrow-pointer
-    menu:
+      - text: "Getting Started"
+        href: getting_started.html
+        icon: fa-play
       - text: "Start writing!"
         href: editing_website.html
         icon: fa-pen
@@ -29,9 +25,15 @@ navbar:
       - text: "Adding new pages"
         href: editing_website.html#adding-new-pages
         icon: fa-plus
-  - text: "OTTR Courses"
+  - text: "Getting Started with OTTR Courses"
     icon: fa-lightbulb
     menu:
+      - text: "Prerequisites"
+        href: getting_started.html#prerequisites-for-using-ottr
+        icon: fa-asterisk
+      - text: "Getting Started"
+        href: getting_started.html
+        icon: fa-play
       - text: "Start writing!"
         href: writing_content_courses.html
         icon: fa-pen
