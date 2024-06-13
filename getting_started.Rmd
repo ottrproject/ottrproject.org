@@ -152,11 +152,11 @@ Detailed instructions for these steps are provided below:
   
 Some alternative information on these steps are available [here from GitHub](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/creating-a-pull-request-from-a-fork) or from [James Priest's Gist on the Fork and PR Workflow](https://gist.github.com/james-priest/74188772ef2a6f8d7132d0b9dc065f9c) (note: you don't need to clone the forked repo locally, instead making edits online and committing to a new branch).
 
-If you'd rather not create a fork and open a PR, we can make edits to the `sync.yml` file for you if you open an issue in the relevant repo (links below) providing us the information about your repo (organization or username as well as the new repo name) or submit a response in our [OTTR Feedback Google Form](https://forms.gle/jGQnd5oemHWyuUq28) providing the information for your new repo in the "Do you have any overall suggestions for OTTR?" question.
+If you'd rather not create a fork and open a PR, we can make edits to the `sync.yml` file for you if you open an issue in the relevant repo (links in table below) providing us the information about your repo (organization or username as well as the new repo name) or submit a response in our [OTTR Feedback Google Form](https://forms.gle/jGQnd5oemHWyuUq28) providing the information for your new repo in the "Do you have any overall suggestions for OTTR?" question.
 
-| Repository            | Issues Link                                                                 |
-|:---------------------:|:---------------------------------------------------------------------------:|
-| OTTR_Template         | [Open an issue here](https://github.com/jhudsl/OTTR_Template/issues/new/choose)        |
+| Repository            | Issues Links                                                                 |
+|:---------------------:|:---------------------------------------------------------------------------|
+| OTTR_Template         | [Open a general issue here](https://github.com/jhudsl/OTTR_Template/issues/new/choose)<br/>[Open an issue to add a new repo to `sync.yml` for OTTR updates](https://github.com/jhudsl/OTTR_Template/issues/new?assignees=cansavvy&labels=&projects=&template=new-course-add-to-sync.md&title=)<br/>[Open an issue to update your repo name/location in `sync.yml` for OTTR updates](https://github.com/jhudsl/OTTR_Template/issues/new?assignees=cansavvy&labels=&projects=&template=update-course-info-for-sync.md&title=)|
 | OTTR_Quizzes          | [Open an issue here](https://github.com/jhudsl/OTTR_Quizzes/issues/new/choose)         |
 | OTTR_Template_Website | [Open an issue here](https://github.com/jhudsl/OTTR_Template_Website/issues/new/choose)|
 
