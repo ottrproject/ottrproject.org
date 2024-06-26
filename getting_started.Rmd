@@ -120,23 +120,29 @@ For more information about GitHub Pages we recommend you refer to the GitHub doc
 
 ### 8. Enroll your repository for OTTR updates (Not required but highly encouraged)
 
-This OTTR templates (https://github.com/jhudsl/OTTR_Template_Website) are always a work in progress.
+These OTTR templates (https://github.com/jhudsl/OTTR_Template_Website or https://github.com/jhudsl/OTTR_Template) are always a work in progress.
 We are working on adding more features and smoothing out bugs as we go. This is also why [your feedback is greatly appreciated](https://github.com/jhudsl/OTTR_Template/issues/new/choose).
 
 When updates are made to files that aren't specific to the course content but instead run checks and other processes in the original repository, pull requests are filed automatically to any downstream repositories made from this template.
 
-**To enroll in these automatic update pull requests, the new course's repository name will need to be added to [this file in the OTTR website template](https://github.com/jhudsl/OTTR_Template_Website/edit/main/.github/sync.yml)**
+**To enroll in these automatic update pull requests, the new course's repository name will need to be added to the relevant OTTR template sync file. See [Which file should you edit section for links to the file you want](#which-sync-file-should-you-edit)**
 
 If you're a member of the jhudsl GitHub organization, you can make edits to the sync file in a new branch and open a pull request. 
 
-If you're not a member of the jhudsl GitHub organization, to edit the sync file, you'd have to create a fork and open a pull request from that fork. We provide instructions for that below [in the section Making edits to these files if you are not part of the jhudsl Github organization](#making-edits-to-these-files-if-you-are-not-part-of-the-jhudsl-github-organization). However, if you'd rather not create a fork and open a PR, we can make edits to the `sync.yml` file for you if you open an issue in the relevant repo [(links in table below)](#links-to-open-an-issue-in-an-ottr-template-repository) providing us the information about your repo (organization or username as well as the new repo name) or submit a response in our [OTTR Feedback Google Form](https://forms.gle/jGQnd5oemHWyuUq28) providing the information for your new repo in the "Do you have any overall suggestions for OTTR?" question.
+If you're not a member of the jhudsl GitHub organization, you can use one of these alternatives:
+
+* Submit a response in our [OTTR Feedback Google Form](https://forms.gle/jGQnd5oemHWyuUq28) by providing the information for your new repo (organization or username as well as the new repo name) in the "Do you have any overall suggestions for OTTR?" question and we can make edits to the `sync.yml` file for you.
+* Open an issue in the relevant repo [(links in table below)](#links-to-open-an-issue-in-an-ottr-template-repository) providing us the information about your repo (organization or username as well as the new repo name) and we can make edits to the `sync.yml` file for you.
+* Edit the sync file by creating a fork and opening a pull request from that fork. We provide instructions for that below [in the section Making edits to these files if you are not part of the jhudsl Github organization](#making-edits-to-this-file-if-you-are-not-part-of-the-jhudsl-github-organization). 
+
+#### Which sync file should you edit?
 
 - Go to the respective file: `.github/sync.yml` of the OTTR template repository you created your repository from:
-    - [File for the main course OTTR_Template_Website updates](https://github.com/jhudsl/OTTR_Template_Website/blob/main/.github/sync.yml)
     - [File for the main course OTTR_Template updates](https://github.com/jhudsl/OTTR_Template/blob/main/.github/sync.yml)
+    - [File for the website OTTR_Template_Website updates](https://github.com/jhudsl/OTTR_Template_Website/blob/main/.github/sync.yml)
     - [File for the OTTR_Quizzes updates](https://github.com/jhudsl/OTTR_Quizzes/blob/main/.github/sync.yml)
 
-#### Making edits to these files if you are not part of the jhudsl GitHub organization 
+#### Making edits to this file if you are not part of the jhudsl GitHub organization 
 
 If you're not part of the jhudsl GitHub organization, to edit the `sync.yml` file you'll need to
   - fork the repo
@@ -164,7 +170,7 @@ Some alternative information on these steps are available [here from GitHub](htt
 | OTTR_Quizzes          | [Open an issue here](https://github.com/jhudsl/OTTR_Quizzes/issues/new/choose)         |
 | OTTR_Template_Website | [Open an issue here](https://github.com/jhudsl/OTTR_Template_Website/issues/new/choose)|
 
-#### Making edits to these files if you are part of the jhudsl GitHub organization
+#### Making edits to this file if you are part of the jhudsl GitHub organization
 
 - Add your repository's name where it says `#NEW REPO HERE#`. Be careful to indent the same amount as the other repositories listed.
 ![](https://raw.githubusercontent.com/jhudsl/OTTR_Template/main/resources/screenshots/edit-sync.yml.png)
