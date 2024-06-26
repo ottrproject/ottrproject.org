@@ -672,6 +672,44 @@ quotes, and commas included in this pattern):</p>
 <p>Commit the changes to your <code>_bookdown.yml</code> and see if the
 preview GitHub action runs appropriately.</p>
 </div>
+<div
+id="error-github-action-link-to-download-and-preview-.docx-file-is-returning-a-404-error"
+class="section level3">
+<h3><code>404 error</code>: GitHub Action link to download and preview
+<code>.docx</code> file is returning a 404 error</h3>
+<p>If you get a 404 error after clicking the link while attempting to
+download the <code>.docx</code> file from the GitHub Action rendered
+previews, then add the following code to the end of the
+<code>_output.yml</code> file:</p>
+<pre><code>bookdown::word_document2:
+  toc: true</code></pre>
+<p>Commit the changes to your <code>_output.yml</code> and see if the
+preview GitHub action runs appropriately.</p>
+</div>
+<div
+id="error-in-if-title-x2-returnhead-the-condition-has-length-1-run-bookdown-render-error"
+class="section level3">
+<h3><code>Error in if (title == x2) return(head) : the condition has length &gt; 1</code>:
+Run bookdown render error</h3>
+<p>If you observe an error like this:</p>
+<pre><code>Error in if (title == x2) return(head) : the condition has length &gt; 1
+Calls: &lt;Anonymous&gt; ... split_chapters -&gt; build -&gt; sub -&gt; is.factor -&gt; prepend_chapter_title
+Execution halted
+Error: Process completed with exit code 1.</code></pre>
+<p>Then look at the <code>GA_Script.Rhtml</code> file and remove the
+following <code>html</code> frontmatter if it’s present:</p>
+<p>(at the beginning of the file)</p>
+<pre><code>  &lt;html&gt;
+
+  &lt;head&gt;
+  &lt;title&gt;Title&lt;/title&gt;
+  &lt;/head&gt;
+
+  &lt;body&gt;</code></pre>
+<p>(at the end of the file)</p>
+<pre><code>  &lt;/body&gt;
+  &lt;/html&gt;</code></pre>
+</div>
 </div>
 <div id="ask-a-question-on-the-google-group" class="section level2">
 <h2>Ask a question on the Google Group</h2>
