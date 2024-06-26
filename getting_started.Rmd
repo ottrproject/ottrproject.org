@@ -150,6 +150,7 @@ If you're not part of the jhudsl GitHub organization, to edit the `sync.yml` fil
   - create a PR in the original OTTR repo using your branch
   
 Detailed instructions for these steps are provided below:
+
   - Click the pencil in the upper right for "Fork this repository and edit the file"
   - Click the green button that says "Fork this repository"
   - Make the edits to the file, adding your repository's name where it says `#NEW REPO HERE#`. Be careful to indent the same amount as the other repositories listed.
