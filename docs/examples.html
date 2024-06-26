@@ -13,8 +13,8 @@
 
 <title>Examples of OTTR websites</title>
 
-<script src="site_libs/header-attrs-2.10/header-attrs.js"></script>
-<script src="site_libs/jquery-1.11.3/jquery.min.js"></script>
+<script src="site_libs/header-attrs-2.27.1/header-attrs.js"></script>
+<script src="site_libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <link href="site_libs/bootstrap-3.3.5/css/bootstrap.min.css" rel="stylesheet" />
 <script src="site_libs/bootstrap-3.3.5/js/bootstrap.min.js"></script>
@@ -29,14 +29,14 @@
        h6 {font-size: 12px;}
        code {color: inherit; background-color: rgba(0, 0, 0, 0.04);}
        pre:not([class]) { background-color: white }</style>
-<script src="site_libs/jqueryui-1.11.4/jquery-ui.min.js"></script>
+<script src="site_libs/jqueryui-1.13.2/jquery-ui.min.js"></script>
 <link href="site_libs/tocify-1.9.1/jquery.tocify.css" rel="stylesheet" />
 <script src="site_libs/tocify-1.9.1/jquery.tocify.js"></script>
 <script src="site_libs/navigation-1.1/tabsets.js"></script>
 <link href="site_libs/highlightjs-9.12.0/default.css" rel="stylesheet" />
 <script src="site_libs/highlightjs-9.12.0/highlight.js"></script>
-<link href="site_libs/font-awesome-5.1.0/css/all.css" rel="stylesheet" />
-<link href="site_libs/font-awesome-5.1.0/css/v4-shims.css" rel="stylesheet" />
+<link href="site_libs/font-awesome-6.4.2/css/all.min.css" rel="stylesheet" />
+<link href="site_libs/font-awesome-6.4.2/css/v4-shims.min.css" rel="stylesheet" />
 
 <style type="text/css">
   code{white-space: pre-wrap;}
@@ -57,6 +57,7 @@ if (window.hljs) {
   }
 }
 </script>
+
 
 
 
@@ -86,6 +87,9 @@ button.code-folding-btn:focus {
 }
 summary {
   display: list-item;
+}
+details > summary > p:only-child {
+  display: inline;
 }
 pre code {
   padding: 0;
@@ -143,11 +147,15 @@ $(document).ready(function () {
     href = "index.html";
   var menuAnchor = $('a[href="' + href + '"]');
 
-  // mark it active
-  menuAnchor.tab('show');
-
-  // if it's got a parent navbar menu mark it active as well
-  menuAnchor.closest('li.dropdown').addClass('active');
+  // mark the anchor link active (and if it's in a dropdown, also mark that active)
+  var dropdown = menuAnchor.closest('li.dropdown');
+  if (window.bootstrap) { // Bootstrap 4+
+    menuAnchor.addClass('active');
+    dropdown.find('> .dropdown-toggle').addClass('active');
+  } else { // Bootstrap 3
+    menuAnchor.parent().addClass('active');
+    dropdown.addClass('active');
+  }
 
   // Navbar adjustments
   var navHeight = $(".navbar").first().height() + 15;
@@ -176,8 +184,8 @@ $(document).ready(function () {
   border-radius: 4px;
 }
 
-.tabset-dropdown > .nav-tabs > li.active:before {
-  content: "";
+.tabset-dropdown > .nav-tabs > li.active:before, .tabset-dropdown > .nav-tabs.nav-tabs-open:before {
+  content: "\e259";
   font-family: 'Glyphicons Halflings';
   display: inline-block;
   padding: 10px;
@@ -185,16 +193,9 @@ $(document).ready(function () {
 }
 
 .tabset-dropdown > .nav-tabs.nav-tabs-open > li.active:before {
-  content: "&#xe258;";
-  border: none;
-}
-
-.tabset-dropdown > .nav-tabs.nav-tabs-open:before {
-  content: "";
+  content: "\e258";
   font-family: 'Glyphicons Halflings';
-  display: inline-block;
-  padding: 10px;
-  border-right: 1px solid #ddd;
+  border: none;
 }
 
 .tabset-dropdown > .nav-tabs > li.active {
@@ -311,7 +312,7 @@ div.tocify {
 <div class="navbar navbar-default  navbar-fixed-top" role="navigation">
   <div class="container">
     <div class="navbar-header">
-      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-bs-toggle="collapse" data-target="#navbar" data-bs-target="#navbar">
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
@@ -328,7 +329,7 @@ div.tocify {
   </a>
 </li>
 <li class="dropdown">
-  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
     <span class="fa fa-star"></span>
      
     Getting Started with OTTR Websites
@@ -374,7 +375,7 @@ div.tocify {
   </ul>
 </li>
 <li class="dropdown">
-  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
     <span class="fa fa-lightbulb"></span>
      
     Getting Started with OTTR Courses
@@ -443,7 +444,7 @@ div.tocify {
   </ul>
 </li>
 <li class="dropdown">
-  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
     About
      
     <span class="caret"></span>
@@ -550,13 +551,26 @@ div.tocify {
 
 <div id="ottr-spinoff-babies" class="section level1">
 <h1>OTTR spinoff babies</h1>
-<p>We are actively working on developing additional versions of our original template to cater to specific needs. These variations can range from technical modifications that simplify the template, to tangential adaptations, or even more complex versions compared to the original OTTR template.</p>
-<p>We also noticed that if specific branding or variations of the original template need to be used many times, it’s often easier to create a new template.</p>
+<p>We are actively working on developing additional versions of our
+original template to cater to specific needs. These variations can range
+from technical modifications that simplify the template, to tangential
+adaptations, or even more complex versions compared to the original OTTR
+template.</p>
+<p>We also noticed that if specific branding or variations of the
+original template need to be used many times, it’s often easier to
+create a new template.</p>
 <p>We affectionately call these spinoff templates OTTR “babies”.</p>
-<p>If you find yourself making a full set of courses and multiple repositories from OTTR, you may want to make a template from our template (If you need to go this route, we recommend reaching out to the OTTR maintainers by filing a GitHub issue and assigning <code>@cansavvy</code> and <code>@carriewright11</code>). Also please reach out if you have any other interesting ideas or suggestions!</p>
+<p>If you find yourself making a full set of courses and multiple
+repositories from OTTR, you may want to make a template from our
+template (If you need to go this route, we recommend reaching out to the
+OTTR maintainers by filing a GitHub issue and assigning
+<code>@cansavvy</code> and <code>@carriewright11</code>). Also please
+reach out if you have any other interesting ideas or suggestions!</p>
 <div id="quarto-spinoff" class="section level2">
 <h2>Quarto spinoff</h2>
-<p>Maybe you prefer a Quarto website! We have that: <a href="https://github.com/fhdsl/OTTR_Quarto" class="uri">https://github.com/fhdsl/OTTR_Quarto</a></p>
+<p>Maybe you prefer a Quarto website! We have that: <a
+href="https://github.com/fhdsl/OTTR_Quarto"
+class="uri">https://github.com/fhdsl/OTTR_Quarto</a></p>
 </div>
 <div id="jekyll-spinoff" class="section level2">
 <h2>Jekyll spinoff</h2>
@@ -564,7 +578,11 @@ div.tocify {
 </div>
 <div id="metric-collection" class="section level2">
 <h2>metric collection</h2>
-<p>This is a template powered by the <code>metricminer</code> R package to allow you to display metrics in a dashboard. This template shows basics for how you can display metrics collected from: <a href="https://github.com/fhdsl/metricminer-dashboard/tree/main">Github template repo</a></p>
+<p>This is a template powered by the <code>metricminer</code> R package
+to allow you to display metrics in a dashboard. This template shows
+basics for how you can display metrics collected from: <a
+href="https://github.com/fhdsl/metricminer-dashboard/tree/main">Github
+template repo</a></p>
 <ul>
 <li>Google Analytics</li>
 <li>Google Forms</li>
@@ -572,23 +590,33 @@ div.tocify {
 <li>CRAN</li>
 <li>Calendly</li>
 </ul>
-<p>And more websites being added. <a href="https://www.metricminer.org/">See metricminer.org for more details!</a></p>
+<p>And more websites being added. <a
+href="https://www.metricminer.org/">See metricminer.org for more
+details!</a></p>
 </div>
 <div id="anvil-template" class="section level2">
 <h2>AnVIL template</h2>
-<p>This is a template (made from our main OTTR Template) that is used for a set of courses being made for the <a href="https://anvilproject.org/">AnVIL set of cloud tools</a></p>
+<p>This is a template (made from our main OTTR Template) that is used
+for a set of courses being made for the <a
+href="https://anvilproject.org/">AnVIL set of cloud tools</a></p>
 <ul>
-<li><a href="https://github.com/jhudsl/AnVIL_Template">GitHub repository and source code</a></li>
+<li><a href="https://github.com/jhudsl/AnVIL_Template">GitHub repository
+and source code</a></li>
 </ul>
-<p>Courses will look similar to this <a href="https://jhudatascience.org/AnVIL_Template/">link</a>.</p>
+<p>Courses will look similar to this <a
+href="https://jhudatascience.org/AnVIL_Template/">link</a>.</p>
 </div>
 <div id="datatrail-template" class="section level2">
 <h2>DataTrail template</h2>
-<p>This is a template (made from our main OTTR Template) that will be used for a set of courses being made for <a href="https://www.datatrail.org/">DataTrail</a></p>
+<p>This is a template (made from our main OTTR Template) that will be
+used for a set of courses being made for <a
+href="https://www.datatrail.org/">DataTrail</a></p>
 <ul>
-<li><a href="https://github.com/datatrail-jhu/DataTrail_Template">GitHub repository and source code</a></li>
+<li><a href="https://github.com/datatrail-jhu/DataTrail_Template">GitHub
+repository and source code</a></li>
 </ul>
-<p>Courses will look similar to this <a href="https://datatrail-jhu.github.io/DataTrail_Template/introduction.html">link</a>.</p>
+<p>Courses will look similar to this <a
+href="https://datatrail-jhu.github.io/DataTrail_Template/introduction.html">link</a>.</p>
 <p><br></p>
 </div>
 </div>
