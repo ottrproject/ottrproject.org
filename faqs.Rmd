@@ -109,6 +109,49 @@ rmd_files: ["index.Rmd",
 ```
 Commit the changes to your `_bookdown.yml` and see if the preview GitHub action runs appropriately.
 
+### `404 error`: GitHub Action link to download and preview `.docx` file is returning a 404 error
+
+If you get a 404 error after clicking the link while attempting to download the `.docx` file from the GitHub Action rendered previews, then add the following code to the end of the `_output.yml` file:
+
+```
+bookdown::word_document2:
+  toc: true
+```
+
+Commit the changes to your `_output.yml` and see if the preview GitHub action runs appropriately. 
+
+### `Error in if (title == x2) return(head) : the condition has length > 1`: Run bookdown render error
+
+If you observe an error like this:
+
+```
+Error in if (title == x2) return(head) : the condition has length > 1
+Calls: <Anonymous> ... split_chapters -> build -> sub -> is.factor -> prepend_chapter_title
+Execution halted
+Error: Process completed with exit code 1.
+```
+
+Then look at the `GA_Script.Rhtml` file and remove the following `html` frontmatter if it's present:
+
+(at the beginning of the file)
+
+```
+  <html>
+
+  <head>
+  <title>Title</title>
+  </head>
+
+  <body>
+```
+
+(at the end of the file)
+
+```
+  </body>
+  </html>
+```
+
 ## Ask a question on the Google Group
 
 You can always start a discussion on the [Discussions](https://github.com/jhudsl/OTTR_Template/discussions) tab above. You can also join our [Google Group](https://groups.google.com/g/jhudsl) to ask questions and keep in touch with the OTTR community.
