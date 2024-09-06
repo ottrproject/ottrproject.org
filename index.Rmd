@@ -31,6 +31,8 @@ It helps you use [GitHub](https://github.com/) to publish websites and courses f
 - Easily customize branding
 - Easily include code (and avoid version difference issues using Docker containers)
 - Easily format courses for learning platforms like [coursera](https://www.coursera.org/) and [Leanpub](https://leanpub.com/) 
+- Easily update courses! (only edit once and it gets propagated to all locations)
+
 <br>
 (*Note that you will need to establish a publishing contract with coursera if you want to publish there)
 
@@ -44,7 +46,7 @@ Check out this short video about OTTR:
 
 ## How to use OTTR:
 
-1.  Edit and write a websites and courses in [R Markdown files](https://rmarkdown.rstudio.com/) (or Quarto - coming soon!) 
+1.  Edit and write websites and courses in [R Markdown files](https://rmarkdown.rstudio.com/) (or Quarto - coming soon!) 
 1. Use GitHub to host your content, we will walk you through how!
 1. Let the GitHub actions in our tools do all the checks and rendering so you don't have too
 1. Update your content as needed based on the errors OTTR finds and the preview
