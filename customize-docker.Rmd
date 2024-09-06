@@ -205,7 +205,7 @@ For your personalized docker image, you can store the Dockerfile anywhere. In or
 
 It may be easiest to store it in the OTTR-made repository you are working from.
 
-In whichever repository you choose to store your Dockerfile, its recommended you use a GitHub action to automatically test it when you make changes. You can use our Docker handling [GitHub action here as a starting point](https://github.com/jhudsl/OTTR_Template/blob/main/.github/workflows/docker-test.yml).
+In whichever repository you choose to store your Dockerfile, its recommended you use a GitHub action to automatically test it when you make changes. You can use our Docker handling [GitHub action here as a starting point](https://github.com/jhudsl/ottr-docker/blob/main/.github/workflows/docker-test.yml).
 
 You will need to modify this GHA for your own purposes:
 
