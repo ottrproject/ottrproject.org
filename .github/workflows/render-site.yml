@@ -15,10 +15,8 @@ on:
       - '**.Rmd'
       - styles.css
       - _site.yml
-      - subdir_html/*.Rmd
       - resources/images/*.png
       - resources/images/favicon.ico
-      - site_libs/*
 
 jobs:
   yaml-check:
@@ -26,7 +24,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
 
         # Use the yaml-env-action action.
       - name: Load environment from YAML
@@ -43,11 +41,11 @@ jobs:
     runs-on: ubuntu-latest
     container:
       image: ${{needs.yaml-check.outputs.rendering_docker_image}}
-    # Steps represent a sequence of tasks that will be executed as part of the job
-    steps:
+      
+    steps:    
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - name: checkout
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
         with:
           # get the full repo
           fetch-depth: 0
@@ -72,11 +70,14 @@ jobs:
           exit 1
 
 # Commit the rendered site files - html files and site_libs files
+# The git reset step will remove any other files created in this workflow, such as API keys
       - name: Commit rendered site files
         run: |
-          git config --system --add safe.directory $GITHUB_WORKSPACE
-          git config --local user.email "actions@github.com"
-          git config --local user.name "GitHub Actions"
+          git config --global --add safe.directory $GITHUB_WORKSPACE
+          git config --global user.name 'github-actions[bot]'
+          git config --global user.email 'github-actions[bot]@users.noreply.github.com'
           git add --force docs/*
           git commit -m 'Render site' || echo "No changes to commit"
+          git reset --hard HEAD
+          git pull --rebase --allow-unrelated-histories --strategy-option=ours
           git push origin main || echo "No changes to push"
