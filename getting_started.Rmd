@@ -125,6 +125,14 @@ We are working on adding more features and smoothing out bugs as we go. This is 
 
 When updates are made to files that aren't specific to the course content but instead run checks and other processes in the original repository, pull requests are filed automatically to any downstream repositories made from this template.
 
+#### 9. To get sync updates, add jhudsl-robot as a collaborator
+\*You can skip this step if your course is in the `jhudsl` organization.
+To enable the full functionality of [GitHub Actions](https://github.com/jhudsl/OTTR_Template/wiki/How-to-set-up-and-customize-GitHub-actions-robots) in this repository, it is necessary to grant appropriate permissions. To achieve this, you should add `jhudsl-robot` as a collaborator to your repository with write permissions.
+In your repository, go to your `Settings` > `Collaborators & Teams` and click on `Add people`.
+In the pop up window, search for and add `jhudsl-robot`.
+<img src="https://github.com/jhudsl/OTTR_Template/raw/main/resources/screenshots/add-jhudsl-robot.png" width = 400>
+If shown the option, choose the `write` option then click `Add jhudsl-robot to this repository`. Otherwise, just click `add`.
+
 **To enroll in these automatic update pull requests, the new course's repository name will need to be added to the relevant OTTR template sync file. See [Which file should you edit section for links to the file you want](#which-sync-file-should-you-edit)**
 
 If you're a member of the jhudsl GitHub organization, you can make edits to the sync file in a new branch and open a pull request. 
