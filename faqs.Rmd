@@ -151,6 +151,10 @@ Then look at the `GA_Script.Rhtml` file and remove the following `html` frontmat
   </body>
   </html>
 ```
+## Content not rendering
+
+Check that the config file is up-to-date. It should look like this: https://github.com/jhudsl/OTTR_Template/blob/main/config_automation.yml.
+(be careful to keep your selections for the configuration you would like).
 
 ## Contact Info
 
