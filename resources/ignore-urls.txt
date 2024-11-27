@@ -1,2 +1,1 @@
 http://www.someurl.html
-https://jhudatascience.org/
