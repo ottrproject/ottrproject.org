@@ -13,7 +13,7 @@
 
 <title>Getting started</title>
 
-<script src="site_libs/header-attrs-2.27.1/header-attrs.js"></script>
+<script src="site_libs/header-attrs-2.25/header-attrs.js"></script>
 <script src="site_libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <link href="site_libs/bootstrap-3.3.5/css/bootstrap.min.css" rel="stylesheet" />
@@ -761,6 +761,23 @@ feedback is greatly appreciated</a>.</p>
 content but instead run checks and other processes in the original
 repository, pull requests are filed automatically to any downstream
 repositories made from this template.</p>
+<div id="to-get-sync-updates-add-jhudsl-robot-as-a-collaborator"
+class="section level4">
+<h4>9. To get sync updates, add jhudsl-robot as a collaborator</h4>
+<p>*You can skip this step if your course is in the <code>jhudsl</code>
+organization. To enable the full functionality of <a
+href="https://github.com/jhudsl/OTTR_Template/wiki/How-to-set-up-and-customize-GitHub-actions-robots">GitHub
+Actions</a> in this repository, it is necessary to grant appropriate
+permissions. To achieve this, you should add <code>jhudsl-robot</code>
+as a collaborator to your repository with write permissions. In your
+repository, go to your <code>Settings</code> &gt;
+<code>Collaborators &amp; Teams</code> and click on
+<code>Add people</code>. In the pop up window, search for and add
+<code>jhudsl-robot</code>.
+<img src="https://github.com/jhudsl/OTTR_Template/raw/main/resources/screenshots/add-jhudsl-robot.png" width = 400>
+If shown the option, choose the <code>write</code> option then click
+<code>Add jhudsl-robot to this repository</code>. Otherwise, just click
+<code>add</code>.</p>
 <p><strong>To enroll in these automatic update pull requests, the new
 course’s repository name will need to be added to the relevant OTTR
 template sync file. See <a href="#which-sync-file-should-you-edit">Which
@@ -788,6 +805,7 @@ href="#making-edits-to-this-file-if-you-are-not-part-of-the-jhudsl-github-organi
 the section Making edits to these files if you are not part of the
 jhudsl Github organization</a>.</li>
 </ul>
+</div>
 <div id="which-sync-file-should-you-edit" class="section level4">
 <h4>Which sync file should you edit?</h4>
 <ul>
@@ -887,7 +905,10 @@ issue here</a></td>
 <td align="center">OTTR_Template_Website</td>
 <td align="left"><a
 href="https://github.com/jhudsl/OTTR_Template_Website/issues/new/choose">Open
-an issue here</a></td>
+an issue here</a><br/><a
+href="https://github.com/jhudsl/OTTR_Template_Website/issues/new?assignees=cansavvy&amp;labels=&amp;projects=&amp;template=new-website-add-to-sync.md&amp;title=">Open
+an issue to add a new repo to <code>sync.yml</code> for OTTR
+updates</a></td>
 </tr>
 </tbody>
 </table>

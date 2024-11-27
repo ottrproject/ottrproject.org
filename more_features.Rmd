@@ -86,16 +86,19 @@ Links to personal websites can be added below the table to make it easier to rea
 
 These rows should be included for _all courses_:
 ```
-|Template Publishing Engineers|[Candace Savonen], [Carrie Wright]|
+|Template Publishing Engineers|[Candace Savonen], [Carrie Wright], [Ava Hoffman]|
 |Publishing Maintenance Engineer|[Candace Savonen]|
-|Technical Publishing Stylists|[Carrie Wright], [Candace Savonen]|
-|Package Developers[ottrpal]|[John Muschelli], [Candace Savonen], [Carrie Wright]|
+|Technical Publishing Stylists|[Carrie Wright], [Ava Hoffman], [Candace Savonen]|
+|Package Developers ([ottrpal]) [Candace Savonen], [Ava Hoffman], [Howard Baek], [Kate Isaac], [Carrie Wright], [John Muschelli]|
 
 <!-- Author information -->
 
 [John Muschelli]: https://johnmuschelli.com/
 [Candace Savonen]: https://www.cansavvy.com/
 [Carrie Wright]: https://carriewright11.github.io/
+[Ava Hoffman]: https://www.avahoffman.com/
+[Howard Baek]: https://www.linkedin.com/in/howard-baik/
+[Kate Isaac]: https://kweav.github.io/
 
 <!-- Links -->
 
