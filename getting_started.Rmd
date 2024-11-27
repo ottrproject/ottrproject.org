@@ -169,7 +169,7 @@ Some alternative information on these steps are available [here from GitHub](htt
 |:---------------------:|:---------------------------------------------------------------------------|
 | OTTR_Template         | [Open a general issue here](https://github.com/jhudsl/OTTR_Template/issues/new/choose)<br/>[Open an issue to add a new repo to `sync.yml` for OTTR updates](https://github.com/jhudsl/OTTR_Template/issues/new?assignees=cansavvy&labels=&projects=&template=new-course-add-to-sync.md&title=)<br/>[Open an issue to update your repo name/location in `sync.yml` for OTTR updates](https://github.com/jhudsl/OTTR_Template/issues/new?assignees=cansavvy&labels=&projects=&template=update-course-info-for-sync.md&title=)|
 | OTTR_Quizzes          | [Open an issue here](https://github.com/jhudsl/OTTR_Quizzes/issues/new/choose)         |
-| OTTR_Template_Website | [Open an issue here](https://github.com/jhudsl/OTTR_Template_Website/issues/new/choose)|
+| OTTR_Template_Website | [Open an issue here](https://github.com/jhudsl/OTTR_Template_Website/issues/new/choose)<br/>[Open an issue to add a new repo to `sync.yml` for OTTR updates](https://github.com/jhudsl/OTTR_Template_Website/issues/new?assignees=cansavvy&labels=&projects=&template=new-website-add-to-sync.md&title=)|
 
 #### Making edits to this file if you are part of the jhudsl GitHub organization
 
