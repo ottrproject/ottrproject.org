@@ -105,6 +105,8 @@ If it's a 'word' the spell check should recognize, you'll need to add this to th
 Go to the `resources/dictionary.txt` file. Open the file and add the new 'word' to its appropriate place (the words are in alphabetical order).
 After committing the changes to `resources/dictionary.txt` on your branch, the spell check status check should be successfully passed.
 
+If you find that you have a file that you would like to exclude from the spell check you can add the name of the file to exclude_files.txt, which can also be found within the resources directory. 
+
 ### Style code
 
 In the `config_automation.yml` file it is set by:
