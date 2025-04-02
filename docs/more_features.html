@@ -526,7 +526,7 @@ div.tocify {
   </a>
 </li>
 <li>
-  <a href="https://github.com/jhudsl/OTTR_Template">
+  <a href="https://github.com/ottrproject/OTTR_Template">
     <span class="fa fa-github"></span>
      
     
@@ -587,7 +587,7 @@ mention of the author, add a minus sign before @, e.g., <span
 class="citation">[-@R-base]</span>.</p>
 </blockquote>
 <p>See <a
-href="https://github.com/jhudsl/OTTR_Template/blob/main/02-chapter_of_course.Rmd">Chapter
+href="https://github.com/ottrproject/OTTR_Template/blob/main/02-chapter_of_course.Rmd">Chapter
 2</a> of this template course for examples.</p>
 <p>This will automatically list references at the bottom of each chapter
 included in your course, as well as at the end of your course. Thus it
@@ -611,9 +611,9 @@ to your <code>_output.yml</code> file.</p>
 we decided to make a table of credits to make it clear who did what.</p>
 <p>Here is an example:</p>
 <p><img
-src="https://raw.githubusercontent.com/jhudsl/OTTR_Template/main/resources/screenshots/example_credits.png" /></p>
+src="https://raw.githubusercontent.com/ottrproject/OTTR_Template/main/resources/screenshots/example_credits.png" /></p>
 <p>Please see the <a
-href="https://jhudatascience.org/OTTR_Template/about-the-authors.html">About
+href="https://ottrproject.org/OTTR_Template/about-the-authors.html">About
 section</a> of the template for descriptions of how credits should be
 attributed for the course.</p>
 <p>This is generated from the About.Rmd file. An About.Rmd file will
@@ -665,7 +665,7 @@ easier to read.</p>
 
 &lt;!-- Links --&gt;
 
-[ottrpal]: https://github.com/jhudsl/ottrpal</code></pre>
+[ottrpal]: https://github.com/ottrproject/ottrpal</code></pre>
 <p>These rows should be added to all <em>Johns Hopkins</em> courses:</p>
 <pre><code>|Content Publisher|[Ira Gooding]|
 |Content Publishing Reviewer|Ira Gooding]|
@@ -684,7 +684,7 @@ Courses</em>:</p>
 <h3>Adding the Credits table to Coursera</h3>
 <p>In Coursera, you can add the credits table URL as an ungraded plugin
 (<a
-href="https://github.com/jhudsl/OTTR_Template/wiki/Publishing-on-Coursera#navigating-to-your-course-on-coursera">the
+href="https://github.com/ottrproject/OTTR_Template/wiki/Publishing-on-Coursera#navigating-to-your-course-on-coursera">the
 same as described here for adding chapter content</a>). This should be
 added at the beginning of your course, right after the introduction.</p>
 </div>
@@ -705,7 +705,7 @@ maintenance issues, as updating one would require remembering to update
 the other as well! 😱</p>
 <p>In OTTR, we try to minimize maintenance pains. To get around this, we
 use <code>cow::borrow_chapter()</code> from the <a
-href="https://jhudatascience.org/cow/index.html">jhudsl/cow</a> package.
+href="https://ottrproject.org/cow/index.html">jhudsl/cow</a> package.
 The <code>cow</code> package is already on the
 <code>jhudsl/course_template</code> Docker image so you do not need to
 install it if you are using the Docker image or if you are have GitHub
@@ -721,7 +721,7 @@ R chunk with this; where <code>{r, echo = FALSE, results='asis'}</code>
 is included in your chunk arguments.</p>
 <pre><code>cow::borrow_chapter(
   doc_path = &quot;02-chapter_of_course.Rmd&quot;,
-  repo_name = &quot;jhudsl/OTTR_Template&quot;
+  repo_name = &quot;ottrproject/OTTR_Template&quot;
 )</code></pre>
 <p>The magic of this function is that whenever the course is re-rendered
 it will knit the latest version of the chapter you are borrowing. Note
@@ -767,7 +767,7 @@ chapter.</p>
 over, you might instead just want to put a link to the Bookdown chapter.
 You can just use the full URL. A link would look something like
 this:</p>
-<pre><code>![](https://jhudatascience.org/OTTR_Template/a-new-chapter.html)</code></pre>
+<pre><code>![](https://ottrproject.org/OTTR_Template/a-new-chapter.html)</code></pre>
 <p>You might want your course available for download as a docx. For
 example, you might be running a “train-the-trainer” workshop where
 trainees don’t feel comfortable using Github to edit the lessons for
@@ -895,7 +895,7 @@ alt="Check Google Analytics" /></p></li>
   <br>
   Your feedback is greatly appreciated! You can fill out <a href="https://forms.gle/jvFjnhqt5V1E9LbQ9">this form </a>
   <br>
-  or <a href="https://github.com/jhudsl/OTTR_Template/issues/new/choose">file a GitHub issue</a>.
+  or <a href="https://github.com/ottrproject/OTTR_Template/issues/new/choose">file a GitHub issue</a>.
     <br>
   <br><font size="1">Otter images by <a href = https://www.linkedin.com/in/jimin-hwang-549835142/>Jimin Hwang</a>.</font>
   <br>

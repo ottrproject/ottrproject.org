@@ -14,7 +14,7 @@ If your course doesn't require any additional packages to run, then you do not n
 
 We recommend using the `jhudsl/base_ottr:main` tagged image instead of the `latest` version. The `main` image is ready for use, while the `latest` may be under development. All GitHub Actions by default use the `jhudsl/base_ottr:main`.
 
-If you are new to Docker, you may find it helpful to read this [introduction to Docker](https://jhudatascience.org/Adv_Reproducibility_in_Cancer_Informatics/launching-a-docker-image.html).
+If you are new to Docker, you may find it helpful to read this [introduction to Docker](https://ottrproject.org/Adv_Reproducibility_in_Cancer_Informatics/launching-a-docker-image.html).
 
 - If you don't have one, you will need to [sign up with a Docker account](https://hub.docker.com/).  
 - If you haven't installed Docker desktop (or need to update it), you can do so [here](https://docs.docker.com/get-docker/).  
@@ -84,7 +84,7 @@ Should you find that your course needs additional packages beyond what's include
 There's a library of ottr-ready docker images that you can see [here](https://github.com/jhudsl/ottr_docker). If you would like to contribute your own customized docker image that works with OTTR, please file a pull request!
 
 1) Create a [Dockerhub account](https://hub.docker.com/signup) if you don't have one.
-2) Create a new Docker image on your Dockerhub account. Follow these [instructions](https://jhudatascience.org/Adv_Reproducibility_in_Cancer_Informatics/launching-a-docker-image.html) if you don't know how to do that.
+2) Create a new Docker image on your Dockerhub account. Follow these [instructions](https://ottrproject.org/Adv_Reproducibility_in_Cancer_Informatics/launching-a-docker-image.html) if you don't know how to do that.
 3) [Set up Dockerhub secrets in your repository or organization](#set-dockerhub-related-secrets).   
 4) [Update the Github actions workflows accordingly](#updating-workflows-for-new-docker-image).
 5) [Edit the Dockerfile in your repository](#modifying-the-dockerfile-for-a-new-image).
@@ -111,11 +111,11 @@ To make sure that your new Docker image is being used for rendering in the GitHu
 
 Then start a new branch so that you can submit a new pull request with your changes.
 
-Now, when you file a pull request, the Dockerfile build for your docker image will be tested automatically by the [GitHub actions](https://github.com/jhudsl/OTTR_Template/wiki/How-to-set-up-and-customize-GitHub-actions-robots) if `docker-test` is set to `yes`. The default is `docker-test: no`
+Now, when you file a pull request, the Dockerfile build for your docker image will be tested automatically by the [GitHub actions](https://github.com/ottrproject/OTTR_Template/wiki/How-to-set-up-and-customize-GitHub-actions-robots) if `docker-test` is set to `yes`. The default is `docker-test: no`
 
 ### Modifying the Dockerfile for a new image
 
-[Read this chapter for instructions on how to modify Docker images](https://jhudatascience.org/Adv_Reproducibility_in_Cancer_Informatics/modifying-a-docker-image.html)
+[Read this chapter for instructions on how to modify Docker images](https://ottrproject.org/Adv_Reproducibility_in_Cancer_Informatics/modifying-a-docker-image.html)
 
 You will probably want to create your Docker image by using the `jhudsl/base_ottr:main` as your base -- this means that all the packages that are in our `jhudsl/base_ottr:main` image will be included in the Docker image you build.
 
@@ -123,7 +123,7 @@ You will probably want to create your Docker image by using the `jhudsl/base_ott
 FROM jhudsl/base_ottr:main
 ```
 
-You can take a look at this [Dockerfile template we've set up here](https://github.com/jhudsl/OTTR_Template/blob/main/resources/TEMPLATE_Dockerfile) (note that the commands would need to be uncommented and real package names put in place of `package_name`'s).
+You can take a look at this [Dockerfile template we've set up here](https://github.com/ottrproject/OTTR_Template/blob/main/resources/TEMPLATE_Dockerfile) (note that the commands would need to be uncommented and real package names put in place of `package_name`'s).
 
 #### Template commands for adding packages to the Dockerfile
 
@@ -154,11 +154,11 @@ RUN pip3 install \
 
 ### Testing a modified Docker image
 
-[Read this chapter for instructions on how to modify Docker images](https://jhudatascience.org/Adv_Reproducibility_in_Cancer_Informatics/modifying-a-docker-image.html)
+[Read this chapter for instructions on how to modify Docker images](https://ottrproject.org/Adv_Reproducibility_in_Cancer_Informatics/modifying-a-docker-image.html)
 
 When you've added a package to the Dockerfile, you may want to check that it builds successfully before it's added to your repository. You can include changes to your Dockerfile in a pull request which will trigger an automatic testing of building it.
 
-[Read this chapter for more tips on how to modify Docker images](https://jhudatascience.org/Adv_Reproducibility_in_Cancer_Informatics/modifying-a-docker-image.html)
+[Read this chapter for more tips on how to modify Docker images](https://ottrproject.org/Adv_Reproducibility_in_Cancer_Informatics/modifying-a-docker-image.html)
 
 OR
 
@@ -205,7 +205,7 @@ For your personalized docker image, you can store the Dockerfile anywhere. In or
 
 It may be easiest to store it in the OTTR-made repository you are working from.
 
-In whichever repository you choose to store your Dockerfile, its recommended you use a GitHub action to automatically test it when you make changes. You can use our Docker handling [GitHub action here as a starting point](https://github.com/jhudsl/ottr-docker/blob/main/.github/workflows/docker-test.yml).
+In whichever repository you choose to store your Dockerfile, its recommended you use a GitHub action to automatically test it when you make changes. You can use our Docker handling [GitHub action here as a starting point](https://github.com/ottrproject/ottr-docker/blob/main/.github/workflows/docker-test.yml).
 
 You will need to modify this GHA for your own purposes:
 
@@ -221,4 +221,4 @@ If you do choose to use the action manually, then you can use this by going to `
 
 ![](resources/images/docker-gha.png)
 
-For more guidance on how to personalize Docker images, we taking our [Containers for Scientist course](https://hutchdatascience.org/Containers_for_Scientists/). Or file a GitHub issue on the relevant repository.
+For more guidance on how to personalize Docker images, we taking our [Containers for Scientist course](https://ottrproject.org/Containers_for_Scientists/). Or file a GitHub issue on the relevant repository.

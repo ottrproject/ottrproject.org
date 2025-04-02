@@ -19,7 +19,7 @@ Search on the OTTR docs for what you are looking for. Note that first few entrie
 This guide will describe the most common OTTR errors and pitfalls and how to address them.
 When you open a pull request, you should see a report like this:
 
-![](https://github.com/jhudsl/OTTR_Template/raw/main/resources/screenshots/gha-actions-error.png)
+![](https://github.com/ottrproject/OTTR_Template/raw/main/resources/screenshots/gha-actions-error.png)
 
 When you see an ❌ , click on the `Details` button to see the error message. We'll discuss the most common error messages here.
 
@@ -42,7 +42,7 @@ Execution halted
 ```
 _What does this mean?:_
 
-Your Google Slides presentation you have tried to retrieve a slide from with `ottrpal::include_slide()` is not public. Your Google Slide document must be set to `Anyone with a link`. See [this article for more details.](https://support.wix.com/en/article/setting-permissions-for-google-drive-files-and-folders#:~:text=Settings%20Permissions%20for%20a%20Google,edit%20and%20comment%20as%20well.) The renders will fail if this is not set! See the [setting up images and graphics section](https://github.com/jhudsl/OTTR_Template/wiki/Setting-up-images-and-graphics) for more details.
+Your Google Slides presentation you have tried to retrieve a slide from with `ottrpal::include_slide()` is not public. Your Google Slide document must be set to `Anyone with a link`. See [this article for more details.](https://support.wix.com/en/article/setting-permissions-for-google-drive-files-and-folders#:~:text=Settings%20Permissions%20for%20a%20Google,edit%20and%20comment%20as%20well.) The renders will fail if this is not set! See the [setting up images and graphics section](https://github.com/ottrproject/OTTR_Template/wiki/Setting-up-images-and-graphics) for more details.
 
 ***
 
@@ -153,11 +153,11 @@ Then look at the `GA_Script.Rhtml` file and remove the following `html` frontmat
 ```
 ## Content not rendering
 
-Check that the config file is up-to-date. It should look like this: https://github.com/jhudsl/OTTR_Template/blob/main/config_automation.yml.
+Check that the config file is up-to-date. It should look like this: https://github.com/ottrproject/OTTR_Template/blob/main/config_automation.yml.
 (be careful to keep your selections for the configuration you would like).
 
 ## Contact Info
 
-If you have a question that's not addressed by this website or just wanna chat with us about something else, please email us at itcrtrainingnetwork@gmail.com OR you can [leave a GitHub issue here](https://github.com/jhudsl/OTTR_Template/issues/new). 
+If you have a question that's not addressed by this website or just wanna chat with us about something else, please email us at itcrtrainingnetwork@gmail.com OR you can [leave a GitHub issue here](https://github.com/ottrproject/OTTR_Template/issues/new). 
 
 We greatly appreciate any feedback! We are always looking for ways to improve OTTR so more open source courses can be made!

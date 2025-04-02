@@ -361,7 +361,7 @@ steps.
 
 Once your pull request is open, the OTTR GitHub Actions checks will begin. These checks will generate reports as comments on your pull request.
 
-<img src ="https://raw.githubusercontent.com/jhudsl/OTTR_Template/main/resources/screenshots/gha-checks.png" width=400px">
+<img src ="https://raw.githubusercontent.com/ottrproject/OTTR_Template/main/resources/screenshots/gha-checks.png" width=400px">
 
 Read these comments to begin addressing the problems with more commits
 to your branch.
@@ -369,21 +369,21 @@ to your branch.
 You can adjust what checks are run by editing the
 `config_automation.yml` file. This is further discussed in this section
 about [the GitHub
-Actions](https://github.com/jhudsl/OTTR_Template/wiki/How-to-set-up-and-customize-GitHub-actions-robots).
+Actions](https://github.com/ottrproject/OTTR_Template/wiki/How-to-set-up-and-customize-GitHub-actions-robots).
 
 If you need more information on failed GitHub actions you can scroll to
 the bottom of your pull request where the status of the checks are shown
 and click on `Details` for more information. If you are unsure what the
 error message means and have trouble addressing it, please [file an
 issue on the OTTR_Template repository to get
-help](https://github.com/jhudsl/OTTR_Template/issues/new?assignees=cansavvy&labels=bug&template=course-template-problem-report.md).
+help](https://github.com/ottrproject/OTTR_Template/issues/new?assignees=cansavvy&labels=bug&template=course-template-problem-report.md).
 
 For more on [what to put in a pull request's description, you can read
 this
-chapter](https://jhudatascience.org/Adv_Reproducibility_in_Cancer_Informatics/engaging-in-code-review---as-an-author.html).
+chapter](https://ottrproject.org/Adv_Reproducibility_in_Cancer_Informatics/engaging-in-code-review---as-an-author.html).
 
 For more on [how to review a pull request, see this
-chapter](https://jhudatascience.org/Adv_Reproducibility_in_Cancer_Informatics/engaging-in-code-review---as-a-reviewer.html).
+chapter](https://ottrproject.org/Adv_Reproducibility_in_Cancer_Informatics/engaging-in-code-review---as-a-reviewer.html).
 
 
 <p class="comment">
@@ -397,10 +397,10 @@ If you encounter situations where a spelling report or URL report doesn't look a
 
 ### More resources for learning GitHub
 
-- [Using version control with GitHub](https://jhudatascience.org/Adv_Reproducibility_in_Cancer_Informatics/using-version-control-with-github.html)
+- [Using version control with GitHub](https://ottrproject.org/Adv_Reproducibility_in_Cancer_Informatics/using-version-control-with-github.html)
 - [Happy Git and GitHub for the useR](https://happygitwithr.com/)
-- [Using Version Control with GitHub](https://jhudatascience.org/Adv_Reproducibility_in_Cancer_Informatics/using-version-control-with-github.html)
-- [Using GitHub in a workflow in RStudio](https://hutchdatascience.org/Tools_for_Reproducible_Workflows_in_R/using-github-in-a-workflow.html)
+- [Using Version Control with GitHub](https://ottrproject.org/Adv_Reproducibility_in_Cancer_Informatics/using-version-control-with-github.html)
+- [Using GitHub in a workflow in RStudio](https://ottrproject.org/Tools_for_Reproducible_Workflows_in_R/using-github-in-a-workflow.html)
 - [GitHub for Data Scientists](https://towardsdatascience.com/introduction-to-github-for-data-scientists-2cf8b9b25fba)
 - [GitHub docs about creating a Pull Request](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/creating-a-pull-request)
 - [Making a Pull Request](https://www.atlassian.com/git/tutorials/making-a-pull-request)
@@ -434,7 +434,7 @@ look like this:
 ``` yaml
 book_filename: "Course_Name"  
 chapter_name: "Chapter "  
-repo: https://github.com/jhudsl/OTTR_Template/ ##Make sure you update this for your GitHub Repo!!  
+repo: https://github.com/ottrproject/OTTR_Template/ ##Make sure you update this for your GitHub Repo!!  
 rmd_files: ["index.Rmd",  
             "01-intro.Rmd",   
             "02-chapter_of_course.Rmd",   
@@ -538,7 +538,7 @@ You can obtain the Google Slide URL by clicking on the slide with the
 image you want to add and copying the address from the browser search
 bar:
 
-![](https://raw.githubusercontent.com/jhudsl/OTTR_Template/main/resources/screenshots/slide_url.png)
+![](https://raw.githubusercontent.com/ottrproject/OTTR_Template/main/resources/screenshots/slide_url.png)
 
 Additionally, include notes (similar to the fig.alt text) for each slide in the Google Slides presentation, describing the content and images of the slide. This will enable accessibility for individuals with visual impairments, as the notes can be converted into audio. Please note that line breaks are not allowed within the fig.alt text. If there are no line breaks, the text should appear in blue within the code chunk.
 
@@ -558,7 +558,7 @@ on the internet with this link can view". Note that "Private" is the
 default setting when you make a new presentation.
 
 See [Chapter
-2](https://github.com/jhudsl/OTTR_Template/blob/main/02-chapter_of_course.Rmd)
+2](https://github.com/ottrproject/OTTR_Template/blob/main/02-chapter_of_course.Rmd)
 of the template course for examples.
 
 
@@ -577,7 +577,7 @@ Again, it is important to use the `echo=FALSE` option so that only the
 video is shown and not the code to generate it.
 
 See [Chapter
-2](https://github.com/jhudsl/OTTR_Template/blob/main/02-chapter_of_course.Rmd)
+2](https://github.com/ottrproject/OTTR_Template/blob/main/02-chapter_of_course.Rmd)
 of the template course for examples.
 
 
@@ -597,7 +597,7 @@ course material.
 If you want to include a file that is not hosted online, consider
 hosting it on GitHub using the method described for hosting your
 Bookdown version of the course. See the [Set up GitHub
-pages](https://github.com/jhudsl/OTTR_Template/wiki/Starting-a-new-course-with-this-template#set-up-github-pages)
+pages](https://github.com/ottrproject/OTTR_Template/wiki/Starting-a-new-course-with-this-template#set-up-github-pages)
 section.
 
 Then you would do the following, where the url is that of your hosted
@@ -606,5 +606,5 @@ file:
 <img src="resources/images/include_url_3.png" width="600"/>
 
 See [Chapter
-2](https://github.com/jhudsl/OTTR_Template/blob/main/02-chapter_of_course.Rmd)
+2](https://github.com/ottrproject/OTTR_Template/blob/main/02-chapter_of_course.Rmd)
 of the template course for examples.

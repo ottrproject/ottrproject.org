@@ -18,7 +18,7 @@ If you find yourself making a full set of courses and multiple repositories from
 
 ## Quarto spinoff 
 
-Maybe you prefer a Quarto website! We have that: https://github.com/fhdsl/OTTR_Quarto
+Maybe you prefer a Quarto website! We have that: https://github.com/ottrproject/OTTR_Quarto
 
 ## Jekyll spinoff 
 
@@ -28,7 +28,7 @@ TBD: Coming soon
 
 This is a template powered by the `metricminer` R package to allow you to display metrics in a dashboard.
 This template shows basics for how you can display metrics collected from:
-[Github template repo](https://github.com/fhdsl/metricminer-dashboard/tree/main)
+[Github template repo](https://github.com/ottrproject/metricminer-dashboard/tree/main)
 
 - Google Analytics
 - Google Forms
@@ -44,7 +44,7 @@ This is a template (made from our main OTTR Template) that is used for a set of 
 
 - [GitHub repository and source code](https://github.com/jhudsl/AnVIL_Template)  
 
-Courses will look similar to this [link](https://jhudatascience.org/AnVIL_Template/).
+Courses will look similar to this [link](https://ottrproject.org/AnVIL_Template/).
 
 ## DataTrail template
 
