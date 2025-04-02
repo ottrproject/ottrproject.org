@@ -91,7 +91,7 @@ navbar:
     href: faqs.html
     icon: fa-handshake
   - text: ""
-    href: https://github.com/jhudsl/OTTR_Template
+    href: https://github.com/ottrproject/OTTR_Template
     icon: fa-github
 
 output:

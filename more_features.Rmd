@@ -32,7 +32,7 @@ To reference the citations in your writing follow the [bookdown instructions](ht
 > Items can be cited directly within the documentation using the syntax @key where key is the citation key in the first line of the entry, e.g., @R-base. To put citations in parentheses, use [@key]. To cite multiple entries, separate the keys by semicolons, e.g., [@key-1; @key-2; @key-3]. To suppress the mention of the author, add a minus sign before @, e.g., [-@R-base].
 
 
-See [Chapter 2](https://github.com/jhudsl/OTTR_Template/blob/main/02-chapter_of_course.Rmd) of this template course for examples.
+See [Chapter 2](https://github.com/ottrproject/OTTR_Template/blob/main/02-chapter_of_course.Rmd) of this template course for examples.
 
 This will automatically list references at the bottom of each chapter included in your course, as well as at the end of your course. Thus it is important to keep the `References.Rmd` file and to keep this as the last part of the `_bookdown.yml` file as it is in the template, so that this full list of references will be listed in a place that makes sense.
 
@@ -53,9 +53,9 @@ Since so many individuals contribute to our courses in so many ways, we decided 
 
 Here is an example:  
 
-![](https://raw.githubusercontent.com/jhudsl/OTTR_Template/main/resources/screenshots/example_credits.png)
+![](https://raw.githubusercontent.com/ottrproject/OTTR_Template/main/resources/screenshots/example_credits.png)
 
-Please see the [About section](https://jhudatascience.org/OTTR_Template/about-the-authors.html) of the template for descriptions of how credits should be attributed for the course.
+Please see the [About section](https://ottrproject.org/OTTR_Template/about-the-authors.html) of the template for descriptions of how credits should be attributed for the course.
 
 This is generated from the About.Rmd file. An About.Rmd file will already be in your course from using our template. You will need to do the following steps to update it for your course:
 
@@ -102,7 +102,7 @@ These rows should be included for _all courses_:
 
 <!-- Links -->
 
-[ottrpal]: https://github.com/jhudsl/ottrpal
+[ottrpal]: https://github.com/ottrproject/ottrpal
 ```
 
 These rows should be added to all _Johns Hopkins_ courses:
@@ -127,7 +127,7 @@ Additionally, this row should be added for _all ITCR Courses_:
 
 ### Adding the Credits table to Coursera
 
-In Coursera, you can add the credits table URL as an ungraded plugin ([the same as described here for adding chapter content](https://github.com/jhudsl/OTTR_Template/wiki/Publishing-on-Coursera#navigating-to-your-course-on-coursera)). This should be added at the beginning of your course, right after the introduction.
+In Coursera, you can add the credits table URL as an ungraded plugin ([the same as described here for adding chapter content](https://github.com/ottrproject/OTTR_Template/wiki/Publishing-on-Coursera#navigating-to-your-course-on-coursera)). This should be added at the beginning of your course, right after the introduction.
 
 ### Adding the Credits table to Leanpub
 
@@ -141,7 +141,7 @@ If you have two courses where the content and topics overlap, you may want to sh
 
 However, sharing material by copying and pasting can lead to maintenance issues, as updating one would require remembering to update the other as well! 😱
 
-In OTTR, we try to minimize maintenance pains. To get around this, we use `cow::borrow_chapter()` from the [jhudsl/cow](https://jhudatascience.org/cow/index.html) package.
+In OTTR, we try to minimize maintenance pains. To get around this, we use `cow::borrow_chapter()` from the [jhudsl/cow](https://ottrproject.org/cow/index.html) package.
 The `cow` package is already on the `jhudsl/course_template` Docker image  so you do not need to install it if you are using the Docker image or if you are have GitHub Actions do all the rendering for you.
 
 To borrow a chapter from another course, create an `.Rmd` as you normally would, with a `ottrpal::set_knitr_image_path()` in a chunk at the beginning of the file and a [`H1` title](https://www.markdownguide.org/basic-syntax/).
@@ -151,7 +151,7 @@ Then, wherever you would like the borrowed chapter to appear, put an R chunk wit
 ```
 cow::borrow_chapter(
   doc_path = "02-chapter_of_course.Rmd",
-  repo_name = "jhudsl/OTTR_Template"
+  repo_name = "ottrproject/OTTR_Template"
 )
 ```
 
@@ -193,7 +193,7 @@ If you want to change the title you can use an option `remove_h1` to remove the 
 
 If you don't want the material from another chapter completely copied over, you might instead just want to put a link to the Bookdown chapter. You can just use the full URL. A link would look something like this:
 ```
-![](https://jhudatascience.org/OTTR_Template/a-new-chapter.html)
+![](https://ottrproject.org/OTTR_Template/a-new-chapter.html)
 ```
 
 

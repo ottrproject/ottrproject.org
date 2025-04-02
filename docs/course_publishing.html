@@ -526,7 +526,7 @@ div.tocify {
   </a>
 </li>
 <li>
-  <a href="https://github.com/jhudsl/OTTR_Template">
+  <a href="https://github.com/ottrproject/OTTR_Template">
     <span class="fa fa-github"></span>
      
     
@@ -550,7 +550,7 @@ div.tocify {
 
 
 <p>Below are some examples of courses created using the <a
-href="https://github.com/jhudsl/OTTR_Template">OTTR Template</a> and
+href="https://github.com/ottrproject/OTTR_Template">OTTR Template</a> and
 published on three platforms: Bookdown, Leanpub and Coursera.</p>
 <p><em>Introduction to Reproducibility in Cancer Informatics:</em></p>
 <ul>
@@ -559,7 +559,7 @@ href="https://github.com/jhudsl/Reproducibility_in_Cancer_Informatics">GitHub
 repository and source code</a>
 <ul>
 <li><a
-href="https://jhudatascience.org/Reproducibility_in_Cancer_Informatics/introduction.html">Bookdown
+href="https://ottrproject.org/Reproducibility_in_Cancer_Informatics/introduction.html">Bookdown
 website</a><br />
 </li>
 <li><a
@@ -578,7 +578,7 @@ href="https://github.com/jhudsl/Computing_for_Cancer_Informatics">GitHub
 repository and source code</a>
 <ul>
 <li><a
-href="https://jhudatascience.org/Computing_for_Cancer_Informatics/">Bookdown
+href="https://ottrproject.org/Computing_for_Cancer_Informatics/">Bookdown
 website</a><br />
 </li>
 <li><a
@@ -594,7 +594,7 @@ course</a></li>
 <h1>Publishing with Bookdown</h1>
 <p>To publish your content using Bookdown, you can utilize Github Pages
 by following the repository setup instructions provided <a
-href="https://github.com/jhudsl/OTTR_Template/wiki/Starting-a-new-course-with-this-template#set-up-github-pages">here</a>.
+href="https://github.com/ottrproject/OTTR_Template/wiki/Starting-a-new-course-with-this-template#set-up-github-pages">here</a>.
 It’s important to note that Bookdown serves as a fundamental component
 for utilizing other publishing platforms such as Coursera or Leanpub.
 Therefore, if you intend to use Coursera or Leanpub, you will need to
@@ -607,7 +607,7 @@ file <code>03-new_chapter_of_course.Rmd</code>. We would update our
 <code>_bookdown.yml</code> to look like this:</p>
 <pre class="yaml"><code>book_filename: &quot;Course_Name&quot;  
 chapter_name: &quot;Chapter &quot;  
-repo: https://github.com/jhudsl/OTTR_Template/ ##Make sure you update this to your GitHub Repo!!  
+repo: https://github.com/ottrproject/OTTR_Template/ ##Make sure you update this to your GitHub Repo!!  
 rmd_files: [&quot;index.Rmd&quot;,  
             &quot;01-intro.Rmd&quot;,   
             &quot;02-chapter_of_course.Rmd&quot;,   
@@ -637,7 +637,7 @@ href="#github-actions">GitHub Actions</a> will re-run
 <h1>Publishing with Leanpub</h1>
 <p>OTTR contains all the files you need to publish your course to <a
 href="https://leanpub.com/">Leanpub</a>. The <a
-href="https://github.com/jhudsl/ottrpal"><code>ottrpal</code>
+href="https://github.com/ottrproject/ottrpal"><code>ottrpal</code>
 package</a> takes care of handling and automatically converting the
 content into a rendered version that is prepared for Leanpub.</p>
 <p>These converted files are stored in the <code>manuscript</code>
@@ -648,7 +648,7 @@ the <code>ottrpal</code> package and should not be edited.</p>
 there is some additional setup involved with this process and you will
 need to create a separate private OTTR_Quizzes repository to store these
 quizzes. Start with <a
-href="https://github.com/jhudsl/OTTR_Template/wiki/Making-quizzes-private">these
+href="https://github.com/ottrproject/OTTR_Template/wiki/Making-quizzes-private">these
 instructions</a> first if you want your quizzes and answers to be
 hidden.</p>
 <div id="leanpub-rendering" class="section level2">
@@ -657,7 +657,7 @@ hidden.</p>
 tasks for links and other elements for you, as long as you have followed
 the formatting instructions provided in the
 <code>Setting up images</code> section of <a
-href="https://github.com/jhudsl/OTTR_Template/wiki/Setting-up-images-and-graphics">this
+href="https://github.com/ottrproject/OTTR_Template/wiki/Setting-up-images-and-graphics">this
 Wiki</a>.</p>
 <p>Github Actions in this repository will attempt to convert Bookdown to
 Leanpub for you by running <code>ottrpal::bookdown_to_leanpub()</code>
@@ -669,7 +669,7 @@ class="section level3">
 turn on a few Github Actions that are included in the template but by
 default, turned off.</p>
 <p>In your <a
-href="https://github.com/jhudsl/OTTR_Template/wiki/How-to-set-up-and-customize-GitHub-actions-robots">config_automation.yml
+href="https://github.com/ottrproject/OTTR_Template/wiki/How-to-set-up-and-customize-GitHub-actions-robots">config_automation.yml
 file</a>, you will need to turn on two Actions in particular:</p>
 <ul>
 <li><code>render-leanpub: yes</code></li>
@@ -681,7 +681,7 @@ manually specify the order of your chapters and quizzes by creating the
 <a
 href="https://leanpub.com/lfm/read#leanpub-auto-the-booktxt-file">Book.txt
 file</a> by hand or whether you’d like this to be <a
-href="https://jhudatascience.org/ottrpal/#about-the-booktxt-file">automatically
+href="https://ottrproject.org/ottrpal/#about-the-booktxt-file">automatically
 generated based on file and quiz numbering.</a>. Read more about this <a
 href="https://www.ottrproject.org/examples.html#Setting_up_quizzes">in
 the upcoming section</a>.</p>
@@ -698,7 +698,7 @@ formatting will be checked automatically and reported in a link on a
 comment in your pull request.</p>
 <p>If you encounter issues with the <code>ottrpal</code> package, please
 file an issue in its <a
-href="https://github.com/jhudsl/ottrpal/issues">Github
+href="https://github.com/ottrproject/ottrpal/issues">Github
 repository</a>.</p>
 </div>
 </div>
@@ -706,7 +706,7 @@ repository</a>.</p>
 <h2>Hosting your course on Leanpub</h2>
 <p><em>Finalizing your course on Leanpub can be tricky</em>. We have
 created a course, <a
-href="https://hutchdatascience.org/Using_Leanpub/index.html">Using
+href="https://ottrproject.org/Using_Leanpub/index.html">Using
 Leanpub</a>, to help guide you.</p>
 <p>To host your course on Leanpub, follow these steps:</p>
 <ol style="list-style-type: decimal">
@@ -857,7 +857,7 @@ recognized by Leanpub.</li>
 class="section level2">
 <h2>Converting Quizzes from Leanpub to Coursera format</h2>
 <p><a
-href="https://github.com/jhudsl/OTTR_Template/wiki/Publishing-on-Courseraa">See
+href="https://github.com/ottrproject/OTTR_Template/wiki/Publishing-on-Courseraa">See
 more instructions on how to port a course made from these templates to
 Coursera</a>.</p>
 <p>You can convert your quizzes to a nicely upload-able yaml file in
@@ -872,7 +872,7 @@ wish to publish to Coursera and prefer this do not run, you may delete
 this section (but it shouldn’t hurt anything to keep as is – unless for
 some reason it causes you some troubles).</p>
 <p>Additionally, the <a
-href="https://github.com/jhudsl/ottrpal"><code>ottrpal</code></a>
+href="https://github.com/ottrproject/ottrpal"><code>ottrpal</code></a>
 package has a <code>ottrpal::convert_quizzes()</code> function if you
 choose to create quizzes and publish on both Leanpub and Coursera.</p>
 </div>
@@ -881,7 +881,7 @@ class="section level2">
 <h2>Setting up the _Quizzes repository checklist:</h2>
 <ul class="task-list">
 <li><p><input type="checkbox" />A <a
-href="https://github.com/jhudsl/OTTR_Template/wiki/Setting-up-GitHub-secrets"><code>GH_PAT</code>
+href="https://github.com/ottrproject/OTTR_Template/wiki/Setting-up-GitHub-secrets"><code>GH_PAT</code>
 has been set in the main Template and the <code>_Quizzes</code>
 repository if you are using a separate <code>_Quizzes</code>
 repository</a>.</p></li>
@@ -911,7 +911,7 @@ checked.</li>
 </ul></li>
 </ul></li>
 <li><p><input type="checkbox" />This repo has been enrolled in <a
-href="https://github.com/jhudsl/OTTR_Template/wiki/Receiving-template-updates">automatic
+href="https://github.com/ottrproject/OTTR_Template/wiki/Receiving-template-updates">automatic
 updates from the original template</a>.</p></li>
 <li><p><input type="checkbox" />Your Book.txt file is up to
 date.</p></li>
@@ -966,26 +966,26 @@ on your repository as well.</p>
 has been added to your account</a> you can navigate to it by going to
 <code>My Courses</code>:</p>
 <p><img
-src="https://raw.githubusercontent.com/jhudsl/OTTR_Template/main/resources/coursera_screenshots/profile.png" /></p>
+src="https://raw.githubusercontent.com/ottrproject/OTTR_Template/main/resources/coursera_screenshots/profile.png" /></p>
 <p><br></p>
 <p>And you should see it listed:</p>
 <p><img
-src="https://raw.githubusercontent.com/jhudsl/OTTR_Template/main/resources/coursera_screenshots/my-courses.png" /></p>
+src="https://raw.githubusercontent.com/ottrproject/OTTR_Template/main/resources/coursera_screenshots/my-courses.png" /></p>
 <p><br></p>
 <p>Click on <code>Go to Course</code> and on your main course page,
 click <code>Edit Course</code> in the right corner.</p>
 <p><img
-src="https://raw.githubusercontent.com/jhudsl/OTTR_Template/main/resources/coursera_screenshots/edit-course-nav.png" /></p>
+src="https://raw.githubusercontent.com/ottrproject/OTTR_Template/main/resources/coursera_screenshots/edit-course-nav.png" /></p>
 <p><br></p>
 <p>This will bring you to your version page (at this point you should
 only have a Version 1, so go to that one).</p>
 <p><img
-src="https://raw.githubusercontent.com/jhudsl/OTTR_Template/main/resources/coursera_screenshots/versions.png" /></p>
+src="https://raw.githubusercontent.com/ottrproject/OTTR_Template/main/resources/coursera_screenshots/versions.png" /></p>
 <p><br></p>
 <p>Now you are on the Edit content page and ready to add lessons,
 modules and quizzes!</p>
 <p><img
-src="https://raw.githubusercontent.com/jhudsl/OTTR_Template/main/resources/coursera_screenshots/edit-content.png" /></p>
+src="https://raw.githubusercontent.com/ottrproject/OTTR_Template/main/resources/coursera_screenshots/edit-content.png" /></p>
 <p><br></p>
 <p>In general, you will want each lesson to contain at least a chapter
 and a quiz.</p>
@@ -994,7 +994,7 @@ the length of your chapters and quizzes you may want one or two
 lessons/chapters/quizzes a module.</p>
 <p>To add a new lesson, click the <code>+ Add Lesson</code> button:</p>
 <p><img
-src="https://raw.githubusercontent.com/jhudsl/OTTR_Template/main/resources/coursera_screenshots/add-lesson.png" /></p>
+src="https://raw.githubusercontent.com/ottrproject/OTTR_Template/main/resources/coursera_screenshots/add-lesson.png" /></p>
 <p>Now you are ready to add a chapter!</p>
 <div id="adding-new-chapters-to-coursera" class="section level3">
 <h3>Adding new chapters to Coursera</h3>
@@ -1013,42 +1013,42 @@ github repository, go to <code>Settings</code> &gt; <code>Pages</code>
 and you’ll see <code>Your site is published at:</code></p>
 <p>So for example, the introduction chapter of this template would be
 linked by using this URL:</p>
-<pre><code>https://jhudatascience.org/OTTR_Template/no_toc/introduction.html</code></pre>
+<pre><code>https://ottrproject.org/OTTR_Template/no_toc/introduction.html</code></pre>
 <p>To add this URL to Coursera, add a new lesson, click
 <code>+ More</code> and choose <code>Ungraded Plugin</code>.</p>
 <p><img
-src="https://raw.githubusercontent.com/jhudsl/OTTR_Template/main/resources/coursera_screenshots/add-chapter-1.png" /></p>
+src="https://raw.githubusercontent.com/ottrproject/OTTR_Template/main/resources/coursera_screenshots/add-chapter-1.png" /></p>
 <p><br></p>
 <p>This will add an unpublished ungraded plugin to your lesson: <img
-src="https://raw.githubusercontent.com/jhudsl/OTTR_Template/main/resources/coursera_screenshots/add-chapter-2.png" /></p>
+src="https://raw.githubusercontent.com/ottrproject/OTTR_Template/main/resources/coursera_screenshots/add-chapter-2.png" /></p>
 <p><br></p>
 <p>Now click the edit button on the new
 <code>Ungraded Plugin</code>.</p>
 <p><img
-src="https://raw.githubusercontent.com/jhudsl/OTTR_Template/main/resources/coursera_screenshots/add-chapter-3.png" /></p>
+src="https://raw.githubusercontent.com/ottrproject/OTTR_Template/main/resources/coursera_screenshots/add-chapter-3.png" /></p>
 <p><br></p>
 <p>This will bring you to the standard example plug in page. <img
-src="https://raw.githubusercontent.com/jhudsl/OTTR_Template/main/resources/coursera_screenshots/add-chapter-4.png" /></p>
+src="https://raw.githubusercontent.com/ottrproject/OTTR_Template/main/resources/coursera_screenshots/add-chapter-4.png" /></p>
 <p><br></p>
 <p>Scroll down and click <code>Edit Configuration</code>:</p>
 <p><img
-src="https://raw.githubusercontent.com/jhudsl/OTTR_Template/main/resources/coursera_screenshots/add-chapter-5.png" /></p>
+src="https://raw.githubusercontent.com/ottrproject/OTTR_Template/main/resources/coursera_screenshots/add-chapter-5.png" /></p>
 <p><br></p>
 <p>Replace the example URL with the URL of your individual chapter we
 discussed above.</p>
 <p><img
-src="https://raw.githubusercontent.com/jhudsl/OTTR_Template/main/resources/coursera_screenshots/add-chapter-6.png" /></p>
+src="https://raw.githubusercontent.com/ottrproject/OTTR_Template/main/resources/coursera_screenshots/add-chapter-6.png" /></p>
 <p><br></p>
 <p>Then click on <code>Save Configuration</code>:</p>
 <p><img
-src="https://raw.githubusercontent.com/jhudsl/OTTR_Template/main/resources/coursera_screenshots/new-add-chapter-7.png" /></p>
+src="https://raw.githubusercontent.com/ottrproject/OTTR_Template/main/resources/coursera_screenshots/new-add-chapter-7.png" /></p>
 <p>Also be sure to modify the time estimate to be something that you
 think is appropriate for your content - err on the side of giving
 students extra time.</p>
 <p>If the URL you provided was correct, you should see a preview of your
 chapter:</p>
 <p><img
-src="https://raw.githubusercontent.com/jhudsl/OTTR_Template/main/resources/coursera_screenshots/add-chapter-8.png" /></p>
+src="https://raw.githubusercontent.com/ottrproject/OTTR_Template/main/resources/coursera_screenshots/add-chapter-8.png" /></p>
 <p><br></p>
 <p>You may want to edit the title at the top of this page to indicate
 the material being linked.</p>
@@ -1057,7 +1057,7 @@ it’s not actually publishing publicly, it is just saving your changes).
 And it will ask you again to really scare you, but yes, click
 <code>Publish</code>.</p>
 <p><img
-src="https://raw.githubusercontent.com/jhudsl/OTTR_Template/main/resources/coursera_screenshots/add-chapter-9.png" /></p>
+src="https://raw.githubusercontent.com/ottrproject/OTTR_Template/main/resources/coursera_screenshots/add-chapter-9.png" /></p>
 <p>Congrats you added a chapter to your course! Now do the same thing
 for all your chapters!</p>
 </div>
@@ -1067,11 +1067,11 @@ for all your chapters!</p>
 on whatever lesson you would like to add the quiz to and click the
 <code>+ Quiz</code> button.</p>
 <p><img
-src="https://raw.githubusercontent.com/jhudsl/OTTR_Template/main/resources/coursera_screenshots/add-quiz-1.png" /></p>
+src="https://raw.githubusercontent.com/ottrproject/OTTR_Template/main/resources/coursera_screenshots/add-quiz-1.png" /></p>
 <p><br></p>
 <p>Now go to <code>Edit</code> on the new quiz.</p>
 <p><img
-src="https://raw.githubusercontent.com/jhudsl/OTTR_Template/main/resources/coursera_screenshots/add-quiz-2.png" /></p>
+src="https://raw.githubusercontent.com/ottrproject/OTTR_Template/main/resources/coursera_screenshots/add-quiz-2.png" /></p>
 <p><br></p>
 <p>If you are choosing to manually enter your quizzes, you can continue
 to add each question from this page.</p>
@@ -1081,15 +1081,15 @@ files. (If you’ve not yet converted your leanpub quizzes, then <a
 href="#converting-quizzes-from-leanpub-format">refer to that
 section</a>.)</p>
 <p><img
-src="https://raw.githubusercontent.com/jhudsl/OTTR_Template/main/resources/coursera_screenshots/add-quiz-3.png" /></p>
+src="https://raw.githubusercontent.com/ottrproject/OTTR_Template/main/resources/coursera_screenshots/add-quiz-3.png" /></p>
 <p><br></p>
 <p>Upload your Coursera quiz yml file from your device:</p>
 <p><img
-src="https://raw.githubusercontent.com/jhudsl/OTTR_Template/main/resources/coursera_screenshots/add-quiz-4.png" /></p>
+src="https://raw.githubusercontent.com/ottrproject/OTTR_Template/main/resources/coursera_screenshots/add-quiz-4.png" /></p>
 <p><br></p>
 <p>After you’ve selected the file click <code>Upload</code>:</p>
 <p><img
-src="https://raw.githubusercontent.com/jhudsl/OTTR_Template/main/resources/coursera_screenshots/add-quiz-5.png" /></p>
+src="https://raw.githubusercontent.com/ottrproject/OTTR_Template/main/resources/coursera_screenshots/add-quiz-5.png" /></p>
 <p>It will let you know if there are any problems uploading the quiz. If
 the <code>coursera_quiz_conversion.R</code> script failed to render
 something properly, please <a
@@ -1108,25 +1108,25 @@ side of quiz editing page, there’s a drop down menu to select
 estimated time it should take to complete the quiz (by default it is set
 to a certain number of minutes).</p>
 <p><img
-src="https://raw.githubusercontent.com/jhudsl/OTTR_Template/main/resources/coursera_screenshots/quiz-settings.png" /></p>
+src="https://raw.githubusercontent.com/ottrproject/OTTR_Template/main/resources/coursera_screenshots/quiz-settings.png" /></p>
 <p><br></p>
 <p>You also will want to assign the learning objectives that apply to
 this quiz. You can do this by clicking on the plus sign underneath the
 title.</p>
 <p><img
-src="https://raw.githubusercontent.com/jhudsl/OTTR_Template/main/resources/coursera_screenshots/learning-obj-assigned.png" /></p>
+src="https://raw.githubusercontent.com/ottrproject/OTTR_Template/main/resources/coursera_screenshots/learning-obj-assigned.png" /></p>
 <p><br></p>
 <p>From here it will suggest the module’s learning objectives. Click all
 that apply and then <code>Save</code>.</p>
 <p><img
-src="https://raw.githubusercontent.com/jhudsl/OTTR_Template/main/resources/coursera_screenshots/assign-learning-obj.png" /></p>
+src="https://raw.githubusercontent.com/ottrproject/OTTR_Template/main/resources/coursera_screenshots/assign-learning-obj.png" /></p>
 <p><br></p>
 <p>You can edit the title of your quiz and then click
 <code>Publish</code> (don’t worry it’s not actually publishing publicly,
 its just saving your changes). And it will ask you again to really scare
 you, but yes, click <code>Publish</code>.</p>
 <p><img
-src="https://raw.githubusercontent.com/jhudsl/OTTR_Template/main/resources/coursera_screenshots/add-chapter-9.png" /></p>
+src="https://raw.githubusercontent.com/ottrproject/OTTR_Template/main/resources/coursera_screenshots/add-chapter-9.png" /></p>
 <p>Congrats you added a quiz to your course!</p>
 </div>
 </div>
@@ -1135,23 +1135,23 @@ src="https://raw.githubusercontent.com/jhudsl/OTTR_Template/main/resources/cours
 <p>You can click on <code>Go to Course</code>. And on your main course
 page click <code>Edit Course</code> in the right corner.</p>
 <p><img
-src="https://raw.githubusercontent.com/jhudsl/OTTR_Template/main/resources/coursera_screenshots/edit-course-nav.png" /></p>
+src="https://raw.githubusercontent.com/ottrproject/OTTR_Template/main/resources/coursera_screenshots/edit-course-nav.png" /></p>
 <p><br></p>
 <p>This will bring you to your version page.</p>
 <p><img
-src="https://raw.githubusercontent.com/jhudsl/OTTR_Template/main/resources/coursera_screenshots/versions.png" /></p>
+src="https://raw.githubusercontent.com/ottrproject/OTTR_Template/main/resources/coursera_screenshots/versions.png" /></p>
 <p><br></p>
 <p>Underneath <code>Content</code>, on the left side bar, at the bottom,
 there is the <code>Programmed Messages</code>.</p>
 <p><img
-src="https://raw.githubusercontent.com/jhudsl/OTTR_Template/main/resources/coursera_screenshots/versions.png" /></p>
+src="https://raw.githubusercontent.com/ottrproject/OTTR_Template/main/resources/coursera_screenshots/versions.png" /></p>
 <p><br></p>
 <p>At the very least you should add a <code>Welcome to the course</code>
 and a <code>Completion</code> programmed message. Click on each of these
 to edit them. Click <code>Preview</code> and then <code>Publish</code>
 to save your edits.</p>
 <p><img
-src="https://raw.githubusercontent.com/jhudsl/OTTR_Template/main/resources/coursera_screenshots/programmed-messages.png" /></p>
+src="https://raw.githubusercontent.com/ottrproject/OTTR_Template/main/resources/coursera_screenshots/programmed-messages.png" /></p>
 <p>Here are some templated messages to get you started:</p>
 <div id="welcome-template-message" class="section level4">
 <h4>Welcome template message:</h4>
@@ -1185,16 +1185,16 @@ Formula. To get to this page, you can click on
 <code>Go to Course</code>. And on your main course page click
 <code>Edit Course</code> in the right corner.</p>
 <p><img
-src="https://raw.githubusercontent.com/jhudsl/OTTR_Template/main/resources/coursera_screenshots/edit-course-nav.png" /></p>
+src="https://raw.githubusercontent.com/ottrproject/OTTR_Template/main/resources/coursera_screenshots/edit-course-nav.png" /></p>
 <p><br></p>
 <p>This will bring you to your version page.</p>
 <p><img
-src="https://raw.githubusercontent.com/jhudsl/OTTR_Template/main/resources/coursera_screenshots/versions.png" /></p>
+src="https://raw.githubusercontent.com/ottrproject/OTTR_Template/main/resources/coursera_screenshots/versions.png" /></p>
 <p><br></p>
 <p>Now you can set the percentage that each module’s assignments are
 worth in the course.</p>
 <p><img
-src="https://raw.githubusercontent.com/jhudsl/OTTR_Template/main/resources/coursera_screenshots/grading-formula.png" /></p>
+src="https://raw.githubusercontent.com/ottrproject/OTTR_Template/main/resources/coursera_screenshots/grading-formula.png" /></p>
 </div>
 <div id="content-schedule" class="section level2">
 <h2>Content Schedule</h2>
@@ -1248,7 +1248,7 @@ Regardless of the format you choose for the instructional content, you must take
   <br>
   Your feedback is greatly appreciated! You can fill out <a href="https://forms.gle/jvFjnhqt5V1E9LbQ9">this form </a>
   <br>
-  or <a href="https://github.com/jhudsl/OTTR_Template/issues/new/choose">file a GitHub issue</a>.
+  or <a href="https://github.com/ottrproject/OTTR_Template/issues/new/choose">file a GitHub issue</a>.
     <br>
   <br><font size="1">Otter images by <a href = https://www.linkedin.com/in/jimin-hwang-549835142/>Jimin Hwang</a>.</font>
   <br>

@@ -526,7 +526,7 @@ div.tocify {
   </a>
 </li>
 <li>
-  <a href="https://github.com/jhudsl/OTTR_Template">
+  <a href="https://github.com/ottrproject/OTTR_Template">
     <span class="fa fa-github"></span>
      
     
@@ -564,7 +564,7 @@ image is ready for use, while the <code>latest</code> may be under
 development. All GitHub Actions by default use the
 <code>jhudsl/base_ottr:main</code>.</p>
 <p>If you are new to Docker, you may find it helpful to read this <a
-href="https://jhudatascience.org/Adv_Reproducibility_in_Cancer_Informatics/launching-a-docker-image.html">introduction
+href="https://ottrproject.org/Adv_Reproducibility_in_Cancer_Informatics/launching-a-docker-image.html">introduction
 to Docker</a>.</p>
 <ul>
 <li>If you don’t have one, you will need to <a
@@ -650,7 +650,7 @@ please file a pull request!</p>
 <li>Create a <a href="https://hub.docker.com/signup">Dockerhub
 account</a> if you don’t have one.</li>
 <li>Create a new Docker image on your Dockerhub account. Follow these <a
-href="https://jhudatascience.org/Adv_Reproducibility_in_Cancer_Informatics/launching-a-docker-image.html">instructions</a>
+href="https://ottrproject.org/Adv_Reproducibility_in_Cancer_Informatics/launching-a-docker-image.html">instructions</a>
 if you don’t know how to do that.</li>
 <li><a href="#set-dockerhub-related-secrets">Set up Dockerhub secrets in
 your repository or organization</a>.<br />
@@ -697,7 +697,7 @@ tag.</p>
 with your changes.</p>
 <p>Now, when you file a pull request, the Dockerfile build for your
 docker image will be tested automatically by the <a
-href="https://github.com/jhudsl/OTTR_Template/wiki/How-to-set-up-and-customize-GitHub-actions-robots">GitHub
+href="https://github.com/ottrproject/OTTR_Template/wiki/How-to-set-up-and-customize-GitHub-actions-robots">GitHub
 actions</a> if <code>docker-test</code> is set to <code>yes</code>. The
 default is <code>docker-test: no</code></p>
 </div>
@@ -705,7 +705,7 @@ default is <code>docker-test: no</code></p>
 class="section level3">
 <h3>Modifying the Dockerfile for a new image</h3>
 <p><a
-href="https://jhudatascience.org/Adv_Reproducibility_in_Cancer_Informatics/modifying-a-docker-image.html">Read
+href="https://ottrproject.org/Adv_Reproducibility_in_Cancer_Informatics/modifying-a-docker-image.html">Read
 this chapter for instructions on how to modify Docker images</a></p>
 <p>You will probably want to create your Docker image by using the
 <code>jhudsl/base_ottr:main</code> as your base – this means that all
@@ -713,7 +713,7 @@ the packages that are in our <code>jhudsl/base_ottr:main</code> image
 will be included in the Docker image you build.</p>
 <pre><code>FROM jhudsl/base_ottr:main</code></pre>
 <p>You can take a look at this <a
-href="https://github.com/jhudsl/OTTR_Template/blob/main/resources/TEMPLATE_Dockerfile">Dockerfile
+href="https://github.com/ottrproject/OTTR_Template/blob/main/resources/TEMPLATE_Dockerfile">Dockerfile
 template we’ve set up here</a> (note that the commands would need to be
 uncommented and real package names put in place of
 <code>package_name</code>’s).</p>
@@ -748,14 +748,14 @@ packages using this format:</p>
 <div id="testing-a-modified-docker-image" class="section level3">
 <h3>Testing a modified Docker image</h3>
 <p><a
-href="https://jhudatascience.org/Adv_Reproducibility_in_Cancer_Informatics/modifying-a-docker-image.html">Read
+href="https://ottrproject.org/Adv_Reproducibility_in_Cancer_Informatics/modifying-a-docker-image.html">Read
 this chapter for instructions on how to modify Docker images</a></p>
 <p>When you’ve added a package to the Dockerfile, you may want to check
 that it builds successfully before it’s added to your repository. You
 can include changes to your Dockerfile in a pull request which will
 trigger an automatic testing of building it.</p>
 <p><a
-href="https://jhudatascience.org/Adv_Reproducibility_in_Cancer_Informatics/modifying-a-docker-image.html">Read
+href="https://ottrproject.org/Adv_Reproducibility_in_Cancer_Informatics/modifying-a-docker-image.html">Read
 this chapter for more tips on how to modify Docker images</a></p>
 <p>OR</p>
 <p>If you prefer to test it locally, then you can follow these
@@ -807,7 +807,7 @@ working from.</p>
 <p>In whichever repository you choose to store your Dockerfile, its
 recommended you use a GitHub action to automatically test it when you
 make changes. You can use our Docker handling <a
-href="https://github.com/jhudsl/ottr-docker/blob/main/.github/workflows/docker-test.yml">GitHub
+href="https://github.com/ottrproject/ottr-docker/blob/main/.github/workflows/docker-test.yml">GitHub
 action here as a starting point</a>.</p>
 <p>You will need to modify this GHA for your own purposes:</p>
 <ul>
@@ -839,7 +839,7 @@ docker image to be pushed to Dockerhub.</li>
 <p><img src="resources/images/docker-gha.png" /></p>
 <p>For more guidance on how to personalize Docker images, we taking our
 <a
-href="https://hutchdatascience.org/Containers_for_Scientists/">Containers
+href="https://ottrproject.org/Containers_for_Scientists/">Containers
 for Scientist course</a>. Or file a GitHub issue on the relevant
 repository.</p>
 </div>
@@ -856,7 +856,7 @@ repository.</p>
   <br>
   Your feedback is greatly appreciated! You can fill out <a href="https://forms.gle/jvFjnhqt5V1E9LbQ9">this form </a>
   <br>
-  or <a href="https://github.com/jhudsl/OTTR_Template/issues/new/choose">file a GitHub issue</a>.
+  or <a href="https://github.com/ottrproject/OTTR_Template/issues/new/choose">file a GitHub issue</a>.
     <br>
   <br><font size="1">Otter images by <a href = https://www.linkedin.com/in/jimin-hwang-549835142/>Jimin Hwang</a>.</font>
   <br>

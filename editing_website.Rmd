@@ -359,7 +359,7 @@ steps.
 
 Once your pull request is open, the OTTR GitHub Actions checks will begin. These checks will generate reports as comments on your pull request.
 
-<img src ="https://raw.githubusercontent.com/jhudsl/OTTR_Template/main/resources/screenshots/gha-checks.png" width=400px">
+<img src ="https://raw.githubusercontent.com/ottrproject/OTTR_Template/main/resources/screenshots/gha-checks.png" width=400px">
 
 Read these comments to begin addressing the problems with more commits
 to your branch.
@@ -367,21 +367,21 @@ to your branch.
 You can adjust what checks are run by editing the
 `config_automation.yml` file. This is further discussed in this section
 about [the GitHub
-Actions](https://github.com/jhudsl/OTTR_Template/wiki/How-to-set-up-and-customize-GitHub-actions-robots).
+Actions](https://github.com/ottrproject/OTTR_Template/wiki/How-to-set-up-and-customize-GitHub-actions-robots).
 
 If you need more information on failed GitHub actions you can scroll to
 the bottom of your pull request where the status of the checks are shown
 and click on `Details` for more information. If you are unsure what the
 error message means and have trouble addressing it, please [file an
 issue on the OTTR_Template repository to get
-help](https://github.com/jhudsl/OTTR_Template/issues/new?assignees=cansavvy&labels=bug&template=course-template-problem-report.md).
+help](https://github.com/ottrproject/OTTR_Template/issues/new?assignees=cansavvy&labels=bug&template=course-template-problem-report.md).
 
 For more on [what to put in a pull request's description, you can read
 this
-chapter](https://jhudatascience.org/Adv_Reproducibility_in_Cancer_Informatics/engaging-in-code-review---as-an-author.html).
+chapter](https://ottrproject.org/Adv_Reproducibility_in_Cancer_Informatics/engaging-in-code-review---as-an-author.html).
 
 For more on [how to review a pull request, see this
-chapter](https://jhudatascience.org/Adv_Reproducibility_in_Cancer_Informatics/engaging-in-code-review---as-a-reviewer.html).
+chapter](https://ottrproject.org/Adv_Reproducibility_in_Cancer_Informatics/engaging-in-code-review---as-a-reviewer.html).
 
 
 <p class="comment">
@@ -461,10 +461,10 @@ navbar.
 
 ## More resources for learning GitHub
 
-- [Using version control with GitHub](https://jhudatascience.org/Adv_Reproducibility_in_Cancer_Informatics/using-version-control-with-github.html)
+- [Using version control with GitHub](https://ottrproject.org/Adv_Reproducibility_in_Cancer_Informatics/using-version-control-with-github.html)
 - [Happy Git and GitHub for the useR](https://happygitwithr.com/)
-- [Using Version Control with GitHub](https://jhudatascience.org/Adv_Reproducibility_in_Cancer_Informatics/using-version-control-with-github.html)
-- [Using GitHub in a workflow in RStudio](https://hutchdatascience.org/Tools_for_Reproducible_Workflows_in_R/using-github-in-a-workflow.html)
+- [Using Version Control with GitHub](https://ottrproject.org/Adv_Reproducibility_in_Cancer_Informatics/using-version-control-with-github.html)
+- [Using GitHub in a workflow in RStudio](https://ottrproject.org/Tools_for_Reproducible_Workflows_in_R/using-github-in-a-workflow.html)
 - [GitHub for Data Scientists](https://towardsdatascience.com/introduction-to-github-for-data-scientists-2cf8b9b25fba)
 - [GitHub docs about creating a Pull Request](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/creating-a-pull-request)
 - [Making a Pull Request](https://www.atlassian.com/git/tutorials/making-a-pull-request)
